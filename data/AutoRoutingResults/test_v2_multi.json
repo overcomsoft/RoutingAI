@@ -1,0 +1,1913 @@
+[
+  {
+    "group_id": "AUTO_001",
+    "source_group_id": 1,
+    "is_auto_generated": true,
+    "version": "V2",
+    "equipment_process": "CMP",
+    "equipment_maker": "-",
+    "equipment_name": "kscta01",
+    "equipment_id": "66fe4277-5d3f-4982-b7ae-b72319263ba2",
+    "utility": "AKWW",
+    "size": "20A",
+    "path_count": 1,
+    "unique_poc_count": 1,
+    "avg_similarity": null,
+    "max_start_xy_dist": 0.0,
+    "common_z_levels": [
+      {
+        "mean_z": 14699.1,
+        "path_count": 36,
+        "xy_spread": 3098.0
+      },
+      {
+        "mean_z": 14907.0,
+        "path_count": 36,
+        "xy_spread": 4089.8
+      }
+    ],
+    "zones": {
+      "trunk": {
+        "x_min": 4256.2,
+        "x_max": 5459.2,
+        "y_min": 24488.2,
+        "y_max": 28603.2,
+        "z_min": 14699.0,
+        "z_max": 14907.0,
+        "x_range": 1203.0,
+        "y_range": 4115.0,
+        "z_range": 208.0,
+        "xy_spread": 4287.2,
+        "node_count": 515,
+        "mean_z": 14699.1,
+        "path_count": 36
+      },
+      "fan_in": {
+        "x_min": 5344.2,
+        "x_max": 5459.2,
+        "y_min": 24488.2,
+        "y_max": 28503.2,
+        "z_min": 15495.0,
+        "z_max": 15495.0,
+        "x_range": 115.0,
+        "y_range": 4015.0,
+        "z_range": 0.0,
+        "xy_spread": 4016.6,
+        "node_count": 36
+      },
+      "fan_out": {
+        "x_min": 5344.2,
+        "x_max": 5356.2,
+        "y_min": 24488.2,
+        "y_max": 27799.2,
+        "z_min": 15495.0,
+        "z_max": 15495.0,
+        "x_range": 12.0,
+        "y_range": 3311.0,
+        "z_range": 0.0,
+        "xy_spread": 3311.0,
+        "node_count": 36
+      },
+      "is_trunk_estimated": true
+    },
+    "quality_score": 0.9195,
+    "match_score": 0.6509507003105459,
+    "validation": {
+      "is_valid": true,
+      "quality_score": 0.9195,
+      "checks": {
+        "continuity": 1.0,
+        "length_ratio": 0.7974,
+        "pattern": 0.7333,
+        "obstacle_free": 1.0,
+        "zone_compliance": 1.0
+      },
+      "warnings": [],
+      "collision_count": 0
+    },
+    "similarity_detail": {
+      "arrow": 0.7333,
+      "vector": 0.2667,
+      "range": 0.5891,
+      "length": 0.5947,
+      "equip_relative": 1.0,
+      "terminal": 1.0,
+      "obstacle": 0.6923,
+      "level": 1.0
+    },
+    "spatial_context": {
+      "equipment_bbox": {
+        "min": [
+          5290.9,
+          22801.8,
+          15495.0
+        ],
+        "max": [
+          7787.2,
+          28613.4,
+          17500.0
+        ]
+      },
+      "obstacles_nearby": 45,
+      "obstacle_density": 1.0,
+      "column_crossings_template": 13,
+      "column_collisions_result": 0,
+      "start_level": "A/F",
+      "end_level": "A/F",
+      "levels_traversed": [
+        "A/F"
+      ],
+      "start_face": "B",
+      "terminal_type": "DISCONNECTED"
+    },
+    "paths": [
+      {
+        "poc_id": "auto_v2_20260405210713",
+        "terminal_label": "자동 생성 경로 (V2)",
+        "start_pos": [
+          5459.2,
+          28503.2,
+          15495.0
+        ],
+        "end_pos": [
+          5356.2,
+          27702.3,
+          15495.0
+        ],
+        "displacement_vector": {
+          "x": -103.0,
+          "y": -800.9,
+          "z": 0.0
+        },
+        "node_positions": [
+          [
+            5459.2,
+            28503.2,
+            15495.0
+          ],
+          [
+            5459.2,
+            28503.2,
+            14699.1
+          ],
+          [
+            5459.2,
+            28479.0,
+            14699.1
+          ],
+          [
+            5459.2,
+            28187.4,
+            14699.1
+          ],
+          [
+            5459.2,
+            28187.4,
+            14586.1
+          ],
+          [
+            5459.2,
+            28187.4,
+            14491.1
+          ],
+          [
+            5459.2,
+            28041.0,
+            14491.1
+          ],
+          [
+            5459.2,
+            27969.0,
+            14491.1
+          ],
+          [
+            5459.2,
+            27969.0,
+            14606.1
+          ],
+          [
+            5459.2,
+            27969.0,
+            14699.1
+          ],
+          [
+            5459.2,
+            27702.3,
+            14699.1
+          ],
+          [
+            5459.2,
+            27702.3,
+            15495.0
+          ],
+          [
+            5356.2,
+            27702.3,
+            15495.0
+          ]
+        ],
+        "path_step_vectors": [
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -795.9
+          },
+          {
+            "x": 0.0,
+            "y": -24.2,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": -291.6,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -113.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -95.0
+          },
+          {
+            "x": 0.0,
+            "y": -146.4,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": -72.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 115.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 93.0
+          },
+          {
+            "x": 0.0,
+            "y": -266.7,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 795.9
+          },
+          {
+            "x": -103.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        ],
+        "path_step_lengths": [
+          795.9,
+          24.2,
+          291.6,
+          113.0,
+          95.0,
+          146.4,
+          72.0,
+          115.0,
+          93.0,
+          266.7,
+          795.9,
+          103.0
+        ],
+        "path_total_length": 2911.7,
+        "path_arrow": "R-H-H-R-R-H-H-R-R-H-R-H",
+        "path_bbox": {
+          "x_min": 5356.2,
+          "x_max": 5459.2,
+          "y_min": 27702.3,
+          "y_max": 28503.2,
+          "z_min": 14491.1,
+          "z_max": 15495.0,
+          "x_range": 103.0,
+          "y_range": 800.9,
+          "z_range": 1003.9,
+          "xy_spread": 807.5,
+          "node_count": 13
+        },
+        "path_range": {
+          "x": 103.0,
+          "y": 800.9,
+          "z": 1003.9
+        },
+        "h_segments": [
+          {
+            "mean_z": 14699.1,
+            "mid_xy": [
+              5459.2,
+              28389.867
+            ],
+            "node_count": 3
+          },
+          {
+            "mean_z": 14491.1,
+            "mid_xy": [
+              5459.2,
+              28065.8
+            ],
+            "node_count": 3
+          },
+          {
+            "mean_z": 14699.1,
+            "mid_xy": [
+              5459.2,
+              27835.65
+            ],
+            "node_count": 2
+          },
+          {
+            "mean_z": 15495.0,
+            "mid_xy": [
+              5407.7,
+              27702.3
+            ],
+            "node_count": 2
+          }
+        ],
+        "path_summary": "AUTO_V2"
+      }
+    ]
+  },
+  {
+    "group_id": "AUTO_001",
+    "source_group_id": 1,
+    "is_auto_generated": true,
+    "version": "V2",
+    "equipment_process": "CMP",
+    "equipment_maker": "-",
+    "equipment_name": "kscta01",
+    "equipment_id": "66fe4277-5d3f-4982-b7ae-b72319263ba2",
+    "utility": "AKWW",
+    "size": "20A",
+    "path_count": 1,
+    "unique_poc_count": 1,
+    "avg_similarity": null,
+    "max_start_xy_dist": 0.0,
+    "common_z_levels": [
+      {
+        "mean_z": 14699.1,
+        "path_count": 36,
+        "xy_spread": 3098.0
+      },
+      {
+        "mean_z": 14907.0,
+        "path_count": 36,
+        "xy_spread": 4089.8
+      }
+    ],
+    "zones": {
+      "trunk": {
+        "x_min": 4256.2,
+        "x_max": 5459.2,
+        "y_min": 24488.2,
+        "y_max": 28603.2,
+        "z_min": 14699.0,
+        "z_max": 14907.0,
+        "x_range": 1203.0,
+        "y_range": 4115.0,
+        "z_range": 208.0,
+        "xy_spread": 4287.2,
+        "node_count": 515,
+        "mean_z": 14699.1,
+        "path_count": 36
+      },
+      "fan_in": {
+        "x_min": 5344.2,
+        "x_max": 5459.2,
+        "y_min": 24488.2,
+        "y_max": 28503.2,
+        "z_min": 15495.0,
+        "z_max": 15495.0,
+        "x_range": 115.0,
+        "y_range": 4015.0,
+        "z_range": 0.0,
+        "xy_spread": 4016.6,
+        "node_count": 36
+      },
+      "fan_out": {
+        "x_min": 5344.2,
+        "x_max": 5356.2,
+        "y_min": 24488.2,
+        "y_max": 27799.2,
+        "z_min": 15495.0,
+        "z_max": 15495.0,
+        "x_range": 12.0,
+        "y_range": 3311.0,
+        "z_range": 0.0,
+        "xy_spread": 3311.0,
+        "node_count": 36
+      },
+      "is_trunk_estimated": true
+    },
+    "quality_score": 0.9336,
+    "match_score": 0.6605913033969916,
+    "validation": {
+      "is_valid": true,
+      "quality_score": 0.9336,
+      "checks": {
+        "continuity": 1.0,
+        "length_ratio": 0.8821,
+        "pattern": 0.7143,
+        "obstacle_free": 1.0,
+        "zone_compliance": 1.0
+      },
+      "warnings": [],
+      "collision_count": 0
+    },
+    "similarity_detail": {
+      "arrow": 0.7143,
+      "vector": 0.2857,
+      "range": 0.5135,
+      "length": 0.7643,
+      "equip_relative": 0.9514,
+      "terminal": 0.9774,
+      "obstacle": 0.5588,
+      "level": 1.0
+    },
+    "spatial_context": {
+      "equipment_bbox": {
+        "min": [
+          5290.9,
+          22801.8,
+          15495.0
+        ],
+        "max": [
+          7787.2,
+          28613.4,
+          17500.0
+        ]
+      },
+      "obstacles_nearby": 45,
+      "obstacle_density": 1.0,
+      "column_crossings_template": 17,
+      "column_collisions_result": 0,
+      "start_level": "A/F",
+      "end_level": "A/F",
+      "levels_traversed": [
+        "A/F"
+      ],
+      "start_face": "B",
+      "terminal_type": "DISCONNECTED"
+    },
+    "paths": [
+      {
+        "poc_id": "auto_v2_20260405210713",
+        "terminal_label": "자동 생성 경로 (V2)",
+        "start_pos": [
+          5500,
+          28200,
+          15495
+        ],
+        "end_pos": [
+          5300.0,
+          27000.0,
+          15495.0
+        ],
+        "displacement_vector": {
+          "x": -200.0,
+          "y": -1200.0,
+          "z": 0.0
+        },
+        "node_positions": [
+          [
+            5500.0,
+            28200.0,
+            15495.0
+          ],
+          [
+            5500.0,
+            28200.0,
+            14699.1
+          ],
+          [
+            5500.0,
+            27739.6,
+            14699.1
+          ],
+          [
+            5500.0,
+            27739.6,
+            14586.1
+          ],
+          [
+            5500.0,
+            27739.6,
+            14491.1
+          ],
+          [
+            5500.0,
+            27630.8,
+            14491.1
+          ],
+          [
+            5500.0,
+            27455.4,
+            14491.1
+          ],
+          [
+            5500.0,
+            27455.4,
+            14606.1
+          ],
+          [
+            5500.0,
+            27455.4,
+            14699.1
+          ],
+          [
+            5500.0,
+            27000.0,
+            14699.1
+          ],
+          [
+            5500.0,
+            27000.0,
+            15495.0
+          ],
+          [
+            5300.0,
+            27000.0,
+            15495.0
+          ]
+        ],
+        "path_step_vectors": [
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -795.9
+          },
+          {
+            "x": 0.0,
+            "y": -460.4,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -113.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -95.0
+          },
+          {
+            "x": 0.0,
+            "y": -108.8,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": -175.4,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 115.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 93.0
+          },
+          {
+            "x": 0.0,
+            "y": -455.4,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 795.9
+          },
+          {
+            "x": -200.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        ],
+        "path_step_lengths": [
+          795.9,
+          460.4,
+          113.0,
+          95.0,
+          108.8,
+          175.4,
+          115.0,
+          93.0,
+          455.4,
+          795.9,
+          200.0
+        ],
+        "path_total_length": 3407.8,
+        "path_arrow": "R-H-R-R-H-H-R-R-H-R-H",
+        "path_bbox": {
+          "x_min": 5300.0,
+          "x_max": 5500.0,
+          "y_min": 27000.0,
+          "y_max": 28200.0,
+          "z_min": 14491.1,
+          "z_max": 15495.0,
+          "x_range": 200.0,
+          "y_range": 1200.0,
+          "z_range": 1003.9,
+          "xy_spread": 1216.6,
+          "node_count": 12
+        },
+        "path_range": {
+          "x": 200.0,
+          "y": 1200.0,
+          "z": 1003.9
+        },
+        "h_segments": [
+          {
+            "mean_z": 14699.1,
+            "mid_xy": [
+              5500.0,
+              27969.8
+            ],
+            "node_count": 2
+          },
+          {
+            "mean_z": 14491.1,
+            "mid_xy": [
+              5500.0,
+              27608.6
+            ],
+            "node_count": 3
+          },
+          {
+            "mean_z": 14699.1,
+            "mid_xy": [
+              5500.0,
+              27227.7
+            ],
+            "node_count": 2
+          },
+          {
+            "mean_z": 15495.0,
+            "mid_xy": [
+              5400.0,
+              27000.0
+            ],
+            "node_count": 2
+          }
+        ],
+        "path_summary": "AUTO_V2"
+      }
+    ]
+  },
+  {
+    "group_id": "AUTO_003",
+    "source_group_id": 3,
+    "is_auto_generated": true,
+    "version": "V2",
+    "equipment_process": "CMP",
+    "equipment_maker": "-",
+    "equipment_name": "kscta01",
+    "equipment_id": "66fe4277-5d3f-4982-b7ae-b72319263ba2",
+    "utility": "UPW_S",
+    "size": "25A",
+    "path_count": 1,
+    "unique_poc_count": 1,
+    "avg_similarity": null,
+    "max_start_xy_dist": 0.0,
+    "common_z_levels": [
+      {
+        "mean_z": 14750.0,
+        "path_count": 26,
+        "xy_spread": 3762.7
+      },
+      {
+        "mean_z": 15050.0,
+        "path_count": 26,
+        "xy_spread": 4517.3
+      }
+    ],
+    "zones": {
+      "trunk": {
+        "x_min": 5804.2,
+        "x_max": 8604.2,
+        "y_min": 24506.2,
+        "y_max": 30210.2,
+        "z_min": 14750.0,
+        "z_max": 15050.0,
+        "x_range": 2800.0,
+        "y_range": 5704.0,
+        "z_range": 300.0,
+        "xy_spread": 6006.8,
+        "node_count": 508,
+        "mean_z": 14750.0,
+        "path_count": 26
+      },
+      "fan_in": {
+        "x_min": 5904.2,
+        "x_max": 7537.2,
+        "y_min": 25875.2,
+        "y_max": 28541.2,
+        "z_min": 15495.0,
+        "z_max": 15495.0,
+        "x_range": 1633.0,
+        "y_range": 2666.0,
+        "z_range": 0.0,
+        "xy_spread": 3039.0,
+        "node_count": 26
+      },
+      "fan_out": {
+        "x_min": 5984.2,
+        "x_max": 7537.2,
+        "y_min": 24506.2,
+        "y_max": 28270.2,
+        "z_min": 15495.0,
+        "z_max": 15495.0,
+        "x_range": 1553.0,
+        "y_range": 3764.0,
+        "z_range": 0.0,
+        "xy_spread": 4071.8,
+        "node_count": 26
+      },
+      "is_trunk_estimated": true
+    },
+    "quality_score": 0.9822,
+    "match_score": 0.5361756074010879,
+    "validation": {
+      "is_valid": true,
+      "quality_score": 0.9822,
+      "checks": {
+        "continuity": 1.0,
+        "length_ratio": 0.9483,
+        "pattern": 0.95,
+        "obstacle_free": 1.0,
+        "zone_compliance": 1.0
+      },
+      "warnings": [],
+      "collision_count": 0
+    },
+    "similarity_detail": {
+      "arrow": 0.95,
+      "vector": 0.45,
+      "range": 0.2937,
+      "length": 0.8966,
+      "equip_relative": 0.5358,
+      "terminal": 0.7844,
+      "obstacle": 0.9143,
+      "level": 0.375
+    },
+    "spatial_context": {
+      "equipment_bbox": {
+        "min": [
+          5290.9,
+          22801.8,
+          15495.0
+        ],
+        "max": [
+          7787.2,
+          28613.4,
+          17500.0
+        ]
+      },
+      "obstacles_nearby": 230,
+      "obstacle_density": 1.0,
+      "column_crossings_template": 29,
+      "column_collisions_result": 0,
+      "start_level": "A/F",
+      "end_level": "CSF",
+      "levels_traversed": [
+        "A/F",
+        "CSF"
+      ],
+      "start_face": "B",
+      "terminal_type": "DISCONNECTED"
+    },
+    "paths": [
+      {
+        "poc_id": "auto_v2_20260405210713",
+        "terminal_label": "자동 생성 경로 (V2)",
+        "start_pos": [
+          5504.2,
+          28482.2,
+          15495
+        ],
+        "end_pos": [
+          4963.2,
+          22468.2,
+          13182.4
+        ],
+        "displacement_vector": {
+          "x": -541.0,
+          "y": -6014.0,
+          "z": -2312.6
+        },
+        "node_positions": [
+          [
+            5504.2,
+            28482.2,
+            15495.0
+          ],
+          [
+            5504.2,
+            28482.2,
+            14750.0
+          ],
+          [
+            5504.2,
+            27879.5,
+            14750.0
+          ],
+          [
+            5504.2,
+            27804.6,
+            14750.0
+          ],
+          [
+            5504.2,
+            27360.3,
+            14750.0
+          ],
+          [
+            5504.2,
+            26451.9,
+            14750.0
+          ],
+          [
+            5504.2,
+            26054.0,
+            14750.0
+          ],
+          [
+            5504.2,
+            25437.3,
+            14750.0
+          ],
+          [
+            5504.2,
+            25438.3,
+            14450.0
+          ],
+          [
+            5504.2,
+            25332.2,
+            14450.0
+          ],
+          [
+            5504.2,
+            25225.4,
+            14450.0
+          ],
+          [
+            5504.2,
+            25225.4,
+            14750.0
+          ],
+          [
+            5504.2,
+            24396.5,
+            14750.0
+          ],
+          [
+            5504.2,
+            23998.6,
+            14750.0
+          ],
+          [
+            5504.2,
+            23700.2,
+            14750.0
+          ],
+          [
+            5504.2,
+            23468.1,
+            14750.0
+          ],
+          [
+            5504.2,
+            23393.2,
+            14750.0
+          ],
+          [
+            5504.2,
+            22621.4,
+            14750.0
+          ],
+          [
+            5504.2,
+            22468.2,
+            14750.0
+          ],
+          [
+            5504.2,
+            22468.2,
+            13182.4
+          ],
+          [
+            4963.2,
+            22468.2,
+            13182.4
+          ]
+        ],
+        "path_step_vectors": [
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -745.0
+          },
+          {
+            "x": 0.0,
+            "y": -602.7,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": -74.9,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": -444.3,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": -908.4,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": -397.9,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": -616.7,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 1.0,
+            "z": -300.0
+          },
+          {
+            "x": 0.0,
+            "y": -106.1,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": -106.8,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 300.0
+          },
+          {
+            "x": 0.0,
+            "y": -828.9,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": -397.9,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": -298.4,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": -232.1,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": -74.9,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": -771.8,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": -153.2,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -1567.6
+          },
+          {
+            "x": -541.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        ],
+        "path_step_lengths": [
+          745.0,
+          602.7,
+          74.9,
+          444.3,
+          908.4,
+          397.9,
+          616.7,
+          300.0,
+          106.1,
+          106.8,
+          300.0,
+          828.9,
+          397.9,
+          298.4,
+          232.1,
+          74.9,
+          771.8,
+          153.2,
+          1567.6,
+          541.0
+        ],
+        "path_total_length": 9468.6,
+        "path_arrow": "R-H-H-H-H-H-H-R-H-H-R-H-H-H-H-H-H-H-R-H",
+        "path_bbox": {
+          "x_min": 4963.2,
+          "x_max": 5504.2,
+          "y_min": 22468.2,
+          "y_max": 28482.2,
+          "z_min": 13182.4,
+          "z_max": 15495.0,
+          "x_range": 541.0,
+          "y_range": 6014.0,
+          "z_range": 2312.6,
+          "xy_spread": 6038.3,
+          "node_count": 21
+        },
+        "path_range": {
+          "x": 541.0,
+          "y": 6014.0,
+          "z": 2312.6
+        },
+        "h_segments": [
+          {
+            "mean_z": 14750.0,
+            "mid_xy": [
+              5504.2,
+              27067.114
+            ],
+            "node_count": 7
+          },
+          {
+            "mean_z": 14450.0,
+            "mid_xy": [
+              5504.2,
+              25331.967
+            ],
+            "node_count": 3
+          },
+          {
+            "mean_z": 14750.0,
+            "mid_xy": [
+              5504.2,
+              23658.95
+            ],
+            "node_count": 8
+          },
+          {
+            "mean_z": 13182.4,
+            "mid_xy": [
+              5233.7,
+              22468.2
+            ],
+            "node_count": 2
+          }
+        ],
+        "path_summary": "AUTO_V2"
+      }
+    ]
+  },
+  {
+    "group_id": "AUTO_020",
+    "source_group_id": 20,
+    "is_auto_generated": true,
+    "version": "V2",
+    "equipment_process": "CMP",
+    "equipment_maker": "-",
+    "equipment_name": "kscta01",
+    "equipment_id": "66fe4277-5d3f-4982-b7ae-b72319263ba2",
+    "utility": "ALKA",
+    "size": "100A",
+    "path_count": 1,
+    "unique_poc_count": 1,
+    "avg_similarity": null,
+    "max_start_xy_dist": 0.0,
+    "common_z_levels": [
+      {
+        "mean_z": 14830.0,
+        "path_count": 6,
+        "xy_spread": 1619.3
+      }
+    ],
+    "zones": {
+      "trunk": {
+        "x_min": 5867.2,
+        "x_max": 8428.2,
+        "y_min": 27098.0,
+        "y_max": 31385.2,
+        "z_min": 14700.0,
+        "z_max": 14900.0,
+        "x_range": 2561.0,
+        "y_range": 4287.2,
+        "z_range": 200.0,
+        "xy_spread": 4842.2,
+        "node_count": 23,
+        "mean_z": 14830.0,
+        "path_count": 6
+      },
+      "fan_in": {
+        "x_min": 5989.4,
+        "x_max": 6047.0,
+        "y_min": 27399.9,
+        "y_max": 28228.4,
+        "z_min": 15495.0,
+        "z_max": 15495.0,
+        "x_range": 57.6,
+        "y_range": 828.5,
+        "z_range": 0.0,
+        "xy_spread": 830.5,
+        "node_count": 6
+      },
+      "fan_out": {
+        "x_min": 8248.2,
+        "x_max": 8428.2,
+        "y_min": 30775.2,
+        "y_max": 31385.2,
+        "z_min": 17000.0,
+        "z_max": 17000.0,
+        "x_range": 180.0,
+        "y_range": 610.0,
+        "z_range": 0.0,
+        "xy_spread": 636.0,
+        "node_count": 6
+      },
+      "is_trunk_estimated": true
+    },
+    "quality_score": 0.9407,
+    "match_score": 0.7126716220383479,
+    "validation": {
+      "is_valid": true,
+      "quality_score": 0.9407,
+      "checks": {
+        "continuity": 1.0,
+        "length_ratio": 0.8535,
+        "pattern": 0.8,
+        "obstacle_free": 1.0,
+        "zone_compliance": 1.0
+      },
+      "warnings": [],
+      "collision_count": 0
+    },
+    "similarity_detail": {
+      "arrow": 0.8,
+      "vector": 0.2,
+      "range": 0.654,
+      "length": 0.7071,
+      "equip_relative": 0.4849,
+      "terminal": 0.7734,
+      "obstacle": 0.8333,
+      "level": 0.5833
+    },
+    "spatial_context": {
+      "equipment_bbox": {
+        "min": [
+          5290.9,
+          22801.8,
+          15495.0
+        ],
+        "max": [
+          7787.2,
+          28613.4,
+          17500.0
+        ]
+      },
+      "obstacles_nearby": 75,
+      "obstacle_density": 1.0,
+      "column_crossings_template": 8,
+      "column_collisions_result": 0,
+      "start_level": "A/F",
+      "end_level": "CSF",
+      "levels_traversed": [
+        "A/F",
+        "CSF"
+      ],
+      "start_face": "B",
+      "terminal_type": "duct"
+    },
+    "paths": [
+      {
+        "poc_id": "auto_v2_20260405210713",
+        "terminal_label": "자동 생성 경로 (V2)",
+        "start_pos": [
+          5400,
+          27500,
+          15495
+        ],
+        "end_pos": [
+          4800.0,
+          25000.0,
+          13000.0
+        ],
+        "displacement_vector": {
+          "x": -600.0,
+          "y": -2500.0,
+          "z": -2495.0
+        },
+        "node_positions": [
+          [
+            5400.0,
+            27500.0,
+            15495.0
+          ],
+          [
+            5400.0,
+            27500.0,
+            14830.0
+          ],
+          [
+            5400.0,
+            26062.7,
+            14830.0
+          ],
+          [
+            5400.0,
+            25000.0,
+            14830.0
+          ],
+          [
+            5400.0,
+            25000.0,
+            13000.0
+          ],
+          [
+            4800.0,
+            25000.0,
+            13000.0
+          ]
+        ],
+        "path_step_vectors": [
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -665.0
+          },
+          {
+            "x": 0.0,
+            "y": -1437.3,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": -1062.7,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -1830.0
+          },
+          {
+            "x": -600.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        ],
+        "path_step_lengths": [
+          665.0,
+          1437.3,
+          1062.7,
+          1830.0,
+          600.0
+        ],
+        "path_total_length": 5595.0,
+        "path_arrow": "R-H-H-R-H",
+        "path_bbox": {
+          "x_min": 4800.0,
+          "x_max": 5400.0,
+          "y_min": 25000.0,
+          "y_max": 27500.0,
+          "z_min": 13000.0,
+          "z_max": 15495.0,
+          "x_range": 600.0,
+          "y_range": 2500.0,
+          "z_range": 2495.0,
+          "xy_spread": 2571.0,
+          "node_count": 6
+        },
+        "path_range": {
+          "x": 600.0,
+          "y": 2500.0,
+          "z": 2495.0
+        },
+        "h_segments": [
+          {
+            "mean_z": 14830.0,
+            "mid_xy": [
+              5400.0,
+              26187.567
+            ],
+            "node_count": 3
+          },
+          {
+            "mean_z": 13000.0,
+            "mid_xy": [
+              5100.0,
+              25000.0
+            ],
+            "node_count": 2
+          }
+        ],
+        "path_summary": "AUTO_V2"
+      }
+    ]
+  },
+  {
+    "group_id": "AUTO_021",
+    "source_group_id": 21,
+    "is_auto_generated": true,
+    "version": "V2",
+    "equipment_process": "CMP",
+    "equipment_maker": "-",
+    "equipment_name": "kscta01",
+    "equipment_id": "66fe4277-5d3f-4982-b7ae-b72319263ba2",
+    "utility": "ALKA",
+    "size": "65A",
+    "path_count": 1,
+    "unique_poc_count": 1,
+    "avg_similarity": null,
+    "max_start_xy_dist": 0.0,
+    "common_z_levels": [
+      {
+        "mean_z": 14820.0,
+        "path_count": 5,
+        "xy_spread": 1635.2
+      }
+    ],
+    "zones": {
+      "trunk": {
+        "x_min": 6045.2,
+        "x_max": 8428.2,
+        "y_min": 25135.2,
+        "y_max": 31025.2,
+        "z_min": 14700.0,
+        "z_max": 14900.0,
+        "x_range": 2383.0,
+        "y_range": 5890.0,
+        "z_range": 200.0,
+        "xy_spread": 6353.8,
+        "node_count": 21,
+        "mean_z": 14820.0,
+        "path_count": 5
+      },
+      "fan_in": {
+        "x_min": 5989.4,
+        "x_max": 7521.0,
+        "y_min": 25134.9,
+        "y_max": 28367.7,
+        "z_min": 15352.5,
+        "z_max": 15495.0,
+        "x_range": 1531.6,
+        "y_range": 3232.8,
+        "z_range": 142.5,
+        "xy_spread": 3553.6,
+        "node_count": 10
+      },
+      "fan_out": {
+        "x_min": 8248.2,
+        "x_max": 8428.2,
+        "y_min": 29985.2,
+        "y_max": 31025.2,
+        "z_min": 17000.0,
+        "z_max": 17000.0,
+        "x_range": 180.0,
+        "y_range": 1040.0,
+        "z_range": 0.0,
+        "xy_spread": 1055.5,
+        "node_count": 5
+      },
+      "is_trunk_estimated": true
+    },
+    "quality_score": 0.853,
+    "match_score": 0.6559596211337835,
+    "validation": {
+      "is_valid": true,
+      "quality_score": 0.853,
+      "checks": {
+        "continuity": 1.0,
+        "length_ratio": 0.8274,
+        "pattern": 0.75,
+        "obstacle_free": 0.7,
+        "zone_compliance": 1.0
+      },
+      "warnings": [
+        "기둥 충돌: 1개 세그먼트"
+      ],
+      "collision_count": 1
+    },
+    "similarity_detail": {
+      "arrow": 0.75,
+      "vector": 0.217,
+      "range": 0.6101,
+      "length": 0.6547,
+      "equip_relative": 0.5364,
+      "terminal": 0.7858,
+      "obstacle": 0.9722,
+      "level": 0.5833
+    },
+    "spatial_context": {
+      "equipment_bbox": {
+        "min": [
+          5290.9,
+          22801.8,
+          15495.0
+        ],
+        "max": [
+          7787.2,
+          28613.4,
+          17500.0
+        ]
+      },
+      "obstacles_nearby": 100,
+      "obstacle_density": 1.0,
+      "column_crossings_template": 18,
+      "column_collisions_result": 1,
+      "start_level": "A/F",
+      "end_level": "CSF",
+      "levels_traversed": [
+        "A/F",
+        "CSF"
+      ],
+      "start_face": "B",
+      "terminal_type": "duct"
+    },
+    "paths": [
+      {
+        "poc_id": "auto_v2_20260405210713",
+        "terminal_label": "자동 생성 경로 (V2)",
+        "start_pos": [
+          5600,
+          27000,
+          15495
+        ],
+        "end_pos": [
+          5000.0,
+          24000.0,
+          13000.0
+        ],
+        "displacement_vector": {
+          "x": -600.0,
+          "y": -3000.0,
+          "z": -2495.0
+        },
+        "node_positions": [
+          [
+            5600.0,
+            27000.0,
+            15495.0
+          ],
+          [
+            5545.1,
+            27000.0,
+            15347.6
+          ],
+          [
+            5545.1,
+            27000.0,
+            14672.6
+          ],
+          [
+            5545.1,
+            26849.6,
+            14672.6
+          ],
+          [
+            5545.1,
+            24934.5,
+            14672.6
+          ],
+          [
+            5545.1,
+            24000.0,
+            14672.6
+          ],
+          [
+            5545.1,
+            24000.0,
+            12852.6
+          ],
+          [
+            5545.1,
+            24000.0,
+            13000.0
+          ],
+          [
+            5000.0,
+            24000.0,
+            13000.0
+          ]
+        ],
+        "path_step_vectors": [
+          {
+            "x": -54.9,
+            "y": 0.0,
+            "z": -147.4
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -675.0
+          },
+          {
+            "x": 0.0,
+            "y": -150.4,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": -1915.1,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": -934.5,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -1820.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 147.4
+          },
+          {
+            "x": -545.1,
+            "y": 0.0,
+            "z": 0.0
+          }
+        ],
+        "path_step_lengths": [
+          157.3,
+          675.0,
+          150.4,
+          1915.1,
+          934.5,
+          1820.0,
+          147.4,
+          545.1
+        ],
+        "path_total_length": 6344.8,
+        "path_arrow": "D-R-H-H-H-R-R-H",
+        "path_bbox": {
+          "x_min": 5000.0,
+          "x_max": 5600.0,
+          "y_min": 24000.0,
+          "y_max": 27000.0,
+          "z_min": 12852.6,
+          "z_max": 15495.0,
+          "x_range": 600.0,
+          "y_range": 3000.0,
+          "z_range": 2642.4,
+          "xy_spread": 3059.4,
+          "node_count": 9
+        },
+        "path_range": {
+          "x": 600.0,
+          "y": 3000.0,
+          "z": 2642.4
+        },
+        "h_segments": [
+          {
+            "mean_z": 14672.6,
+            "mid_xy": [
+              5545.1,
+              25696.025
+            ],
+            "node_count": 4
+          },
+          {
+            "mean_z": 13000.0,
+            "mid_xy": [
+              5272.55,
+              24000.0
+            ],
+            "node_count": 2
+          }
+        ],
+        "path_summary": "AUTO_V2"
+      }
+    ]
+  },
+  {
+    "group_id": "AUTO_031",
+    "source_group_id": 31,
+    "is_auto_generated": true,
+    "version": "V2",
+    "equipment_process": "CMP",
+    "equipment_maker": "-",
+    "equipment_name": "kscta01",
+    "equipment_id": "66fe4277-5d3f-4982-b7ae-b72319263ba2",
+    "utility": "PA",
+    "size": "1/4B",
+    "path_count": 1,
+    "unique_poc_count": 1,
+    "avg_similarity": null,
+    "max_start_xy_dist": 0.0,
+    "common_z_levels": [
+      {
+        "mean_z": 14766.7,
+        "path_count": 3,
+        "xy_spread": 887.8
+      }
+    ],
+    "zones": {
+      "trunk": {
+        "x_min": 6047.4,
+        "x_max": 8428.2,
+        "y_min": 25535.4,
+        "y_max": 30595.2,
+        "z_min": 14700.0,
+        "z_max": 14900.0,
+        "x_range": 2380.8,
+        "y_range": 5059.8,
+        "z_range": 200.0,
+        "xy_spread": 5592.0,
+        "node_count": 15,
+        "mean_z": 14766.7,
+        "path_count": 3
+      },
+      "fan_in": {
+        "x_min": 5989.4,
+        "x_max": 6047.4,
+        "y_min": 25535.4,
+        "y_max": 27056.9,
+        "z_min": 15337.5,
+        "z_max": 15495.0,
+        "x_range": 58.0,
+        "y_range": 1521.5,
+        "z_range": 157.5,
+        "xy_spread": 1522.6,
+        "node_count": 6
+      },
+      "fan_out": {
+        "x_min": 8248.2,
+        "x_max": 8428.2,
+        "y_min": 30415.2,
+        "y_max": 30595.2,
+        "z_min": 17000.0,
+        "z_max": 17000.0,
+        "x_range": 180.0,
+        "y_range": 180.0,
+        "z_range": 0.0,
+        "xy_spread": 254.6,
+        "node_count": 3
+      },
+      "is_trunk_estimated": false
+    },
+    "quality_score": 0.9184,
+    "match_score": 0.3,
+    "validation": {
+      "is_valid": true,
+      "quality_score": 0.9184,
+      "checks": {
+        "continuity": 1.0,
+        "length_ratio": 0.7587,
+        "pattern": 0.7778,
+        "obstacle_free": 1.0,
+        "zone_compliance": 1.0
+      },
+      "warnings": [],
+      "collision_count": 0
+    },
+    "similarity_detail": {
+      "arrow": 0.7778,
+      "vector": 0.2838,
+      "range": 0.534,
+      "length": 0.5173,
+      "equip_relative": 0.5957,
+      "terminal": 0.7881,
+      "obstacle": 0.9412,
+      "level": 0.375
+    },
+    "spatial_context": {
+      "equipment_bbox": {
+        "min": [
+          5290.9,
+          22801.8,
+          15495.0
+        ],
+        "max": [
+          7787.2,
+          28613.4,
+          17500.0
+        ]
+      },
+      "obstacles_nearby": 57,
+      "obstacle_density": 1.0,
+      "column_crossings_template": 15,
+      "column_collisions_result": 0,
+      "start_level": "A/F",
+      "end_level": "A/F",
+      "levels_traversed": [
+        "A/F"
+      ],
+      "start_face": "B",
+      "terminal_type": "DISCONNECTED"
+    },
+    "paths": [
+      {
+        "poc_id": "auto_v2_20260405210713",
+        "terminal_label": "자동 생성 경로 (V2)",
+        "start_pos": [
+          6000,
+          27000,
+          15495
+        ],
+        "end_pos": [
+          5500.0,
+          25000.0,
+          14000.0
+        ],
+        "displacement_vector": {
+          "x": -500.0,
+          "y": -2000.0,
+          "z": -1495.0
+        },
+        "node_positions": [
+          [
+            6000.0,
+            27000.0,
+            15495.0
+          ],
+          [
+            5945.0,
+            27000.0,
+            15232.8
+          ],
+          [
+            5945.0,
+            27000.0,
+            14504.5
+          ],
+          [
+            5945.0,
+            26933.8,
+            14504.5
+          ],
+          [
+            5945.0,
+            26748.2,
+            14504.5
+          ],
+          [
+            5945.0,
+            25509.2,
+            14504.5
+          ],
+          [
+            5945.0,
+            25000.0,
+            14504.5
+          ],
+          [
+            5945.0,
+            25000.0,
+            13737.8
+          ],
+          [
+            5945.0,
+            25000.0,
+            14000.0
+          ],
+          [
+            5500.0,
+            25000.0,
+            14000.0
+          ]
+        ],
+        "path_step_vectors": [
+          {
+            "x": -55.0,
+            "y": 0.0,
+            "z": -262.2
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -728.3
+          },
+          {
+            "x": 0.0,
+            "y": -66.2,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": -185.6,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": -1239.0,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": -509.2,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -766.7
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 262.2
+          },
+          {
+            "x": -445.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        ],
+        "path_step_lengths": [
+          267.9,
+          728.3,
+          66.2,
+          185.6,
+          1239.0,
+          509.2,
+          766.7,
+          262.2,
+          445.0
+        ],
+        "path_total_length": 4470.1,
+        "path_arrow": "D-R-H-H-H-H-R-R-H",
+        "path_bbox": {
+          "x_min": 5500.0,
+          "x_max": 6000.0,
+          "y_min": 25000.0,
+          "y_max": 27000.0,
+          "z_min": 13737.8,
+          "z_max": 15495.0,
+          "x_range": 500.0,
+          "y_range": 2000.0,
+          "z_range": 1757.2,
+          "xy_spread": 2061.6,
+          "node_count": 10
+        },
+        "path_range": {
+          "x": 500.0,
+          "y": 2000.0,
+          "z": 1757.2
+        },
+        "h_segments": [
+          {
+            "mean_z": 14504.5,
+            "mid_xy": [
+              5945.0,
+              26238.24
+            ],
+            "node_count": 5
+          },
+          {
+            "mean_z": 14000.0,
+            "mid_xy": [
+              5722.5,
+              25000.0
+            ],
+            "node_count": 2
+          }
+        ],
+        "path_summary": "AUTO_V2"
+      }
+    ]
+  }
+]

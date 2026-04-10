@@ -1,0 +1,917 @@
+{
+  "source_file": "./data-v10\\CVD_TNMHJ02_260323_082632_total.json",
+  "equipment_id": "faae34ef-9922-42ff-9251-36c687bb01f2",
+  "equipment_name": "VMB_NF3_VMHYT",
+  "equipment_process": "CVD",
+  "equipment_maker": "TEST",
+  "created_at": "2026-04-05T19:48:13.134648",
+  "poc_paths": [
+    {
+      "start_poc_id": "ea24f61c-dec0-428b-8809-a87172b9c303",
+      "start_poc_info": {
+        "guid": "ea24f61c-dec0-428b-8809-a87172b9c303",
+        "id": "POC11434",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          153035.890625,
+          59876.203125,
+          10081.0
+        ],
+        "bay": null,
+        "level": "CSF",
+        "bop": 2080.95,
+        "connectionGuidList": [
+          "e51eff0f-c2eb-437b-b5cd-523fbd2eeef9"
+        ],
+        "connectionIDList": [
+          "PIPE10791"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 152978.7,
+            "y": 59819.0,
+            "z": 10080.9
+          },
+          "max": {
+            "x": 153093.0,
+            "y": 59933.3,
+            "z": 10081.0
+          }
+        },
+        "utility": "CABINET(Ex)",
+        "material": "Spiral",
+        "size": "100A"
+      },
+      "paths": [
+        {
+          "terminal_label": "Duct / TakeOff 도달",
+          "branch_depth": 0,
+          "branch_segments": [],
+          "path_summary": "PO->EB->EB->EB->ET->TK",
+          "end_node_id": "fa7a18d9-07f5-444a-bda9-861b26324f70",
+          "end_node_type": "TAKEOFF",
+          "steps": [
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "ea24f61c-dec0-428b-8809-a87172b9c303",
+                "id": "POC11434",
+                "name": "start",
+                "type": "POC",
+                "position": [
+                  153035.890625,
+                  59876.203125,
+                  10081.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 2080.95,
+                "connectionGuidList": [
+                  "e51eff0f-c2eb-437b-b5cd-523fbd2eeef9"
+                ],
+                "connectionIDList": [
+                  "PIPE10791"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 152978.7,
+                    "y": 59819.0,
+                    "z": 10080.9
+                  },
+                  "max": {
+                    "x": 153093.0,
+                    "y": 59933.3,
+                    "z": 10081.0
+                  }
+                },
+                "utility": "CABINET(Ex)",
+                "material": "Spiral",
+                "size": "100A"
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "e51eff0f-c2eb-437b-b5cd-523fbd2eeef9",
+                "id": "PIPE10791",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  153035.890625,
+                  59876.203125,
+                  10081.0
+                ],
+                "connectionGuidList": [
+                  "ea24f61c-dec0-428b-8809-a87172b9c303",
+                  "9392666f-7126-40e7-8d9a-ea08a9727e55"
+                ],
+                "connectionIDList": [
+                  "POC11434",
+                  "ELBOW10790"
+                ],
+                "utility": "CABINET(Ex)",
+                "material": "Spiral",
+                "size": "100A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "9392666f-7126-40e7-8d9a-ea08a9727e55",
+                "id": "ELBOW10790",
+                "name": "Elbow-spiral-100A",
+                "type": "ELBOW",
+                "position": [
+                  153035.890625,
+                  59876.203125,
+                  11600.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 3568.45,
+                "connectionGuidList": [
+                  "e51eff0f-c2eb-437b-b5cd-523fbd2eeef9",
+                  "634f054b-05d1-4877-bde5-0330ee724f94"
+                ],
+                "connectionIDList": [
+                  "PIPE10791",
+                  "PIPE10325"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 152978.7,
+                    "y": 59756.1,
+                    "z": 11479.8
+                  },
+                  "max": {
+                    "x": 153092.8,
+                    "y": 59933.3,
+                    "z": 11657.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "634f054b-05d1-4877-bde5-0330ee724f94",
+                "id": "PIPE10325",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  153035.890625,
+                  59756.203125,
+                  11600.0
+                ],
+                "connectionGuidList": [
+                  "9392666f-7126-40e7-8d9a-ea08a9727e55",
+                  "9608f129-fa85-4b99-987c-10166dec4791"
+                ],
+                "connectionIDList": [
+                  "ELBOW10790",
+                  "ELBOW09653"
+                ],
+                "utility": "CABINET(Ex)",
+                "material": "Spiral",
+                "size": "100A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "9608f129-fa85-4b99-987c-10166dec4791",
+                "id": "ELBOW09653",
+                "name": "Elbow-spiral-100A",
+                "type": "ELBOW",
+                "position": [
+                  153035.890625,
+                  59527.0,
+                  11600.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 3599.9,
+                "connectionGuidList": [
+                  "634f054b-05d1-4877-bde5-0330ee724f94",
+                  "5bbc8cb0-14d0-42f6-a9bb-fa03a8cb7f3b"
+                ],
+                "connectionIDList": [
+                  "PIPE10325",
+                  "PIPE08494"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 152978.7,
+                    "y": 59469.9,
+                    "z": 11542.8
+                  },
+                  "max": {
+                    "x": 153155.9,
+                    "y": 59647.1,
+                    "z": 11657.0
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "5bbc8cb0-14d0-42f6-a9bb-fa03a8cb7f3b",
+                "id": "PIPE08494",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  153155.890625,
+                  59527.0,
+                  11600.0
+                ],
+                "connectionGuidList": [
+                  "9608f129-fa85-4b99-987c-10166dec4791",
+                  "7bceea48-d3e0-4044-a2df-39a24c3332f6"
+                ],
+                "connectionIDList": [
+                  "ELBOW09653",
+                  "ELBOW08493"
+                ],
+                "utility": "CABINET(Ex)",
+                "material": "Spiral",
+                "size": "100A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "7bceea48-d3e0-4044-a2df-39a24c3332f6",
+                "id": "ELBOW08493",
+                "name": "Elbow-spiral-100A",
+                "type": "ELBOW",
+                "position": [
+                  155208.0,
+                  59527.0,
+                  11600.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 3568.45,
+                "connectionGuidList": [
+                  "5bbc8cb0-14d0-42f6-a9bb-fa03a8cb7f3b",
+                  "21d549e3-a633-4e33-be15-a0666bb6ae81"
+                ],
+                "connectionIDList": [
+                  "PIPE08494",
+                  "PIPE08495"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 155087.8,
+                    "y": 59469.8,
+                    "z": 11479.8
+                  },
+                  "max": {
+                    "x": 155265.1,
+                    "y": 59584.0,
+                    "z": 11657.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "21d549e3-a633-4e33-be15-a0666bb6ae81",
+                "id": "PIPE08495",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  155208.0,
+                  59527.0,
+                  11480.0
+                ],
+                "connectionGuidList": [
+                  "7bceea48-d3e0-4044-a2df-39a24c3332f6",
+                  "02b6ab49-78c2-4bb3-8335-7ad15a647168"
+                ],
+                "connectionIDList": [
+                  "ELBOW08493",
+                  "ETC10677"
+                ],
+                "utility": "CABINET(Ex)",
+                "material": "Spiral",
+                "size": "100A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "02b6ab49-78c2-4bb3-8335-7ad15a647168",
+                "id": "ETC10677",
+                "name": "Damper-SUS316-100A",
+                "type": "ETC",
+                "position": [
+                  155208.5,
+                  59527.0,
+                  11326.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 3350.95,
+                "connectionGuidList": [
+                  "21d549e3-a633-4e33-be15-a0666bb6ae81",
+                  "fa7a18d9-07f5-444a-bda9-861b26324f70"
+                ],
+                "connectionIDList": [
+                  "PIPE08495",
+                  "TAKEOFF07634"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 155119.9,
+                    "y": 59465.8,
+                    "z": 11249.8
+                  },
+                  "max": {
+                    "x": 155265.5,
+                    "y": 59588.2,
+                    "z": 11452.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "type": "DIRECT_NODE",
+                "id": "direct_02b6ab49-78c2-4bb3-8335-7ad15a647168_fa7a18d9-07f5-444a-bda9-861b26324f70"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "fa7a18d9-07f5-444a-bda9-861b26324f70",
+                "id": "TAKEOFF07634",
+                "name": "takeoff",
+                "type": "TAKEOFF",
+                "position": [
+                  155208.5,
+                  59527.0,
+                  11126.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 3176.0,
+                "connectionGuidList": [
+                  "6c30177f-43eb-4678-a409-52476b9134a2",
+                  "02b6ab49-78c2-4bb3-8335-7ad15a647168"
+                ],
+                "connectionIDList": [
+                  "DUCT07065",
+                  "ETC10677"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 155151.3,
+                    "y": 59469.8,
+                    "z": 11126.0
+                  },
+                  "max": {
+                    "x": 155265.6,
+                    "y": 59584.1,
+                    "z": 11226.0
+                  }
+                }
+              }
+            }
+          ],
+          "node_positions": [
+            [
+              153035.890625,
+              59876.203125,
+              10081.0
+            ],
+            [
+              153035.890625,
+              59876.203125,
+              11600.0
+            ],
+            [
+              153035.890625,
+              59527.0,
+              11600.0
+            ],
+            [
+              155208.0,
+              59527.0,
+              11600.0
+            ],
+            [
+              155208.5,
+              59527.0,
+              11326.0
+            ],
+            [
+              155208.5,
+              59527.0,
+              11126.0
+            ]
+          ],
+          "path_arrow": "R-H-H-R-R",
+          "path_bbox": {
+            "x_min": 153035.9,
+            "x_max": 155208.5,
+            "y_min": 59527.0,
+            "y_max": 59876.2,
+            "z_min": 10081.0,
+            "z_max": 11600.0,
+            "x_range": 2172.6,
+            "y_range": 349.2,
+            "z_range": 1519.0,
+            "xy_spread": 2200.5,
+            "node_count": 6
+          },
+          "path_range": {
+            "x": 2172.6,
+            "y": 349.2,
+            "z": 1519.0
+          },
+          "path_step_vectors": [
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1519.0
+            },
+            {
+              "x": 0.0,
+              "y": -349.2,
+              "z": 0.0
+            },
+            {
+              "x": 2172.1,
+              "y": 0.0,
+              "z": 0.0
+            },
+            {
+              "x": 0.5,
+              "y": 0.0,
+              "z": -274.0
+            },
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -200.0
+            }
+          ],
+          "path_step_lengths": [
+            1519.0,
+            349.2,
+            2172.1,
+            274.0,
+            200.0
+          ],
+          "path_step_vector": "(0.0,0.0,1519.0), (0.0,-349.2,0.0), (2172.1,0.0,0.0), (0.5,0.0,-274.0), (0.0,0.0,-200.0)",
+          "path_step_length": "1519.0, 349.2, 2172.1, 274.0, 200.0",
+          "path_total_length": 4514.3,
+          "h_segments": [
+            {
+              "mean_z": 11600.0,
+              "mid_xy": [
+                153759.927,
+                59643.401
+              ],
+              "node_count": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start_poc_id": "247713ba-b377-4606-9e55-c32844eb6dc9",
+      "start_poc_info": {
+        "guid": "247713ba-b377-4606-9e55-c32844eb6dc9",
+        "id": "POC09351",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          153143.890625,
+          59457.203125,
+          9995.0
+        ],
+        "bay": null,
+        "level": "CSF",
+        "bop": 1994.95,
+        "connectionGuidList": [
+          "d9a86316-8ee5-49d8-b8dd-a29d10f859c8"
+        ],
+        "connectionIDList": [
+          "PIPE09350"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 153140.7,
+            "y": 59454.0,
+            "z": 9994.9
+          },
+          "max": {
+            "x": 153147.0,
+            "y": 59460.3,
+            "z": 9995.0
+          }
+        },
+        "utility": "NF3",
+        "material": "SUS316 EP",
+        "size": "1/4B"
+      },
+      "paths": []
+    },
+    {
+      "start_poc_id": "c8080142-e9dc-4e01-834f-781e6fe77618",
+      "start_poc_info": {
+        "guid": "c8080142-e9dc-4e01-834f-781e6fe77618",
+        "id": "POC11439",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          153143.890625,
+          59537.203125,
+          9995.0
+        ],
+        "bay": null,
+        "level": "CSF",
+        "bop": 1994.95,
+        "connectionGuidList": [
+          "7ece5f42-588c-4f58-8a40-fd17c1280b6b"
+        ],
+        "connectionIDList": [
+          "PIPE11440"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 153140.7,
+            "y": 59534.0,
+            "z": 9994.9
+          },
+          "max": {
+            "x": 153147.0,
+            "y": 59540.3,
+            "z": 9995.0
+          }
+        },
+        "utility": "NF3",
+        "material": "SUS316 EP",
+        "size": "1/4B"
+      },
+      "paths": []
+    },
+    {
+      "start_poc_id": "aea0602d-de65-4750-b995-8b551ba3a414",
+      "start_poc_info": {
+        "guid": "aea0602d-de65-4750-b995-8b551ba3a414",
+        "id": "POC11445",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          153143.890625,
+          59617.203125,
+          9995.0
+        ],
+        "bay": null,
+        "level": "CSF",
+        "bop": 1994.95,
+        "connectionGuidList": [
+          "3afd6e32-dbee-4ff2-b8be-24247eb54112"
+        ],
+        "connectionIDList": [
+          "PIPE11446"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 153140.7,
+            "y": 59614.0,
+            "z": 9994.9
+          },
+          "max": {
+            "x": 153147.0,
+            "y": 59620.3,
+            "z": 9995.0
+          }
+        },
+        "utility": "NF3",
+        "material": "SUS316 EP",
+        "size": "1/4B"
+      },
+      "paths": []
+    },
+    {
+      "start_poc_id": "be4e630d-ba44-4e1c-a0ed-c2057b63ba4f",
+      "start_poc_info": {
+        "guid": "be4e630d-ba44-4e1c-a0ed-c2057b63ba4f",
+        "id": "POC09528",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          153143.890625,
+          59697.203125,
+          9995.0
+        ],
+        "bay": null,
+        "level": "CSF",
+        "bop": 1994.95,
+        "connectionGuidList": [
+          "7e8050d0-4696-4413-908a-aedb6a2e82c0"
+        ],
+        "connectionIDList": [
+          "PIPE09527"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 153140.7,
+            "y": 59694.0,
+            "z": 9994.9
+          },
+          "max": {
+            "x": 153147.0,
+            "y": 59700.3,
+            "z": 9995.0
+          }
+        },
+        "utility": "NF3",
+        "material": "SUS316 EP",
+        "size": "1/4B"
+      },
+      "paths": []
+    },
+    {
+      "start_poc_id": "c3068cac-cc14-4a20-aa5e-7aa55b3618e0",
+      "start_poc_info": {
+        "guid": "c3068cac-cc14-4a20-aa5e-7aa55b3618e0",
+        "id": "POC11312",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          153143.890625,
+          59777.203125,
+          9995.0
+        ],
+        "bay": null,
+        "level": "CSF",
+        "bop": 1994.95,
+        "connectionGuidList": [
+          "8ca1401f-a844-41d9-a483-449456d75281"
+        ],
+        "connectionIDList": [
+          "PIPE11311"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 153140.7,
+            "y": 59774.0,
+            "z": 9994.9
+          },
+          "max": {
+            "x": 153147.0,
+            "y": 59780.3,
+            "z": 9995.0
+          }
+        },
+        "utility": "NF3",
+        "material": "SUS316 EP",
+        "size": "1/4B"
+      },
+      "paths": []
+    },
+    {
+      "start_poc_id": "91d47d4c-cbea-4f7a-80c8-a2b9689d36e0",
+      "start_poc_info": {
+        "guid": "91d47d4c-cbea-4f7a-80c8-a2b9689d36e0",
+        "id": "POC10485",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          153143.890625,
+          59857.203125,
+          9995.0
+        ],
+        "bay": null,
+        "level": "CSF",
+        "bop": 1994.95,
+        "connectionGuidList": [
+          "e78a125a-8dd0-4c04-ae17-45b833232d44"
+        ],
+        "connectionIDList": [
+          "PIPE10484"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 153140.7,
+            "y": 59854.0,
+            "z": 9994.9
+          },
+          "max": {
+            "x": 153147.0,
+            "y": 59860.3,
+            "z": 9995.0
+          }
+        },
+        "utility": "NF3",
+        "material": "SUS316 EP",
+        "size": "1/4B"
+      },
+      "paths": []
+    },
+    {
+      "start_poc_id": "85906ce4-7424-4693-b313-962eda53f645",
+      "start_poc_info": {
+        "guid": "85906ce4-7424-4693-b313-962eda53f645",
+        "id": "POC10532",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          153143.890625,
+          59937.203125,
+          9995.0
+        ],
+        "bay": null,
+        "level": "CSF",
+        "bop": 1994.95,
+        "connectionGuidList": [
+          "7012fbcd-7c2d-4201-9332-411f98503395"
+        ],
+        "connectionIDList": [
+          "PIPE10531"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 153140.7,
+            "y": 59934.0,
+            "z": 9994.9
+          },
+          "max": {
+            "x": 153147.0,
+            "y": 59940.3,
+            "z": 9995.0
+          }
+        },
+        "utility": "NF3",
+        "material": "SUS316 EP",
+        "size": "1/4B"
+      },
+      "paths": []
+    },
+    {
+      "start_poc_id": "08135e22-2592-4d81-a473-ba749c74b54d",
+      "start_poc_info": {
+        "guid": "08135e22-2592-4d81-a473-ba749c74b54d",
+        "id": "POC10129",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          153143.890625,
+          60017.203125,
+          9995.0
+        ],
+        "bay": null,
+        "level": "CSF",
+        "bop": 1994.95,
+        "connectionGuidList": [
+          "4208492e-b9af-48bf-8c63-34fe92836cbf"
+        ],
+        "connectionIDList": [
+          "PIPE10128"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 153140.7,
+            "y": 60014.0,
+            "z": 9994.9
+          },
+          "max": {
+            "x": 153147.0,
+            "y": 60020.3,
+            "z": 9995.0
+          }
+        },
+        "utility": "NF3",
+        "material": "SUS316 EP",
+        "size": "1/4B"
+      },
+      "paths": []
+    },
+    {
+      "start_poc_id": "ebdabda2-7e45-4493-af7c-c6fd41a07db8",
+      "start_poc_info": {
+        "guid": "ebdabda2-7e45-4493-af7c-c6fd41a07db8",
+        "id": "POC10705",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          153143.890625,
+          60097.203125,
+          9995.0
+        ],
+        "bay": null,
+        "level": "CSF",
+        "bop": 1994.95,
+        "connectionGuidList": [
+          "c1984c1a-d443-424b-85d5-7877ff9353fc"
+        ],
+        "connectionIDList": [
+          "PIPE10704"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 153140.7,
+            "y": 60094.0,
+            "z": 9994.9
+          },
+          "max": {
+            "x": 153147.0,
+            "y": 60100.3,
+            "z": 9995.0
+          }
+        },
+        "utility": "NF3",
+        "material": "SUS316 EP",
+        "size": "1/4B"
+      },
+      "paths": []
+    },
+    {
+      "start_poc_id": "5263977b-74ca-4f5d-8fa6-e215ba5a2059",
+      "start_poc_info": {
+        "guid": "5263977b-74ca-4f5d-8fa6-e215ba5a2059",
+        "id": "POC11459",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          153143.890625,
+          60177.203125,
+          9995.0
+        ],
+        "bay": null,
+        "level": "CSF",
+        "bop": 1994.95,
+        "connectionGuidList": [
+          "28e879f9-f063-47e3-a847-287e3c8cc119"
+        ],
+        "connectionIDList": [
+          "PIPE11460"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 153140.7,
+            "y": 60174.0,
+            "z": 9994.9
+          },
+          "max": {
+            "x": 153147.0,
+            "y": 60180.3,
+            "z": 9995.0
+          }
+        },
+        "utility": "NF3",
+        "material": "SUS316 EP",
+        "size": "1/4B"
+      },
+      "paths": []
+    },
+    {
+      "start_poc_id": "04a30720-70da-4d1c-afa8-76e8cfb70572",
+      "start_poc_info": {
+        "guid": "04a30720-70da-4d1c-afa8-76e8cfb70572",
+        "id": "POC11463",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          153035.890625,
+          60026.203125,
+          9871.0
+        ],
+        "bay": null,
+        "level": "CSF",
+        "bop": 1870.95,
+        "connectionGuidList": [
+          "51ce1344-6a43-4dbc-bda5-a1255f36fee2"
+        ],
+        "connectionIDList": [
+          "PIPE11464"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 153031.1,
+            "y": 60021.4,
+            "z": 9870.9
+          },
+          "max": {
+            "x": 153040.6,
+            "y": 60030.9,
+            "z": 9871.0
+          }
+        },
+        "utility": "NF3",
+        "material": "SUS316 EP",
+        "size": "3/8B"
+      },
+      "paths": []
+    }
+  ]
+}

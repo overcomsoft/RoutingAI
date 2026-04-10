@@ -1,0 +1,1515 @@
+{
+  "source_file": "./data-v10\\ETCH_ELOHJ07_260323_082636_total.json",
+  "equipment_id": "36d42b99-46da-4cc7-a2e7-dddb0dd5d021",
+  "equipment_name": "Comp_Pump_KAS_SDE30M20-LT_9??",
+  "equipment_process": "ETCH",
+  "equipment_maker": "samsung",
+  "created_at": "2026-04-05T19:48:13.369344",
+  "poc_paths": [
+    {
+      "start_poc_id": "f8328a9d-cead-48e4-8d33-b4abe4d192c5",
+      "start_poc_info": {
+        "guid": "f8328a9d-cead-48e4-8d33-b4abe4d192c5",
+        "id": "POC15688",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          114650.0,
+          12862.7001953125,
+          3145.0
+        ],
+        "bay": null,
+        "level": "FSF",
+        "bop": 144.95,
+        "connectionGuidList": [
+          "b6e93a28-2f39-49ef-86df-d6a1cbe9089e"
+        ],
+        "connectionIDList": [
+          "FLANGE15687"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 114625.7,
+            "y": 12862.7,
+            "z": 3120.7
+          },
+          "max": {
+            "x": 114674.2,
+            "y": 12862.7,
+            "z": 3169.2
+          }
+        },
+        "utility": "ACID",
+        "material": null,
+        "size": "40A"
+      },
+      "paths": [
+        {
+          "terminal_label": "Duct / TakeOff 도달",
+          "branch_depth": 0,
+          "branch_segments": [],
+          "path_summary": "PO->FL->RD->EB->EB->EB->EB->EB->CL->TK",
+          "end_node_id": "bb37c60f-be2a-4173-9871-45bfca48ea8a",
+          "end_node_type": "TAKEOFF",
+          "steps": [
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "f8328a9d-cead-48e4-8d33-b4abe4d192c5",
+                "id": "POC15688",
+                "name": "start",
+                "type": "POC",
+                "position": [
+                  114650.0,
+                  12862.7001953125,
+                  3145.0
+                ],
+                "bay": null,
+                "level": "FSF",
+                "bop": 144.95,
+                "connectionGuidList": [
+                  "b6e93a28-2f39-49ef-86df-d6a1cbe9089e"
+                ],
+                "connectionIDList": [
+                  "FLANGE15687"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 114625.7,
+                    "y": 12862.7,
+                    "z": 3120.7
+                  },
+                  "max": {
+                    "x": 114674.2,
+                    "y": 12862.7,
+                    "z": 3169.2
+                  }
+                },
+                "utility": "ACID",
+                "material": null,
+                "size": "40A"
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "type": "DIRECT_NODE",
+                "id": "direct_f8328a9d-cead-48e4-8d33-b4abe4d192c5_b6e93a28-2f39-49ef-86df-d6a1cbe9089e"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "b6e93a28-2f39-49ef-86df-d6a1cbe9089e",
+                "id": "FLANGE15687",
+                "name": "Flange_NW Flange-SUS304-40A",
+                "type": "FLANGE",
+                "position": [
+                  114650.0,
+                  12872.7001953125,
+                  3145.0
+                ],
+                "bay": null,
+                "level": "FSF",
+                "bop": 145.0,
+                "connectionGuidList": [
+                  "723a2a54-d830-4d3d-b2e3-2f25b6ab03dc",
+                  "f8328a9d-cead-48e4-8d33-b4abe4d192c5"
+                ],
+                "connectionIDList": [
+                  "PIPE14866",
+                  "POC15688"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 114622.4,
+                    "y": 12862.6,
+                    "z": 3118.8
+                  },
+                  "max": {
+                    "x": 114677.4,
+                    "y": 12882.6,
+                    "z": 3171.2
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "723a2a54-d830-4d3d-b2e3-2f25b6ab03dc",
+                "id": "PIPE14866",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  114650.0,
+                  12882.7001953125,
+                  3145.0
+                ],
+                "connectionGuidList": [
+                  "b6e93a28-2f39-49ef-86df-d6a1cbe9089e",
+                  "51222984-fb50-4240-8b82-076d8522d194"
+                ],
+                "connectionIDList": [
+                  "FLANGE15687",
+                  "REDUCER14864"
+                ],
+                "utility": "ACID",
+                "material": null,
+                "size": "40A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "51222984-fb50-4240-8b82-076d8522d194",
+                "id": "REDUCER14864",
+                "name": "Reducer-???-050Ax040A",
+                "type": "REDUCER",
+                "position": [
+                  114650.0,
+                  13100.5556640625,
+                  3145.0
+                ],
+                "bay": null,
+                "level": "FSF",
+                "bop": 145.0,
+                "connectionGuidList": [
+                  "442d5c6d-a71c-4dbc-9f6d-a49280a37b07",
+                  "723a2a54-d830-4d3d-b2e3-2f25b6ab03dc"
+                ],
+                "connectionIDList": [
+                  "ELBOW14865",
+                  "PIPE14866"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 114619.7,
+                    "y": 13062.5,
+                    "z": 3114.8
+                  },
+                  "max": {
+                    "x": 114680.1,
+                    "y": 13138.5,
+                    "z": 3175.2
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "type": "DIRECT_NODE",
+                "id": "direct_51222984-fb50-4240-8b82-076d8522d194_442d5c6d-a71c-4dbc-9f6d-a49280a37b07"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "442d5c6d-a71c-4dbc-9f6d-a49280a37b07",
+                "id": "ELBOW14865",
+                "name": "Elbow_elbowshort-???-050A",
+                "type": "ELBOW",
+                "position": [
+                  114650.0,
+                  13189.4560546875,
+                  3145.0
+                ],
+                "bay": null,
+                "level": "FSF",
+                "bop": 155.2,
+                "connectionGuidList": [
+                  "51222984-fb50-4240-8b82-076d8522d194",
+                  "6eb7183c-8503-4c4f-addb-1c9b6a732e9d"
+                ],
+                "connectionIDList": [
+                  "REDUCER14864",
+                  "PIPE15312"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 114619.7,
+                    "y": 13138.7,
+                    "z": 3114.7
+                  },
+                  "max": {
+                    "x": 114680.1,
+                    "y": 13219.6,
+                    "z": 3195.7
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "6eb7183c-8503-4c4f-addb-1c9b6a732e9d",
+                "id": "PIPE15312",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  114650.0,
+                  13189.4560546875,
+                  3195.80004882812
+                ],
+                "connectionGuidList": [
+                  "442d5c6d-a71c-4dbc-9f6d-a49280a37b07",
+                  "59c04cda-c854-4823-82a6-6a4ec7ee310d"
+                ],
+                "connectionIDList": [
+                  "ELBOW14865",
+                  "ELBOW15911"
+                ],
+                "utility": "ACID",
+                "material": null,
+                "size": "50A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "59c04cda-c854-4823-82a6-6a4ec7ee310d",
+                "id": "ELBOW15911",
+                "name": "Elbow_elbowshort-???-050A",
+                "type": "ELBOW",
+                "position": [
+                  114650.0,
+                  13189.4560546875,
+                  5400.00048828125
+                ],
+                "bay": null,
+                "level": "FSF",
+                "bop": 2389.75,
+                "connectionGuidList": [
+                  "6eb7183c-8503-4c4f-addb-1c9b6a732e9d",
+                  "a8cb5f12-1b18-4ec2-a32d-ba8ab6ed7acd"
+                ],
+                "connectionIDList": [
+                  "PIPE15312",
+                  "PIPE16067"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 114619.7,
+                    "y": 13159.2,
+                    "z": 5349.3
+                  },
+                  "max": {
+                    "x": 114680.1,
+                    "y": 13240.1,
+                    "z": 5430.2
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "a8cb5f12-1b18-4ec2-a32d-ba8ab6ed7acd",
+                "id": "PIPE16067",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  114650.0,
+                  13240.255859375,
+                  5400.00048828125
+                ],
+                "connectionGuidList": [
+                  "59c04cda-c854-4823-82a6-6a4ec7ee310d",
+                  "c246ceb8-b070-44c8-aa36-1bd78b808ce6"
+                ],
+                "connectionIDList": [
+                  "ELBOW15911",
+                  "ELBOW15794"
+                ],
+                "utility": "ACID",
+                "material": null,
+                "size": "50A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "c246ceb8-b070-44c8-aa36-1bd78b808ce6",
+                "id": "ELBOW15794",
+                "name": "Elbow_elbowshort-???-050A",
+                "type": "ELBOW",
+                "position": [
+                  114650.0,
+                  13549.4560546875,
+                  5400.00048828125
+                ],
+                "bay": null,
+                "level": "FSF",
+                "bop": 2400.0,
+                "connectionGuidList": [
+                  "a8cb5f12-1b18-4ec2-a32d-ba8ab6ed7acd",
+                  "91ab73dd-19a8-4f86-9ebc-b0500bdd7441"
+                ],
+                "connectionIDList": [
+                  "PIPE16067",
+                  "PIPE15793"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 114619.7,
+                    "y": 13498.7,
+                    "z": 5369.8
+                  },
+                  "max": {
+                    "x": 114700.6,
+                    "y": 13579.6,
+                    "z": 5430.2
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "91ab73dd-19a8-4f86-9ebc-b0500bdd7441",
+                "id": "PIPE15793",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  114700.796875,
+                  13549.4560546875,
+                  5400.00048828125
+                ],
+                "connectionGuidList": [
+                  "c246ceb8-b070-44c8-aa36-1bd78b808ce6",
+                  "7dad34b1-2535-4855-aed1-b6a6c8027c16"
+                ],
+                "connectionIDList": [
+                  "ELBOW15794",
+                  "ELBOW15795"
+                ],
+                "utility": "ACID",
+                "material": null,
+                "size": "50A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "7dad34b1-2535-4855-aed1-b6a6c8027c16",
+                "id": "ELBOW15795",
+                "name": "Elbow_elbowshort-???-050A",
+                "type": "ELBOW",
+                "position": [
+                  117000.0,
+                  13549.4560546875,
+                  5400.0
+                ],
+                "bay": null,
+                "level": "FSF",
+                "bop": 2400.0,
+                "connectionGuidList": [
+                  "91ab73dd-19a8-4f86-9ebc-b0500bdd7441",
+                  "5a324448-ef6e-41ca-bb06-a01aa60541d3"
+                ],
+                "connectionIDList": [
+                  "PIPE15793",
+                  "PIPE16044"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 116949.2,
+                    "y": 13498.7,
+                    "z": 5369.8
+                  },
+                  "max": {
+                    "x": 117030.1,
+                    "y": 13579.6,
+                    "z": 5430.2
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "5a324448-ef6e-41ca-bb06-a01aa60541d3",
+                "id": "PIPE16044",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  117000.0,
+                  13498.6552734375,
+                  5400.0
+                ],
+                "connectionGuidList": [
+                  "7dad34b1-2535-4855-aed1-b6a6c8027c16",
+                  "b42cc5a9-1165-415e-8bda-b32502255c54"
+                ],
+                "connectionIDList": [
+                  "ELBOW15795",
+                  "ELBOW15560"
+                ],
+                "utility": "ACID",
+                "material": null,
+                "size": "50A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "b42cc5a9-1165-415e-8bda-b32502255c54",
+                "id": "ELBOW15560",
+                "name": "Elbow_elbowshort-???-050A",
+                "type": "ELBOW",
+                "position": [
+                  117000.0,
+                  11900.0,
+                  5400.0
+                ],
+                "bay": null,
+                "level": "FSF",
+                "bop": 2400.0,
+                "connectionGuidList": [
+                  "5a324448-ef6e-41ca-bb06-a01aa60541d3",
+                  "97126c72-405d-4652-a598-6428f6583375"
+                ],
+                "connectionIDList": [
+                  "PIPE16044",
+                  "PIPE15559"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 116969.8,
+                    "y": 11869.7,
+                    "z": 5369.8
+                  },
+                  "max": {
+                    "x": 117050.7,
+                    "y": 11950.6,
+                    "z": 5430.2
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "97126c72-405d-4652-a598-6428f6583375",
+                "id": "PIPE15559",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  117050.796875,
+                  11900.0,
+                  5400.0
+                ],
+                "connectionGuidList": [
+                  "b42cc5a9-1165-415e-8bda-b32502255c54",
+                  "ba241c32-4e52-4f83-96dc-480ee58ee8d8"
+                ],
+                "connectionIDList": [
+                  "ELBOW15560",
+                  "CLAMP15561"
+                ],
+                "utility": "ACID",
+                "material": null,
+                "size": "50A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "ba241c32-4e52-4f83-96dc-480ee58ee8d8",
+                "id": "CLAMP15561",
+                "name": "Clamp_NW Clamp-SUS304-50A-Assembly",
+                "type": "CLAMP",
+                "position": [
+                  117450.0234375,
+                  11900.0,
+                  5400.23779296875
+                ],
+                "bay": null,
+                "level": "FSF",
+                "bop": 2400.2,
+                "connectionGuidList": [
+                  "97126c72-405d-4652-a598-6428f6583375",
+                  "256d050f-9541-41d7-a240-05cfdda2ae75"
+                ],
+                "connectionIDList": [
+                  "PIPE15559",
+                  "PIPE15946"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 117429.9,
+                    "y": 11838.4,
+                    "z": 5353.2
+                  },
+                  "max": {
+                    "x": 117470.1,
+                    "y": 11961.5,
+                    "z": 5447.2
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "256d050f-9541-41d7-a240-05cfdda2ae75",
+                "id": "PIPE15946",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  117515.0,
+                  11900.0,
+                  5400.0
+                ],
+                "connectionGuidList": [
+                  "bb37c60f-be2a-4173-9871-45bfca48ea8a",
+                  "ba241c32-4e52-4f83-96dc-480ee58ee8d8"
+                ],
+                "connectionIDList": [
+                  "TAKEOFF15314",
+                  "CLAMP15561"
+                ],
+                "utility": "ACID",
+                "material": null,
+                "size": "50A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "bb37c60f-be2a-4173-9871-45bfca48ea8a",
+                "id": "TAKEOFF15314",
+                "name": "takeoff",
+                "type": "TAKEOFF",
+                "position": [
+                  117565.0,
+                  11900.0,
+                  5400.0
+                ],
+                "bay": null,
+                "level": "FSF",
+                "bop": 2399.95,
+                "connectionGuidList": [
+                  "a004b381-141d-43c5-bdd6-f72dd8ec66ee",
+                  "256d050f-9541-41d7-a240-05cfdda2ae75"
+                ],
+                "connectionIDList": [
+                  "BRANCH PIPE15313",
+                  "PIPE15946"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 117515.0,
+                    "y": 11869.7,
+                    "z": 5369.7
+                  },
+                  "max": {
+                    "x": 117565.0,
+                    "y": 11930.2,
+                    "z": 5430.2
+                  }
+                }
+              }
+            }
+          ],
+          "node_positions": [
+            [
+              114650.0,
+              12862.7001953125,
+              3145.0
+            ],
+            [
+              114650.0,
+              12872.7001953125,
+              3145.0
+            ],
+            [
+              114650.0,
+              13100.5556640625,
+              3145.0
+            ],
+            [
+              114650.0,
+              13189.4560546875,
+              3145.0
+            ],
+            [
+              114650.0,
+              13189.4560546875,
+              5400.00048828125
+            ],
+            [
+              114650.0,
+              13549.4560546875,
+              5400.00048828125
+            ],
+            [
+              117000.0,
+              13549.4560546875,
+              5400.0
+            ],
+            [
+              117000.0,
+              11900.0,
+              5400.0
+            ],
+            [
+              117450.0234375,
+              11900.0,
+              5400.23779296875
+            ],
+            [
+              117565.0,
+              11900.0,
+              5400.0
+            ]
+          ],
+          "path_arrow": "H-H-H-R-H-H-H-H-H",
+          "path_bbox": {
+            "x_min": 114650.0,
+            "x_max": 117565.0,
+            "y_min": 11900.0,
+            "y_max": 13549.5,
+            "z_min": 3145.0,
+            "z_max": 5400.2,
+            "x_range": 2915.0,
+            "y_range": 1649.5,
+            "z_range": 2255.2,
+            "xy_spread": 3349.3,
+            "node_count": 10
+          },
+          "path_range": {
+            "x": 2915.0,
+            "y": 1649.5,
+            "z": 2255.2
+          },
+          "path_step_vectors": [
+            {
+              "x": 0.0,
+              "y": 10.0,
+              "z": 0.0
+            },
+            {
+              "x": 0.0,
+              "y": 227.9,
+              "z": 0.0
+            },
+            {
+              "x": 0.0,
+              "y": 88.9,
+              "z": 0.0
+            },
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 2255.0
+            },
+            {
+              "x": 0.0,
+              "y": 360.0,
+              "z": 0.0
+            },
+            {
+              "x": 2350.0,
+              "y": 0.0,
+              "z": -0.0
+            },
+            {
+              "x": 0.0,
+              "y": -1649.5,
+              "z": 0.0
+            },
+            {
+              "x": 450.0,
+              "y": 0.0,
+              "z": 0.2
+            },
+            {
+              "x": 115.0,
+              "y": 0.0,
+              "z": -0.2
+            }
+          ],
+          "path_step_lengths": [
+            10.0,
+            227.9,
+            88.9,
+            2255.0,
+            360.0,
+            2350.0,
+            1649.5,
+            450.0,
+            115.0
+          ],
+          "path_step_vector": "(0.0,10.0,0.0), (0.0,227.9,0.0), (0.0,88.9,0.0), (0.0,0.0,2255.0), (0.0,360.0,0.0), (2350.0,0.0,-0.0), (0.0,-1649.5,0.0), (450.0,0.0,0.2), (115.0,0.0,-0.2)",
+          "path_step_length": "10.0, 227.9, 88.9, 2255.0, 360.0, 2350.0, 1649.5, 450.0, 115.0",
+          "path_total_length": 7506.3,
+          "h_segments": [
+            {
+              "mean_z": 3145.0,
+              "mid_xy": [
+                114650.0,
+                13006.353
+              ],
+              "node_count": 4
+            },
+            {
+              "mean_z": 5400.04,
+              "mid_xy": [
+                116385.837,
+                12664.728
+              ],
+              "node_count": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start_poc_id": "2d4ceb58-1645-441d-8f9b-949759800329",
+      "start_poc_info": {
+        "guid": "2d4ceb58-1645-441d-8f9b-949759800329",
+        "id": "POC14491",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          114650.0,
+          12418.7001953125,
+          4007.99975585938
+        ],
+        "bay": null,
+        "level": "FSF",
+        "bop": 1007.9,
+        "connectionGuidList": [
+          "caf5dba4-90af-4877-8256-dd85a6685f3d"
+        ],
+        "connectionIDList": [
+          "BELLOWS14490"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 114592.8,
+            "y": 12361.5,
+            "z": 4007.9
+          },
+          "max": {
+            "x": 114707.1,
+            "y": 12475.8,
+            "z": 4007.9
+          }
+        },
+        "utility": "",
+        "material": "SUS304 AP",
+        "size": "100A"
+      },
+      "paths": [
+        {
+          "terminal_label": "다른 장비 PoC 도달",
+          "branch_depth": 0,
+          "branch_segments": [],
+          "path_summary": "PO->BL->FL->EB->EB->EB->RD->EB->FL->BL->PO",
+          "end_node_id": "64ce731f-e3e7-4b1c-9638-fe0c592d03b8",
+          "end_node_type": "POC",
+          "steps": [
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "2d4ceb58-1645-441d-8f9b-949759800329",
+                "id": "POC14491",
+                "name": "start",
+                "type": "POC",
+                "position": [
+                  114650.0,
+                  12418.7001953125,
+                  4007.99975585938
+                ],
+                "bay": null,
+                "level": "FSF",
+                "bop": 1007.9,
+                "connectionGuidList": [
+                  "caf5dba4-90af-4877-8256-dd85a6685f3d"
+                ],
+                "connectionIDList": [
+                  "BELLOWS14490"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 114592.8,
+                    "y": 12361.5,
+                    "z": 4007.9
+                  },
+                  "max": {
+                    "x": 114707.1,
+                    "y": 12475.8,
+                    "z": 4007.9
+                  }
+                },
+                "utility": "",
+                "material": "SUS304 AP",
+                "size": "100A"
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "type": "DIRECT_NODE",
+                "id": "direct_2d4ceb58-1645-441d-8f9b-949759800329_caf5dba4-90af-4877-8256-dd85a6685f3d"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "caf5dba4-90af-4877-8256-dd85a6685f3d",
+                "id": "BELLOWS14490",
+                "name": "Bellows-SUS316-125A",
+                "type": "BELLOWS",
+                "position": [
+                  114650.0,
+                  12418.7001953125,
+                  4082.99975585938
+                ],
+                "bay": null,
+                "level": "FSF",
+                "bop": 1082.9,
+                "connectionGuidList": [
+                  "2d4ceb58-1645-441d-8f9b-949759800329",
+                  "be171a54-7a7b-45cb-8e0a-6344a4bfb65d"
+                ],
+                "connectionIDList": [
+                  "POC14491",
+                  "FLANGE14457"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 114551.5,
+                    "y": 12318.6,
+                    "z": 4007.9
+                  },
+                  "max": {
+                    "x": 114748.5,
+                    "y": 12518.6,
+                    "z": 4157.9
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "type": "DIRECT_NODE",
+                "id": "direct_caf5dba4-90af-4877-8256-dd85a6685f3d_be171a54-7a7b-45cb-8e0a-6344a4bfb65d"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "be171a54-7a7b-45cb-8e0a-6344a4bfb65d",
+                "id": "FLANGE14457",
+                "name": "Flange_NW Flange-SUS316-125A",
+                "type": "FLANGE",
+                "position": [
+                  114650.0,
+                  12418.7001953125,
+                  4168.0
+                ],
+                "bay": null,
+                "level": "FSF",
+                "bop": 1167.9,
+                "connectionGuidList": [
+                  "13272c06-74ce-47e0-aa09-a3d37360b0c7",
+                  "caf5dba4-90af-4877-8256-dd85a6685f3d"
+                ],
+                "connectionIDList": [
+                  "PIPE14440",
+                  "BELLOWS14490"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 114572.5,
+                    "y": 12341.1,
+                    "z": 4157.9
+                  },
+                  "max": {
+                    "x": 114727.5,
+                    "y": 12496.1,
+                    "z": 4177.9
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "13272c06-74ce-47e0-aa09-a3d37360b0c7",
+                "id": "PIPE14440",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  114649.96875,
+                  12418.6982421875,
+                  12339.541015625
+                ],
+                "connectionGuidList": [
+                  "41a1092c-da60-4254-b647-8455f551d948",
+                  "be171a54-7a7b-45cb-8e0a-6344a4bfb65d"
+                ],
+                "connectionIDList": [
+                  "ELBOW14439",
+                  "FLANGE14457"
+                ],
+                "utility": "PUMP",
+                "material": null,
+                "size": "125A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "41a1092c-da60-4254-b647-8455f551d948",
+                "id": "ELBOW14439",
+                "name": "Elbow_Elbow45-???-125A",
+                "type": "ELBOW",
+                "position": [
+                  114649.96875,
+                  12418.6982421875,
+                  12418.44140625
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 4431.5,
+                "connectionGuidList": [
+                  "13272c06-74ce-47e0-aa09-a3d37360b0c7",
+                  "45b4a920-36a2-4bca-a463-5a5f0a1a5986"
+                ],
+                "connectionIDList": [
+                  "PIPE14440",
+                  "PIPE14441"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 114483.4,
+                    "y": 12222.5,
+                    "z": 12339.5
+                  },
+                  "max": {
+                    "x": 114747.3,
+                    "y": 12516.0,
+                    "z": 12523.5
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "45b4a920-36a2-4bca-a463-5a5f0a1a5986",
+                "id": "PIPE14441",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  113981.953125,
+                  11464.4033203125,
+                  13583.310546875
+                ],
+                "connectionGuidList": [
+                  "42817284-ff7b-4510-9611-2a4685e75b99",
+                  "41a1092c-da60-4254-b647-8455f551d948"
+                ],
+                "connectionIDList": [
+                  "ELBOW14472",
+                  "ELBOW14439"
+                ],
+                "utility": "PUMP",
+                "material": null,
+                "size": "125A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "42817284-ff7b-4510-9611-2a4685e75b99",
+                "id": "ELBOW14472",
+                "name": "Elbow_Elbow45-???-125A",
+                "type": "ELBOW",
+                "position": [
+                  113949.9609375,
+                  11418.6982421875,
+                  13639.1015625
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 5690.95,
+                "connectionGuidList": [
+                  "45b4a920-36a2-4bca-a463-5a5f0a1a5986",
+                  "df10b98c-38c3-4e9f-b12b-0e15f057fdba"
+                ],
+                "connectionIDList": [
+                  "PIPE14441",
+                  "PIPE14473"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 113896.3,
+                    "y": 11277.2,
+                    "z": 13533.8
+                  },
+                  "max": {
+                    "x": 114116.4,
+                    "y": 11614.8,
+                    "z": 13848.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "df10b98c-38c3-4e9f-b12b-0e15f057fdba",
+                "id": "PIPE14473",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  113949.9609375,
+                  11418.6982421875,
+                  14745.9306640625
+                ],
+                "connectionGuidList": [
+                  "15ca8d54-e572-4c69-b35d-70b7aadff2bd",
+                  "42817284-ff7b-4510-9611-2a4685e75b99"
+                ],
+                "connectionIDList": [
+                  "ELBOW14481",
+                  "ELBOW14472"
+                ],
+                "utility": "PUMP",
+                "material": null,
+                "size": "125A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "15ca8d54-e572-4c69-b35d-70b7aadff2bd",
+                "id": "ELBOW14481",
+                "name": "Elbow_Elbow45-???-125A",
+                "type": "ELBOW",
+                "position": [
+                  113949.9609375,
+                  11418.6982421875,
+                  14824.830078125
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1137.9,
+                "connectionGuidList": [
+                  "df10b98c-38c3-4e9f-b12b-0e15f057fdba",
+                  "5d34e749-c762-4ea6-85be-c0b345950023"
+                ],
+                "connectionIDList": [
+                  "PIPE14473",
+                  "PIPE14482"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 113859.1,
+                    "y": 11283.4,
+                    "z": 14745.9
+                  },
+                  "max": {
+                    "x": 114152.8,
+                    "y": 11509.4,
+                    "z": 14929.9
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "5d34e749-c762-4ea6-85be-c0b345950023",
+                "id": "PIPE14482",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  114285.9296875,
+                  11285.29296875,
+                  15186.3154296875
+                ],
+                "connectionGuidList": [
+                  "446b0c84-1da4-4b27-ae7f-617e6c68b6ef",
+                  "15ca8d54-e572-4c69-b35d-70b7aadff2bd"
+                ],
+                "connectionIDList": [
+                  "REDUCER14446",
+                  "ELBOW14481"
+                ],
+                "utility": "PUMP",
+                "material": null,
+                "size": "125A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "446b0c84-1da4-4b27-ae7f-617e6c68b6ef",
+                "id": "REDUCER14446",
+                "name": "Reducer-???-125Ax050A",
+                "type": "REDUCER",
+                "position": [
+                  114327.6640625,
+                  11268.7216796875,
+                  15231.216796875
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1531.2,
+                "connectionGuidList": [
+                  "5d34e749-c762-4ea6-85be-c0b345950023",
+                  "4cc3fe7f-136c-4a89-91fc-b25d4a4bc3dc"
+                ],
+                "connectionIDList": [
+                  "PIPE14482",
+                  "ELBOW14445"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 114218.2,
+                    "y": 11177.3,
+                    "z": 15129.7
+                  },
+                  "max": {
+                    "x": 114437.0,
+                    "y": 11360.1,
+                    "z": 15332.7
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "type": "DIRECT_NODE",
+                "id": "direct_446b0c84-1da4-4b27-ae7f-617e6c68b6ef_4cc3fe7f-136c-4a89-91fc-b25d4a4bc3dc"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "4cc3fe7f-136c-4a89-91fc-b25d4a4bc3dc",
+                "id": "ELBOW14445",
+                "name": "Elbow_Elbow45-???-050A",
+                "type": "ELBOW",
+                "position": [
+                  114390.15625,
+                  11243.9052734375,
+                  15298.462890625
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1618.9,
+                "connectionGuidList": [
+                  "446b0c84-1da4-4b27-ae7f-617e6c68b6ef",
+                  "adaca23b-6cd8-4399-a42b-52a7447f37ef"
+                ],
+                "connectionIDList": [
+                  "REDUCER14446",
+                  "FLANGE14447"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 114308.2,
+                    "y": 11216.2,
+                    "z": 15254.7
+                  },
+                  "max": {
+                    "x": 114449.8,
+                    "y": 11300.0,
+                    "z": 15383.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "type": "DIRECT_NODE",
+                "id": "direct_4cc3fe7f-136c-4a89-91fc-b25d4a4bc3dc_adaca23b-6cd8-4399-a42b-52a7447f37ef"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "adaca23b-6cd8-4399-a42b-52a7447f37ef",
+                "id": "FLANGE14447",
+                "name": "Flange_NW Flange-SUS316-50A",
+                "type": "FLANGE",
+                "position": [
+                  114390.15625,
+                  11243.9052734375,
+                  15340.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1640.0,
+                "connectionGuidList": [
+                  "4cc3fe7f-136c-4a89-91fc-b25d4a4bc3dc",
+                  "f0c5601e-aa00-46a1-be6b-f665bf7c0709"
+                ],
+                "connectionIDList": [
+                  "ELBOW14445",
+                  "BELLOWS14496"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 114352.6,
+                    "y": 11206.4,
+                    "z": 15330.0
+                  },
+                  "max": {
+                    "x": 114427.6,
+                    "y": 11281.4,
+                    "z": 15350.0
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "type": "DIRECT_NODE",
+                "id": "direct_adaca23b-6cd8-4399-a42b-52a7447f37ef_f0c5601e-aa00-46a1-be6b-f665bf7c0709"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "f0c5601e-aa00-46a1-be6b-f665bf7c0709",
+                "id": "BELLOWS14496",
+                "name": "Bellows-SUS316-50A",
+                "type": "BELLOWS",
+                "position": [
+                  114390.15625,
+                  11243.9052734375,
+                  15425.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1725.0,
+                "connectionGuidList": [
+                  "adaca23b-6cd8-4399-a42b-52a7447f37ef",
+                  "64ce731f-e3e7-4b1c-9638-fe0c592d03b8"
+                ],
+                "connectionIDList": [
+                  "FLANGE14447",
+                  "POC14500"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 114325.1,
+                    "y": 11178.9,
+                    "z": 15350.0
+                  },
+                  "max": {
+                    "x": 114455.1,
+                    "y": 11308.9,
+                    "z": 15500.0
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "type": "DIRECT_NODE",
+                "id": "direct_f0c5601e-aa00-46a1-be6b-f665bf7c0709_64ce731f-e3e7-4b1c-9638-fe0c592d03b8"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "64ce731f-e3e7-4b1c-9638-fe0c592d03b8",
+                "id": "POC14500",
+                "name": "end",
+                "type": "POC",
+                "position": [
+                  114390.162742444,
+                  11243.9047744722,
+                  15500.0
+                ],
+                "bay": null,
+                "level": "CR",
+                "bop": -0.05,
+                "connectionGuidList": [
+                  "f0c5601e-aa00-46a1-be6b-f665bf7c0709"
+                ],
+                "connectionIDList": [
+                  "BELLOWS14496"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 114359.8,
+                    "y": 11213.6,
+                    "z": 15499.9
+                  },
+                  "max": {
+                    "x": 114420.4,
+                    "y": 11274.1,
+                    "z": 15500.0
+                  }
+                },
+                "utility": "PUMP",
+                "material": "???",
+                "size": "50A"
+              }
+            }
+          ],
+          "node_positions": [
+            [
+              114650.0,
+              12418.7001953125,
+              4007.99975585938
+            ],
+            [
+              114650.0,
+              12418.7001953125,
+              4082.99975585938
+            ],
+            [
+              114650.0,
+              12418.7001953125,
+              4168.0
+            ],
+            [
+              114649.96875,
+              12418.6982421875,
+              12418.44140625
+            ],
+            [
+              113949.9609375,
+              11418.6982421875,
+              13639.1015625
+            ],
+            [
+              113949.9609375,
+              11418.6982421875,
+              14824.830078125
+            ],
+            [
+              114327.6640625,
+              11268.7216796875,
+              15231.216796875
+            ],
+            [
+              114390.15625,
+              11243.9052734375,
+              15298.462890625
+            ],
+            [
+              114390.15625,
+              11243.9052734375,
+              15340.0
+            ],
+            [
+              114390.15625,
+              11243.9052734375,
+              15425.0
+            ],
+            [
+              114390.162742444,
+              11243.9047744722,
+              15500.0
+            ]
+          ],
+          "path_arrow": "R-R-R-D-R-D-D-R-R-R",
+          "path_bbox": {
+            "x_min": 113950.0,
+            "x_max": 114650.0,
+            "y_min": 11243.9,
+            "y_max": 12418.7,
+            "z_min": 4008.0,
+            "z_max": 15500.0,
+            "x_range": 700.0,
+            "y_range": 1174.8,
+            "z_range": 11492.0,
+            "xy_spread": 1220.7,
+            "node_count": 11
+          },
+          "path_range": {
+            "x": 700.0,
+            "y": 1174.8,
+            "z": 11492.0
+          },
+          "path_step_vectors": [
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 75.0
+            },
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 85.0
+            },
+            {
+              "x": -0.0,
+              "y": -0.0,
+              "z": 8250.4
+            },
+            {
+              "x": -700.0,
+              "y": -1000.0,
+              "z": 1220.7
+            },
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1185.7
+            },
+            {
+              "x": 377.7,
+              "y": -150.0,
+              "z": 406.4
+            },
+            {
+              "x": 62.5,
+              "y": -24.8,
+              "z": 67.2
+            },
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 41.5
+            },
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 85.0
+            },
+            {
+              "x": 0.0,
+              "y": -0.0,
+              "z": 75.0
+            }
+          ],
+          "path_step_lengths": [
+            75.0,
+            85.0,
+            8250.4,
+            1726.3,
+            1185.7,
+            574.7,
+            95.1,
+            41.5,
+            85.0,
+            75.0
+          ],
+          "path_step_vector": "(0.0,0.0,75.0), (0.0,0.0,85.0), (-0.0,-0.0,8250.4), (-700.0,-1000.0,1220.7), (0.0,0.0,1185.7), (377.7,-150.0,406.4), (62.5,-24.8,67.2), (0.0,0.0,41.5), (0.0,0.0,85.0), (0.0,-0.0,75.0)",
+          "path_step_length": "75.0, 85.0, 8250.4, 1726.3, 1185.7, 574.7, 95.1, 41.5, 85.0, 75.0",
+          "path_total_length": 12193.7,
+          "h_segments": []
+        }
+      ]
+    }
+  ]
+}

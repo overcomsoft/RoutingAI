@@ -1,0 +1,1024 @@
+{
+  "source_file": "./data-v10\\CVD_TNMHJ02_260323_082632_total.json",
+  "equipment_id": "8bef74b6-2215-4403-a843-5f565ea555e1",
+  "equipment_name": "TNMHJ02_POC",
+  "equipment_process": "CVD",
+  "equipment_maker": "-",
+  "created_at": "2026-04-05T19:48:13.138562",
+  "poc_paths": [
+    {
+      "start_poc_id": "13372fef-ffd2-4c44-8d0f-f89823cb4656",
+      "start_poc_info": {
+        "guid": "13372fef-ffd2-4c44-8d0f-f89823cb4656",
+        "id": "POC05902",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          156820.999999327,
+          75026.999999327,
+          15495.0
+        ],
+        "bay": null,
+        "level": "A/F",
+        "bop": 1795.0,
+        "connectionGuidList": [
+          "ffa47a41-f1e0-4151-8458-5cdd1214fb8a"
+        ],
+        "connectionIDList": [
+          "CLAMP05847"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 156790.7,
+            "y": 74996.7,
+            "z": 15495.0
+          },
+          "max": {
+            "x": 156851.2,
+            "y": 75057.2,
+            "z": 15495.0
+          }
+        },
+        "utility": "Foreline",
+        "material": "???",
+        "size": "50A"
+      },
+      "paths": [
+        {
+          "terminal_label": "Duct / TakeOff 도달",
+          "branch_depth": 1,
+          "branch_segments": [
+            {
+              "branch_node_guid": "9d2c7798-c574-4b6e-9823-49169181d41f",
+              "branch_index": 2,
+              "branch_total": 3
+            }
+          ],
+          "path_summary": "PO->CL->TE->CL->RD->CL->EB->EB->EB->EB->EB->EB->ET->TK",
+          "end_node_id": "a355d050-e9ab-467b-87a3-8e0e4239e9c8",
+          "end_node_type": "TAKEOFF",
+          "steps": [
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "13372fef-ffd2-4c44-8d0f-f89823cb4656",
+                "id": "POC05902",
+                "name": "start",
+                "type": "POC",
+                "position": [
+                  156820.999999327,
+                  75026.999999327,
+                  15495.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1795.0,
+                "connectionGuidList": [
+                  "ffa47a41-f1e0-4151-8458-5cdd1214fb8a"
+                ],
+                "connectionIDList": [
+                  "CLAMP05847"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 156790.7,
+                    "y": 74996.7,
+                    "z": 15495.0
+                  },
+                  "max": {
+                    "x": 156851.2,
+                    "y": 75057.2,
+                    "z": 15495.0
+                  }
+                },
+                "utility": "Foreline",
+                "material": "???",
+                "size": "50A"
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "type": "DIRECT_NODE",
+                "id": "direct_13372fef-ffd2-4c44-8d0f-f89823cb4656_ffa47a41-f1e0-4151-8458-5cdd1214fb8a"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "ffa47a41-f1e0-4151-8458-5cdd1214fb8a",
+                "id": "CLAMP05847",
+                "name": "Clamp_NW Clamp-SUS316-50A-Assembly",
+                "type": "CLAMP",
+                "position": [
+                  156821.0,
+                  75027.0,
+                  15475.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1774.95,
+                "connectionGuidList": [
+                  "13372fef-ffd2-4c44-8d0f-f89823cb4656",
+                  "9d2c7798-c574-4b6e-9823-49169181d41f"
+                ],
+                "connectionIDList": [
+                  "POC05902",
+                  "TEE05846"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 156759.4,
+                    "y": 74979.9,
+                    "z": 15454.8
+                  },
+                  "max": {
+                    "x": 156882.5,
+                    "y": 75074.0,
+                    "z": 15495.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "type": "DIRECT_NODE",
+                "id": "direct_ffa47a41-f1e0-4151-8458-5cdd1214fb8a_9d2c7798-c574-4b6e-9823-49169181d41f"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "9d2c7798-c574-4b6e-9823-49169181d41f",
+                "id": "TEE05846",
+                "name": "Tee-???-050A",
+                "type": "TEE",
+                "position": [
+                  156821.0,
+                  75027.0,
+                  15392.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1691.95,
+                "connectionGuidList": [
+                  "ffa47a41-f1e0-4151-8458-5cdd1214fb8a",
+                  "3027cf79-93de-49b6-b36b-ef4ec1a3767d",
+                  "cdfa4f8b-f7e5-458e-9b43-66a959f7adca"
+                ],
+                "connectionIDList": [
+                  "CLAMP05847",
+                  "CLAMP05848",
+                  "CLAMP05849"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 156790.7,
+                    "y": 74996.7,
+                    "z": 15328.4
+                  },
+                  "max": {
+                    "x": 156884.5,
+                    "y": 75057.2,
+                    "z": 15455.5
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "type": "DIRECT_NODE",
+                "id": "direct_9d2c7798-c574-4b6e-9823-49169181d41f_cdfa4f8b-f7e5-458e-9b43-66a959f7adca"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "cdfa4f8b-f7e5-458e-9b43-66a959f7adca",
+                "id": "CLAMP05849",
+                "name": "Clamp_NW Clamp-SUS316-50A-Assembly",
+                "type": "CLAMP",
+                "position": [
+                  156821.0,
+                  75027.0,
+                  15308.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1607.95,
+                "connectionGuidList": [
+                  "9d2c7798-c574-4b6e-9823-49169181d41f",
+                  "f78b740c-51e1-463a-b6ba-1128c2dae05d"
+                ],
+                "connectionIDList": [
+                  "TEE05846",
+                  "PIPE05913"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 156759.4,
+                    "y": 74979.9,
+                    "z": 15287.8
+                  },
+                  "max": {
+                    "x": 156882.5,
+                    "y": 75074.0,
+                    "z": 15328.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "f78b740c-51e1-463a-b6ba-1128c2dae05d",
+                "id": "PIPE05913",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  156821.0,
+                  75027.0,
+                  15288.0
+                ],
+                "connectionGuidList": [
+                  "cdfa4f8b-f7e5-458e-9b43-66a959f7adca",
+                  "b575fbaa-cd0c-4bbd-af4f-4827fa365ea7"
+                ],
+                "connectionIDList": [
+                  "CLAMP05849",
+                  "REDUCER05833"
+                ],
+                "utility": "CABINET(Ex)",
+                "material": "Spiral",
+                "size": "50A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "b575fbaa-cd0c-4bbd-af4f-4827fa365ea7",
+                "id": "REDUCER05833",
+                "name": "Reducer-???-100Ax050A",
+                "type": "REDUCER",
+                "position": [
+                  156821.0,
+                  75027.0,
+                  15137.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1436.95,
+                "connectionGuidList": [
+                  "c7403095-1313-4c9c-9fae-77e51a864b7e",
+                  "f78b740c-51e1-463a-b6ba-1128c2dae05d"
+                ],
+                "connectionIDList": [
+                  "CLAMP05831",
+                  "PIPE05913"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 156763.9,
+                    "y": 74970.0,
+                    "z": 15086.2
+                  },
+                  "max": {
+                    "x": 156878.0,
+                    "y": 75084.0,
+                    "z": 15187.7
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "type": "DIRECT_NODE",
+                "id": "direct_b575fbaa-cd0c-4bbd-af4f-4827fa365ea7_c7403095-1313-4c9c-9fae-77e51a864b7e"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "c7403095-1313-4c9c-9fae-77e51a864b7e",
+                "id": "CLAMP05831",
+                "name": "Clamp_DC Clamp-PVC-100A-Assembly",
+                "type": "CLAMP",
+                "position": [
+                  156821.0,
+                  75027.0,
+                  15070.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1367.2,
+                "connectionGuidList": [
+                  "6be4b58a-64ed-4851-81c1-5b16d1917f74",
+                  "b575fbaa-cd0c-4bbd-af4f-4827fa365ea7"
+                ],
+                "connectionIDList": [
+                  "PIPE05832",
+                  "REDUCER05833"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 156722.9,
+                    "y": 74929.0,
+                    "z": 15042.2
+                  },
+                  "max": {
+                    "x": 156919.0,
+                    "y": 75125.0,
+                    "z": 15092.2
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "6be4b58a-64ed-4851-81c1-5b16d1917f74",
+                "id": "PIPE05832",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  156821.0,
+                  75027.0,
+                  14962.0
+                ],
+                "connectionGuidList": [
+                  "b705a10c-7200-4516-96b1-55a40eae5bf5",
+                  "c7403095-1313-4c9c-9fae-77e51a864b7e"
+                ],
+                "connectionIDList": [
+                  "ELBOW05830",
+                  "CLAMP05831"
+                ],
+                "utility": "CABINET(Ex)",
+                "material": "Spiral",
+                "size": "100A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "b705a10c-7200-4516-96b1-55a40eae5bf5",
+                "id": "ELBOW05830",
+                "name": "Elbow-spiral-100A",
+                "type": "ELBOW",
+                "position": [
+                  156821.0,
+                  75027.0,
+                  14842.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1173.45,
+                "connectionGuidList": [
+                  "6be4b58a-64ed-4851-81c1-5b16d1917f74",
+                  "2ec8ef64-e073-4edb-86ca-9dbac34fded6"
+                ],
+                "connectionIDList": [
+                  "PIPE05832",
+                  "PIPE05828"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 156763.8,
+                    "y": 74969.9,
+                    "z": 14784.8
+                  },
+                  "max": {
+                    "x": 156941.1,
+                    "y": 75084.1,
+                    "z": 14962.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "2ec8ef64-e073-4edb-86ca-9dbac34fded6",
+                "id": "PIPE05828",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  157025.0,
+                  75027.0,
+                  14842.0
+                ],
+                "connectionGuidList": [
+                  "0aea0eda-48c0-4b25-8fdc-a4543c700166",
+                  "b705a10c-7200-4516-96b1-55a40eae5bf5"
+                ],
+                "connectionIDList": [
+                  "ELBOW05829",
+                  "ELBOW05830"
+                ],
+                "utility": "CABINET(Ex)",
+                "material": "Spiral",
+                "size": "100A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "0aea0eda-48c0-4b25-8fdc-a4543c700166",
+                "id": "ELBOW05829",
+                "name": "Elbow-spiral-100A",
+                "type": "ELBOW",
+                "position": [
+                  157145.0,
+                  75027.0,
+                  14842.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1110.45,
+                "connectionGuidList": [
+                  "7c9e85e7-12de-4ac4-9506-cbd3169194ae",
+                  "2ec8ef64-e073-4edb-86ca-9dbac34fded6"
+                ],
+                "connectionIDList": [
+                  "PIPE05977",
+                  "PIPE05828"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 157024.9,
+                    "y": 74969.9,
+                    "z": 14721.8
+                  },
+                  "max": {
+                    "x": 157202.1,
+                    "y": 75084.1,
+                    "z": 14899.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "7c9e85e7-12de-4ac4-9506-cbd3169194ae",
+                "id": "PIPE05977",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  157145.0,
+                  75027.0,
+                  14722.0
+                ],
+                "connectionGuidList": [
+                  "0aea0eda-48c0-4b25-8fdc-a4543c700166",
+                  "4ec54910-34e4-4dda-bd80-e9cd6dda2da4"
+                ],
+                "connectionIDList": [
+                  "ELBOW05829",
+                  "ELBOW05876"
+                ],
+                "utility": "CABINET(Ex)",
+                "material": "Spiral",
+                "size": "100A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "4ec54910-34e4-4dda-bd80-e9cd6dda2da4",
+                "id": "ELBOW05876",
+                "name": "Elbow-spiral-100A",
+                "type": "ELBOW",
+                "position": [
+                  157145.0,
+                  75027.0,
+                  13500.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 5531.45,
+                "connectionGuidList": [
+                  "7c9e85e7-12de-4ac4-9506-cbd3169194ae",
+                  "f0c42780-d403-4476-b3a6-11e368d22a93"
+                ],
+                "connectionIDList": [
+                  "PIPE05977",
+                  "PIPE05875"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 157024.9,
+                    "y": 74969.8,
+                    "z": 13442.8
+                  },
+                  "max": {
+                    "x": 157202.1,
+                    "y": 75084.0,
+                    "z": 13620.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "f0c42780-d403-4476-b3a6-11e368d22a93",
+                "id": "PIPE05875",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  157025.0,
+                  75027.0,
+                  13500.0
+                ],
+                "connectionGuidList": [
+                  "4ec54910-34e4-4dda-bd80-e9cd6dda2da4",
+                  "37d0a09a-8595-4ad1-87a2-316b3c08f414"
+                ],
+                "connectionIDList": [
+                  "ELBOW05876",
+                  "ELBOW05836"
+                ],
+                "utility": "CABINET(Ex)",
+                "material": "Spiral",
+                "size": "100A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "37d0a09a-8595-4ad1-87a2-316b3c08f414",
+                "id": "ELBOW05836",
+                "name": "Elbow-spiral-100A",
+                "type": "ELBOW",
+                "position": [
+                  155509.0,
+                  75027.0,
+                  13500.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 5468.45,
+                "connectionGuidList": [
+                  "f0c42780-d403-4476-b3a6-11e368d22a93",
+                  "e62ad62c-ef86-4265-981b-9191d752d604"
+                ],
+                "connectionIDList": [
+                  "PIPE05875",
+                  "PIPE05834"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 155451.8,
+                    "y": 74969.9,
+                    "z": 13379.8
+                  },
+                  "max": {
+                    "x": 155629.1,
+                    "y": 75084.1,
+                    "z": 13557.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "e62ad62c-ef86-4265-981b-9191d752d604",
+                "id": "PIPE05834",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  155509.0,
+                  75027.0,
+                  11720.0
+                ],
+                "connectionGuidList": [
+                  "00d5f87c-738a-4f06-bdbb-29b25f321c0f",
+                  "37d0a09a-8595-4ad1-87a2-316b3c08f414"
+                ],
+                "connectionIDList": [
+                  "ELBOW05835",
+                  "ELBOW05836"
+                ],
+                "utility": "CABINET(Ex)",
+                "material": "Spiral",
+                "size": "100A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "00d5f87c-738a-4f06-bdbb-29b25f321c0f",
+                "id": "ELBOW05835",
+                "name": "Elbow-spiral-100A",
+                "type": "ELBOW",
+                "position": [
+                  155509.0,
+                  75027.0,
+                  11600.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 3631.45,
+                "connectionGuidList": [
+                  "17436bef-3f6c-4820-ab88-fb8dd5bd829c",
+                  "e62ad62c-ef86-4265-981b-9191d752d604"
+                ],
+                "connectionIDList": [
+                  "PIPE05863",
+                  "PIPE05834"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 155388.8,
+                    "y": 74969.9,
+                    "z": 11542.8
+                  },
+                  "max": {
+                    "x": 155566.1,
+                    "y": 75084.1,
+                    "z": 11720.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "17436bef-3f6c-4820-ab88-fb8dd5bd829c",
+                "id": "PIPE05863",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  155328.0,
+                  75027.0,
+                  11600.0
+                ],
+                "connectionGuidList": [
+                  "1712685f-1bdd-4bdf-9e8a-06f555bf4289",
+                  "00d5f87c-738a-4f06-bdbb-29b25f321c0f"
+                ],
+                "connectionIDList": [
+                  "ELBOW05864",
+                  "ELBOW05835"
+                ],
+                "utility": "CABINET(Ex)",
+                "material": "Spiral",
+                "size": "100A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "1712685f-1bdd-4bdf-9e8a-06f555bf4289",
+                "id": "ELBOW05864",
+                "name": "Elbow-spiral-100A",
+                "type": "ELBOW",
+                "position": [
+                  155208.0,
+                  75027.0,
+                  11600.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 3568.45,
+                "connectionGuidList": [
+                  "219bb3d8-5ff5-4fc0-809a-3b6fe3e3bee1",
+                  "17436bef-3f6c-4820-ab88-fb8dd5bd829c"
+                ],
+                "connectionIDList": [
+                  "PIPE05909",
+                  "PIPE05863"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 155150.8,
+                    "y": 74969.8,
+                    "z": 11479.8
+                  },
+                  "max": {
+                    "x": 155328.1,
+                    "y": 75084.0,
+                    "z": 11657.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "219bb3d8-5ff5-4fc0-809a-3b6fe3e3bee1",
+                "id": "PIPE05909",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  155208.0,
+                  75027.0,
+                  11402.0
+                ],
+                "connectionGuidList": [
+                  "89ef9d9e-4b24-405c-b958-7214a5797cc0",
+                  "1712685f-1bdd-4bdf-9e8a-06f555bf4289"
+                ],
+                "connectionIDList": [
+                  "ETC05908",
+                  "ELBOW05864"
+                ],
+                "utility": "CABINET(Ex)",
+                "material": "Spiral",
+                "size": "100A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "89ef9d9e-4b24-405c-b958-7214a5797cc0",
+                "id": "ETC05908",
+                "name": "Damper-SUS316-100A",
+                "type": "ETC",
+                "position": [
+                  155208.5,
+                  75027.0,
+                  11326.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 3350.95,
+                "connectionGuidList": [
+                  "219bb3d8-5ff5-4fc0-809a-3b6fe3e3bee1",
+                  "a355d050-e9ab-467b-87a3-8e0e4239e9c8"
+                ],
+                "connectionIDList": [
+                  "PIPE05909",
+                  "TAKEOFF05910"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 155119.9,
+                    "y": 74965.8,
+                    "z": 11249.8
+                  },
+                  "max": {
+                    "x": 155265.5,
+                    "y": 75088.2,
+                    "z": 11452.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "type": "DIRECT_NODE",
+                "id": "direct_89ef9d9e-4b24-405c-b958-7214a5797cc0_a355d050-e9ab-467b-87a3-8e0e4239e9c8"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "a355d050-e9ab-467b-87a3-8e0e4239e9c8",
+                "id": "TAKEOFF05910",
+                "name": "takeoff",
+                "type": "TAKEOFF",
+                "position": [
+                  155208.5,
+                  75027.0,
+                  11126.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 3176.0,
+                "connectionGuidList": [
+                  "6c30177f-43eb-4678-a409-52476b9134a2",
+                  "89ef9d9e-4b24-405c-b958-7214a5797cc0"
+                ],
+                "connectionIDList": [
+                  "DUCT07065",
+                  "ETC05908"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 155151.3,
+                    "y": 74969.8,
+                    "z": 11126.0
+                  },
+                  "max": {
+                    "x": 155265.6,
+                    "y": 75084.1,
+                    "z": 11226.0
+                  }
+                }
+              }
+            }
+          ],
+          "node_positions": [
+            [
+              156820.999999327,
+              75026.999999327,
+              15495.0
+            ],
+            [
+              156821.0,
+              75027.0,
+              15475.0
+            ],
+            [
+              156821.0,
+              75027.0,
+              15392.0
+            ],
+            [
+              156821.0,
+              75027.0,
+              15308.0
+            ],
+            [
+              156821.0,
+              75027.0,
+              15137.0
+            ],
+            [
+              156821.0,
+              75027.0,
+              15070.0
+            ],
+            [
+              156821.0,
+              75027.0,
+              14842.0
+            ],
+            [
+              157145.0,
+              75027.0,
+              14842.0
+            ],
+            [
+              157145.0,
+              75027.0,
+              13500.0
+            ],
+            [
+              155509.0,
+              75027.0,
+              13500.0
+            ],
+            [
+              155509.0,
+              75027.0,
+              11600.0
+            ],
+            [
+              155208.0,
+              75027.0,
+              11600.0
+            ],
+            [
+              155208.5,
+              75027.0,
+              11326.0
+            ],
+            [
+              155208.5,
+              75027.0,
+              11126.0
+            ]
+          ],
+          "path_arrow": "R-R-R-R-R-R-H-R-H-R-H-R-R",
+          "path_bbox": {
+            "x_min": 155208.0,
+            "x_max": 157145.0,
+            "y_min": 75027.0,
+            "y_max": 75027.0,
+            "z_min": 11126.0,
+            "z_max": 15495.0,
+            "x_range": 1937.0,
+            "y_range": 0.0,
+            "z_range": 4369.0,
+            "xy_spread": 1937.0,
+            "node_count": 14
+          },
+          "path_range": {
+            "x": 1937.0,
+            "y": 0.0,
+            "z": 4369.0
+          },
+          "path_step_vectors": [
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -20.0
+            },
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -83.0
+            },
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -84.0
+            },
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -171.0
+            },
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -67.0
+            },
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -228.0
+            },
+            {
+              "x": 324.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -1342.0
+            },
+            {
+              "x": -1636.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -1900.0
+            },
+            {
+              "x": -301.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            {
+              "x": 0.5,
+              "y": 0.0,
+              "z": -274.0
+            },
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -200.0
+            }
+          ],
+          "path_step_lengths": [
+            20.0,
+            83.0,
+            84.0,
+            171.0,
+            67.0,
+            228.0,
+            324.0,
+            1342.0,
+            1636.0,
+            1900.0,
+            301.0,
+            274.0,
+            200.0
+          ],
+          "path_step_vector": "(0.0,0.0,-20.0), (0.0,0.0,-83.0), (0.0,0.0,-84.0), (0.0,0.0,-171.0), (0.0,0.0,-67.0), (0.0,0.0,-228.0), (324.0,0.0,0.0), (0.0,0.0,-1342.0), (-1636.0,0.0,0.0), (0.0,0.0,-1900.0), (-301.0,0.0,0.0), (0.5,0.0,-274.0), (0.0,0.0,-200.0)",
+          "path_step_length": "20.0, 83.0, 84.0, 171.0, 67.0, 228.0, 324.0, 1342.0, 1636.0, 1900.0, 301.0, 274.0, 200.0",
+          "path_total_length": 6630.0,
+          "h_segments": [
+            {
+              "mean_z": 14842.0,
+              "mid_xy": [
+                156983.0,
+                75027.0
+              ],
+              "node_count": 2
+            },
+            {
+              "mean_z": 13500.0,
+              "mid_xy": [
+                156327.0,
+                75027.0
+              ],
+              "node_count": 2
+            },
+            {
+              "mean_z": 11600.0,
+              "mid_xy": [
+                155358.5,
+                75027.0
+              ],
+              "node_count": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

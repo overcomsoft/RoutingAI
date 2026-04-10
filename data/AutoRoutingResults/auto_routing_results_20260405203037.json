@@ -1,0 +1,295 @@
+[
+  {
+    "group_id": "AUTO_001",
+    "source_group_id": 1,
+    "is_auto_generated": true,
+    "equipment_process": "CMP",
+    "equipment_maker": "-",
+    "equipment_name": "kscta01",
+    "equipment_id": "66fe4277-5d3f-4982-b7ae-b72319263ba2",
+    "utility": "AKWW",
+    "size": "20A",
+    "path_count": 1,
+    "unique_poc_count": 1,
+    "avg_similarity": null,
+    "max_start_xy_dist": 0.0,
+    "common_z_levels": [
+      {
+        "mean_z": 14699.1,
+        "path_count": 36,
+        "xy_spread": 3098.0
+      },
+      {
+        "mean_z": 14907.0,
+        "path_count": 36,
+        "xy_spread": 4089.8
+      }
+    ],
+    "zones": {
+      "trunk": {
+        "x_min": 4256.2,
+        "x_max": 5459.2,
+        "y_min": 24488.2,
+        "y_max": 28603.2,
+        "z_min": 14699.0,
+        "z_max": 14907.0,
+        "x_range": 1203.0,
+        "y_range": 4115.0,
+        "z_range": 208.0,
+        "xy_spread": 4287.2,
+        "node_count": 515,
+        "mean_z": 14699.1,
+        "path_count": 36
+      },
+      "fan_in": {
+        "x_min": 5344.2,
+        "x_max": 5459.2,
+        "y_min": 24488.2,
+        "y_max": 28503.2,
+        "z_min": 15495.0,
+        "z_max": 15495.0,
+        "x_range": 115.0,
+        "y_range": 4015.0,
+        "z_range": 0.0,
+        "xy_spread": 4016.6,
+        "node_count": 36
+      },
+      "fan_out": {
+        "x_min": 5344.2,
+        "x_max": 5356.2,
+        "y_min": 24488.2,
+        "y_max": 27799.2,
+        "z_min": 15495.0,
+        "z_max": 15495.0,
+        "x_range": 12.0,
+        "y_range": 3311.0,
+        "z_range": 0.0,
+        "xy_spread": 3311.0,
+        "node_count": 36
+      },
+      "is_trunk_estimated": true
+    },
+    "quality_score": 0.8841,
+    "validation": {
+      "is_valid": true,
+      "quality_score": 0.8841,
+      "checks": {
+        "continuity": 1.0,
+        "length_ratio": 0.803,
+        "pattern": 0.6667,
+        "zone_compliance": 1.0,
+        "no_intersection": 1.0
+      },
+      "warnings": []
+    },
+    "template_poc_id": "61af9d85-97ea-4d2d-bc56-494b117234f9",
+    "paths": [
+      {
+        "poc_id": "auto_20260405203037",
+        "terminal_label": "자동 생성 경로",
+        "start_pos": [
+          5500.0,
+          28200.0,
+          15495.0
+        ],
+        "end_pos": [
+          5300.0,
+          27500.0,
+          15495.0
+        ],
+        "displacement_vector": {
+          "x": -200.0,
+          "y": -700.0,
+          "z": 0.0
+        },
+        "node_positions": [
+          [
+            5500.0,
+            28200.0,
+            15495.0
+          ],
+          [
+            5500.0,
+            28200.0,
+            14699.1
+          ],
+          [
+            5500.0,
+            28178.2,
+            14699.1
+          ],
+          [
+            5500.0,
+            27915.6,
+            14699.1
+          ],
+          [
+            5500.0,
+            27915.6,
+            14586.1
+          ],
+          [
+            5500.0,
+            27915.6,
+            14491.1
+          ],
+          [
+            5500.0,
+            27783.8,
+            14491.1
+          ],
+          [
+            5500.0,
+            27783.8,
+            14606.1
+          ],
+          [
+            5500.0,
+            27783.8,
+            14699.1
+          ],
+          [
+            5500.0,
+            27500.0,
+            14699.1
+          ],
+          [
+            5500.0,
+            27500.0,
+            15495.0
+          ],
+          [
+            5300.0,
+            27500.0,
+            15495.0
+          ]
+        ],
+        "path_step_vectors": [
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -795.9
+          },
+          {
+            "x": 0.0,
+            "y": -21.8,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": -262.6,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -113.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -95.0
+          },
+          {
+            "x": 0.0,
+            "y": -131.8,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 115.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 93.0
+          },
+          {
+            "x": 0.0,
+            "y": -283.8,
+            "z": 0.0
+          },
+          {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 795.9
+          },
+          {
+            "x": -200.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        ],
+        "path_step_lengths": [
+          795.9,
+          21.8,
+          262.6,
+          113.0,
+          95.0,
+          131.8,
+          115.0,
+          93.0,
+          283.8,
+          795.9,
+          200.0
+        ],
+        "path_total_length": 2907.8,
+        "path_arrow": "R-H-H-R-R-H-R-R-H-R-H",
+        "path_bbox": {
+          "x_min": 5300.0,
+          "x_max": 5500.0,
+          "y_min": 27500.0,
+          "y_max": 28200.0,
+          "z_min": 14491.1,
+          "z_max": 15495.0,
+          "x_range": 200.0,
+          "y_range": 700.0,
+          "z_range": 1003.9,
+          "xy_spread": 728.0,
+          "node_count": 12
+        },
+        "path_range": {
+          "x": 200.0,
+          "y": 700.0,
+          "z": 1003.9
+        },
+        "h_segments": [
+          {
+            "mean_z": 14699.1,
+            "mid_xy": [
+              5500.0,
+              28097.933
+            ],
+            "node_count": 3
+          },
+          {
+            "mean_z": 14491.1,
+            "mid_xy": [
+              5500.0,
+              27849.7
+            ],
+            "node_count": 2
+          },
+          {
+            "mean_z": 14699.1,
+            "mid_xy": [
+              5500.0,
+              27641.9
+            ],
+            "node_count": 2
+          },
+          {
+            "mean_z": 15495.0,
+            "mid_xy": [
+              5400.0,
+              27500.0
+            ],
+            "node_count": 2
+          }
+        ],
+        "path_summary": "AUTO"
+      }
+    ]
+  }
+]

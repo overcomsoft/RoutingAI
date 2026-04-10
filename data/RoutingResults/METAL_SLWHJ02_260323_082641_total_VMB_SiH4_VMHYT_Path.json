@@ -1,0 +1,3531 @@
+{
+  "source_file": "./data-v10\\METAL_SLWHJ02_260323_082641_total.json",
+  "equipment_id": "2ffdde52-0dd1-43bd-8ff6-a247478418b2",
+  "equipment_name": "VMB_SiH4_VMHYT",
+  "equipment_process": "METAL",
+  "equipment_maker": "TEST",
+  "created_at": "2026-04-05T19:48:13.565813",
+  "poc_paths": [
+    {
+      "start_poc_id": "5ddc7821-01f0-4a20-8b3f-f571a3b3c9e3",
+      "start_poc_info": {
+        "guid": "5ddc7821-01f0-4a20-8b3f-f571a3b3c9e3",
+        "id": "POC19553",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          310886.187517678,
+          9462.88520812988,
+          10081.3330078125
+        ],
+        "bay": null,
+        "level": "CSF",
+        "bop": 2081.3,
+        "connectionGuidList": [
+          "1c271c8d-9bfa-4951-a45e-7b2d7d88c023"
+        ],
+        "connectionIDList": [
+          "CLAMP19548"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 310829.0,
+            "y": 9405.7,
+            "z": 10081.3
+          },
+          "max": {
+            "x": 310943.3,
+            "y": 9520.0,
+            "z": 10081.3
+          }
+        },
+        "utility": "CABINET(Ex)",
+        "material": "Spiral",
+        "size": "100A"
+      },
+      "paths": [
+        {
+          "terminal_label": "Duct / TakeOff 도달",
+          "branch_depth": 0,
+          "branch_segments": [],
+          "path_summary": "PO->CL->EB->EB->EB->ET->TK",
+          "end_node_id": "4e1488d7-278b-42d0-9f5f-fce237b44671",
+          "end_node_type": "TAKEOFF",
+          "steps": [
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "5ddc7821-01f0-4a20-8b3f-f571a3b3c9e3",
+                "id": "POC19553",
+                "name": "start",
+                "type": "POC",
+                "position": [
+                  310886.187517678,
+                  9462.88520812988,
+                  10081.3330078125
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 2081.3,
+                "connectionGuidList": [
+                  "1c271c8d-9bfa-4951-a45e-7b2d7d88c023"
+                ],
+                "connectionIDList": [
+                  "CLAMP19548"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 310829.0,
+                    "y": 9405.7,
+                    "z": 10081.3
+                  },
+                  "max": {
+                    "x": 310943.3,
+                    "y": 9520.0,
+                    "z": 10081.3
+                  }
+                },
+                "utility": "CABINET(Ex)",
+                "material": "Spiral",
+                "size": "100A"
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "type": "DIRECT_NODE",
+                "id": "direct_5ddc7821-01f0-4a20-8b3f-f571a3b3c9e3_1c271c8d-9bfa-4951-a45e-7b2d7d88c023"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "1c271c8d-9bfa-4951-a45e-7b2d7d88c023",
+                "id": "CLAMP19548",
+                "name": "Clamp_DC Clamp-SUS316-100A-Assembly",
+                "type": "CLAMP",
+                "position": [
+                  310886.0,
+                  9463.0,
+                  10097.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 2099.75,
+                "connectionGuidList": [
+                  "67615b50-f362-4eaf-9c51-235e5c2786fe",
+                  "5ddc7821-01f0-4a20-8b3f-f571a3b3c9e3"
+                ],
+                "connectionIDList": [
+                  "PIPE19490",
+                  "POC19553"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 310788.0,
+                    "y": 9365.0,
+                    "z": 10074.8
+                  },
+                  "max": {
+                    "x": 310984.0,
+                    "y": 9561.0,
+                    "z": 10124.7
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "67615b50-f362-4eaf-9c51-235e5c2786fe",
+                "id": "PIPE19490",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  310886.0,
+                  9463.0,
+                  10113.0
+                ],
+                "connectionGuidList": [
+                  "1c271c8d-9bfa-4951-a45e-7b2d7d88c023",
+                  "2d091f7d-f1c1-4746-a021-af539e239134"
+                ],
+                "connectionIDList": [
+                  "CLAMP19548",
+                  "ELBOW19489"
+                ],
+                "utility": "CABINET(Ex)",
+                "material": "Spiral",
+                "size": "100A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "2d091f7d-f1c1-4746-a021-af539e239134",
+                "id": "ELBOW19489",
+                "name": "Elbow-spiral-100A",
+                "type": "ELBOW",
+                "position": [
+                  310886.0,
+                  9463.0,
+                  13200.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 5168.45,
+                "connectionGuidList": [
+                  "67615b50-f362-4eaf-9c51-235e5c2786fe",
+                  "d19b0108-cee5-4282-988b-5677436ad0fa"
+                ],
+                "connectionIDList": [
+                  "PIPE19490",
+                  "PIPE19491"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 310828.9,
+                    "y": 9405.8,
+                    "z": 13079.8
+                  },
+                  "max": {
+                    "x": 310943.1,
+                    "y": 9583.1,
+                    "z": 13257.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "d19b0108-cee5-4282-988b-5677436ad0fa",
+                "id": "PIPE19491",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  310886.0,
+                  9583.0,
+                  13200.0
+                ],
+                "connectionGuidList": [
+                  "2d091f7d-f1c1-4746-a021-af539e239134",
+                  "07f353c3-17f0-454d-9fd1-21041cb7e6aa"
+                ],
+                "connectionIDList": [
+                  "ELBOW19489",
+                  "ELBOW19536"
+                ],
+                "utility": "CABINET(Ex)",
+                "material": "Spiral",
+                "size": "100A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "07f353c3-17f0-454d-9fd1-21041cb7e6aa",
+                "id": "ELBOW19536",
+                "name": "Elbow-spiral-100A",
+                "type": "ELBOW",
+                "position": [
+                  310886.0,
+                  9980.0,
+                  13200.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 5199.9,
+                "connectionGuidList": [
+                  "b1923e45-1079-414e-bfe5-f9010bba6446",
+                  "d19b0108-cee5-4282-988b-5677436ad0fa"
+                ],
+                "connectionIDList": [
+                  "PIPE19596",
+                  "PIPE19491"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 310828.8,
+                    "y": 9859.8,
+                    "z": 13142.8
+                  },
+                  "max": {
+                    "x": 311006.1,
+                    "y": 10037.1,
+                    "z": 13257.0
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "b1923e45-1079-414e-bfe5-f9010bba6446",
+                "id": "PIPE19596",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  311006.0,
+                  9980.0,
+                  13200.0
+                ],
+                "connectionGuidList": [
+                  "07f353c3-17f0-454d-9fd1-21041cb7e6aa",
+                  "055e237f-a7ec-4d4a-a9f9-32282ab55a71"
+                ],
+                "connectionIDList": [
+                  "ELBOW19536",
+                  "ELBOW19597"
+                ],
+                "utility": "CABINET(Ex)",
+                "material": "Spiral",
+                "size": "100A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "055e237f-a7ec-4d4a-a9f9-32282ab55a71",
+                "id": "ELBOW19597",
+                "name": "Elbow-spiral-100A",
+                "type": "ELBOW",
+                "position": [
+                  312300.0,
+                  9980.0,
+                  13200.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 5168.45,
+                "connectionGuidList": [
+                  "b1923e45-1079-414e-bfe5-f9010bba6446",
+                  "cf6e810e-1c22-4c21-b597-d9ea6a02a136"
+                ],
+                "connectionIDList": [
+                  "PIPE19596",
+                  "PIPE19364"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 312179.8,
+                    "y": 9922.8,
+                    "z": 13079.8
+                  },
+                  "max": {
+                    "x": 312357.1,
+                    "y": 10037.0,
+                    "z": 13257.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "cf6e810e-1c22-4c21-b597-d9ea6a02a136",
+                "id": "PIPE19364",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  312300.0,
+                  9980.0,
+                  13080.0
+                ],
+                "connectionGuidList": [
+                  "055e237f-a7ec-4d4a-a9f9-32282ab55a71",
+                  "00bc7aad-e09e-4249-b809-c097cf816d17"
+                ],
+                "connectionIDList": [
+                  "ELBOW19597",
+                  "ETC19363"
+                ],
+                "utility": "CABINET(Ex)",
+                "material": "Spiral",
+                "size": "100A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "00bc7aad-e09e-4249-b809-c097cf816d17",
+                "id": "ETC19363",
+                "name": "Damper-SUS304-100A",
+                "type": "ETC",
+                "position": [
+                  312300.0,
+                  9980.0,
+                  12776.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 4801.05,
+                "connectionGuidList": [
+                  "cf6e810e-1c22-4c21-b597-d9ea6a02a136",
+                  "d024afa1-f849-408c-973b-e7f3b119baaf"
+                ],
+                "connectionIDList": [
+                  "PIPE19364",
+                  "PIPE19365"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 312211.5,
+                    "y": 9858.0,
+                    "z": 12700.0
+                  },
+                  "max": {
+                    "x": 312350.0,
+                    "y": 10102.0,
+                    "z": 12902.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "d024afa1-f849-408c-973b-e7f3b119baaf",
+                "id": "PIPE19365",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  312300.0,
+                  9980.0,
+                  12700.0
+                ],
+                "connectionGuidList": [
+                  "00bc7aad-e09e-4249-b809-c097cf816d17",
+                  "4e1488d7-278b-42d0-9f5f-fce237b44671"
+                ],
+                "connectionIDList": [
+                  "ETC19363",
+                  "TAKEOFF19403"
+                ],
+                "utility": "CABINET(Ex)",
+                "material": "Spiral",
+                "size": "100A"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "4e1488d7-278b-42d0-9f5f-fce237b44671",
+                "id": "TAKEOFF19403",
+                "name": "takeoff",
+                "type": "TAKEOFF",
+                "position": [
+                  312300.0,
+                  9980.0,
+                  12690.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 4692.5,
+                "connectionGuidList": [
+                  "1bd07a9e-a249-40cb-beb0-f705f683a4ee",
+                  "d024afa1-f849-408c-973b-e7f3b119baaf"
+                ],
+                "connectionIDList": [
+                  "DUCT19265",
+                  "PIPE19365"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 312242.8,
+                    "y": 9922.8,
+                    "z": 12690.0
+                  },
+                  "max": {
+                    "x": 312357.1,
+                    "y": 10037.1,
+                    "z": 12695.0
+                  }
+                }
+              }
+            }
+          ],
+          "node_positions": [
+            [
+              310886.187517678,
+              9462.88520812988,
+              10081.3330078125
+            ],
+            [
+              310886.0,
+              9463.0,
+              10097.0
+            ],
+            [
+              310886.0,
+              9463.0,
+              13200.0
+            ],
+            [
+              310886.0,
+              9980.0,
+              13200.0
+            ],
+            [
+              312300.0,
+              9980.0,
+              13200.0
+            ],
+            [
+              312300.0,
+              9980.0,
+              12776.0
+            ],
+            [
+              312300.0,
+              9980.0,
+              12690.0
+            ]
+          ],
+          "path_arrow": "R-R-H-H-R-R",
+          "path_bbox": {
+            "x_min": 310886.0,
+            "x_max": 312300.0,
+            "y_min": 9462.9,
+            "y_max": 9980.0,
+            "z_min": 10081.3,
+            "z_max": 13200.0,
+            "x_range": 1414.0,
+            "y_range": 517.1,
+            "z_range": 3118.7,
+            "xy_spread": 1505.6,
+            "node_count": 7
+          },
+          "path_range": {
+            "x": 1414.0,
+            "y": 517.1,
+            "z": 3118.7
+          },
+          "path_step_vectors": [
+            {
+              "x": -0.2,
+              "y": 0.1,
+              "z": 15.7
+            },
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 3103.0
+            },
+            {
+              "x": 0.0,
+              "y": 517.0,
+              "z": 0.0
+            },
+            {
+              "x": 1414.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -424.0
+            },
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -86.0
+            }
+          ],
+          "path_step_lengths": [
+            15.7,
+            3103.0,
+            517.0,
+            1414.0,
+            424.0,
+            86.0
+          ],
+          "path_step_vector": "(-0.2,0.1,15.7), (0.0,0.0,3103.0), (0.0,517.0,0.0), (1414.0,0.0,0.0), (0.0,0.0,-424.0), (0.0,0.0,-86.0)",
+          "path_step_length": "15.7, 3103.0, 517.0, 1414.0, 424.0, 86.0",
+          "path_total_length": 5559.7,
+          "h_segments": [
+            {
+              "mean_z": 13200.0,
+              "mid_xy": [
+                311357.333,
+                9807.667
+              ],
+              "node_count": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start_poc_id": "cd075030-f419-4e89-bc58-f1905582ae3d",
+      "start_poc_info": {
+        "guid": "cd075030-f419-4e89-bc58-f1905582ae3d",
+        "id": "POC17527",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          310467.741817894,
+          9354.85247196324,
+          9995.43298339844
+        ],
+        "bay": null,
+        "level": "CSF",
+        "bop": 1995.4,
+        "connectionGuidList": [
+          "f096c31a-1ecd-4d69-b9ab-7b8a8c763079"
+        ],
+        "connectionIDList": [
+          "PIPE17526"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 310464.5,
+            "y": 9351.6,
+            "z": 9995.4
+          },
+          "max": {
+            "x": 310470.9,
+            "y": 9358.0,
+            "z": 9995.4
+          }
+        },
+        "utility": "SiH4",
+        "material": "SUS316 EP",
+        "size": "1/4B"
+      },
+      "paths": [
+        {
+          "terminal_label": "다른 장비 PoC 도달",
+          "branch_depth": 0,
+          "branch_segments": [],
+          "path_summary": "PO->BD->BD->BD->BD->BD->BD->BD->BD->BD->BD->BD->BD->BD->BD->BD->GL->PO",
+          "end_node_id": "2f99f160-5187-4ff4-bf98-d0f2888e4c68",
+          "end_node_type": "POC",
+          "steps": [
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "cd075030-f419-4e89-bc58-f1905582ae3d",
+                "id": "POC17527",
+                "name": "start",
+                "type": "POC",
+                "position": [
+                  310467.741817894,
+                  9354.85247196324,
+                  9995.43298339844
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 1995.4,
+                "connectionGuidList": [
+                  "f096c31a-1ecd-4d69-b9ab-7b8a8c763079"
+                ],
+                "connectionIDList": [
+                  "PIPE17526"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 310464.5,
+                    "y": 9351.6,
+                    "z": 9995.4
+                  },
+                  "max": {
+                    "x": 310470.9,
+                    "y": 9358.0,
+                    "z": 9995.4
+                  }
+                },
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "f096c31a-1ecd-4d69-b9ab-7b8a8c763079",
+                "id": "PIPE17526",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  310468.0,
+                  9355.0,
+                  10327.0
+                ],
+                "connectionGuidList": [
+                  "a727620f-68db-4078-ba3f-5116f42cbc43",
+                  "cd075030-f419-4e89-bc58-f1905582ae3d"
+                ],
+                "connectionIDList": [
+                  "BENDING17435",
+                  "POC17527"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "a727620f-68db-4078-ba3f-5116f42cbc43",
+                "id": "BENDING17435",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  310468.0,
+                  9358.1748046875,
+                  10330.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 2329.95,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "d41ae346-1a41-4be6-876a-8601aab82e26",
+                  "f096c31a-1ecd-4d69-b9ab-7b8a8c763079"
+                ],
+                "connectionIDList": [
+                  "PIPE17433",
+                  "PIPE17526"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 310464.8,
+                    "y": 9355.0,
+                    "z": 10326.8
+                  },
+                  "max": {
+                    "x": 310471.1,
+                    "y": 9358.1,
+                    "z": 10333.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "d41ae346-1a41-4be6-876a-8601aab82e26",
+                "id": "PIPE17433",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  310468.0,
+                  9392.0,
+                  10330.0
+                ],
+                "connectionGuidList": [
+                  "c0d0b55f-6f0c-4cc3-85d8-783aeec73950",
+                  "a727620f-68db-4078-ba3f-5116f42cbc43"
+                ],
+                "connectionIDList": [
+                  "BENDING17434",
+                  "BENDING17435"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "c0d0b55f-6f0c-4cc3-85d8-783aeec73950",
+                "id": "BENDING17434",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  310468.0,
+                  9395.0,
+                  10333.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 2331.4,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "c05d65ae-5681-464d-98cd-c2dd0a20a9e3",
+                  "d41ae346-1a41-4be6-876a-8601aab82e26"
+                ],
+                "connectionIDList": [
+                  "PIPE17650",
+                  "PIPE17433"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 310464.8,
+                    "y": 9391.8,
+                    "z": 10329.8
+                  },
+                  "max": {
+                    "x": 310471.1,
+                    "y": 9398.1,
+                    "z": 10333.0
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "c05d65ae-5681-464d-98cd-c2dd0a20a9e3",
+                "id": "PIPE17650",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  310468.0,
+                  9395.0,
+                  10547.0
+                ],
+                "connectionGuidList": [
+                  "a8990e21-9e63-4a88-80fc-8f4f93b97769",
+                  "c0d0b55f-6f0c-4cc3-85d8-783aeec73950"
+                ],
+                "connectionIDList": [
+                  "BENDING17649",
+                  "BENDING17434"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "a8990e21-9e63-4a88-80fc-8f4f93b97769",
+                "id": "BENDING17649",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  310468.0,
+                  9398.0,
+                  10550.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 2549.95,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "c71cb915-17b7-4a82-bd06-f5ab548f3949",
+                  "c05d65ae-5681-464d-98cd-c2dd0a20a9e3"
+                ],
+                "connectionIDList": [
+                  "PIPE17624",
+                  "PIPE17650"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 310464.8,
+                    "y": 9394.8,
+                    "z": 10546.8
+                  },
+                  "max": {
+                    "x": 310471.1,
+                    "y": 9398.0,
+                    "z": 10553.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "c71cb915-17b7-4a82-bd06-f5ab548f3949",
+                "id": "PIPE17624",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  310468.0,
+                  9617.0,
+                  10550.0
+                ],
+                "connectionGuidList": [
+                  "10cbdcdd-7552-4335-8efe-9ddf38f9b6f5",
+                  "a8990e21-9e63-4a88-80fc-8f4f93b97769"
+                ],
+                "connectionIDList": [
+                  "BENDING17622",
+                  "BENDING17649"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "10cbdcdd-7552-4335-8efe-9ddf38f9b6f5",
+                "id": "BENDING17622",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  310471.0,
+                  9620.0,
+                  10550.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 2549.95,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "3df4a8ed-eb08-485b-b9ed-ec38657815db",
+                  "c71cb915-17b7-4a82-bd06-f5ab548f3949"
+                ],
+                "connectionIDList": [
+                  "PIPE17623",
+                  "PIPE17624"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 310467.8,
+                    "y": 9616.8,
+                    "z": 10546.8
+                  },
+                  "max": {
+                    "x": 310471.0,
+                    "y": 9623.1,
+                    "z": 10553.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "3df4a8ed-eb08-485b-b9ed-ec38657815db",
+                "id": "PIPE17623",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  310471.0,
+                  9620.0,
+                  10550.0
+                ],
+                "connectionGuidList": [
+                  "10cbdcdd-7552-4335-8efe-9ddf38f9b6f5",
+                  "da7e6bc7-392b-4116-a293-0ca476922dd0"
+                ],
+                "connectionIDList": [
+                  "BENDING17622",
+                  "BENDING17333"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "da7e6bc7-392b-4116-a293-0ca476922dd0",
+                "id": "BENDING17333",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  310487.5,
+                  9620.0,
+                  10553.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 2551.4,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "3a50d3a8-58eb-4526-884d-1d597cb9554c",
+                  "3df4a8ed-eb08-485b-b9ed-ec38657815db"
+                ],
+                "connectionIDList": [
+                  "PIPE17331",
+                  "PIPE17623"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 310484.3,
+                    "y": 9616.8,
+                    "z": 10549.8
+                  },
+                  "max": {
+                    "x": 310490.6,
+                    "y": 9623.1,
+                    "z": 10553.0
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "3a50d3a8-58eb-4526-884d-1d597cb9554c",
+                "id": "PIPE17331",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  310487.5,
+                  9620.0,
+                  13597.0
+                ],
+                "connectionGuidList": [
+                  "1c23a167-b5a5-4ead-922f-a1d168861978",
+                  "da7e6bc7-392b-4116-a293-0ca476922dd0"
+                ],
+                "connectionIDList": [
+                  "BENDING17332",
+                  "BENDING17333"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "1c23a167-b5a5-4ead-922f-a1d168861978",
+                "id": "BENDING17332",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  310487.5,
+                  9620.0,
+                  13596.8251953125
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 5598.4,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "3a50d3a8-58eb-4526-884d-1d597cb9554c",
+                  "c283ed0d-bc77-46fd-87f8-7af2c09768d3"
+                ],
+                "connectionIDList": [
+                  "PIPE17331",
+                  "PIPE17505"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 310484.3,
+                    "y": 9616.8,
+                    "z": 13596.8
+                  },
+                  "max": {
+                    "x": 310490.6,
+                    "y": 9623.1,
+                    "z": 13600.0
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "c283ed0d-bc77-46fd-87f8-7af2c09768d3",
+                "id": "PIPE17505",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  311477.0,
+                  9620.0,
+                  13600.0
+                ],
+                "connectionGuidList": [
+                  "6d11323c-47c3-4a49-a0e5-0016c8afebfc",
+                  "1c23a167-b5a5-4ead-922f-a1d168861978"
+                ],
+                "connectionIDList": [
+                  "BENDING17572",
+                  "BENDING17332"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "6d11323c-47c3-4a49-a0e5-0016c8afebfc",
+                "id": "BENDING17572",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  311480.0,
+                  9623.0,
+                  13600.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 5599.95,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "0dd777a9-ad6d-4224-9795-6bf9fb000346",
+                  "c283ed0d-bc77-46fd-87f8-7af2c09768d3"
+                ],
+                "connectionIDList": [
+                  "PIPE17573",
+                  "PIPE17505"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 311476.8,
+                    "y": 9619.8,
+                    "z": 13596.8
+                  },
+                  "max": {
+                    "x": 311483.1,
+                    "y": 9623.0,
+                    "z": 13603.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "0dd777a9-ad6d-4224-9795-6bf9fb000346",
+                "id": "PIPE17573",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  311480.0,
+                  9623.0,
+                  13600.0
+                ],
+                "connectionGuidList": [
+                  "6d11323c-47c3-4a49-a0e5-0016c8afebfc",
+                  "5ace17f5-1276-445c-a56e-35b4c72cd252"
+                ],
+                "connectionIDList": [
+                  "BENDING17572",
+                  "BENDING17543"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "5ace17f5-1276-445c-a56e-35b4c72cd252",
+                "id": "BENDING17543",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  311483.1875,
+                  11320.0,
+                  13600.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 5599.95,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "9d10b799-c0cd-4a44-a32b-3706e3576b7a",
+                  "0dd777a9-ad6d-4224-9795-6bf9fb000346"
+                ],
+                "connectionIDList": [
+                  "PIPE17541",
+                  "PIPE17573"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 311480.0,
+                    "y": 11316.8,
+                    "z": 13596.8
+                  },
+                  "max": {
+                    "x": 311483.1,
+                    "y": 11323.1,
+                    "z": 13603.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "9d10b799-c0cd-4a44-a32b-3706e3576b7a",
+                "id": "PIPE17541",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  311497.0,
+                  11320.0,
+                  13600.0
+                ],
+                "connectionGuidList": [
+                  "db58ec0a-67ef-4c44-9982-4ca98f24754a",
+                  "5ace17f5-1276-445c-a56e-35b4c72cd252"
+                ],
+                "connectionIDList": [
+                  "BENDING17542",
+                  "BENDING17543"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "db58ec0a-67ef-4c44-9982-4ca98f24754a",
+                "id": "BENDING17542",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  311500.0,
+                  11320.0,
+                  13603.1748046875
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 5601.55,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "5128c728-2918-477e-8bc7-9ad47d3f38fb",
+                  "9d10b799-c0cd-4a44-a32b-3706e3576b7a"
+                ],
+                "connectionIDList": [
+                  "PIPE17401",
+                  "PIPE17541"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 311496.8,
+                    "y": 11316.8,
+                    "z": 13600.0
+                  },
+                  "max": {
+                    "x": 311503.1,
+                    "y": 11323.1,
+                    "z": 13603.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "5128c728-2918-477e-8bc7-9ad47d3f38fb",
+                "id": "PIPE17401",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  311500.0,
+                  11320.0,
+                  14697.0
+                ],
+                "connectionGuidList": [
+                  "2eedd17e-bbf9-4ef3-9d17-69fa81b4d622",
+                  "db58ec0a-67ef-4c44-9982-4ca98f24754a"
+                ],
+                "connectionIDList": [
+                  "BENDING17399",
+                  "BENDING17542"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "2eedd17e-bbf9-4ef3-9d17-69fa81b4d622",
+                "id": "BENDING17399",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  311503.1875,
+                  11320.0,
+                  14700.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 999.95,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "edb3fd75-45f3-406c-bee4-94e7ffaf6593",
+                  "5128c728-2918-477e-8bc7-9ad47d3f38fb"
+                ],
+                "connectionIDList": [
+                  "PIPE17400",
+                  "PIPE17401"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 311500.0,
+                    "y": 11316.8,
+                    "z": 14696.8
+                  },
+                  "max": {
+                    "x": 311503.1,
+                    "y": 11323.1,
+                    "z": 14703.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "edb3fd75-45f3-406c-bee4-94e7ffaf6593",
+                "id": "PIPE17400",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  311517.0,
+                  11320.0,
+                  14700.0
+                ],
+                "connectionGuidList": [
+                  "0ee8d892-7bdd-4e1c-971f-d70802a9aed6",
+                  "2eedd17e-bbf9-4ef3-9d17-69fa81b4d622"
+                ],
+                "connectionIDList": [
+                  "BENDING17575",
+                  "BENDING17399"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "0ee8d892-7bdd-4e1c-971f-d70802a9aed6",
+                "id": "BENDING17575",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  311520.0,
+                  11323.1748046875,
+                  14700.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 999.95,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "6c0fbd81-f87e-4164-ac06-800ec7e3d0ac",
+                  "edb3fd75-45f3-406c-bee4-94e7ffaf6593"
+                ],
+                "connectionIDList": [
+                  "PIPE17576",
+                  "PIPE17400"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 311516.8,
+                    "y": 11320.0,
+                    "z": 14696.8
+                  },
+                  "max": {
+                    "x": 311523.1,
+                    "y": 11323.1,
+                    "z": 14703.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "6c0fbd81-f87e-4164-ac06-800ec7e3d0ac",
+                "id": "PIPE17576",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  311520.0,
+                  11848.0,
+                  14700.0
+                ],
+                "connectionGuidList": [
+                  "100a3413-4100-4cd3-9ca1-2bb7ded9f62b",
+                  "0ee8d892-7bdd-4e1c-971f-d70802a9aed6"
+                ],
+                "connectionIDList": [
+                  "BENDING17353",
+                  "BENDING17575"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "100a3413-4100-4cd3-9ca1-2bb7ded9f62b",
+                "id": "BENDING17353",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  311520.0,
+                  11851.0,
+                  14703.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1001.4,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "3d36a7bb-a5b5-42db-93b9-6a8586e8ccaa",
+                  "6c0fbd81-f87e-4164-ac06-800ec7e3d0ac"
+                ],
+                "connectionIDList": [
+                  "PIPE17351",
+                  "PIPE17576"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 311516.8,
+                    "y": 11847.8,
+                    "z": 14699.8
+                  },
+                  "max": {
+                    "x": 311523.1,
+                    "y": 11854.1,
+                    "z": 14703.0
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "3d36a7bb-a5b5-42db-93b9-6a8586e8ccaa",
+                "id": "PIPE17351",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  311520.0,
+                  11851.0,
+                  14862.0
+                ],
+                "connectionGuidList": [
+                  "62e46531-0b55-4638-af36-c62c5bb9ad8f",
+                  "100a3413-4100-4cd3-9ca1-2bb7ded9f62b"
+                ],
+                "connectionIDList": [
+                  "BENDING17352",
+                  "BENDING17353"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "62e46531-0b55-4638-af36-c62c5bb9ad8f",
+                "id": "BENDING17352",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  311523.0,
+                  11851.0,
+                  14865.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1164.95,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "92b477bb-faa0-4416-ab8a-ee7a922d1704",
+                  "3d36a7bb-a5b5-42db-93b9-6a8586e8ccaa"
+                ],
+                "connectionIDList": [
+                  "PIPE17521",
+                  "PIPE17351"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 311519.8,
+                    "y": 11847.8,
+                    "z": 14861.8
+                  },
+                  "max": {
+                    "x": 311523.0,
+                    "y": 11854.1,
+                    "z": 14868.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "92b477bb-faa0-4416-ab8a-ee7a922d1704",
+                "id": "PIPE17521",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  311523.0,
+                  11851.0,
+                  14865.0
+                ],
+                "connectionGuidList": [
+                  "62e46531-0b55-4638-af36-c62c5bb9ad8f",
+                  "31b75740-0c5f-4edc-9bfe-facecd8e180a"
+                ],
+                "connectionIDList": [
+                  "BENDING17352",
+                  "BENDING17522"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "31b75740-0c5f-4edc-9bfe-facecd8e180a",
+                "id": "BENDING17522",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  311796.8125,
+                  11851.0,
+                  14865.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1164.95,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "92b477bb-faa0-4416-ab8a-ee7a922d1704",
+                  "b42943ef-d290-4b67-9c3e-2c2d104aa55e"
+                ],
+                "connectionIDList": [
+                  "PIPE17521",
+                  "PIPE17553"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 311796.8,
+                    "y": 11847.8,
+                    "z": 14861.8
+                  },
+                  "max": {
+                    "x": 311800.0,
+                    "y": 11854.1,
+                    "z": 14868.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "b42943ef-d290-4b67-9c3e-2c2d104aa55e",
+                "id": "PIPE17553",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  311800.0,
+                  11848.0,
+                  14865.0
+                ],
+                "connectionGuidList": [
+                  "31b75740-0c5f-4edc-9bfe-facecd8e180a",
+                  "db3d1c6d-687a-4923-90c1-78b8d0716639"
+                ],
+                "connectionIDList": [
+                  "BENDING17522",
+                  "BENDING17636"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "db3d1c6d-687a-4923-90c1-78b8d0716639",
+                "id": "BENDING17636",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  311800.0,
+                  11410.1748046875,
+                  14865.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1164.95,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "b42943ef-d290-4b67-9c3e-2c2d104aa55e",
+                  "35e2c2cd-6b7f-46c9-8fee-58e6363b5cd0"
+                ],
+                "connectionIDList": [
+                  "PIPE17553",
+                  "PIPE17518"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 311796.8,
+                    "y": 11407.0,
+                    "z": 14861.8
+                  },
+                  "max": {
+                    "x": 311803.1,
+                    "y": 11410.1,
+                    "z": 14868.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "35e2c2cd-6b7f-46c9-8fee-58e6363b5cd0",
+                "id": "PIPE17518",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  311800.0,
+                  11407.0,
+                  14868.0
+                ],
+                "connectionGuidList": [
+                  "db3d1c6d-687a-4923-90c1-78b8d0716639",
+                  "85c6ae52-c1fe-4672-99fd-b2ab30758323"
+                ],
+                "connectionIDList": [
+                  "BENDING17636",
+                  "GLAND17517"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "85c6ae52-c1fe-4672-99fd-b2ab30758323",
+                "id": "GLAND17517",
+                "name": "Gland-SUS316 EP-1_4B-Female Assembly",
+                "type": "GLAND",
+                "position": [
+                  311800.0,
+                  11407.0,
+                  15495.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1785.9,
+                "connectionGuidList": [
+                  "35e2c2cd-6b7f-46c9-8fee-58e6363b5cd0",
+                  "2f99f160-5187-4ff4-bf98-d0f2888e4c68"
+                ],
+                "connectionIDList": [
+                  "PIPE17518",
+                  "POC17519"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 311788.9,
+                    "y": 11397.5,
+                    "z": 15463.8
+                  },
+                  "max": {
+                    "x": 311811.0,
+                    "y": 11416.5,
+                    "z": 15508.0
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "type": "DIRECT_NODE",
+                "id": "direct_85c6ae52-c1fe-4672-99fd-b2ab30758323_2f99f160-5187-4ff4-bf98-d0f2888e4c68"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "2f99f160-5187-4ff4-bf98-d0f2888e4c68",
+                "id": "POC17519",
+                "name": "end",
+                "type": "POC",
+                "position": [
+                  311799.893753052,
+                  11407.400390625,
+                  15495.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1794.95,
+                "connectionGuidList": [
+                  "85c6ae52-c1fe-4672-99fd-b2ab30758323"
+                ],
+                "connectionIDList": [
+                  "GLAND17517"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 311796.7,
+                    "y": 11404.2,
+                    "z": 15494.9
+                  },
+                  "max": {
+                    "x": 311803.0,
+                    "y": 11410.5,
+                    "z": 15495.0
+                  }
+                },
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            }
+          ],
+          "node_positions": [
+            [
+              310467.741817894,
+              9354.85247196324,
+              9995.43298339844
+            ],
+            [
+              310468.0,
+              9358.1748046875,
+              10330.0
+            ],
+            [
+              310468.0,
+              9395.0,
+              10333.0
+            ],
+            [
+              310468.0,
+              9398.0,
+              10550.0
+            ],
+            [
+              310471.0,
+              9620.0,
+              10550.0
+            ],
+            [
+              310487.5,
+              9620.0,
+              10553.0
+            ],
+            [
+              310487.5,
+              9620.0,
+              13596.8251953125
+            ],
+            [
+              311480.0,
+              9623.0,
+              13600.0
+            ],
+            [
+              311483.1875,
+              11320.0,
+              13600.0
+            ],
+            [
+              311500.0,
+              11320.0,
+              13603.1748046875
+            ],
+            [
+              311503.1875,
+              11320.0,
+              14700.0
+            ],
+            [
+              311520.0,
+              11323.1748046875,
+              14700.0
+            ],
+            [
+              311520.0,
+              11851.0,
+              14703.0
+            ],
+            [
+              311523.0,
+              11851.0,
+              14865.0
+            ],
+            [
+              311796.8125,
+              11851.0,
+              14865.0
+            ],
+            [
+              311800.0,
+              11410.1748046875,
+              14865.0
+            ],
+            [
+              311800.0,
+              11407.0,
+              15495.0
+            ],
+            [
+              311799.893753052,
+              11407.400390625,
+              15495.0
+            ]
+          ],
+          "path_arrow": "R-H-R-H-D-R-H-H-D-R-H-H-R-H-H-R-H",
+          "path_bbox": {
+            "x_min": 310467.7,
+            "x_max": 311800.0,
+            "y_min": 9354.9,
+            "y_max": 11851.0,
+            "z_min": 9995.4,
+            "z_max": 15495.0,
+            "x_range": 1332.3,
+            "y_range": 2496.1,
+            "z_range": 5499.6,
+            "xy_spread": 2827.9,
+            "node_count": 18
+          },
+          "path_range": {
+            "x": 1332.3,
+            "y": 2496.1,
+            "z": 5499.6
+          },
+          "path_step_vectors": [
+            {
+              "x": 0.3,
+              "y": 3.3,
+              "z": 334.6
+            },
+            {
+              "x": 0.0,
+              "y": 36.8,
+              "z": 3.0
+            },
+            {
+              "x": 0.0,
+              "y": 3.0,
+              "z": 217.0
+            },
+            {
+              "x": 3.0,
+              "y": 222.0,
+              "z": 0.0
+            },
+            {
+              "x": 16.5,
+              "y": 0.0,
+              "z": 3.0
+            },
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 3043.8
+            },
+            {
+              "x": 992.5,
+              "y": 3.0,
+              "z": 3.2
+            },
+            {
+              "x": 3.2,
+              "y": 1697.0,
+              "z": 0.0
+            },
+            {
+              "x": 16.8,
+              "y": 0.0,
+              "z": 3.2
+            },
+            {
+              "x": 3.2,
+              "y": 0.0,
+              "z": 1096.8
+            },
+            {
+              "x": 16.8,
+              "y": 3.2,
+              "z": 0.0
+            },
+            {
+              "x": 0.0,
+              "y": 527.8,
+              "z": 3.0
+            },
+            {
+              "x": 3.0,
+              "y": 0.0,
+              "z": 162.0
+            },
+            {
+              "x": 273.8,
+              "y": 0.0,
+              "z": 0.0
+            },
+            {
+              "x": 3.2,
+              "y": -440.8,
+              "z": 0.0
+            },
+            {
+              "x": 0.0,
+              "y": -3.2,
+              "z": 630.0
+            },
+            {
+              "x": -0.1,
+              "y": 0.4,
+              "z": 0.0
+            }
+          ],
+          "path_step_lengths": [
+            334.6,
+            36.9,
+            217.0,
+            222.0,
+            16.8,
+            3043.8,
+            992.5,
+            1697.0,
+            17.1,
+            1096.8,
+            17.1,
+            527.8,
+            162.0,
+            273.8,
+            440.8,
+            630.0,
+            0.4
+          ],
+          "path_step_vector": "(0.3,3.3,334.6), (0.0,36.8,3.0), (0.0,3.0,217.0), (3.0,222.0,0.0), (16.5,0.0,3.0), (0.0,0.0,3043.8), (992.5,3.0,3.2), (3.2,1697.0,0.0), (16.8,0.0,3.2), (3.2,0.0,1096.8), (16.8,3.2,0.0), (0.0,527.8,3.0), (3.0,0.0,162.0), (273.8,0.0,0.0), (3.2,-440.8,0.0), (0.0,-3.2,630.0), (-0.1,0.4,0.0)",
+          "path_step_length": "334.6, 36.9, 217.0, 222.0, 16.8, 3043.8, 992.5, 1697.0, 17.1, 1096.8, 17.1, 527.8, 162.0, 273.8, 440.8, 630.0, 0.4",
+          "path_total_length": 9726.4,
+          "h_segments": [
+            {
+              "mean_z": 10331.5,
+              "mid_xy": [
+                310468.0,
+                9376.587
+              ],
+              "node_count": 2
+            },
+            {
+              "mean_z": 10550.0,
+              "mid_xy": [
+                310469.5,
+                9509.0
+              ],
+              "node_count": 2
+            },
+            {
+              "mean_z": 13598.942,
+              "mid_xy": [
+                311150.229,
+                10187.667
+              ],
+              "node_count": 3
+            },
+            {
+              "mean_z": 14701.0,
+              "mid_xy": [
+                311514.396,
+                11498.058
+              ],
+              "node_count": 3
+            },
+            {
+              "mean_z": 14865.0,
+              "mid_xy": [
+                311706.604,
+                11704.058
+              ],
+              "node_count": 3
+            },
+            {
+              "mean_z": 15495.0,
+              "mid_xy": [
+                311799.947,
+                11407.2
+              ],
+              "node_count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start_poc_id": "c406be6b-546f-4479-a0eb-de03bcfb98ae",
+      "start_poc_info": {
+        "guid": "c406be6b-546f-4479-a0eb-de03bcfb98ae",
+        "id": "POC17599",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          310547.741817894,
+          9354.85247895706,
+          9995.43298339844
+        ],
+        "bay": null,
+        "level": "CSF",
+        "bop": 1995.4,
+        "connectionGuidList": [
+          "48150bcb-3c09-466a-bda4-35083ec1b6a2"
+        ],
+        "connectionIDList": [
+          "PIPE17598"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 310544.5,
+            "y": 9351.6,
+            "z": 9995.4
+          },
+          "max": {
+            "x": 310550.9,
+            "y": 9358.0,
+            "z": 9995.4
+          }
+        },
+        "utility": "SiH4",
+        "material": "SUS316 EP",
+        "size": "1/4B"
+      },
+      "paths": [
+        {
+          "terminal_label": "다른 장비 PoC 도달",
+          "branch_depth": 0,
+          "branch_segments": [],
+          "path_summary": "PO->BD->BD->BD->BD->BD->BD->BD->BD->BD->BD->BD->BD->BD->BD->BD->GL->PO",
+          "end_node_id": "d39a9ae0-7d6e-4521-a414-8e85d5f66725",
+          "end_node_type": "POC",
+          "steps": [
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "c406be6b-546f-4479-a0eb-de03bcfb98ae",
+                "id": "POC17599",
+                "name": "start",
+                "type": "POC",
+                "position": [
+                  310547.741817894,
+                  9354.85247895706,
+                  9995.43298339844
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 1995.4,
+                "connectionGuidList": [
+                  "48150bcb-3c09-466a-bda4-35083ec1b6a2"
+                ],
+                "connectionIDList": [
+                  "PIPE17598"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 310544.5,
+                    "y": 9351.6,
+                    "z": 9995.4
+                  },
+                  "max": {
+                    "x": 310550.9,
+                    "y": 9358.0,
+                    "z": 9995.4
+                  }
+                },
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "48150bcb-3c09-466a-bda4-35083ec1b6a2",
+                "id": "PIPE17598",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  310548.0,
+                  9355.0,
+                  10327.0
+                ],
+                "connectionGuidList": [
+                  "f3890d24-3351-4ed9-adf2-7af9ccc628b6",
+                  "c406be6b-546f-4479-a0eb-de03bcfb98ae"
+                ],
+                "connectionIDList": [
+                  "BENDING17507",
+                  "POC17599"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "f3890d24-3351-4ed9-adf2-7af9ccc628b6",
+                "id": "BENDING17507",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  310544.8125,
+                  9355.0,
+                  10330.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 2329.95,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "ef4f58bf-9129-4052-8de8-6d06cea1fa00",
+                  "48150bcb-3c09-466a-bda4-35083ec1b6a2"
+                ],
+                "connectionIDList": [
+                  "PIPE17428",
+                  "PIPE17598"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 310544.8,
+                    "y": 9351.8,
+                    "z": 10326.8
+                  },
+                  "max": {
+                    "x": 310548.0,
+                    "y": 9358.1,
+                    "z": 10333.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "ef4f58bf-9129-4052-8de8-6d06cea1fa00",
+                "id": "PIPE17428",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  310491.0,
+                  9355.0,
+                  10330.0
+                ],
+                "connectionGuidList": [
+                  "99034e8f-b67a-4c6e-a022-f5aa446caadf",
+                  "f3890d24-3351-4ed9-adf2-7af9ccc628b6"
+                ],
+                "connectionIDList": [
+                  "BENDING17345",
+                  "BENDING17507"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "99034e8f-b67a-4c6e-a022-f5aa446caadf",
+                "id": "BENDING17345",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  310488.0,
+                  9358.1748046875,
+                  10330.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 2329.95,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "823aebb7-031b-4a42-9dcd-5d3ed0be3da8",
+                  "ef4f58bf-9129-4052-8de8-6d06cea1fa00"
+                ],
+                "connectionIDList": [
+                  "PIPE17343",
+                  "PIPE17428"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 310484.8,
+                    "y": 9355.0,
+                    "z": 10326.8
+                  },
+                  "max": {
+                    "x": 310491.1,
+                    "y": 9358.1,
+                    "z": 10333.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "823aebb7-031b-4a42-9dcd-5d3ed0be3da8",
+                "id": "PIPE17343",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  310488.0,
+                  9392.0,
+                  10330.0
+                ],
+                "connectionGuidList": [
+                  "6ff11b14-95ad-4817-8f15-719e9d44e520",
+                  "99034e8f-b67a-4c6e-a022-f5aa446caadf"
+                ],
+                "connectionIDList": [
+                  "BENDING17344",
+                  "BENDING17345"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "6ff11b14-95ad-4817-8f15-719e9d44e520",
+                "id": "BENDING17344",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  310488.0,
+                  9395.0,
+                  10333.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 2331.4,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "54dee860-e9f6-4a62-97e0-4b0967f0976e",
+                  "823aebb7-031b-4a42-9dcd-5d3ed0be3da8"
+                ],
+                "connectionIDList": [
+                  "PIPE17377",
+                  "PIPE17343"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 310484.8,
+                    "y": 9391.8,
+                    "z": 10329.8
+                  },
+                  "max": {
+                    "x": 310491.1,
+                    "y": 9398.1,
+                    "z": 10333.0
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "54dee860-e9f6-4a62-97e0-4b0967f0976e",
+                "id": "PIPE17377",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  310488.0,
+                  9395.0,
+                  10547.0
+                ],
+                "connectionGuidList": [
+                  "ba6dff1f-d591-4eac-968c-c20807d728f3",
+                  "6ff11b14-95ad-4817-8f15-719e9d44e520"
+                ],
+                "connectionIDList": [
+                  "BENDING17378",
+                  "BENDING17344"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "ba6dff1f-d591-4eac-968c-c20807d728f3",
+                "id": "BENDING17378",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  310488.0,
+                  9398.0,
+                  10550.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 2549.95,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "ac800043-1251-4bbb-9c4b-cb1ce8079481",
+                  "54dee860-e9f6-4a62-97e0-4b0967f0976e"
+                ],
+                "connectionIDList": [
+                  "PIPE17511",
+                  "PIPE17377"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 310484.8,
+                    "y": 9394.8,
+                    "z": 10546.8
+                  },
+                  "max": {
+                    "x": 310491.1,
+                    "y": 9398.0,
+                    "z": 10553.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "ac800043-1251-4bbb-9c4b-cb1ce8079481",
+                "id": "PIPE17511",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  310488.0,
+                  9596.8251953125,
+                  10550.0
+                ],
+                "connectionGuidList": [
+                  "31a8499e-fbd7-4478-a079-2dff81ca6691",
+                  "ba6dff1f-d591-4eac-968c-c20807d728f3"
+                ],
+                "connectionIDList": [
+                  "BENDING17652",
+                  "BENDING17378"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "31a8499e-fbd7-4478-a079-2dff81ca6691",
+                "id": "BENDING17652",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  310488.0,
+                  9596.8251953125,
+                  10550.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 2549.95,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "ac800043-1251-4bbb-9c4b-cb1ce8079481",
+                  "b0641fce-d7f6-4be4-b33a-750d9f817577"
+                ],
+                "connectionIDList": [
+                  "PIPE17511",
+                  "PIPE17308"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 310484.8,
+                    "y": 9596.8,
+                    "z": 10546.8
+                  },
+                  "max": {
+                    "x": 310491.1,
+                    "y": 9599.9,
+                    "z": 10553.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "b0641fce-d7f6-4be4-b33a-750d9f817577",
+                "id": "PIPE17308",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  310487.5,
+                  9600.0,
+                  13597.0
+                ],
+                "connectionGuidList": [
+                  "d15c88f5-6779-4719-90f5-07e90e7153ce",
+                  "31a8499e-fbd7-4478-a079-2dff81ca6691"
+                ],
+                "connectionIDList": [
+                  "BENDING17306",
+                  "BENDING17652"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "d15c88f5-6779-4719-90f5-07e90e7153ce",
+                "id": "BENDING17306",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  310490.5,
+                  9600.0,
+                  13600.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 5599.95,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "eb1aa76d-c8be-4c05-94b4-5893f8d7ebad",
+                  "b0641fce-d7f6-4be4-b33a-750d9f817577"
+                ],
+                "connectionIDList": [
+                  "PIPE17307",
+                  "PIPE17308"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 310487.3,
+                    "y": 9596.8,
+                    "z": 13596.8
+                  },
+                  "max": {
+                    "x": 310490.5,
+                    "y": 9603.1,
+                    "z": 13603.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "eb1aa76d-c8be-4c05-94b4-5893f8d7ebad",
+                "id": "PIPE17307",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  311497.0,
+                  9600.0,
+                  13600.0
+                ],
+                "connectionGuidList": [
+                  "fcfce9f4-22da-4e2a-bd17-6e0fd5e37f4b",
+                  "d15c88f5-6779-4719-90f5-07e90e7153ce"
+                ],
+                "connectionIDList": [
+                  "BENDING17324",
+                  "BENDING17306"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "fcfce9f4-22da-4e2a-bd17-6e0fd5e37f4b",
+                "id": "BENDING17324",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  311500.0,
+                  9603.0,
+                  13600.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 5599.95,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "5d40475e-06ba-44b2-aa07-53013efe29aa",
+                  "eb1aa76d-c8be-4c05-94b4-5893f8d7ebad"
+                ],
+                "connectionIDList": [
+                  "PIPE17325",
+                  "PIPE17307"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 311496.8,
+                    "y": 9599.8,
+                    "z": 13596.8
+                  },
+                  "max": {
+                    "x": 311503.1,
+                    "y": 9603.0,
+                    "z": 13603.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "5d40475e-06ba-44b2-aa07-53013efe29aa",
+                "id": "PIPE17325",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  311500.0,
+                  11297.0,
+                  13600.0
+                ],
+                "connectionGuidList": [
+                  "6412a87a-179e-45d1-84b0-14101f1477e7",
+                  "fcfce9f4-22da-4e2a-bd17-6e0fd5e37f4b"
+                ],
+                "connectionIDList": [
+                  "BENDING17330",
+                  "BENDING17324"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "6412a87a-179e-45d1-84b0-14101f1477e7",
+                "id": "BENDING17330",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  311500.0,
+                  11300.0,
+                  13603.0
+                ],
+                "bay": null,
+                "level": "CSF",
+                "bop": 5601.4,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "20d1126b-3f6f-4bf0-be9c-82e320eacd57",
+                  "5d40475e-06ba-44b2-aa07-53013efe29aa"
+                ],
+                "connectionIDList": [
+                  "PIPE17515",
+                  "PIPE17325"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 311496.8,
+                    "y": 11296.8,
+                    "z": 13599.8
+                  },
+                  "max": {
+                    "x": 311503.1,
+                    "y": 11303.1,
+                    "z": 13603.0
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "20d1126b-3f6f-4bf0-be9c-82e320eacd57",
+                "id": "PIPE17515",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  311500.0,
+                  11300.0,
+                  14657.0
+                ],
+                "connectionGuidList": [
+                  "87c48277-ef52-4079-a7ec-bcc15977fd9b",
+                  "6412a87a-179e-45d1-84b0-14101f1477e7"
+                ],
+                "connectionIDList": [
+                  "BENDING17550",
+                  "BENDING17330"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "87c48277-ef52-4079-a7ec-bcc15977fd9b",
+                "id": "BENDING17550",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  311496.8125,
+                  11300.0,
+                  14660.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 959.95,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "2bd6daa5-9e30-4b7b-b50e-d828dc0430ef",
+                  "20d1126b-3f6f-4bf0-be9c-82e320eacd57"
+                ],
+                "connectionIDList": [
+                  "PIPE17551",
+                  "PIPE17515"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 311496.8,
+                    "y": 11296.8,
+                    "z": 14656.8
+                  },
+                  "max": {
+                    "x": 311500.0,
+                    "y": 11303.1,
+                    "z": 14663.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "2bd6daa5-9e30-4b7b-b50e-d828dc0430ef",
+                "id": "PIPE17551",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  311497.0,
+                  11300.0,
+                  14660.0
+                ],
+                "connectionGuidList": [
+                  "87c48277-ef52-4079-a7ec-bcc15977fd9b",
+                  "47a4a4e3-5a92-4614-89af-2085c9aa738b"
+                ],
+                "connectionIDList": [
+                  "BENDING17550",
+                  "BENDING17633"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "47a4a4e3-5a92-4614-89af-2085c9aa738b",
+                "id": "BENDING17633",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  311483.1875,
+                  11300.0,
+                  14660.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 959.95,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "2bd6daa5-9e30-4b7b-b50e-d828dc0430ef",
+                  "22fd1967-9417-40b9-ae5e-1a4a57abf473"
+                ],
+                "connectionIDList": [
+                  "PIPE17551",
+                  "PIPE17458"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 311480.0,
+                    "y": 11296.8,
+                    "z": 14656.8
+                  },
+                  "max": {
+                    "x": 311483.1,
+                    "y": 11303.1,
+                    "z": 14663.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "22fd1967-9417-40b9-ae5e-1a4a57abf473",
+                "id": "PIPE17458",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  311480.0,
+                  9744.0,
+                  14660.0
+                ],
+                "connectionGuidList": [
+                  "41eb9aa0-444b-4083-b174-94543e429250",
+                  "47a4a4e3-5a92-4614-89af-2085c9aa738b"
+                ],
+                "connectionIDList": [
+                  "BENDING17456",
+                  "BENDING17633"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "41eb9aa0-444b-4083-b174-94543e429250",
+                "id": "BENDING17456",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  311480.0,
+                  9741.0,
+                  14663.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 961.4,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "3742fcec-b04b-4b8e-b024-f3dbeb5658e3",
+                  "22fd1967-9417-40b9-ae5e-1a4a57abf473"
+                ],
+                "connectionIDList": [
+                  "PIPE17457",
+                  "PIPE17458"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 311476.8,
+                    "y": 9737.8,
+                    "z": 14659.8
+                  },
+                  "max": {
+                    "x": 311483.1,
+                    "y": 9744.1,
+                    "z": 14663.0
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "3742fcec-b04b-4b8e-b024-f3dbeb5658e3",
+                "id": "PIPE17457",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  311480.0,
+                  9741.0,
+                  14862.0
+                ],
+                "connectionGuidList": [
+                  "bd3e2c91-5ee9-4932-a067-ad065bee5896",
+                  "41eb9aa0-444b-4083-b174-94543e429250"
+                ],
+                "connectionIDList": [
+                  "BENDING17426",
+                  "BENDING17456"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "bd3e2c91-5ee9-4932-a067-ad065bee5896",
+                "id": "BENDING17426",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  311483.0,
+                  9741.0,
+                  14865.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1164.95,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "cd1f7597-3b98-499b-94e7-74f7fd524973",
+                  "3742fcec-b04b-4b8e-b024-f3dbeb5658e3"
+                ],
+                "connectionIDList": [
+                  "PIPE17425",
+                  "PIPE17457"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 311479.8,
+                    "y": 9737.8,
+                    "z": 14861.8
+                  },
+                  "max": {
+                    "x": 311483.0,
+                    "y": 9744.1,
+                    "z": 14868.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "cd1f7597-3b98-499b-94e7-74f7fd524973",
+                "id": "PIPE17425",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  311809.0,
+                  9741.0,
+                  14865.0
+                ],
+                "connectionGuidList": [
+                  "67ebd61b-90e9-423d-8852-08b74f5098d9",
+                  "bd3e2c91-5ee9-4932-a067-ad065bee5896"
+                ],
+                "connectionIDList": [
+                  "BENDING17421",
+                  "BENDING17426"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "67ebd61b-90e9-423d-8852-08b74f5098d9",
+                "id": "BENDING17421",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  311812.0,
+                  9738.0,
+                  14865.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1164.95,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "0eb9aa7f-d479-4d57-a2d0-c2bbcc25678d",
+                  "cd1f7597-3b98-499b-94e7-74f7fd524973"
+                ],
+                "connectionIDList": [
+                  "PIPE17419",
+                  "PIPE17425"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 311808.8,
+                    "y": 9738.0,
+                    "z": 14861.8
+                  },
+                  "max": {
+                    "x": 311815.1,
+                    "y": 9741.1,
+                    "z": 14868.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "0eb9aa7f-d479-4d57-a2d0-c2bbcc25678d",
+                "id": "PIPE17419",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  311812.0,
+                  9260.0,
+                  14865.0
+                ],
+                "connectionGuidList": [
+                  "df59e24e-2118-45a2-b837-613a6b90cc95",
+                  "67ebd61b-90e9-423d-8852-08b74f5098d9"
+                ],
+                "connectionIDList": [
+                  "BENDING17420",
+                  "BENDING17421"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "df59e24e-2118-45a2-b837-613a6b90cc95",
+                "id": "BENDING17420",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  311815.0,
+                  9257.0,
+                  14865.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1164.95,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "85178f87-20db-439b-85b6-2b7c6d87a65c",
+                  "0eb9aa7f-d479-4d57-a2d0-c2bbcc25678d"
+                ],
+                "connectionIDList": [
+                  "PIPE17555",
+                  "PIPE17419"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 311811.8,
+                    "y": 9253.8,
+                    "z": 14861.8
+                  },
+                  "max": {
+                    "x": 311815.0,
+                    "y": 9260.1,
+                    "z": 14868.1
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "85178f87-20db-439b-85b6-2b7c6d87a65c",
+                "id": "PIPE17555",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  312013.0,
+                  9257.0,
+                  14865.0
+                ],
+                "connectionGuidList": [
+                  "8b7461db-c8db-416e-a16e-b0fb7a83f325",
+                  "df59e24e-2118-45a2-b837-613a6b90cc95"
+                ],
+                "connectionIDList": [
+                  "BENDING17302",
+                  "BENDING17420"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "8b7461db-c8db-416e-a16e-b0fb7a83f325",
+                "id": "BENDING17302",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  312016.0,
+                  9257.0,
+                  14868.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1166.4,
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B",
+                "bendingRadius": 3.17,
+                "radiusRatio": 0.499,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "de7f6242-6647-4e99-9d4f-913c4f4d2de6",
+                  "85178f87-20db-439b-85b6-2b7c6d87a65c"
+                ],
+                "connectionIDList": [
+                  "PIPE17300",
+                  "PIPE17555"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 312012.8,
+                    "y": 9253.8,
+                    "z": 14864.8
+                  },
+                  "max": {
+                    "x": 312019.1,
+                    "y": 9260.1,
+                    "z": 14868.0
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "de7f6242-6647-4e99-9d4f-913c4f4d2de6",
+                "id": "PIPE17300",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  312016.0,
+                  9257.0,
+                  15464.0
+                ],
+                "connectionGuidList": [
+                  "2631b014-83f3-4f58-9b42-51371c5bc5c8",
+                  "8b7461db-c8db-416e-a16e-b0fb7a83f325"
+                ],
+                "connectionIDList": [
+                  "GLAND17301",
+                  "BENDING17302"
+                ],
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "2631b014-83f3-4f58-9b42-51371c5bc5c8",
+                "id": "GLAND17301",
+                "name": "Gland-SUS316 EP-1_4B-Female Assembly",
+                "type": "GLAND",
+                "position": [
+                  312016.0,
+                  9257.0,
+                  15495.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1785.9,
+                "connectionGuidList": [
+                  "de7f6242-6647-4e99-9d4f-913c4f4d2de6",
+                  "d39a9ae0-7d6e-4521-a414-8e85d5f66725"
+                ],
+                "connectionIDList": [
+                  "PIPE17300",
+                  "POC17539"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 312004.9,
+                    "y": 9247.5,
+                    "z": 15463.8
+                  },
+                  "max": {
+                    "x": 312027.0,
+                    "y": 9266.5,
+                    "z": 15508.0
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "type": "DIRECT_NODE",
+                "id": "direct_2631b014-83f3-4f58-9b42-51371c5bc5c8_d39a9ae0-7d6e-4521-a414-8e85d5f66725"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "d39a9ae0-7d6e-4521-a414-8e85d5f66725",
+                "id": "POC17539",
+                "name": "end",
+                "type": "POC",
+                "position": [
+                  312016.09375,
+                  9257.10040283203,
+                  15495.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1794.95,
+                "connectionGuidList": [
+                  "2631b014-83f3-4f58-9b42-51371c5bc5c8"
+                ],
+                "connectionIDList": [
+                  "GLAND17301"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 312012.9,
+                    "y": 9253.9,
+                    "z": 15494.9
+                  },
+                  "max": {
+                    "x": 312019.2,
+                    "y": 9260.2,
+                    "z": 15495.0
+                  }
+                },
+                "utility": "SiH4",
+                "material": "SUS316 EP",
+                "size": "1/4B"
+              }
+            }
+          ],
+          "node_positions": [
+            [
+              310547.741817894,
+              9354.85247895706,
+              9995.43298339844
+            ],
+            [
+              310544.8125,
+              9355.0,
+              10330.0
+            ],
+            [
+              310488.0,
+              9358.1748046875,
+              10330.0
+            ],
+            [
+              310488.0,
+              9395.0,
+              10333.0
+            ],
+            [
+              310488.0,
+              9398.0,
+              10550.0
+            ],
+            [
+              310488.0,
+              9596.8251953125,
+              10550.0
+            ],
+            [
+              310490.5,
+              9600.0,
+              13600.0
+            ],
+            [
+              311500.0,
+              9603.0,
+              13600.0
+            ],
+            [
+              311500.0,
+              11300.0,
+              13603.0
+            ],
+            [
+              311496.8125,
+              11300.0,
+              14660.0
+            ],
+            [
+              311483.1875,
+              11300.0,
+              14660.0
+            ],
+            [
+              311480.0,
+              9741.0,
+              14663.0
+            ],
+            [
+              311483.0,
+              9741.0,
+              14865.0
+            ],
+            [
+              311812.0,
+              9738.0,
+              14865.0
+            ],
+            [
+              311815.0,
+              9257.0,
+              14865.0
+            ],
+            [
+              312016.0,
+              9257.0,
+              14868.0
+            ],
+            [
+              312016.0,
+              9257.0,
+              15495.0
+            ],
+            [
+              312016.09375,
+              9257.10040283203,
+              15495.0
+            ]
+          ],
+          "path_arrow": "R-H-H-R-H-R-H-H-R-H-H-R-H-H-H-R-H",
+          "path_bbox": {
+            "x_min": 310488.0,
+            "x_max": 312016.1,
+            "y_min": 9257.0,
+            "y_max": 11300.0,
+            "z_min": 9995.4,
+            "z_max": 15495.0,
+            "x_range": 1528.1,
+            "y_range": 2043.0,
+            "z_range": 5499.6,
+            "xy_spread": 2189.7,
+            "node_count": 18
+          },
+          "path_range": {
+            "x": 1528.1,
+            "y": 2043.0,
+            "z": 5499.6
+          },
+          "path_step_vectors": [
+            {
+              "x": -2.9,
+              "y": 0.1,
+              "z": 334.6
+            },
+            {
+              "x": -56.8,
+              "y": 3.2,
+              "z": 0.0
+            },
+            {
+              "x": 0.0,
+              "y": 36.8,
+              "z": 3.0
+            },
+            {
+              "x": 0.0,
+              "y": 3.0,
+              "z": 217.0
+            },
+            {
+              "x": 0.0,
+              "y": 198.8,
+              "z": 0.0
+            },
+            {
+              "x": 2.5,
+              "y": 3.2,
+              "z": 3050.0
+            },
+            {
+              "x": 1009.5,
+              "y": 3.0,
+              "z": 0.0
+            },
+            {
+              "x": 0.0,
+              "y": 1697.0,
+              "z": 3.0
+            },
+            {
+              "x": -3.2,
+              "y": 0.0,
+              "z": 1057.0
+            },
+            {
+              "x": -13.6,
+              "y": 0.0,
+              "z": 0.0
+            },
+            {
+              "x": -3.2,
+              "y": -1559.0,
+              "z": 3.0
+            },
+            {
+              "x": 3.0,
+              "y": 0.0,
+              "z": 202.0
+            },
+            {
+              "x": 329.0,
+              "y": -3.0,
+              "z": 0.0
+            },
+            {
+              "x": 3.0,
+              "y": -481.0,
+              "z": 0.0
+            },
+            {
+              "x": 201.0,
+              "y": 0.0,
+              "z": 3.0
+            },
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 627.0
+            },
+            {
+              "x": 0.1,
+              "y": 0.1,
+              "z": 0.0
+            }
+          ],
+          "path_step_lengths": [
+            334.6,
+            56.9,
+            36.9,
+            217.0,
+            198.8,
+            3050.0,
+            1009.5,
+            1697.0,
+            1057.0,
+            13.6,
+            1559.0,
+            202.0,
+            329.0,
+            481.0,
+            201.0,
+            627.0,
+            0.1
+          ],
+          "path_step_vector": "(-2.9,0.1,334.6), (-56.8,3.2,0.0), (0.0,36.8,3.0), (0.0,3.0,217.0), (0.0,198.8,0.0), (2.5,3.2,3050.0), (1009.5,3.0,0.0), (0.0,1697.0,3.0), (-3.2,0.0,1057.0), (-13.6,0.0,0.0), (-3.2,-1559.0,3.0), (3.0,0.0,202.0), (329.0,-3.0,0.0), (3.0,-481.0,0.0), (201.0,0.0,3.0), (0.0,0.0,627.0), (0.1,0.1,0.0)",
+          "path_step_length": "334.6, 56.9, 36.9, 217.0, 198.8, 3050.0, 1009.5, 1697.0, 1057.0, 13.6, 1559.0, 202.0, 329.0, 481.0, 201.0, 627.0, 0.1",
+          "path_total_length": 11070.4,
+          "h_segments": [
+            {
+              "mean_z": 10331.0,
+              "mid_xy": [
+                310506.938,
+                9369.392
+              ],
+              "node_count": 3
+            },
+            {
+              "mean_z": 10550.0,
+              "mid_xy": [
+                310488.0,
+                9497.413
+              ],
+              "node_count": 2
+            },
+            {
+              "mean_z": 13601.0,
+              "mid_xy": [
+                311163.5,
+                10167.667
+              ],
+              "node_count": 3
+            },
+            {
+              "mean_z": 14661.0,
+              "mid_xy": [
+                311486.667,
+                10780.333
+              ],
+              "node_count": 3
+            },
+            {
+              "mean_z": 14865.75,
+              "mid_xy": [
+                311781.5,
+                9498.25
+              ],
+              "node_count": 4
+            },
+            {
+              "mean_z": 15495.0,
+              "mid_xy": [
+                312016.047,
+                9257.05
+              ],
+              "node_count": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

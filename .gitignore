@@ -29,11 +29,5 @@ Thumbs.db
 # Claude Code
 .claude/
 
-# Data - 대용량 결과 파일 (필요시 별도 관리)
-data/RoutingResults/
-data/GroupPipeResults/
-data/AutoRoutingResults/
+# Data - DB 백업 파일
 data/postgresql-bk-*.sql
-
-# 입력 데이터 JSON (BIM 원본 - 대용량)
-data/input/*.json

@@ -1,0 +1,1296 @@
+{
+  "source_file": "./data-v10\\ETCH_ELOHJ07_260323_082636_total.json",
+  "equipment_id": "335469ed-6e79-401b-b7ce-48ee9226211e",
+  "equipment_name": "Comp_Pump_KAS_MU300P_9??",
+  "equipment_process": "ETCH",
+  "equipment_maker": "samsung",
+  "created_at": "2026-04-05T19:48:13.326706",
+  "poc_paths": [
+    {
+      "start_poc_id": "7dfe605d-5457-4db8-9139-17c7a37277b9",
+      "start_poc_info": {
+        "guid": "7dfe605d-5457-4db8-9139-17c7a37277b9",
+        "id": "POC14668",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          115606.919998169,
+          6668.9700012207,
+          14633.5
+        ],
+        "bay": null,
+        "level": "A/F",
+        "bop": 933.45,
+        "connectionGuidList": [
+          "16ae02bb-f6a2-4b48-afcc-1c8979dff535"
+        ],
+        "connectionIDList": [
+          "FLEXIBLE14669"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 115593.3,
+            "y": 6668.9,
+            "z": 14619.8
+          },
+          "max": {
+            "x": 115620.5,
+            "y": 6668.9,
+            "z": 14647.1
+          }
+        },
+        "utility": "",
+        "material": "SUS304",
+        "size": "20A"
+      },
+      "paths": [
+        {
+          "terminal_label": "Duct / TakeOff 도달",
+          "branch_depth": 0,
+          "branch_segments": [],
+          "path_summary": "PO->UN->BD->BD->BD->RG->VL->BD->TK",
+          "end_node_id": "25de22eb-c332-495a-899f-5e7896df7a7b",
+          "end_node_type": "TAKEOFF",
+          "steps": [
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "7dfe605d-5457-4db8-9139-17c7a37277b9",
+                "id": "POC14668",
+                "name": "start",
+                "type": "POC",
+                "position": [
+                  115606.919998169,
+                  6668.9700012207,
+                  14633.5
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 933.45,
+                "connectionGuidList": [
+                  "16ae02bb-f6a2-4b48-afcc-1c8979dff535"
+                ],
+                "connectionIDList": [
+                  "FLEXIBLE14669"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 115593.3,
+                    "y": 6668.9,
+                    "z": 14619.8
+                  },
+                  "max": {
+                    "x": 115620.5,
+                    "y": 6668.9,
+                    "z": 14647.1
+                  }
+                },
+                "utility": "",
+                "material": "SUS304",
+                "size": "20A"
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "16ae02bb-f6a2-4b48-afcc-1c8979dff535",
+                "id": "FLEXIBLE14669",
+                "type": "FLEXIBLE",
+                "pipeType": "FLEXIBLE",
+                "position": [
+                  115358.921875,
+                  6784.56005859375,
+                  15105.0009765625
+                ],
+                "connectionGuidList": [
+                  "e5adabaf-ff4c-485b-850c-9cd92fb3a219",
+                  "7dfe605d-5457-4db8-9139-17c7a37277b9"
+                ],
+                "connectionIDList": [
+                  "UNION14670",
+                  "POC14668"
+                ],
+                "utility": "PCWS",
+                "material": "SUS304 AP",
+                "size": "3/8B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "e5adabaf-ff4c-485b-850c-9cd92fb3a219",
+                "id": "UNION14670",
+                "name": "Union_Reducing Union-SUS304 AP-1_2Bx3_8B",
+                "type": "UNION",
+                "position": [
+                  115337.7265625,
+                  6784.56005859375,
+                  15105.0009765625
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1405.0,
+                "connectionGuidList": [
+                  "c5cfd3b0-6374-4ebc-9a40-8a3b09a9e328",
+                  "16ae02bb-f6a2-4b48-afcc-1c8979dff535"
+                ],
+                "connectionIDList": [
+                  "PIPE14671",
+                  "FLEXIBLE14669"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 115310.4,
+                    "y": 6772.7,
+                    "z": 15094.7
+                  },
+                  "max": {
+                    "x": 115359.0,
+                    "y": 6796.3,
+                    "z": 15115.3
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "c5cfd3b0-6374-4ebc-9a40-8a3b09a9e328",
+                "id": "PIPE14671",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  112946.421875,
+                  6784.56005859375,
+                  15105.0009765625
+                ],
+                "connectionGuidList": [
+                  "c8827665-b4bd-4fca-828b-724757c84d8b",
+                  "e5adabaf-ff4c-485b-850c-9cd92fb3a219"
+                ],
+                "connectionIDList": [
+                  "BENDING14672",
+                  "UNION14670"
+                ],
+                "utility": "PCWS",
+                "material": "SUS304 AP",
+                "size": "1/2B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "c8827665-b4bd-4fca-828b-724757c84d8b",
+                "id": "BENDING14672",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  112940.0703125,
+                  6790.90966796875,
+                  15105.0009765625
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1404.95,
+                "utility": "PCWS",
+                "material": "SUS304 AP",
+                "size": "1/2B",
+                "bendingRadius": 6.35,
+                "radiusRatio": 0.5,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "62f92b91-fe56-4fb6-9ce5-b6462a59ebec",
+                  "c5cfd3b0-6374-4ebc-9a40-8a3b09a9e328"
+                ],
+                "connectionIDList": [
+                  "PIPE14673",
+                  "PIPE14671"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 112933.7,
+                    "y": 6778.2,
+                    "z": 15098.6
+                  },
+                  "max": {
+                    "x": 112946.4,
+                    "y": 6790.9,
+                    "z": 15111.3
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "62f92b91-fe56-4fb6-9ce5-b6462a59ebec",
+                "id": "PIPE14673",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  112940.0703125,
+                  12829.0322265625,
+                  15105.0
+                ],
+                "connectionGuidList": [
+                  "a8bed1d7-aeda-494e-a92e-3b766d89d259",
+                  "c8827665-b4bd-4fca-828b-724757c84d8b"
+                ],
+                "connectionIDList": [
+                  "BENDING14674",
+                  "BENDING14672"
+                ],
+                "utility": "PCWS",
+                "material": "SUS304 AP",
+                "size": "1/2B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "a8bed1d7-aeda-494e-a92e-3b766d89d259",
+                "id": "BENDING14674",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  112933.71875,
+                  12835.3828125,
+                  15105.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1404.95,
+                "utility": "PCWS",
+                "material": "SUS304 AP",
+                "size": "1/2B",
+                "bendingRadius": 6.35,
+                "radiusRatio": 0.5,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "d2897a86-2f7d-413a-bac1-687e5d53a3b5",
+                  "62f92b91-fe56-4fb6-9ce5-b6462a59ebec"
+                ],
+                "connectionIDList": [
+                  "PIPE14675",
+                  "PIPE14673"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 112933.7,
+                    "y": 12829.0,
+                    "z": 15098.6
+                  },
+                  "max": {
+                    "x": 112946.4,
+                    "y": 12841.7,
+                    "z": 15111.3
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "d2897a86-2f7d-413a-bac1-687e5d53a3b5",
+                "id": "PIPE14675",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  112906.421875,
+                  12835.3828125,
+                  15105.0
+                ],
+                "connectionGuidList": [
+                  "b5fe06bc-181d-4cee-8e5a-f952552f94ee",
+                  "a8bed1d7-aeda-494e-a92e-3b766d89d259"
+                ],
+                "connectionIDList": [
+                  "BENDING14676",
+                  "BENDING14674"
+                ],
+                "utility": "PCWS",
+                "material": "SUS304 AP",
+                "size": "1/2B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "b5fe06bc-181d-4cee-8e5a-f952552f94ee",
+                "id": "BENDING14676",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  112900.0703125,
+                  12841.732421875,
+                  15105.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1404.95,
+                "utility": "PCWS",
+                "material": "SUS304 AP",
+                "size": "1/2B",
+                "bendingRadius": 6.35,
+                "radiusRatio": 0.5,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "2d6926f9-8092-499b-99af-4b150880a1a1",
+                  "d2897a86-2f7d-413a-bac1-687e5d53a3b5"
+                ],
+                "connectionIDList": [
+                  "PIPE14677",
+                  "PIPE14675"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 112893.7,
+                    "y": 12829.0,
+                    "z": 15098.6
+                  },
+                  "max": {
+                    "x": 112906.4,
+                    "y": 12841.7,
+                    "z": 15111.3
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "2d6926f9-8092-499b-99af-4b150880a1a1",
+                "id": "PIPE14677",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  112900.0703125,
+                  13016.85546875,
+                  15105.0
+                ],
+                "connectionGuidList": [
+                  "e5b94892-d66a-4d2a-b7db-2ff99f7f1e69",
+                  "b5fe06bc-181d-4cee-8e5a-f952552f94ee"
+                ],
+                "connectionIDList": [
+                  "REGULATOR14678",
+                  "BENDING14676"
+                ],
+                "utility": "PCWS",
+                "material": "SUS304 AP",
+                "size": "1/2B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "e5b94892-d66a-4d2a-b7db-2ff99f7f1e69",
+                "id": "REGULATOR14678",
+                "name": "Regulator_Water Regulator-SUS304 AP-1_2B",
+                "type": "REGULATOR",
+                "position": [
+                  112900.0703125,
+                  13048.35546875,
+                  15105.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1426.9,
+                "connectionGuidList": [
+                  "2d6926f9-8092-499b-99af-4b150880a1a1",
+                  "8a1ffb11-cf76-4b60-aabb-eeed31f802eb"
+                ],
+                "connectionIDList": [
+                  "PIPE14677",
+                  "PIPE14679"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 112826.5,
+                    "y": 13014.3,
+                    "z": 15032.9
+                  },
+                  "max": {
+                    "x": 112951.6,
+                    "y": 13082.3,
+                    "z": 15220.9
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "8a1ffb11-cf76-4b60-aabb-eeed31f802eb",
+                "id": "PIPE14679",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  112900.0703125,
+                  13079.85546875,
+                  15105.0
+                ],
+                "connectionGuidList": [
+                  "e5b94892-d66a-4d2a-b7db-2ff99f7f1e69",
+                  "e06da3bd-310a-47b1-aead-eaddc7143145"
+                ],
+                "connectionIDList": [
+                  "REGULATOR14678",
+                  "VALVE14680"
+                ],
+                "utility": "PCWS",
+                "material": "SUS304 AP",
+                "size": "1/2B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "e06da3bd-310a-47b1-aead-eaddc7143145",
+                "id": "VALVE14680",
+                "name": "Valve_Ball Valve-SUS304 AP-1_2B",
+                "type": "VALVE",
+                "position": [
+                  112900.0703125,
+                  13350.1669921875,
+                  15105.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1413.5,
+                "connectionGuidList": [
+                  "4fc58ab5-ac4d-4dd4-be7e-e0431a3ecd67",
+                  "8a1ffb11-cf76-4b60-aabb-eeed31f802eb"
+                ],
+                "connectionIDList": [
+                  "PIPE14681",
+                  "PIPE14679"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 112879.3,
+                    "y": 13299.1,
+                    "z": 15087.0
+                  },
+                  "max": {
+                    "x": 112920.7,
+                    "y": 13401.1,
+                    "z": 15140.0
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "4fc58ab5-ac4d-4dd4-be7e-e0431a3ecd67",
+                "id": "PIPE14681",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  112900.0703125,
+                  13401.1669921875,
+                  15105.0
+                ],
+                "connectionGuidList": [
+                  "e06da3bd-310a-47b1-aead-eaddc7143145",
+                  "f8309b5c-03f0-4bf8-8980-61e8a6a0e2b2"
+                ],
+                "connectionIDList": [
+                  "VALVE14680",
+                  "BENDING14682"
+                ],
+                "utility": "PCWS",
+                "material": "SUS304 AP",
+                "size": "1/2B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "f8309b5c-03f0-4bf8-8980-61e8a6a0e2b2",
+                "id": "BENDING14682",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  112900.0703125,
+                  13749.966796875,
+                  15098.650390625
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1404.95,
+                "utility": "PCWS",
+                "material": "SUS304 AP",
+                "size": "1/2B",
+                "bendingRadius": 6.35,
+                "radiusRatio": 0.5,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "b2b48b85-4d05-4a6f-a38e-35a23b2e84b2",
+                  "4fc58ab5-ac4d-4dd4-be7e-e0431a3ecd67"
+                ],
+                "connectionIDList": [
+                  "PIPE14683",
+                  "PIPE14681"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 112893.7,
+                    "y": 13743.6,
+                    "z": 15098.6
+                  },
+                  "max": {
+                    "x": 112906.4,
+                    "y": 13756.3,
+                    "z": 15111.3
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "b2b48b85-4d05-4a6f-a38e-35a23b2e84b2",
+                "id": "PIPE14683",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  112900.0703125,
+                  13749.966796875,
+                  15098.650390625
+                ],
+                "connectionGuidList": [
+                  "f8309b5c-03f0-4bf8-8980-61e8a6a0e2b2",
+                  "25de22eb-c332-495a-899f-5e7896df7a7b"
+                ],
+                "connectionIDList": [
+                  "BENDING14682",
+                  "TAKEOFF14684"
+                ],
+                "utility": "PCWS",
+                "material": "SUS304 AP",
+                "size": "1/2B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "25de22eb-c332-495a-899f-5e7896df7a7b",
+                "id": "TAKEOFF14684",
+                "name": "takeoff",
+                "type": "TAKEOFF",
+                "position": [
+                  112900.0703125,
+                  13749.966796875,
+                  14847.700390625
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1172.7,
+                "connectionGuidList": [
+                  "88f4a797-cb31-46f0-b3db-2ba7e74d7a07",
+                  "b2b48b85-4d05-4a6f-a38e-35a23b2e84b2"
+                ],
+                "connectionIDList": [
+                  "BRANCH PIPE14525",
+                  "PIPE14683"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 112893.7,
+                    "y": 13743.6,
+                    "z": 14847.7
+                  },
+                  "max": {
+                    "x": 112906.4,
+                    "y": 13756.3,
+                    "z": 14897.7
+                  }
+                }
+              }
+            }
+          ],
+          "node_positions": [
+            [
+              115606.919998169,
+              6668.9700012207,
+              14633.5
+            ],
+            [
+              115337.7265625,
+              6784.56005859375,
+              15105.0009765625
+            ],
+            [
+              112940.0703125,
+              6790.90966796875,
+              15105.0009765625
+            ],
+            [
+              112933.71875,
+              12835.3828125,
+              15105.0
+            ],
+            [
+              112900.0703125,
+              12841.732421875,
+              15105.0
+            ],
+            [
+              112900.0703125,
+              13048.35546875,
+              15105.0
+            ],
+            [
+              112900.0703125,
+              13350.1669921875,
+              15105.0
+            ],
+            [
+              112900.0703125,
+              13749.966796875,
+              15098.650390625
+            ],
+            [
+              112900.0703125,
+              13749.966796875,
+              14847.700390625
+            ]
+          ],
+          "path_arrow": "D-H-H-H-H-H-H-R",
+          "path_bbox": {
+            "x_min": 112900.1,
+            "x_max": 115606.9,
+            "y_min": 6669.0,
+            "y_max": 13750.0,
+            "z_min": 14633.5,
+            "z_max": 15105.0,
+            "x_range": 2706.8,
+            "y_range": 7081.0,
+            "z_range": 471.5,
+            "xy_spread": 7580.7,
+            "node_count": 9
+          },
+          "path_range": {
+            "x": 2706.8,
+            "y": 7081.0,
+            "z": 471.5
+          },
+          "path_step_vectors": [
+            {
+              "x": -269.2,
+              "y": 115.6,
+              "z": 471.5
+            },
+            {
+              "x": -2397.7,
+              "y": 6.3,
+              "z": 0.0
+            },
+            {
+              "x": -6.4,
+              "y": 6044.5,
+              "z": -0.0
+            },
+            {
+              "x": -33.6,
+              "y": 6.3,
+              "z": 0.0
+            },
+            {
+              "x": 0.0,
+              "y": 206.6,
+              "z": 0.0
+            },
+            {
+              "x": 0.0,
+              "y": 301.8,
+              "z": 0.0
+            },
+            {
+              "x": 0.0,
+              "y": 399.8,
+              "z": -6.3
+            },
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -251.0
+            }
+          ],
+          "path_step_lengths": [
+            555.1,
+            2397.7,
+            6044.5,
+            34.2,
+            206.6,
+            301.8,
+            399.9,
+            251.0
+          ],
+          "path_step_vector": "(-269.2,115.6,471.5), (-2397.7,6.3,0.0), (-6.4,6044.5,-0.0), (-33.6,6.3,0.0), (0.0,206.6,0.0), (0.0,301.8,0.0), (0.0,399.8,-6.3), (0.0,0.0,-251.0)",
+          "path_step_length": "555.1, 2397.7, 6044.5, 34.2, 206.6, 301.8, 399.9, 251.0",
+          "path_total_length": 10190.8,
+          "h_segments": [
+            {
+              "mean_z": 15104.093,
+              "mid_xy": [
+                113258.828,
+                11343.011
+              ],
+              "node_count": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start_poc_id": "0580f556-8c94-40cb-9b6f-4c57f7bd988a",
+      "start_poc_info": {
+        "guid": "0580f556-8c94-40cb-9b6f-4c57f7bd988a",
+        "id": "POC14664",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          115634.0,
+          6668.9700012207,
+          14596.5
+        ],
+        "bay": null,
+        "level": "A/F",
+        "bop": 896.45,
+        "connectionGuidList": [
+          "b15f6c79-dd57-418a-a4d3-b54b0ee8dddd"
+        ],
+        "connectionIDList": [
+          "FLEXIBLE14663"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 115620.3,
+            "y": 6668.9,
+            "z": 14582.8
+          },
+          "max": {
+            "x": 115647.6,
+            "y": 6668.9,
+            "z": 14610.1
+          }
+        },
+        "utility": "",
+        "material": "SUS304",
+        "size": "20A"
+      },
+      "paths": [
+        {
+          "terminal_label": "Duct / TakeOff 도달",
+          "branch_depth": 0,
+          "branch_segments": [],
+          "path_summary": "PO->UN->BD->VL->BD->TK",
+          "end_node_id": "6b956c77-6465-4f14-ab6e-964fe03443d5",
+          "end_node_type": "TAKEOFF",
+          "steps": [
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "0580f556-8c94-40cb-9b6f-4c57f7bd988a",
+                "id": "POC14664",
+                "name": "start",
+                "type": "POC",
+                "position": [
+                  115634.0,
+                  6668.9700012207,
+                  14596.5
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 896.45,
+                "connectionGuidList": [
+                  "b15f6c79-dd57-418a-a4d3-b54b0ee8dddd"
+                ],
+                "connectionIDList": [
+                  "FLEXIBLE14663"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 115620.3,
+                    "y": 6668.9,
+                    "z": 14582.8
+                  },
+                  "max": {
+                    "x": 115647.6,
+                    "y": 6668.9,
+                    "z": 14610.1
+                  }
+                },
+                "utility": "",
+                "material": "SUS304",
+                "size": "20A"
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "b15f6c79-dd57-418a-a4d3-b54b0ee8dddd",
+                "id": "FLEXIBLE14663",
+                "type": "FLEXIBLE",
+                "pipeType": "FLEXIBLE",
+                "position": [
+                  115644.0,
+                  6668.97021484375,
+                  14596.5
+                ],
+                "connectionGuidList": [
+                  "0580f556-8c94-40cb-9b6f-4c57f7bd988a",
+                  "ba70afd3-7b6d-4129-96cf-83f051908cb5"
+                ],
+                "connectionIDList": [
+                  "POC14664",
+                  "UNION14665"
+                ],
+                "utility": "PCWR",
+                "material": "SUS304",
+                "size": "3/8B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "ba70afd3-7b6d-4129-96cf-83f051908cb5",
+                "id": "UNION14665",
+                "name": "Union_Reducing Union-SUS304 AP-1_2Bx3_8B",
+                "type": "UNION",
+                "position": [
+                  115471.5390625,
+                  6804.56005859375,
+                  15105.0009765625
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1405.0,
+                "connectionGuidList": [
+                  "3f844d5b-fa37-47ee-bd88-f90bb8b3995d",
+                  "b15f6c79-dd57-418a-a4d3-b54b0ee8dddd"
+                ],
+                "connectionIDList": [
+                  "PIPE14685",
+                  "FLEXIBLE14663"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 115444.2,
+                    "y": 6792.7,
+                    "z": 15094.7
+                  },
+                  "max": {
+                    "x": 115492.8,
+                    "y": 6816.3,
+                    "z": 15115.3
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "3f844d5b-fa37-47ee-bd88-f90bb8b3995d",
+                "id": "PIPE14685",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  115444.234375,
+                  6804.56005859375,
+                  15105.0009765625
+                ],
+                "connectionGuidList": [
+                  "ba70afd3-7b6d-4129-96cf-83f051908cb5",
+                  "74728dfa-5db4-4b5f-9019-458f213c064c"
+                ],
+                "connectionIDList": [
+                  "UNION14665",
+                  "BENDING14686"
+                ],
+                "utility": "PCWR",
+                "material": "SUS304 AP",
+                "size": "1/2B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "74728dfa-5db4-4b5f-9019-458f213c064c",
+                "id": "BENDING14686",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  112980.0703125,
+                  6804.56005859375,
+                  15105.0009765625
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1404.95,
+                "utility": "PCWR",
+                "material": "SUS304 AP",
+                "size": "1/2B",
+                "bendingRadius": 10.0,
+                "radiusRatio": 0.787,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "3f844d5b-fa37-47ee-bd88-f90bb8b3995d",
+                  "6333170d-ee41-4a9b-ac5b-ab507ce33eb1"
+                ],
+                "connectionIDList": [
+                  "PIPE14685",
+                  "PIPE14687"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 112963.7,
+                    "y": 6798.2,
+                    "z": 15098.6
+                  },
+                  "max": {
+                    "x": 112980.0,
+                    "y": 6814.5,
+                    "z": 15111.3
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "6333170d-ee41-4a9b-ac5b-ab507ce33eb1",
+                "id": "PIPE14687",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  112970.0703125,
+                  13148.828125,
+                  15105.0
+                ],
+                "connectionGuidList": [
+                  "d762aa72-7512-4089-8d3f-383783b60eba",
+                  "74728dfa-5db4-4b5f-9019-458f213c064c"
+                ],
+                "connectionIDList": [
+                  "VALVE14688",
+                  "BENDING14686"
+                ],
+                "utility": "PCWR",
+                "material": "SUS304 AP",
+                "size": "1/2B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "d762aa72-7512-4089-8d3f-383783b60eba",
+                "id": "VALVE14688",
+                "name": "Valve_Ball Valve-SUS304 AP-1_2B",
+                "type": "VALVE",
+                "position": [
+                  112970.0703125,
+                  13199.828125,
+                  15105.0
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1413.5,
+                "connectionGuidList": [
+                  "c228d337-abb9-47f0-a912-bbe8326cb25a",
+                  "6333170d-ee41-4a9b-ac5b-ab507ce33eb1"
+                ],
+                "connectionIDList": [
+                  "PIPE14689",
+                  "PIPE14687"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 112949.3,
+                    "y": 13148.8,
+                    "z": 15087.0
+                  },
+                  "max": {
+                    "x": 112990.7,
+                    "y": 13250.8,
+                    "z": 15140.0
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "c228d337-abb9-47f0-a912-bbe8326cb25a",
+                "id": "PIPE14689",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  112970.0703125,
+                  13593.6171875,
+                  15105.0
+                ],
+                "connectionGuidList": [
+                  "ee8d2b2c-e603-4ca3-863c-7de77505d20e",
+                  "d762aa72-7512-4089-8d3f-383783b60eba"
+                ],
+                "connectionIDList": [
+                  "BENDING14690",
+                  "VALVE14688"
+                ],
+                "utility": "PCWR",
+                "material": "SUS304 AP",
+                "size": "1/2B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "ee8d2b2c-e603-4ca3-863c-7de77505d20e",
+                "id": "BENDING14690",
+                "name": "bending",
+                "type": "BENDING",
+                "position": [
+                  112970.0703125,
+                  13599.966796875,
+                  15098.650390625
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1404.95,
+                "utility": "PCWR",
+                "material": "SUS304 AP",
+                "size": "1/2B",
+                "bendingRadius": 6.35,
+                "radiusRatio": 0.5,
+                "bendingAngle": 90.0,
+                "connectionGuidList": [
+                  "42bff02e-55a3-4cea-931e-7fc7defd1b2d",
+                  "c228d337-abb9-47f0-a912-bbe8326cb25a"
+                ],
+                "connectionIDList": [
+                  "PIPE14691",
+                  "PIPE14689"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 112963.7,
+                    "y": 13593.6,
+                    "z": 15098.6
+                  },
+                  "max": {
+                    "x": 112976.4,
+                    "y": 13606.3,
+                    "z": 15111.3
+                  }
+                }
+              }
+            },
+            {
+              "kind": "EDGE",
+              "data": {
+                "guid": "42bff02e-55a3-4cea-931e-7fc7defd1b2d",
+                "id": "PIPE14691",
+                "type": "PIPE",
+                "pipeType": "STANDARD",
+                "position": [
+                  112970.0703125,
+                  13599.966796875,
+                  15098.650390625
+                ],
+                "connectionGuidList": [
+                  "ee8d2b2c-e603-4ca3-863c-7de77505d20e",
+                  "6b956c77-6465-4f14-ab6e-964fe03443d5"
+                ],
+                "connectionIDList": [
+                  "BENDING14690",
+                  "TAKEOFF14692"
+                ],
+                "utility": "PCWR",
+                "material": "SUS304 AP",
+                "size": "1/2B"
+              }
+            },
+            {
+              "kind": "NODE",
+              "data": {
+                "guid": "6b956c77-6465-4f14-ab6e-964fe03443d5",
+                "id": "TAKEOFF14692",
+                "name": "takeoff",
+                "type": "TAKEOFF",
+                "position": [
+                  112970.0703125,
+                  13599.966796875,
+                  14847.700390625
+                ],
+                "bay": null,
+                "level": "A/F",
+                "bop": 1172.7,
+                "connectionGuidList": [
+                  "732987f0-3fd1-4c52-8daa-68b4043d9e99",
+                  "42bff02e-55a3-4cea-931e-7fc7defd1b2d"
+                ],
+                "connectionIDList": [
+                  "BRANCH PIPE14546",
+                  "PIPE14691"
+                ],
+                "boundaryBox": {
+                  "min": {
+                    "x": 112963.7,
+                    "y": 13593.6,
+                    "z": 14847.7
+                  },
+                  "max": {
+                    "x": 112976.4,
+                    "y": 13606.3,
+                    "z": 14897.7
+                  }
+                }
+              }
+            }
+          ],
+          "node_positions": [
+            [
+              115634.0,
+              6668.9700012207,
+              14596.5
+            ],
+            [
+              115471.5390625,
+              6804.56005859375,
+              15105.0009765625
+            ],
+            [
+              112980.0703125,
+              6804.56005859375,
+              15105.0009765625
+            ],
+            [
+              112970.0703125,
+              13199.828125,
+              15105.0
+            ],
+            [
+              112970.0703125,
+              13599.966796875,
+              15098.650390625
+            ],
+            [
+              112970.0703125,
+              13599.966796875,
+              14847.700390625
+            ]
+          ],
+          "path_arrow": "D-H-H-H-R",
+          "path_bbox": {
+            "x_min": 112970.1,
+            "x_max": 115634.0,
+            "y_min": 6669.0,
+            "y_max": 13600.0,
+            "z_min": 14596.5,
+            "z_max": 15105.0,
+            "x_range": 2663.9,
+            "y_range": 6931.0,
+            "z_range": 508.5,
+            "xy_spread": 7425.3,
+            "node_count": 6
+          },
+          "path_range": {
+            "x": 2663.9,
+            "y": 6931.0,
+            "z": 508.5
+          },
+          "path_step_vectors": [
+            {
+              "x": -162.5,
+              "y": 135.6,
+              "z": 508.5
+            },
+            {
+              "x": -2491.5,
+              "y": 0.0,
+              "z": 0.0
+            },
+            {
+              "x": -10.0,
+              "y": 6395.3,
+              "z": -0.0
+            },
+            {
+              "x": 0.0,
+              "y": 400.1,
+              "z": -6.3
+            },
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -251.0
+            }
+          ],
+          "path_step_lengths": [
+            550.8,
+            2491.5,
+            6395.3,
+            400.2,
+            251.0
+          ],
+          "path_step_vector": "(-162.5,135.6,508.5), (-2491.5,0.0,0.0), (-10.0,6395.3,-0.0), (0.0,400.1,-6.3), (0.0,0.0,-251.0)",
+          "path_step_length": "550.8, 2491.5, 6395.3, 400.2, 251.0",
+          "path_total_length": 10088.8,
+          "h_segments": [
+            {
+              "mean_z": 15103.413,
+              "mid_xy": [
+                113597.938,
+                10102.229
+              ],
+              "node_count": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start_poc_id": "70bbbe6d-48be-4c95-ad4b-e1946919c3f1",
+      "start_poc_info": {
+        "guid": "70bbbe6d-48be-4c95-ad4b-e1946919c3f1",
+        "id": "POC14693",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          115756.0,
+          6587.33599853516,
+          14564.0
+        ],
+        "bay": null,
+        "level": "A/F",
+        "bop": 864.0,
+        "connectionGuidList": [
+          "6a41358c-6c47-4351-a77e-8e0d6a0dbdde"
+        ],
+        "connectionIDList": [
+          "FLANGE14694"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 115739.0,
+            "y": 6587.3,
+            "z": 14547.0
+          },
+          "max": {
+            "x": 115772.9,
+            "y": 6587.3,
+            "z": 14581.0
+          }
+        },
+        "utility": "ACID",
+        "material": null,
+        "size": "25A"
+      },
+      "paths": []
+    }
+  ]
+}

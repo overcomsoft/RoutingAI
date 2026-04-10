@@ -1,0 +1,88 @@
+{
+  "source_file": "./data-v10\\ETCH_ELOHJ07_260323_082636_total.json",
+  "equipment_id": "57445216-f8d8-4d70-8d93-3c9f0ba6b3d1",
+  "equipment_name": "BB",
+  "equipment_process": "ETCH",
+  "equipment_maker": "samsung",
+  "created_at": "2026-04-05T19:48:13.376277",
+  "poc_paths": [
+    {
+      "start_poc_id": "c00e85aa-3e57-4ff6-ab01-42a50a2a4e54",
+      "start_poc_info": {
+        "guid": "c00e85aa-3e57-4ff6-ab01-42a50a2a4e54",
+        "id": "POC15954",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          116172.849182129,
+          8802.77301025391,
+          8630.71099853516
+        ],
+        "bay": null,
+        "level": "CSF",
+        "bop": 630.7,
+        "connectionGuidList": [
+          "501dbebb-7d50-4a15-8228-1af825cab7eb"
+        ],
+        "connectionIDList": [
+          "FLEXIBLE14246"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 116155.8,
+            "y": 8785.7,
+            "z": 8630.7
+          },
+          "max": {
+            "x": 116189.8,
+            "y": 8819.7,
+            "z": 8630.7
+          }
+        },
+        "utility": "Coolant_R",
+        "material": "SUS304 AP",
+        "size": "25A"
+      },
+      "paths": []
+    },
+    {
+      "start_poc_id": "76c88e1f-eba9-4cf7-b3a3-e43fa148a7e7",
+      "start_poc_info": {
+        "guid": "76c88e1f-eba9-4cf7-b3a3-e43fa148a7e7",
+        "id": "POC15976",
+        "name": "start",
+        "type": "POC",
+        "position": [
+          116112.565185547,
+          8802.77301025391,
+          8874.65100097656
+        ],
+        "bay": null,
+        "level": "CSF",
+        "bop": 874.6,
+        "connectionGuidList": [
+          "55cb5fc1-9803-4ac5-a044-341039f28ab2"
+        ],
+        "connectionIDList": [
+          "FLEXIBLE14247"
+        ],
+        "boundaryBox": {
+          "min": {
+            "x": 116095.5,
+            "y": 8785.7,
+            "z": 8874.6
+          },
+          "max": {
+            "x": 116129.5,
+            "y": 8819.7,
+            "z": 8874.6
+          }
+        },
+        "utility": "Coolant_S",
+        "material": null,
+        "size": "25A"
+      },
+      "paths": []
+    }
+  ]
+}
