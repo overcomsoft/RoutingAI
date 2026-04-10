@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.vs/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Claude Code
+.claude/
+
+# Data - 대용량 결과 파일 (필요시 별도 관리)
+data/RoutingResults/
+data/GroupPipeResults/
+data/AutoRoutingResults/
+data/postgresql-bk-*.sql
+
+# 입력 데이터 JSON (BIM 원본 - 대용량)
+data/input/*.json

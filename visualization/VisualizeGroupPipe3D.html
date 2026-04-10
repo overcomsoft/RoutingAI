@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Group Pipe 3D Viewer</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; background: #1a1a2e; color: #eee; overflow: hidden; }
+#canvas3d { width: 100vw; height: 100vh; display: block; }
+
+/* 좌측 패널 */
+#panel {
+  position: fixed; top: 0; left: 0; width: 320px; height: 100vh;
+  background: rgba(16,16,32,0.92); border-right: 1px solid #334;
+  display: flex; flex-direction: column; z-index: 10;
+  transition: transform 0.3s;
+}
+#panel.collapsed { transform: translateX(-320px); }
+#toggle-panel {
+  position: fixed; top: 10px; left: 10px; z-index: 20;
+  background: #2a2a4a; border: 1px solid #556; color: #aaf; padding: 6px 12px;
+  cursor: pointer; border-radius: 4px; font-size: 13px;
+}
+#panel.collapsed ~ #toggle-panel { left: 10px; }
+#panel:not(.collapsed) ~ #toggle-panel { left: 330px; }
+
+#panel-header { padding: 14px 16px; border-bottom: 1px solid #334; }
+#panel-header h2 { font-size: 15px; color: #8af; margin-bottom: 8px; }
+#search { width: 100%; padding: 6px 10px; background: #222; border: 1px solid #445; color: #eee; border-radius: 4px; font-size: 13px; }
+#filter-row { display: flex; gap: 6px; margin-top: 8px; }
+#filter-row select { flex: 1; padding: 4px; background: #222; border: 1px solid #445; color: #ddd; border-radius: 3px; font-size: 12px; }
+
+#group-list { flex: 1; overflow-y: auto; padding: 4px 0; }
+.group-item {
+  padding: 8px 16px; cursor: pointer; border-bottom: 1px solid #223;
+  display: flex; align-items: center; gap: 10px; font-size: 12px;
+  transition: background 0.15s;
+}
+.group-item:hover { background: rgba(100,130,255,0.12); }
+.group-item.active { background: rgba(100,150,255,0.25); }
+.group-item .color-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+.group-item .info { flex: 1; min-width: 0; }
+.group-item .info .title { font-weight: 600; color: #adf; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.group-item .info .meta { color: #889; font-size: 11px; margin-top: 2px; }
+.group-item .vis-toggle { width: 20px; height: 20px; cursor: pointer; opacity: 0.7; }
+.group-item .vis-toggle:hover { opacity: 1; }
+
+#panel-footer { padding: 10px 16px; border-top: 1px solid #334; font-size: 11px; color: #667; }
+#stats { position: fixed; bottom: 10px; right: 16px; font-size: 11px; color: #556; z-index: 10; }
+
+/* 범례 */
+#legend {
+  position: fixed; top: 10px; right: 16px; background: rgba(16,16,32,0.88);
+  border: 1px solid #334; border-radius: 6px; padding: 12px 16px; z-index: 10; font-size: 12px;
+}
+#legend h3 { font-size: 13px; color: #8af; margin-bottom: 8px; }
+.legend-row { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+.legend-box { width: 18px; height: 10px; border-radius: 2px; }
+
+/* 상세정보 */
+#detail {
+  position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%);
+  background: rgba(16,16,32,0.92); border: 1px solid #445; border-radius: 8px;
+  padding: 12px 20px; z-index: 10; font-size: 12px; display: none; max-width: 700px;
+}
+#detail .title { font-size: 14px; font-weight: 600; color: #8cf; margin-bottom: 6px; }
+#detail .row { display: flex; gap: 20px; flex-wrap: wrap; }
+#detail .field { color: #99a; }
+#detail .field span { color: #dde; }
+
+/* 툴바 */
+#toolbar {
+  position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index: 10;
+  display: flex; gap: 6px;
+}
+#toolbar button {
+  background: #2a2a4a; border: 1px solid #556; color: #aaf; padding: 5px 12px;
+  cursor: pointer; border-radius: 4px; font-size: 12px;
+}
+#toolbar button:hover { background: #3a3a6a; }
+#toolbar button.active { background: #4a4a8a; border-color: #88f; }
+</style>
+</head>
+<body>
+
+<canvas id="canvas3d"></canvas>
+
+<div id="panel">
+  <div id="panel-header">
+    <h2>Group Pipe 3D Viewer</h2>
+    <input id="search" type="text" placeholder="장비명, 유틸리티 검색...">
+    <div id="filter-row">
+      <select id="filter-equip"><option value="">장비 전체</option></select>
+      <select id="filter-utility"><option value="">유틸리티 전체</option></select>
+    </div>
+  </div>
+  <div id="group-list"></div>
+  <div id="panel-footer">
+    <span id="group-count">0</span>개 그룹 | <span id="path-count">0</span>개 경로
+  </div>
+</div>
+
+<button id="toggle-panel">&#9776;</button>
+
+<div id="toolbar">
+  <button id="btn-all-on" title="전체 표시">전체 ON</button>
+  <button id="btn-all-off" title="전체 숨김">전체 OFF</button>
+  <button id="btn-zones" class="active" title="Zone 박스 토글">Zones</button>
+  <button id="btn-auto" title="자동 생성 경로 토글">Auto</button>
+  <button id="btn-fit" title="전체 뷰에 맞춤">Fit</button>
+  <button id="btn-reset" title="카메라 초기화">Reset</button>
+</div>
+
+<div id="legend">
+  <h3>Zone 범례</h3>
+  <div class="legend-row"><div class="legend-box" style="background:rgba(0,180,255,0.5)"></div>Trunk (주 배관)</div>
+  <div class="legend-row"><div class="legend-box" style="background:rgba(0,255,120,0.5)"></div>Fan-In (유입부)</div>
+  <div class="legend-row"><div class="legend-box" style="background:rgba(255,120,0,0.5)"></div>Fan-Out (유출부)</div>
+  <div class="legend-row"><div class="legend-box" style="background:rgba(255,255,0,0.35)"></div>Start PoC</div>
+  <div class="legend-row"><div class="legend-box" style="background:rgba(0,255,200,0.7);border:1px dashed #0fa"></div>Auto Generated</div>
+</div>
+
+<div id="detail">
+  <div class="title" id="detail-title"></div>
+  <div class="row" id="detail-row"></div>
+</div>
+
+<div id="stats"></div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+// ───────────── 데이터 로드 ─────────────
+const JSON_PATH = '../data/GroupPipeResults/group_pipe_results_20260405194814.json';
+const AUTO_PATH = '../data/AutoRoutingResults/test_multi_groups.json';
+
+const resp = await fetch(JSON_PATH);
+const groups = await resp.json();
+
+// 자동 생성 경로 로드 (없으면 무시)
+let autoGroups = [];
+try {
+  const autoResp = await fetch(AUTO_PATH);
+  if (autoResp.ok) autoGroups = await autoResp.json();
+} catch (e) { /* AutoRoutingResults 없으면 무시 */ }
+
+// 자동 생성 경로를 메인 그룹에 병합
+for (const ag of autoGroups) {
+  ag._isAuto = true;
+  groups.push(ag);
+}
+
+// ───────────── 색상 팔레트 ─────────────
+function hslColor(index, total) {
+  const h = (index / total) * 360;
+  const s = 70 + (index % 3) * 10;
+  const l = 50 + (index % 4) * 5;
+  return new THREE.Color(`hsl(${h}, ${s}%, ${l}%)`);
+}
+
+// ───────────── 경로 복원: start_pos + step_vectors → 좌표열 ─────────────
+function reconstructPath(path) {
+  const pts = [];
+  const sp = path.start_pos;
+  let x = sp[0], y = sp[1], z = sp[2];
+  pts.push(new THREE.Vector3(x, z, -y)); // Y-up 변환
+  for (const v of (path.path_step_vectors || [])) {
+    x += v.x; y += v.y; z += v.z;
+    pts.push(new THREE.Vector3(x, z, -y));
+  }
+  return pts;
+}
+
+// ───────────── Three.js 초기화 ─────────────
+const canvas = document.getElementById('canvas3d');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setClearColor(0x0a0a1e);
+
+const scene = new THREE.Scene();
+scene.fog = new THREE.FogExp2(0x0a0a1e, 0.000015);
+
+const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 500000);
+camera.position.set(10000, 20000, 25000);
+
+const controls = new OrbitControls(camera, canvas);
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
+controls.minDistance = 500;
+controls.maxDistance = 200000;
+
+// 조명
+scene.add(new THREE.AmbientLight(0x445566, 1.2));
+const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
+dirLight.position.set(10000, 30000, 15000);
+scene.add(dirLight);
+
+// 그리드
+const gridHelper = new THREE.GridHelper(60000, 60, 0x223344, 0x112233);
+scene.add(gridHelper);
+
+// 축 표시
+const axesHelper = new THREE.AxesHelper(3000);
+scene.add(axesHelper);
+
+// ───────────── 그룹별 3D 오브젝트 생성 ─────────────
+const groupObjects = []; // { group, linesGroup, zonesGroup, color, visible }
+const allPositions = []; // 전체 범위 계산용
+
+const TUBE_SEGMENTS = 6;
+const ZONE_OPACITY = { trunk: 0.15, fan_in: 0.12, fan_out: 0.12 };
+const ZONE_COLORS = { trunk: 0x00b4ff, fan_in: 0x00ff78, fan_out: 0xff7800 };
+
+for (let gi = 0; gi < groups.length; gi++) {
+  const g = groups[gi];
+  const color = hslColor(gi, groups.length);
+  const linesGroup = new THREE.Group();
+  linesGroup.name = `group_${g.group_id}_paths`;
+
+  const isAuto = !!g._isAuto;
+
+  // 각 path를 라인으로 렌더링
+  for (const path of g.paths) {
+    const pts = reconstructPath(path);
+    if (pts.length < 2) continue;
+
+    // 라인 (자동 생성은 점선 + 밝은 녹색, 일반은 실선)
+    const geom = new THREE.BufferGeometry().setFromPoints(pts);
+    let line;
+    if (isAuto) {
+      const mat = new THREE.LineDashedMaterial({
+        color: 0x00ffc8, linewidth: 2, transparent: true, opacity: 0.95,
+        dashSize: 80, gapSize: 40,
+      });
+      line = new THREE.Line(geom, mat);
+      line.computeLineDistances();
+    } else {
+      const mat = new THREE.LineBasicMaterial({ color, linewidth: 1.5, transparent: true, opacity: 0.85 });
+      line = new THREE.Line(geom, mat);
+    }
+    line.userData = { groupId: g.group_id, path, isAuto };
+    linesGroup.add(line);
+
+    // 시작점 구체 (자동 생성: 밝은 녹색, 일반: 노란색)
+    const sphereGeom = new THREE.SphereGeometry(isAuto ? 50 : 30, 8, 6);
+    const sphereMat = new THREE.MeshPhongMaterial({
+      color: isAuto ? 0x00ffc8 : 0xffff00,
+      transparent: true, opacity: isAuto ? 0.9 : 0.7,
+    });
+    const sphere = new THREE.Mesh(sphereGeom, sphereMat);
+    sphere.position.copy(pts[0]);
+    linesGroup.add(sphere);
+
+    // 끝점 구체
+    const endGeom = new THREE.SphereGeometry(isAuto ? 40 : 20, 8, 6);
+    const endMat = new THREE.MeshPhongMaterial({
+      color: isAuto ? 0x00ff88 : 0xff4466,
+      transparent: true, opacity: isAuto ? 0.8 : 0.6,
+    });
+    const endSphere = new THREE.Mesh(endGeom, endMat);
+    endSphere.position.copy(pts[pts.length - 1]);
+    linesGroup.add(endSphere);
+
+    for (const p of pts) allPositions.push(p);
+  }
+
+  scene.add(linesGroup);
+
+  // Zone 박스
+  const zonesGroup = new THREE.Group();
+  zonesGroup.name = `group_${g.group_id}_zones`;
+
+  for (const [zoneKey, zoneColor] of Object.entries(ZONE_COLORS)) {
+    const zone = g.zones[zoneKey];
+    if (!zone) continue;
+    const sx = (zone.x_max - zone.x_min) || 100;
+    const sy = (zone.z_max - zone.z_min) || 100;
+    const sz = (zone.y_max - zone.y_min) || 100;
+    const cx = (zone.x_min + zone.x_max) / 2;
+    const cy = (zone.z_min + zone.z_max) / 2;
+    const cz = -((zone.y_min + zone.y_max) / 2);
+
+    const boxGeom = new THREE.BoxGeometry(sx, sy, sz);
+    const boxMat = new THREE.MeshPhongMaterial({
+      color: zoneColor,
+      transparent: true,
+      opacity: ZONE_OPACITY[zoneKey],
+      side: THREE.DoubleSide,
+      depthWrite: false,
+    });
+    const boxMesh = new THREE.Mesh(boxGeom, boxMat);
+    boxMesh.position.set(cx, cy, cz);
+    zonesGroup.add(boxMesh);
+
+    // 와이어프레임
+    const wireGeom = new THREE.EdgesGeometry(boxGeom);
+    const wireMat = new THREE.LineBasicMaterial({ color: zoneColor, transparent: true, opacity: 0.4 });
+    const wireframe = new THREE.LineSegments(wireGeom, wireMat);
+    wireframe.position.copy(boxMesh.position);
+    zonesGroup.add(wireframe);
+  }
+
+  scene.add(zonesGroup);
+
+  groupObjects.push({ group: g, linesGroup, zonesGroup, color, visible: true });
+}
+
+// ───────────── 카메라 Fit ─────────────
+function fitCamera() {
+  if (allPositions.length === 0) return;
+  const box = new THREE.Box3();
+  for (const p of allPositions) box.expandByPoint(p);
+  const center = box.getCenter(new THREE.Vector3());
+  const size = box.getSize(new THREE.Vector3());
+  const maxDim = Math.max(size.x, size.y, size.z);
+
+  controls.target.copy(center);
+  camera.position.set(center.x + maxDim * 0.6, center.y + maxDim * 0.5, center.z + maxDim * 0.8);
+  controls.update();
+}
+fitCamera();
+
+// ───────────── UI: 그룹 리스트 ─────────────
+const listEl = document.getElementById('group-list');
+const searchEl = document.getElementById('search');
+const filterEquipEl = document.getElementById('filter-equip');
+const filterUtilityEl = document.getElementById('filter-utility');
+const detailEl = document.getElementById('detail');
+const detailTitleEl = document.getElementById('detail-title');
+const detailRowEl = document.getElementById('detail-row');
+
+// 필터 드롭다운 세팅
+const equipNames = [...new Set(groups.map(g => g.equipment_name))].sort();
+const utilityNames = [...new Set(groups.map(g => g.utility))].sort();
+for (const n of equipNames) filterEquipEl.innerHTML += `<option value="${n}">${n}</option>`;
+for (const n of utilityNames) filterUtilityEl.innerHTML += `<option value="${n}">${n}</option>`;
+
+let selectedGroupId = null;
+
+function buildGroupList() {
+  const query = searchEl.value.trim().toLowerCase();
+  const feq = filterEquipEl.value;
+  const fut = filterUtilityEl.value;
+
+  listEl.innerHTML = '';
+  let visCount = 0;
+  let pathTotal = 0;
+
+  for (const obj of groupObjects) {
+    const g = obj.group;
+    const text = `${g.equipment_name} ${g.utility} ${g.size}`.toLowerCase();
+    if (query && !text.includes(query)) continue;
+    if (feq && g.equipment_name !== feq) continue;
+    if (fut && g.utility !== fut) continue;
+
+    visCount++;
+    pathTotal += g.path_count;
+
+    const el = document.createElement('div');
+    el.className = 'group-item' + (g.group_id === selectedGroupId ? ' active' : '');
+    const hexColor = '#' + obj.color.getHexString();
+
+    const autoTag = g._isAuto ? '<span style="color:#0fc;font-size:10px;margin-left:4px">AUTO</span>' : '';
+    const simText = g._isAuto ? `Q=${g.quality_score?.toFixed(3)||'-'}` : `유사도 ${g.avg_similarity}`;
+
+    el.innerHTML = `
+      <div class="color-dot" style="background:${g._isAuto ? '#00ffc8' : hexColor}${g._isAuto ? ';border:1px dashed #0fa' : ''}"></div>
+      <div class="info">
+        <div class="title">#${g.group_id} ${g.equipment_name} / ${g.utility}${autoTag}</div>
+        <div class="meta">${g.size} | ${g.path_count}경로 | ${simText}</div>
+      </div>
+      <div class="vis-toggle" title="표시/숨김">${obj.visible ? '&#128065;' : '&#128064;'}</div>
+    `;
+
+    el.querySelector('.info').addEventListener('click', () => selectGroup(g.group_id));
+    el.querySelector('.vis-toggle').addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleGroupVisibility(g.group_id);
+    });
+
+    listEl.appendChild(el);
+  }
+
+  document.getElementById('group-count').textContent = visCount;
+  document.getElementById('path-count').textContent = pathTotal;
+}
+
+function selectGroup(groupId) {
+  selectedGroupId = (selectedGroupId === groupId) ? null : groupId;
+
+  // 포커스 효과: 선택 그룹 강조, 나머지 반투명
+  for (const obj of groupObjects) {
+    const isSelected = obj.group.group_id === selectedGroupId;
+    const isFaded = selectedGroupId !== null && !isSelected;
+    obj.linesGroup.traverse(child => {
+      if (child.material) {
+        child.material.opacity = isFaded ? 0.08 : (child.material.userData?.origOpacity ?? 0.85);
+      }
+    });
+    obj.zonesGroup.visible = obj.visible && (!selectedGroupId || isSelected) && zonesVisible;
+  }
+
+  // 상세 패널
+  if (selectedGroupId) {
+    const obj = groupObjects.find(o => o.group.group_id === selectedGroupId);
+    const g = obj.group;
+    detailTitleEl.textContent = `#${g.group_id} ${g.equipment_name} / ${g.utility} (${g.size})`;
+    const autoInfo = g._isAuto ? `
+      <div class="field" style="color:#0fc">유형: <span>자동 생성</span></div>
+      <div class="field" style="color:#0fc">품질: <span>${g.quality_score?.toFixed(4) || '-'}</span></div>
+      <div class="field" style="color:#0fc">원본 그룹: <span>#${g.source_group_id || '-'}</span></div>
+    ` : '';
+    detailRowEl.innerHTML = `
+      ${autoInfo}
+      <div class="field">공정: <span>${g.equipment_process}</span></div>
+      <div class="field">경로 수: <span>${g.path_count}</span></div>
+      <div class="field">고유 POC: <span>${g.unique_poc_count}</span></div>
+      <div class="field">평균 유사도: <span>${g.avg_similarity ?? '-'}</span></div>
+      <div class="field">시작POC XY거리: <span>${g.max_start_xy_dist}mm</span></div>
+      <div class="field">Trunk Z: <span>${g.zones.trunk ? g.zones.trunk.mean_z + 'mm' : '-'}</span></div>
+      <div class="field">추정여부: <span>${g.zones.is_trunk_estimated ? '추정' : '확정'}</span></div>
+    `;
+    detailEl.style.display = 'block';
+
+    // 카메라를 선택 그룹으로 이동
+    focusOnGroup(obj);
+  } else {
+    detailEl.style.display = 'none';
+    // 전체 복원
+    for (const obj of groupObjects) {
+      obj.linesGroup.traverse(child => {
+        if (child.material) child.material.opacity = child.material.userData?.origOpacity ?? 0.85;
+      });
+      obj.zonesGroup.visible = obj.visible && zonesVisible;
+    }
+  }
+
+  buildGroupList();
+}
+
+function focusOnGroup(obj) {
+  const box = new THREE.Box3();
+  obj.linesGroup.traverse(child => {
+    if (child.geometry) {
+      child.geometry.computeBoundingBox();
+      const b = child.geometry.boundingBox.clone();
+      b.applyMatrix4(child.matrixWorld);
+      box.union(b);
+    }
+  });
+  if (box.isEmpty()) return;
+  const center = box.getCenter(new THREE.Vector3());
+  const size = box.getSize(new THREE.Vector3());
+  const maxDim = Math.max(size.x, size.y, size.z, 2000);
+  controls.target.copy(center);
+  camera.position.set(center.x + maxDim * 0.8, center.y + maxDim * 0.6, center.z + maxDim * 0.8);
+}
+
+function toggleGroupVisibility(groupId) {
+  const obj = groupObjects.find(o => o.group.group_id === groupId);
+  if (!obj) return;
+  obj.visible = !obj.visible;
+  obj.linesGroup.visible = obj.visible;
+  obj.zonesGroup.visible = obj.visible && zonesVisible;
+  buildGroupList();
+}
+
+// ───────────── 툴바 ─────────────
+let zonesVisible = true;
+
+document.getElementById('btn-all-on').addEventListener('click', () => {
+  for (const obj of groupObjects) {
+    obj.visible = true;
+    obj.linesGroup.visible = true;
+    obj.zonesGroup.visible = zonesVisible;
+  }
+  buildGroupList();
+});
+
+document.getElementById('btn-all-off').addEventListener('click', () => {
+  for (const obj of groupObjects) {
+    obj.visible = false;
+    obj.linesGroup.visible = false;
+    obj.zonesGroup.visible = false;
+  }
+  buildGroupList();
+});
+
+document.getElementById('btn-zones').addEventListener('click', (e) => {
+  zonesVisible = !zonesVisible;
+  e.target.classList.toggle('active', zonesVisible);
+  for (const obj of groupObjects) {
+    obj.zonesGroup.visible = obj.visible && zonesVisible && (!selectedGroupId || obj.group.group_id === selectedGroupId);
+  }
+});
+
+let autoOnly = false;
+document.getElementById('btn-auto').addEventListener('click', (e) => {
+  autoOnly = !autoOnly;
+  e.target.classList.toggle('active', autoOnly);
+  for (const obj of groupObjects) {
+    if (autoOnly) {
+      obj.linesGroup.visible = !!obj.group._isAuto && obj.visible;
+      obj.zonesGroup.visible = !!obj.group._isAuto && obj.visible && zonesVisible;
+    } else {
+      obj.linesGroup.visible = obj.visible;
+      obj.zonesGroup.visible = obj.visible && zonesVisible;
+    }
+  }
+});
+
+document.getElementById('btn-fit').addEventListener('click', fitCamera);
+
+document.getElementById('btn-reset').addEventListener('click', () => {
+  selectedGroupId = null;
+  detailEl.style.display = 'none';
+  for (const obj of groupObjects) {
+    obj.visible = true;
+    obj.linesGroup.visible = true;
+    obj.linesGroup.traverse(child => {
+      if (child.material) child.material.opacity = child.material.userData?.origOpacity ?? 0.85;
+    });
+    obj.zonesGroup.visible = zonesVisible;
+  }
+  fitCamera();
+  buildGroupList();
+});
+
+document.getElementById('toggle-panel').addEventListener('click', () => {
+  document.getElementById('panel').classList.toggle('collapsed');
+});
+
+searchEl.addEventListener('input', buildGroupList);
+filterEquipEl.addEventListener('change', buildGroupList);
+filterUtilityEl.addEventListener('change', buildGroupList);
+
+// opacity 원본 저장
+for (const obj of groupObjects) {
+  obj.linesGroup.traverse(child => {
+    if (child.material) {
+      if (!child.material.userData) child.material.userData = {};
+      child.material.userData.origOpacity = child.material.opacity;
+    }
+  });
+}
+
+buildGroupList();
+
+// ───────────── 렌더 루프 ─────────────
+const statsEl = document.getElementById('stats');
+let frameCount = 0;
+let lastTime = performance.now();
+
+function animate() {
+  requestAnimationFrame(animate);
+  controls.update();
+  renderer.render(scene, camera);
+
+  frameCount++;
+  const now = performance.now();
+  if (now - lastTime >= 1000) {
+    statsEl.textContent = `${frameCount} FPS | ${groups.length} groups`;
+    frameCount = 0;
+    lastTime = now;
+  }
+}
+animate();
+
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+</script>
+</body>
+</html>
