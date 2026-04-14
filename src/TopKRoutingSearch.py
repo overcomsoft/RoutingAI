@@ -89,7 +89,7 @@ WEIGHT_MAP = {
     "segment_2":       {"indices": (15, 18), "weight": 0.06},
     "segment_3":       {"indices": (18, 21), "weight": 0.06},
     "env_cost":        {"indices": (21, 25), "weight": 0.12},
-    "reserved":        {"indices": (25, 30), "weight": 0.00},
+    "arrow_pattern":   {"indices": (25, 30), "weight": 0.15},
 }
 
 # 기본 정규화 파라미터 (mm 단위 기준)
@@ -659,7 +659,8 @@ class PathFeatureEncoder:
         # [21~24] 환경/비용 (총길이, 꺾임횟수, 장애물, 서포트)
         vec[21:25] = self._encode_env_cost(record)
 
-        # [25~29] 예비: 0.0 (이미 0으로 초기화됨)
+        # [25~29] Arrow 패턴 특징 (방향 분포 + 구조 정보)
+        vec[25:30] = self._encode_arrow_pattern(record, step_vectors)
 
         # 가중치 스케일 적용
         vec *= self.scale_factors
@@ -697,7 +698,13 @@ class PathFeatureEncoder:
                 "obstacle_score": unscaled[23],
                 "support_score": unscaled[24],
             },
-            "reserved": unscaled[25:30].tolist(),
+            "arrow_pattern": {
+                "h_ratio": unscaled[25],
+                "r_ratio": unscaled[26],
+                "d_ratio": unscaled[27],
+                "segment_count_norm": unscaled[28],
+                "transition_rate": unscaled[29],
+            },
         }
 
     # ── 내부 인코딩 메서드 ──────────────────────────────────
@@ -845,6 +852,56 @@ class PathFeatureEncoder:
         norm_support = _clamp01(support_score / np_.support_score_max) if np_.support_score_max > 0 else 0.0
 
         return [norm_length, norm_bends, norm_obstacle, norm_support]
+
+    def _encode_arrow_pattern(
+        self, record: Dict[str, Any], step_vectors: List[List[float]]
+    ) -> List[float]:
+        """Arrow 패턴 특징 인코딩: [H비율, R비율, D비율, 세그먼트수 정규화, 방향전환율].
+
+        GT 복합유사도의 Arrow Similarity(가중치 0.25)를 벡터 공간에서
+        근사하기 위해, 방향 패턴의 통계적 특성을 인코딩합니다.
+
+        [25] H(수평) 세그먼트 비율 (0~1)
+        [26] R(수직/Riser) 세그먼트 비율 (0~1)
+        [27] D(대각선) 세그먼트 비율 (0~1)
+        [28] 세그먼트 수 정규화 (0~1, max=30 기준)
+        [29] 방향 전환율 (인접 세그먼트 방향이 바뀌는 비율)
+        """
+        arrow = record.get("path_arrow", "")
+        if not arrow:
+            # step_vectors에서 arrow 재구성
+            codes = []
+            for sv in step_vectors:
+                code = _compute_segment_code_from_vector(sv[0], sv[1], sv[2])
+                if code:
+                    codes.append(code)
+            arrow = "-".join(codes)
+
+        segments = arrow.split("-") if arrow else []
+        n = len(segments)
+        if n == 0:
+            return [0.0, 0.0, 0.0, 0.0, 0.0]
+
+        # H/R/D 비율
+        h_count = sum(1 for s in segments if s == "H")
+        r_count = sum(1 for s in segments if s == "R")
+        d_count = sum(1 for s in segments if s == "D")
+
+        h_ratio = h_count / n
+        r_ratio = r_count / n
+        d_ratio = d_count / n
+
+        # 세그먼트 수 정규화 (30개를 기준으로)
+        seg_norm = _clamp01(n / 30.0)
+
+        # 방향 전환율 (인접 세그먼트가 다른 방향인 비율)
+        if n <= 1:
+            transition_rate = 0.0
+        else:
+            transitions = sum(1 for i in range(n - 1) if segments[i] != segments[i + 1])
+            transition_rate = transitions / (n - 1)
+
+        return [h_ratio, r_ratio, d_ratio, seg_norm, transition_rate]
 
 
 # ─────────────────────────────────────────────────────────────
@@ -1347,6 +1404,82 @@ class TopKSearchEngine:
             results=results,
             search_time_ms=elapsed_ms,
             filters_applied={},
+            total_candidates=len(candidate_records),
+        )
+
+    def search_hybrid_local(
+        self,
+        query_record: Dict[str, Any],
+        candidate_records: Sequence[Dict[str, Any]],
+        k: int = 5,
+        rerank_n: int = 20,
+        composite_fn: Optional[Any] = None,
+    ) -> TopKResult:
+        """하이브리드 검색: 벡터 Top-N → 복합유사도 재정렬 → Top-K.
+
+        Parameters
+        ----------
+        rerank_n : 벡터 검색으로 가져올 후보 수 (기본 20)
+        composite_fn : 복합유사도 함수 (query, candidate) -> float
+        """
+        start_time = time.time()
+
+        query_id = query_record.get("route_path_guid",
+                                     query_record.get("poc_id", ""))
+
+        # (1) 벡터 기반 Top-N 후보 추출
+        query_vector = self.encoder.encode(query_record)
+        query_vector = self.encoder.normalize_l2(query_vector)
+
+        scored = []
+        for idx, rec in enumerate(candidate_records):
+            rec_id = rec.get("route_path_guid", rec.get("poc_id", ""))
+            if rec_id == query_id:
+                continue
+            cand_vector = self.encoder.encode(rec)
+            cand_vector = self.encoder.normalize_l2(cand_vector)
+            cos_dist = max(0.0, 1.0 - float(np.dot(query_vector, cand_vector)))
+            scored.append((cos_dist, idx, rec))
+
+        scored.sort(key=lambda x: x[0])
+        top_n = scored[:rerank_n]
+
+        # (2) 복합유사도로 재정렬
+        if composite_fn is not None:
+            reranked = []
+            for cos_dist, idx, rec in top_n:
+                comp_sim = composite_fn(query_record, rec)
+                reranked.append((comp_sim, cos_dist, idx, rec))
+            reranked.sort(key=lambda x: -x[0])  # 복합유사도 내림차순
+            top_k = reranked[:k]
+        else:
+            top_k = [(1.0 - cd, cd, idx, rec) for cd, idx, rec in top_n[:k]]
+
+        elapsed_ms = (time.time() - start_time) * 1000.0
+
+        results = []
+        for rank_idx, (comp_sim, cos_dist, idx, rec) in enumerate(top_k, start=1):
+            results.append(SearchResult(
+                rank=rank_idx,
+                route_path_guid=rec.get("route_path_guid", rec.get("poc_id", f"local_{idx}")),
+                equipment_name=rec.get("equipment_name", ""),
+                process_name=rec.get("equipment_process", rec.get("process_name", "")),
+                utility=rec.get("utility", ""),
+                size=rec.get("size", ""),
+                direction_pattern=rec.get("path_arrow", ""),
+                total_length_mm=rec.get("path_total_length", 0.0),
+                step_count=len(rec.get("path_step_vectors", [])),
+                start_level=rec.get("start_level", ""),
+                end_level=rec.get("end_level", ""),
+                cosine_distance=cos_dist,
+                similarity_score=comp_sim,
+            ))
+
+        return TopKResult(
+            query_vector=query_vector,
+            results=results,
+            search_time_ms=elapsed_ms,
+            filters_applied={"rerank_n": rerank_n, "mode": "hybrid"},
             total_candidates=len(candidate_records),
         )
 

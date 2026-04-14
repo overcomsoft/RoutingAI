@@ -4,11 +4,7 @@ from __future__ import annotations
 # [실행 명령어]
 #
 #   (1) DB 경로 → DB 벡터 저장 (TB_ROUTE_PATH → TB_ROUTE_FEATURE_VECTOR)
-#   python BuildFeatureVectors.py from-db \
-#       --dbname AUTOROUTINGV7 --user postgres --password dinno \
-#       --host localhost --port 5432 \
-#       --save_norm ../data/FeatureVectors/db_norm_params.json \
-#       --save_json ../data/FeatureVectors/db_feature_vectors.json
+#   python BuildFeatureVectors.py from-db --dbname AUTOROUTINGV7 --user postgres --password dinno --host localhost --port 5432 --save_norm ../data/FeatureVectors/db_norm_params.json --save_json ../data/FeatureVectors/db_feature_vectors.json
 #
 #   (2) 로컬 벡터 생성 + JSON 저장 (GroupPipeResults JSON 소스)
 #   python BuildFeatureVectors.py local \

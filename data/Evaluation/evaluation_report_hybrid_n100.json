@@ -1,0 +1,6273 @@
+{
+  "evaluation_info": {
+    "created_at": "2026-04-14T23:44:52.440719",
+    "mode": "hybrid(rerank_n=100)",
+    "k": 5,
+    "n_queries": 100,
+    "total_candidates": 355,
+    "seed": 42,
+    "total_evaluation_time_sec": 5.01,
+    "avg_query_time_sec": 0.05
+  },
+  "target_assessment": {
+    "recall_at_k": {
+      "target": 0.8,
+      "actual": 0.7598,
+      "passed": false
+    },
+    "ndcg_at_k": {
+      "target": 0.85,
+      "actual": 0.7703,
+      "passed": false
+    },
+    "spearman_rho": {
+      "target": 0.8,
+      "actual": 0.3585,
+      "passed": false
+    },
+    "search_time_p95_ms": {
+      "target": 100.0,
+      "actual": 31.11,
+      "passed": true
+    }
+  },
+  "all_targets_passed": false,
+  "summary": {
+    "recall_at_k": {
+      "mean": 0.7598,
+      "median": 0.75,
+      "p5": 0.3333,
+      "p95": 1.0,
+      "min": 0.2,
+      "max": 1.0
+    },
+    "ndcg_at_k": {
+      "mean": 0.7703,
+      "median": 0.8298,
+      "p5": 0.2689,
+      "p95": 1.0,
+      "min": 0.0974,
+      "max": 1.0334
+    },
+    "spearman_rho": {
+      "mean": 0.3585,
+      "median": 0.8,
+      "p5": -1.0,
+      "p95": 1.0,
+      "min": -1.0,
+      "max": 1.0
+    },
+    "mrr": {
+      "mean": 0.7995,
+      "median": 1.0,
+      "p5": 0.0,
+      "p95": 1.0,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "search_time_ms": {
+      "mean": 26.5879,
+      "median": 25.81,
+      "p5": 21.89,
+      "p95": 31.11,
+      "min": 20.8,
+      "max": 66.22
+    }
+  },
+  "recall_histogram": {
+    "0-10%": 0,
+    "10-20%": 0,
+    "20-30%": 5,
+    "30-40%": 2,
+    "40-50%": 5,
+    "50-60%": 9,
+    "60-70%": 15,
+    "70-80%": 15,
+    "80-90%": 11,
+    "90-100%": 38
+  },
+  "by_utility": {
+    "-": {
+      "count": 8,
+      "mean_recall": 0.725
+    },
+    "ACID": {
+      "count": 2,
+      "mean_recall": 1.0
+    },
+    "AKWW": {
+      "count": 10,
+      "mean_recall": 0.6433
+    },
+    "ALKA": {
+      "count": 2,
+      "mean_recall": 1.0
+    },
+    "Ar": {
+      "count": 16,
+      "mean_recall": 0.7625
+    },
+    "Foreline": {
+      "count": 3,
+      "mean_recall": 1.0
+    },
+    "GN2": {
+      "count": 4,
+      "mean_recall": 0.7875
+    },
+    "HOT DI_S": {
+      "count": 2,
+      "mean_recall": 0.8
+    },
+    "NW": {
+      "count": 5,
+      "mean_recall": 1.0
+    },
+    "O2": {
+      "count": 4,
+      "mean_recall": 0.6875
+    },
+    "OWW": {
+      "count": 2,
+      "mean_recall": 1.0
+    },
+    "PA": {
+      "count": 9,
+      "mean_recall": 0.6611
+    },
+    "PFC": {
+      "count": 2,
+      "mean_recall": 0.325
+    },
+    "PN2": {
+      "count": 12,
+      "mean_recall": 0.7861
+    },
+    "PUMP": {
+      "count": 1,
+      "mean_recall": 1.0
+    },
+    "PV": {
+      "count": 2,
+      "mean_recall": 0.8
+    },
+    "PV_VENT": {
+      "count": 1,
+      "mean_recall": 0.2
+    },
+    "T2(IPA)": {
+      "count": 1,
+      "mean_recall": 1.0
+    },
+    "T3(ArF)": {
+      "count": 1,
+      "mean_recall": 1.0
+    },
+    "UPW_S": {
+      "count": 13,
+      "mean_recall": 0.709
+    }
+  },
+  "query_results": [
+    {
+      "query_id": "6daadd1e-7fed-4607-b991-648fda87bbbc",
+      "equipment_name": "SLWHJ02",
+      "utility": "Foreline",
+      "size": "50A",
+      "path_arrow": "R-D-H-R-H-H-H-H-H-D-R-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "d4875a71-98c2-45da-923c-bd7cd5d3a34e",
+          "similarity": 0.86941
+        },
+        {
+          "id": "38c27c77-c3bf-4017-b0bb-78fa2c157847",
+          "similarity": 0.690846
+        },
+        {
+          "id": "e90af5bf-041d-4972-86fa-a51d899aea3d",
+          "similarity": 0.677661
+        },
+        {
+          "id": "2ffe6c74-30a2-4c40-93e1-bd6a9ac76012",
+          "similarity": 0.65802
+        },
+        {
+          "id": "58861b46-4676-4e8f-b84d-543be9ee51ef",
+          "similarity": 0.65759
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "d4875a71-98c2-45da-923c-bd7cd5d3a34e",
+          "cosine_distance": 0.170518,
+          "composite_similarity": 0.86941
+        },
+        {
+          "id": "38c27c77-c3bf-4017-b0bb-78fa2c157847",
+          "cosine_distance": 0.295418,
+          "composite_similarity": 0.690846
+        },
+        {
+          "id": "e90af5bf-041d-4972-86fa-a51d899aea3d",
+          "cosine_distance": 0.303283,
+          "composite_similarity": 0.677661
+        },
+        {
+          "id": "2ffe6c74-30a2-4c40-93e1-bd6a9ac76012",
+          "cosine_distance": 0.321158,
+          "composite_similarity": 0.65802
+        },
+        {
+          "id": "58861b46-4676-4e8f-b84d-543be9ee51ef",
+          "cosine_distance": 0.356201,
+          "composite_similarity": 0.65759
+        }
+      ],
+      "search_time_ms": 23.48
+    },
+    {
+      "query_id": "8fd60ae9-da8a-4db7-a8af-7432f5367932",
+      "equipment_name": "SLWHJ02",
+      "utility": "Ar",
+      "size": "1/4B",
+      "path_arrow": "H-R-H-H-H-H-H-H-H-H-R-H-R-H-H-R-H-R-H-H-H-H-H-H-H-H-H-R-H",
+      "recall_at_k": 0.6667,
+      "ndcg_at_k": 0.4526,
+      "spearman_rho": 0.7,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+          "similarity": 0.884225
+        },
+        {
+          "id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+          "similarity": 0.878635
+        },
+        {
+          "id": "89e5d182-bf09-4db5-bfb6-72fa7f163c56",
+          "similarity": 0.876302
+        },
+        {
+          "id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+          "similarity": 0.859382
+        },
+        {
+          "id": "b985b848-72e1-49ce-8ef9-9b543dd095ad",
+          "similarity": 0.844534
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+          "cosine_distance": 0.563482,
+          "composite_similarity": 0.884225
+        },
+        {
+          "id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+          "cosine_distance": 0.610862,
+          "composite_similarity": 0.878635
+        },
+        {
+          "id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+          "cosine_distance": 0.676136,
+          "composite_similarity": 0.859382
+        },
+        {
+          "id": "d962180a-daed-437b-91fc-882a5eb3ac21",
+          "cosine_distance": 0.56221,
+          "composite_similarity": 0.83588
+        },
+        {
+          "id": "b985b848-72e1-49ce-8ef9-9b543dd095ad",
+          "cosine_distance": 0.201911,
+          "composite_similarity": 0.833495
+        }
+      ],
+      "search_time_ms": 28.82
+    },
+    {
+      "query_id": "b5c42f37-046a-4ba9-903b-6512f67dbcab",
+      "equipment_name": "kscta01",
+      "utility": "AKWW",
+      "size": "20A",
+      "path_arrow": "R-H-R-R-R-R-H-H-R-R-R-R-H-R",
+      "recall_at_k": 0.5,
+      "ndcg_at_k": 0.9488,
+      "spearman_rho": -1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "bd91c40b-ef5b-478f-a9fb-31b6ec652c29",
+          "similarity": 0.964286
+        },
+        {
+          "id": "bd91c40b-ef5b-478f-a9fb-31b6ec652c29",
+          "similarity": 0.91898
+        },
+        {
+          "id": "f44605a5-9554-40f2-b90a-6e0ce23a7068",
+          "similarity": 0.889392
+        },
+        {
+          "id": "b5c42f37-046a-4ba9-903b-6512f67dbcab",
+          "similarity": 0.887557
+        },
+        {
+          "id": "1877e033-0fd9-4e9d-ad41-3b3489080f8c",
+          "similarity": 0.883266
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "bd91c40b-ef5b-478f-a9fb-31b6ec652c29",
+          "cosine_distance": 0.173416,
+          "composite_similarity": 0.964286
+        },
+        {
+          "id": "bd91c40b-ef5b-478f-a9fb-31b6ec652c29",
+          "cosine_distance": 0.176375,
+          "composite_similarity": 0.91898
+        },
+        {
+          "id": "f44605a5-9554-40f2-b90a-6e0ce23a7068",
+          "cosine_distance": 0.086688,
+          "composite_similarity": 0.889392
+        },
+        {
+          "id": "bd91c40b-ef5b-478f-a9fb-31b6ec652c29",
+          "cosine_distance": 0.000872,
+          "composite_similarity": 0.878149
+        },
+        {
+          "id": "7404da16-2d9a-48ba-979a-478b71ebbb49",
+          "cosine_distance": 0.086818,
+          "composite_similarity": 0.876866
+        }
+      ],
+      "search_time_ms": 23.95
+    },
+    {
+      "query_id": "d4c307f8-fc02-4fc8-a96b-299ed5e1b044",
+      "equipment_name": "ELOHJ07",
+      "utility": "PN2",
+      "size": "1/4B",
+      "path_arrow": "R-D-H-H-H-H-R-H-R-H-R-H-R-H-H-H-H-H-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "cbf9d256-01d6-4e12-b815-a4f16dffaa26",
+          "similarity": 0.882282
+        },
+        {
+          "id": "2931fd16-4ae8-4998-a76f-b707b48575d7",
+          "similarity": 0.795166
+        },
+        {
+          "id": "e1593423-4887-441a-b78f-63dbb8fb408d",
+          "similarity": 0.793981
+        },
+        {
+          "id": "53dd8347-bdd0-4abb-8b92-743d3e454f43",
+          "similarity": 0.793906
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "similarity": 0.785198
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "cbf9d256-01d6-4e12-b815-a4f16dffaa26",
+          "cosine_distance": 0.282813,
+          "composite_similarity": 0.882282
+        },
+        {
+          "id": "2931fd16-4ae8-4998-a76f-b707b48575d7",
+          "cosine_distance": 0.101532,
+          "composite_similarity": 0.795166
+        },
+        {
+          "id": "e1593423-4887-441a-b78f-63dbb8fb408d",
+          "cosine_distance": 0.193326,
+          "composite_similarity": 0.793981
+        },
+        {
+          "id": "53dd8347-bdd0-4abb-8b92-743d3e454f43",
+          "cosine_distance": 0.156702,
+          "composite_similarity": 0.793906
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "cosine_distance": 0.12269,
+          "composite_similarity": 0.785198
+        }
+      ],
+      "search_time_ms": 25.36
+    },
+    {
+      "query_id": "a04dc7ad-39a7-474f-a929-22ca8178edcf",
+      "equipment_name": "WTNHJ02_",
+      "utility": "-",
+      "size": "1/2B",
+      "path_arrow": "R-H-D-H-H-H-H-H-H-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "c789b935-73ca-4329-a746-f02aeb82c99d",
+          "similarity": 0.88461
+        },
+        {
+          "id": "b838c114-3ff8-41f1-8b31-cd03961403f6",
+          "similarity": 0.874958
+        },
+        {
+          "id": "d0b38e6d-3e26-4712-b8f5-80984f61b797",
+          "similarity": 0.847086
+        },
+        {
+          "id": "293f3198-8613-4883-abb9-622bfbf96e53",
+          "similarity": 0.845463
+        },
+        {
+          "id": "2c562f2d-7957-424b-b999-bc891cce1c58",
+          "similarity": 0.822019
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "c789b935-73ca-4329-a746-f02aeb82c99d",
+          "cosine_distance": 0.058105,
+          "composite_similarity": 0.88461
+        },
+        {
+          "id": "b838c114-3ff8-41f1-8b31-cd03961403f6",
+          "cosine_distance": 0.085562,
+          "composite_similarity": 0.874958
+        },
+        {
+          "id": "d0b38e6d-3e26-4712-b8f5-80984f61b797",
+          "cosine_distance": 0.064493,
+          "composite_similarity": 0.847086
+        },
+        {
+          "id": "293f3198-8613-4883-abb9-622bfbf96e53",
+          "cosine_distance": 0.05669,
+          "composite_similarity": 0.845463
+        },
+        {
+          "id": "2c562f2d-7957-424b-b999-bc891cce1c58",
+          "cosine_distance": 0.075045,
+          "composite_similarity": 0.822019
+        }
+      ],
+      "search_time_ms": 23.33
+    },
+    {
+      "query_id": "252c2fc8-95a1-48fc-a708-e8a769fca265",
+      "equipment_name": "SLWHJ02",
+      "utility": "Ar",
+      "size": "1/4B",
+      "path_arrow": "H-R-H-H-H-H-H-H-H-H-H-H-H-R-H-R-H-H-H-H-H-R-H-H-R-R",
+      "recall_at_k": 0.8,
+      "ndcg_at_k": 0.9623,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "99a28835-815e-4288-9565-c22f7a0a83c2",
+          "similarity": 0.889654
+        },
+        {
+          "id": "9fef0329-c045-4578-bd21-dbd63f9a4de1",
+          "similarity": 0.885615
+        },
+        {
+          "id": "92551b55-7ffc-4bb8-b9bd-011167f28617",
+          "similarity": 0.841804
+        },
+        {
+          "id": "52fc01ac-b7cf-41ad-841b-cc30ea23004e",
+          "similarity": 0.81329
+        },
+        {
+          "id": "8db32389-232b-400a-9cbb-4a7ffca27fc6",
+          "similarity": 0.809576
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "99a28835-815e-4288-9565-c22f7a0a83c2",
+          "cosine_distance": 0.315958,
+          "composite_similarity": 0.889654
+        },
+        {
+          "id": "9fef0329-c045-4578-bd21-dbd63f9a4de1",
+          "cosine_distance": 0.070383,
+          "composite_similarity": 0.885615
+        },
+        {
+          "id": "92551b55-7ffc-4bb8-b9bd-011167f28617",
+          "cosine_distance": 0.351237,
+          "composite_similarity": 0.841804
+        },
+        {
+          "id": "52fc01ac-b7cf-41ad-841b-cc30ea23004e",
+          "cosine_distance": 0.256527,
+          "composite_similarity": 0.81329
+        },
+        {
+          "id": "d08af87d-80f0-459f-bc88-eb7d1ff85ef4",
+          "cosine_distance": 0.29561,
+          "composite_similarity": 0.807482
+        }
+      ],
+      "search_time_ms": 26.93
+    },
+    {
+      "query_id": "4c26c113-83ac-4c2f-b442-314e8ed191e1",
+      "equipment_name": "kscta01",
+      "utility": "UPW_S",
+      "size": "25A",
+      "path_arrow": "R-H-H-H-H-H-H-H-H-R-H-R-H-H-H-H-H-H-H-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 0.7439,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "adb56770-9974-4a02-b8fb-318fd320d6b3",
+          "similarity": 0.856187
+        },
+        {
+          "id": "adb56770-9974-4a02-b8fb-318fd320d6b3",
+          "similarity": 0.813148
+        },
+        {
+          "id": "adb56770-9974-4a02-b8fb-318fd320d6b3",
+          "similarity": 0.802763
+        },
+        {
+          "id": "90f17d8b-c0f0-4b57-8320-c4b320f662da",
+          "similarity": 0.800083
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "similarity": 0.794692
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "adb56770-9974-4a02-b8fb-318fd320d6b3",
+          "cosine_distance": 0.114164,
+          "composite_similarity": 0.856187
+        },
+        {
+          "id": "adb56770-9974-4a02-b8fb-318fd320d6b3",
+          "cosine_distance": 0.013536,
+          "composite_similarity": 0.813148
+        },
+        {
+          "id": "adb56770-9974-4a02-b8fb-318fd320d6b3",
+          "cosine_distance": 0.088142,
+          "composite_similarity": 0.802763
+        },
+        {
+          "id": "90f17d8b-c0f0-4b57-8320-c4b320f662da",
+          "cosine_distance": 0.317265,
+          "composite_similarity": 0.800083
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "cosine_distance": 0.172305,
+          "composite_similarity": 0.794692
+        }
+      ],
+      "search_time_ms": 25.81
+    },
+    {
+      "query_id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+      "equipment_name": "SLWHJ02",
+      "utility": "Ar",
+      "size": "1/4B",
+      "path_arrow": "H-R-H-H-H-H-H-H-H-H-R-H-R-H-R-H-R-H-H-H-H-H-H-H-H-H-H-H-H-R-H",
+      "recall_at_k": 0.3333,
+      "ndcg_at_k": 0.1588,
+      "spearman_rho": -1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "89e5d182-bf09-4db5-bfb6-72fa7f163c56",
+          "similarity": 0.930188
+        },
+        {
+          "id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+          "similarity": 0.898837
+        },
+        {
+          "id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+          "similarity": 0.897717
+        },
+        {
+          "id": "16c97265-a5e1-42b3-954f-0bf35137edd5",
+          "similarity": 0.875821
+        },
+        {
+          "id": "89e5d182-bf09-4db5-bfb6-72fa7f163c56",
+          "similarity": 0.863237
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "89e5d182-bf09-4db5-bfb6-72fa7f163c56",
+          "cosine_distance": 0.216275,
+          "composite_similarity": 0.930188
+        },
+        {
+          "id": "89e5d182-bf09-4db5-bfb6-72fa7f163c56",
+          "cosine_distance": 0.492293,
+          "composite_similarity": 0.863237
+        },
+        {
+          "id": "8fd60ae9-da8a-4db7-a8af-7432f5367932",
+          "cosine_distance": 0.676136,
+          "composite_similarity": 0.859382
+        },
+        {
+          "id": "d962180a-daed-437b-91fc-882a5eb3ac21",
+          "cosine_distance": 0.005901,
+          "composite_similarity": 0.843217
+        },
+        {
+          "id": "b985b848-72e1-49ce-8ef9-9b543dd095ad",
+          "cosine_distance": 0.482714,
+          "composite_similarity": 0.841216
+        }
+      ],
+      "search_time_ms": 28.53
+    },
+    {
+      "query_id": "ab6f8e8a-b0ca-4d3e-a537-ee5ecc0cf4c9",
+      "equipment_name": "Comp_Pump_KAS_MU300P_9??",
+      "utility": "-",
+      "size": "1/2B",
+      "path_arrow": "R-R-H-H-H-H-R-H-H-R-R-R",
+      "recall_at_k": 0.2,
+      "ndcg_at_k": 0.4868,
+      "spearman_rho": 0.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "76b7bdda-7218-44fe-b7da-fe1c5bd9eae3",
+          "similarity": 0.79774
+        },
+        {
+          "id": "46e0264b-0eb9-4985-9e5d-66aac5d13c59",
+          "similarity": 0.718209
+        },
+        {
+          "id": "d0bdbe16-3347-4a82-b7be-37a40af0dc5b",
+          "similarity": 0.682949
+        },
+        {
+          "id": "a631c572-cdf1-4389-9423-1beb440e5637",
+          "similarity": 0.681968
+        },
+        {
+          "id": "8e67f73e-445c-482f-9d3c-bdd1905fd6b6",
+          "similarity": 0.679305
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "76b7bdda-7218-44fe-b7da-fe1c5bd9eae3",
+          "cosine_distance": 0.000559,
+          "composite_similarity": 0.79774
+        },
+        {
+          "id": "cf33a9fe-0d3b-4035-9907-59076a353b01",
+          "cosine_distance": 0.73667,
+          "composite_similarity": 0.670267
+        },
+        {
+          "id": "f81d217e-1f4c-433a-a5e6-ce9690ef5a9d",
+          "cosine_distance": 0.744455,
+          "composite_similarity": 0.669977
+        },
+        {
+          "id": "2c562f2d-7957-424b-b999-bc891cce1c58",
+          "cosine_distance": 0.735245,
+          "composite_similarity": 0.639033
+        },
+        {
+          "id": "aced1caa-5363-4586-aefa-764b97df9794",
+          "cosine_distance": 0.73111,
+          "composite_similarity": 0.638695
+        }
+      ],
+      "search_time_ms": 24.02
+    },
+    {
+      "query_id": "627e4092-9de5-4936-8830-abec025e5e85",
+      "equipment_name": "WTNHJ02_",
+      "utility": "NW",
+      "size": "1/2B",
+      "path_arrow": "R-H-R-H-H-H-H-R-H-R-H-H-R-H-R-H-H-R-R-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "1a877d03-ca1a-4bb4-93fa-9c8d48feeb7d",
+          "similarity": 0.988688
+        },
+        {
+          "id": "dcb187e4-cdbd-4c85-a103-eec837d4a1fc",
+          "similarity": 0.785531
+        },
+        {
+          "id": "aa45a6e2-071c-4a20-8bc7-d0536ea46254",
+          "similarity": 0.772836
+        },
+        {
+          "id": "cc197f53-7470-49a4-ba6c-ae7514da7c76",
+          "similarity": 0.758182
+        },
+        {
+          "id": "d7fdd9fa-01b5-4835-8164-4739c5616079",
+          "similarity": 0.751819
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "1a877d03-ca1a-4bb4-93fa-9c8d48feeb7d",
+          "cosine_distance": 0.021172,
+          "composite_similarity": 0.988688
+        },
+        {
+          "id": "dcb187e4-cdbd-4c85-a103-eec837d4a1fc",
+          "cosine_distance": 0.030739,
+          "composite_similarity": 0.785531
+        },
+        {
+          "id": "aa45a6e2-071c-4a20-8bc7-d0536ea46254",
+          "cosine_distance": 0.147288,
+          "composite_similarity": 0.772836
+        },
+        {
+          "id": "cc197f53-7470-49a4-ba6c-ae7514da7c76",
+          "cosine_distance": 0.140527,
+          "composite_similarity": 0.758182
+        },
+        {
+          "id": "d7fdd9fa-01b5-4835-8164-4739c5616079",
+          "cosine_distance": 0.150474,
+          "composite_similarity": 0.751819
+        }
+      ],
+      "search_time_ms": 24.68
+    },
+    {
+      "query_id": "a8a2ad56-7041-4f9c-aa00-0f9bb5ba570d",
+      "equipment_name": "SLWHJ02",
+      "utility": "Ar",
+      "size": "1/4B",
+      "path_arrow": "H-R-H-H-H-H-H-H-H-H-H-H-R-H-R-H-R-H-R-H-H-H-H-H-H-H-R-H",
+      "recall_at_k": 0.75,
+      "ndcg_at_k": 0.9762,
+      "spearman_rho": 0.9,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "b985b848-72e1-49ce-8ef9-9b543dd095ad",
+          "similarity": 0.89489
+        },
+        {
+          "id": "1cb270c4-7a38-44c3-8658-32402c62f98b",
+          "similarity": 0.865892
+        },
+        {
+          "id": "1cb270c4-7a38-44c3-8658-32402c62f98b",
+          "similarity": 0.831498
+        },
+        {
+          "id": "8db32389-232b-400a-9cbb-4a7ffca27fc6",
+          "similarity": 0.829054
+        },
+        {
+          "id": "d962180a-daed-437b-91fc-882a5eb3ac21",
+          "similarity": 0.828212
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "b985b848-72e1-49ce-8ef9-9b543dd095ad",
+          "cosine_distance": 0.328588,
+          "composite_similarity": 0.89489
+        },
+        {
+          "id": "1cb270c4-7a38-44c3-8658-32402c62f98b",
+          "cosine_distance": 0.683338,
+          "composite_similarity": 0.865892
+        },
+        {
+          "id": "1cb270c4-7a38-44c3-8658-32402c62f98b",
+          "cosine_distance": 0.322624,
+          "composite_similarity": 0.831498
+        },
+        {
+          "id": "8db32389-232b-400a-9cbb-4a7ffca27fc6",
+          "cosine_distance": 0.570598,
+          "composite_similarity": 0.829054
+        },
+        {
+          "id": "8db32389-232b-400a-9cbb-4a7ffca27fc6",
+          "cosine_distance": 0.675739,
+          "composite_similarity": 0.826902
+        }
+      ],
+      "search_time_ms": 28.91
+    },
+    {
+      "query_id": "cc197f53-7470-49a4-ba6c-ae7514da7c76",
+      "equipment_name": "WTNHJ02_",
+      "utility": "NW",
+      "size": "1B",
+      "path_arrow": "R-H-D-H-H-R-H-R-H-H-R-H-R-H-R-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "d7fdd9fa-01b5-4835-8164-4739c5616079",
+          "similarity": 0.992045
+        },
+        {
+          "id": "aa45a6e2-071c-4a20-8bc7-d0536ea46254",
+          "similarity": 0.942272
+        },
+        {
+          "id": "0c6df762-ceb1-46eb-85fb-d612d6221dde",
+          "similarity": 0.895406
+        },
+        {
+          "id": "f251189d-fcea-43f5-af5c-f478e8be437d",
+          "similarity": 0.762712
+        },
+        {
+          "id": "627e4092-9de5-4936-8830-abec025e5e85",
+          "similarity": 0.758182
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "d7fdd9fa-01b5-4835-8164-4739c5616079",
+          "cosine_distance": 0.031798,
+          "composite_similarity": 0.992045
+        },
+        {
+          "id": "aa45a6e2-071c-4a20-8bc7-d0536ea46254",
+          "cosine_distance": 0.032337,
+          "composite_similarity": 0.942272
+        },
+        {
+          "id": "0c6df762-ceb1-46eb-85fb-d612d6221dde",
+          "cosine_distance": 0.068273,
+          "composite_similarity": 0.895406
+        },
+        {
+          "id": "f251189d-fcea-43f5-af5c-f478e8be437d",
+          "cosine_distance": 0.052116,
+          "composite_similarity": 0.762712
+        },
+        {
+          "id": "627e4092-9de5-4936-8830-abec025e5e85",
+          "cosine_distance": 0.140527,
+          "composite_similarity": 0.758182
+        }
+      ],
+      "search_time_ms": 24.25
+    },
+    {
+      "query_id": "8b0595c3-de30-41fb-8f6f-615e6d3d8999",
+      "equipment_name": "ELOHJ07",
+      "utility": "GN2",
+      "size": "1/4B",
+      "path_arrow": "R-H-H-H-H-R",
+      "recall_at_k": 0.75,
+      "ndcg_at_k": 0.6156,
+      "spearman_rho": 0.6,
+      "mrr": 0.0,
+      "gt_top_k": [
+        {
+          "id": "b10cbff6-7197-4d7a-be0b-bbee9e733151",
+          "similarity": 0.833327
+        },
+        {
+          "id": "f8d45263-20de-4375-b5db-26c7bcfef5dd",
+          "similarity": 0.800659
+        },
+        {
+          "id": "f8d45263-20de-4375-b5db-26c7bcfef5dd",
+          "similarity": 0.795783
+        },
+        {
+          "id": "18e258b9-a272-4429-9708-3ade1c5fb075",
+          "similarity": 0.672378
+        },
+        {
+          "id": "776cbd6a-de4d-4f13-a073-90906b91b5c7",
+          "similarity": 0.670669
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "f8d45263-20de-4375-b5db-26c7bcfef5dd",
+          "cosine_distance": 0.299731,
+          "composite_similarity": 0.800659
+        },
+        {
+          "id": "f8d45263-20de-4375-b5db-26c7bcfef5dd",
+          "cosine_distance": 0.218372,
+          "composite_similarity": 0.795783
+        },
+        {
+          "id": "18e258b9-a272-4429-9708-3ade1c5fb075",
+          "cosine_distance": 0.335755,
+          "composite_similarity": 0.672378
+        },
+        {
+          "id": "776cbd6a-de4d-4f13-a073-90906b91b5c7",
+          "cosine_distance": 0.274519,
+          "composite_similarity": 0.670669
+        },
+        {
+          "id": "48ddf0b3-11d9-434f-b587-5de75e8cde86",
+          "cosine_distance": 0.252327,
+          "composite_similarity": 0.663312
+        }
+      ],
+      "search_time_ms": 21.03
+    },
+    {
+      "query_id": "f44605a5-9554-40f2-b90a-6e0ce23a7068",
+      "equipment_name": "kscta01",
+      "utility": "AKWW",
+      "size": "20A",
+      "path_arrow": "R-H-H-R-R-R-R-H-R-R-R-R-H-R",
+      "recall_at_k": 0.8,
+      "ndcg_at_k": 0.713,
+      "spearman_rho": 0.6,
+      "mrr": 0.0,
+      "gt_top_k": [
+        {
+          "id": "f44605a5-9554-40f2-b90a-6e0ce23a7068",
+          "similarity": 0.972581
+        },
+        {
+          "id": "7404da16-2d9a-48ba-979a-478b71ebbb49",
+          "similarity": 0.963062
+        },
+        {
+          "id": "61af9d85-97ea-4d2d-bc56-494b117234f9",
+          "similarity": 0.8905
+        },
+        {
+          "id": "bd91c40b-ef5b-478f-a9fb-31b6ec652c29",
+          "similarity": 0.887557
+        },
+        {
+          "id": "b5c42f37-046a-4ba9-903b-6512f67dbcab",
+          "similarity": 0.8697
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "7404da16-2d9a-48ba-979a-478b71ebbb49",
+          "cosine_distance": 0.173499,
+          "composite_similarity": 0.963062
+        },
+        {
+          "id": "61af9d85-97ea-4d2d-bc56-494b117234f9",
+          "cosine_distance": 0.260527,
+          "composite_similarity": 0.8905
+        },
+        {
+          "id": "bd91c40b-ef5b-478f-a9fb-31b6ec652c29",
+          "cosine_distance": 0.086664,
+          "composite_similarity": 0.887557
+        },
+        {
+          "id": "b5c42f37-046a-4ba9-903b-6512f67dbcab",
+          "cosine_distance": 0.260001,
+          "composite_similarity": 0.8697
+        },
+        {
+          "id": "6dc0e809-5930-42e4-9e1a-930bbd3d895e",
+          "cosine_distance": 0.165884,
+          "composite_similarity": 0.856207
+        }
+      ],
+      "search_time_ms": 23.52
+    },
+    {
+      "query_id": "b5c42f37-046a-4ba9-903b-6512f67dbcab",
+      "equipment_name": "kscta01",
+      "utility": "AKWW",
+      "size": "20A",
+      "path_arrow": "R-H-R-R-R-R-H-H-H-H-R-R-R-R-H-R",
+      "recall_at_k": 0.5,
+      "ndcg_at_k": 0.4508,
+      "spearman_rho": -1.0,
+      "mrr": 0.0,
+      "gt_top_k": [
+        {
+          "id": "1877e033-0fd9-4e9d-ad41-3b3489080f8c",
+          "similarity": 0.9375
+        },
+        {
+          "id": "f44605a5-9554-40f2-b90a-6e0ce23a7068",
+          "similarity": 0.916409
+        },
+        {
+          "id": "1877e033-0fd9-4e9d-ad41-3b3489080f8c",
+          "similarity": 0.869545
+        },
+        {
+          "id": "b5c42f37-046a-4ba9-903b-6512f67dbcab",
+          "similarity": 0.868987
+        },
+        {
+          "id": "bd91c40b-ef5b-478f-a9fb-31b6ec652c29",
+          "similarity": 0.864705
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "f44605a5-9554-40f2-b90a-6e0ce23a7068",
+          "cosine_distance": 0.084015,
+          "composite_similarity": 0.916409
+        },
+        {
+          "id": "bd91c40b-ef5b-478f-a9fb-31b6ec652c29",
+          "cosine_distance": 0.002388,
+          "composite_similarity": 0.864705
+        },
+        {
+          "id": "5cc843cd-6307-4f27-b414-f8bde9d4a15e",
+          "cosine_distance": 0.131036,
+          "composite_similarity": 0.856736
+        },
+        {
+          "id": "7404da16-2d9a-48ba-979a-478b71ebbb49",
+          "cosine_distance": 0.084436,
+          "composite_similarity": 0.846938
+        },
+        {
+          "id": "7404da16-2d9a-48ba-979a-478b71ebbb49",
+          "cosine_distance": 0.135235,
+          "composite_similarity": 0.844736
+        }
+      ],
+      "search_time_ms": 24.02
+    },
+    {
+      "query_id": "16c97265-a5e1-42b3-954f-0bf35137edd5",
+      "equipment_name": "SLWHJ02",
+      "utility": "Ar",
+      "size": "1/4B",
+      "path_arrow": "H-R-H-H-H-H-H-H-H-R-H-R-H-H-R-H-R-H-H-H-H-H-H-H-H-H-H-H-H-R-H",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 0.2689,
+      "spearman_rho": 0.0,
+      "mrr": 0.5,
+      "gt_top_k": [
+        {
+          "id": "89e5d182-bf09-4db5-bfb6-72fa7f163c56",
+          "similarity": 0.879236
+        },
+        {
+          "id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+          "similarity": 0.875821
+        },
+        {
+          "id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+          "similarity": 0.847593
+        },
+        {
+          "id": "89e5d182-bf09-4db5-bfb6-72fa7f163c56",
+          "similarity": 0.828033
+        },
+        {
+          "id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+          "similarity": 0.816817
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+          "cosine_distance": 0.524724,
+          "composite_similarity": 0.847593
+        },
+        {
+          "id": "89e5d182-bf09-4db5-bfb6-72fa7f163c56",
+          "cosine_distance": 0.572866,
+          "composite_similarity": 0.828033
+        },
+        {
+          "id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+          "cosine_distance": 0.671486,
+          "composite_similarity": 0.816817
+        },
+        {
+          "id": "0c5f5a61-d33c-4dcb-babf-82edc4f007e6",
+          "cosine_distance": 0.25212,
+          "composite_similarity": 0.815388
+        },
+        {
+          "id": "99a28835-815e-4288-9565-c22f7a0a83c2",
+          "cosine_distance": 0.644866,
+          "composite_similarity": 0.811351
+        }
+      ],
+      "search_time_ms": 29.87
+    },
+    {
+      "query_id": "92551b55-7ffc-4bb8-b9bd-011167f28617",
+      "equipment_name": "SLWHJ02",
+      "utility": "Ar",
+      "size": "1/4B",
+      "path_arrow": "H-R-H-H-H-H-H-H-H-H-H-H-H-H-R-H-R-H-H-H-R-H-H-R-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "d08af87d-80f0-459f-bc88-eb7d1ff85ef4",
+          "similarity": 0.959374
+        },
+        {
+          "id": "8db32389-232b-400a-9cbb-4a7ffca27fc6",
+          "similarity": 0.917167
+        },
+        {
+          "id": "00e59291-15a8-4fa5-a965-c15374595463",
+          "similarity": 0.867568
+        },
+        {
+          "id": "1cb270c4-7a38-44c3-8658-32402c62f98b",
+          "similarity": 0.856043
+        },
+        {
+          "id": "a8a2ad56-7041-4f9c-aa00-0f9bb5ba570d",
+          "similarity": 0.848195
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "d08af87d-80f0-459f-bc88-eb7d1ff85ef4",
+          "cosine_distance": 0.095211,
+          "composite_similarity": 0.959374
+        },
+        {
+          "id": "8db32389-232b-400a-9cbb-4a7ffca27fc6",
+          "cosine_distance": 0.331654,
+          "composite_similarity": 0.917167
+        },
+        {
+          "id": "00e59291-15a8-4fa5-a965-c15374595463",
+          "cosine_distance": 0.065432,
+          "composite_similarity": 0.867568
+        },
+        {
+          "id": "1cb270c4-7a38-44c3-8658-32402c62f98b",
+          "cosine_distance": 0.033554,
+          "composite_similarity": 0.856043
+        },
+        {
+          "id": "a8a2ad56-7041-4f9c-aa00-0f9bb5ba570d",
+          "cosine_distance": 0.290825,
+          "composite_similarity": 0.848195
+        }
+      ],
+      "search_time_ms": 26.21
+    },
+    {
+      "query_id": "058d064c-1b8d-44d8-9767-a85e0da41bec",
+      "equipment_name": "SLWHJ02",
+      "utility": "Ar",
+      "size": "1/4B",
+      "path_arrow": "H-R-H-H-H-H-H-H-H-H-H-H-R-H-R-H-H-H-H-H-R-H-H-R-H-R-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "d962180a-daed-437b-91fc-882a5eb3ac21",
+          "similarity": 0.893257
+        },
+        {
+          "id": "d08af87d-80f0-459f-bc88-eb7d1ff85ef4",
+          "similarity": 0.854361
+        },
+        {
+          "id": "b985b848-72e1-49ce-8ef9-9b543dd095ad",
+          "similarity": 0.847554
+        },
+        {
+          "id": "9fef0329-c045-4578-bd21-dbd63f9a4de1",
+          "similarity": 0.841313
+        },
+        {
+          "id": "0c5f5a61-d33c-4dcb-babf-82edc4f007e6",
+          "similarity": 0.831059
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "d962180a-daed-437b-91fc-882a5eb3ac21",
+          "cosine_distance": 0.490869,
+          "composite_similarity": 0.893257
+        },
+        {
+          "id": "d08af87d-80f0-459f-bc88-eb7d1ff85ef4",
+          "cosine_distance": 0.08767,
+          "composite_similarity": 0.854361
+        },
+        {
+          "id": "b985b848-72e1-49ce-8ef9-9b543dd095ad",
+          "cosine_distance": 0.488212,
+          "composite_similarity": 0.847554
+        },
+        {
+          "id": "9fef0329-c045-4578-bd21-dbd63f9a4de1",
+          "cosine_distance": 0.226358,
+          "composite_similarity": 0.841313
+        },
+        {
+          "id": "0c5f5a61-d33c-4dcb-babf-82edc4f007e6",
+          "cosine_distance": 0.39528,
+          "composite_similarity": 0.831059
+        }
+      ],
+      "search_time_ms": 27.37
+    },
+    {
+      "query_id": "99a28835-815e-4288-9565-c22f7a0a83c2",
+      "equipment_name": "SLWHJ02",
+      "utility": "PN2",
+      "size": "1/4B",
+      "path_arrow": "H-R-H-H-H-H-H-H-H-H-H-H-H-R-H-R-H-H-R-H-H-R-R",
+      "recall_at_k": 0.6,
+      "ndcg_at_k": 0.7197,
+      "spearman_rho": -0.25,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "252c2fc8-95a1-48fc-a708-e8a769fca265",
+          "similarity": 0.889654
+        },
+        {
+          "id": "52fc01ac-b7cf-41ad-841b-cc30ea23004e",
+          "similarity": 0.857628
+        },
+        {
+          "id": "1cb270c4-7a38-44c3-8658-32402c62f98b",
+          "similarity": 0.839862
+        },
+        {
+          "id": "4232693d-b27d-4849-9090-488dc6728fca",
+          "similarity": 0.838199
+        },
+        {
+          "id": "8db32389-232b-400a-9cbb-4a7ffca27fc6",
+          "similarity": 0.833784
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "252c2fc8-95a1-48fc-a708-e8a769fca265",
+          "cosine_distance": 0.315958,
+          "composite_similarity": 0.889654
+        },
+        {
+          "id": "1cb270c4-7a38-44c3-8658-32402c62f98b",
+          "cosine_distance": 0.140922,
+          "composite_similarity": 0.839862
+        },
+        {
+          "id": "8db32389-232b-400a-9cbb-4a7ffca27fc6",
+          "cosine_distance": 0.437271,
+          "composite_similarity": 0.833784
+        },
+        {
+          "id": "9fef0329-c045-4578-bd21-dbd63f9a4de1",
+          "cosine_distance": 0.14664,
+          "composite_similarity": 0.830262
+        },
+        {
+          "id": "92551b55-7ffc-4bb8-b9bd-011167f28617",
+          "cosine_distance": 0.11614,
+          "composite_similarity": 0.826476
+        }
+      ],
+      "search_time_ms": 26.29
+    },
+    {
+      "query_id": "03add684-7a89-4124-8747-6089625c3429",
+      "equipment_name": "SLWHJ02",
+      "utility": "Foreline",
+      "size": "100A",
+      "path_arrow": "R-R-R-R-R-R-R-R-R-R-R-R-R-R-D",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "c157c0cf-5a79-4073-bd2e-687b0ba77364",
+          "similarity": 0.993519
+        },
+        {
+          "id": "e67a68c4-5adf-48bd-92a7-9164fd405a73",
+          "similarity": 0.931896
+        },
+        {
+          "id": "6bde945d-1a05-4a90-a370-3020bdc3483f",
+          "similarity": 0.919414
+        },
+        {
+          "id": "ee10eab0-dc29-4a4a-a2eb-ea7792a3ed4b",
+          "similarity": 0.790608
+        },
+        {
+          "id": "80ae15a0-4164-4a5c-9f57-17d2c038c665",
+          "similarity": 0.727387
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "c157c0cf-5a79-4073-bd2e-687b0ba77364",
+          "cosine_distance": 0.002177,
+          "composite_similarity": 0.993519
+        },
+        {
+          "id": "e67a68c4-5adf-48bd-92a7-9164fd405a73",
+          "cosine_distance": 0.148987,
+          "composite_similarity": 0.931896
+        },
+        {
+          "id": "6bde945d-1a05-4a90-a370-3020bdc3483f",
+          "cosine_distance": 0.183534,
+          "composite_similarity": 0.919414
+        },
+        {
+          "id": "ee10eab0-dc29-4a4a-a2eb-ea7792a3ed4b",
+          "cosine_distance": 0.058496,
+          "composite_similarity": 0.790608
+        },
+        {
+          "id": "80ae15a0-4164-4a5c-9f57-17d2c038c665",
+          "cosine_distance": 0.054951,
+          "composite_similarity": 0.727387
+        }
+      ],
+      "search_time_ms": 24.15
+    },
+    {
+      "query_id": "b5c42f37-046a-4ba9-903b-6512f67dbcab",
+      "equipment_name": "kscta01",
+      "utility": "AKWW",
+      "size": "20A",
+      "path_arrow": "R-H-R-R-R-R-H-R-R-R-R-H-H-R",
+      "recall_at_k": 0.6667,
+      "ndcg_at_k": 0.6799,
+      "spearman_rho": -1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "bd91c40b-ef5b-478f-a9fb-31b6ec652c29",
+          "similarity": 0.972581
+        },
+        {
+          "id": "b5c42f37-046a-4ba9-903b-6512f67dbcab",
+          "similarity": 0.963062
+        },
+        {
+          "id": "bd91c40b-ef5b-478f-a9fb-31b6ec652c29",
+          "similarity": 0.89752
+        },
+        {
+          "id": "b5c42f37-046a-4ba9-903b-6512f67dbcab",
+          "similarity": 0.887557
+        },
+        {
+          "id": "97e80aa5-0809-40de-83ce-00c29c268095",
+          "similarity": 0.884634
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "bd91c40b-ef5b-478f-a9fb-31b6ec652c29",
+          "cosine_distance": 0.17332,
+          "composite_similarity": 0.972581
+        },
+        {
+          "id": "bd91c40b-ef5b-478f-a9fb-31b6ec652c29",
+          "cosine_distance": 0.087475,
+          "composite_similarity": 0.89752
+        },
+        {
+          "id": "97e80aa5-0809-40de-83ce-00c29c268095",
+          "cosine_distance": 0.092947,
+          "composite_similarity": 0.884634
+        },
+        {
+          "id": "97e80aa5-0809-40de-83ce-00c29c268095",
+          "cosine_distance": 0.260715,
+          "composite_similarity": 0.879663
+        },
+        {
+          "id": "bd91c40b-ef5b-478f-a9fb-31b6ec652c29",
+          "cosine_distance": 0.260151,
+          "composite_similarity": 0.8697
+        }
+      ],
+      "search_time_ms": 24.05
+    },
+    {
+      "query_id": "5cc843cd-6307-4f27-b414-f8bde9d4a15e",
+      "equipment_name": "PSTWA03",
+      "utility": "OWW",
+      "size": "25A",
+      "path_arrow": "R-R-H-R-R-R-R-H-H-R-H-H-R-R-R-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "4e4342de-c21a-4cf4-becb-c3da9cfedc02",
+          "similarity": 0.853692
+        },
+        {
+          "id": "fa9210cb-349b-4e13-a393-bfca14ff1ae8",
+          "similarity": 0.790337
+        },
+        {
+          "id": "d0bdbe16-3347-4a82-b7be-37a40af0dc5b",
+          "similarity": 0.762514
+        },
+        {
+          "id": "46e0264b-0eb9-4985-9e5d-66aac5d13c59",
+          "similarity": 0.74031
+        },
+        {
+          "id": "0b7fa9b6-de74-45cd-94be-3e0ae7959541",
+          "similarity": 0.740272
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "4e4342de-c21a-4cf4-becb-c3da9cfedc02",
+          "cosine_distance": 0.072614,
+          "composite_similarity": 0.853692
+        },
+        {
+          "id": "fa9210cb-349b-4e13-a393-bfca14ff1ae8",
+          "cosine_distance": 0.076946,
+          "composite_similarity": 0.790337
+        },
+        {
+          "id": "d0bdbe16-3347-4a82-b7be-37a40af0dc5b",
+          "cosine_distance": 0.124672,
+          "composite_similarity": 0.762514
+        },
+        {
+          "id": "46e0264b-0eb9-4985-9e5d-66aac5d13c59",
+          "cosine_distance": 0.126301,
+          "composite_similarity": 0.74031
+        },
+        {
+          "id": "0b7fa9b6-de74-45cd-94be-3e0ae7959541",
+          "cosine_distance": 0.169333,
+          "composite_similarity": 0.740272
+        }
+      ],
+      "search_time_ms": 23.71
+    },
+    {
+      "query_id": "d08af87d-80f0-459f-bc88-eb7d1ff85ef4",
+      "equipment_name": "SLWHJ02",
+      "utility": "PN2",
+      "size": "1/4B",
+      "path_arrow": "H-R-H-H-H-H-H-H-H-H-H-H-H-H-R-H-R-H-H-H-R-H-R-H-H-H-H-H-H-H-H-H-H-H-R-H",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "99a28835-815e-4288-9565-c22f7a0a83c2",
+          "similarity": 0.885417
+        },
+        {
+          "id": "0c5f5a61-d33c-4dcb-babf-82edc4f007e6",
+          "similarity": 0.881771
+        },
+        {
+          "id": "52fc01ac-b7cf-41ad-841b-cc30ea23004e",
+          "similarity": 0.87336
+        },
+        {
+          "id": "8db32389-232b-400a-9cbb-4a7ffca27fc6",
+          "similarity": 0.870998
+        },
+        {
+          "id": "00e59291-15a8-4fa5-a965-c15374595463",
+          "similarity": 0.868579
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "99a28835-815e-4288-9565-c22f7a0a83c2",
+          "cosine_distance": 0.143608,
+          "composite_similarity": 0.885417
+        },
+        {
+          "id": "0c5f5a61-d33c-4dcb-babf-82edc4f007e6",
+          "cosine_distance": 0.434883,
+          "composite_similarity": 0.881771
+        },
+        {
+          "id": "52fc01ac-b7cf-41ad-841b-cc30ea23004e",
+          "cosine_distance": 0.619951,
+          "composite_similarity": 0.87336
+        },
+        {
+          "id": "8db32389-232b-400a-9cbb-4a7ffca27fc6",
+          "cosine_distance": 0.641777,
+          "composite_similarity": 0.870998
+        },
+        {
+          "id": "00e59291-15a8-4fa5-a965-c15374595463",
+          "cosine_distance": 0.349727,
+          "composite_similarity": 0.868579
+        }
+      ],
+      "search_time_ms": 30.88
+    },
+    {
+      "query_id": "76b7bdda-7218-44fe-b7da-fe1c5bd9eae3",
+      "equipment_name": "Comp_Pump_KAS_MU300P_9??",
+      "utility": "-",
+      "size": "1/2B",
+      "path_arrow": "R-R-R-H-H-H-H-R-H-H-R-R-R",
+      "recall_at_k": 0.2,
+      "ndcg_at_k": 0.4868,
+      "spearman_rho": 0.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "ab6f8e8a-b0ca-4d3e-a537-ee5ecc0cf4c9",
+          "similarity": 0.79774
+        },
+        {
+          "id": "a631c572-cdf1-4389-9423-1beb440e5637",
+          "similarity": 0.732517
+        },
+        {
+          "id": "675ebab3-2278-458a-97b5-8754c896d75f",
+          "similarity": 0.723578
+        },
+        {
+          "id": "fd834507-dba8-4b13-807d-e751ed336b91",
+          "similarity": 0.692003
+        },
+        {
+          "id": "3efbdd19-a01f-4c3a-8f3b-aa9b8db8660d",
+          "similarity": 0.685136
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "ab6f8e8a-b0ca-4d3e-a537-ee5ecc0cf4c9",
+          "cosine_distance": 0.000559,
+          "composite_similarity": 0.79774
+        },
+        {
+          "id": "aced1caa-5363-4586-aefa-764b97df9794",
+          "cosine_distance": 0.725756,
+          "composite_similarity": 0.683715
+        },
+        {
+          "id": "379cf567-cab7-49db-99d2-49c865994e6d",
+          "cosine_distance": 0.500832,
+          "composite_similarity": 0.659338
+        },
+        {
+          "id": "0d9c37f0-bc73-44e3-a7ee-3c16b35c234c",
+          "cosine_distance": 0.414674,
+          "composite_similarity": 0.656538
+        },
+        {
+          "id": "dadca1a9-c04f-4518-adc9-b77a22897dbf",
+          "cosine_distance": 0.688143,
+          "composite_similarity": 0.643223
+        }
+      ],
+      "search_time_ms": 23.88
+    },
+    {
+      "query_id": "f8d45263-20de-4375-b5db-26c7bcfef5dd",
+      "equipment_name": "ELOHJ07",
+      "utility": "GN2",
+      "size": "1/4B",
+      "path_arrow": "R-H-H-H-R",
+      "recall_at_k": 0.4,
+      "ndcg_at_k": 0.6096,
+      "spearman_rho": -1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "8b0595c3-de30-41fb-8f6f-615e6d3d8999",
+          "similarity": 0.795783
+        },
+        {
+          "id": "b10cbff6-7197-4d7a-be0b-bbee9e733151",
+          "similarity": 0.712291
+        },
+        {
+          "id": "f8d45263-20de-4375-b5db-26c7bcfef5dd",
+          "similarity": 0.676629
+        },
+        {
+          "id": "776cbd6a-de4d-4f13-a073-90906b91b5c7",
+          "similarity": 0.642436
+        },
+        {
+          "id": "fc34cf28-cb57-4af2-86eb-2261a95407cc",
+          "similarity": 0.614627
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "8b0595c3-de30-41fb-8f6f-615e6d3d8999",
+          "cosine_distance": 0.218372,
+          "composite_similarity": 0.795783
+        },
+        {
+          "id": "776cbd6a-de4d-4f13-a073-90906b91b5c7",
+          "cosine_distance": 0.305107,
+          "composite_similarity": 0.642436
+        },
+        {
+          "id": "c6aee6ca-0ca5-4a33-9947-5e3695a4bbb4",
+          "cosine_distance": 0.317199,
+          "composite_similarity": 0.614042
+        },
+        {
+          "id": "0d676e77-6fd0-4655-a5be-af20b82a082a",
+          "cosine_distance": 0.321147,
+          "composite_similarity": 0.609219
+        },
+        {
+          "id": "9d0d04ba-3f1f-46da-8727-e34af766fec7",
+          "cosine_distance": 0.23862,
+          "composite_similarity": 0.603891
+        }
+      ],
+      "search_time_ms": 20.8
+    },
+    {
+      "query_id": "a8a2ad56-7041-4f9c-aa00-0f9bb5ba570d",
+      "equipment_name": "SLWHJ02",
+      "utility": "Ar",
+      "size": "1/4B",
+      "path_arrow": "H-R-H-H-H-H-H-H-H-H-H-H-R-H-R-H-H-R-H-H-R-H-R-R",
+      "recall_at_k": 0.8,
+      "ndcg_at_k": 0.8103,
+      "spearman_rho": 0.7,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "1cb270c4-7a38-44c3-8658-32402c62f98b",
+          "similarity": 0.932869
+        },
+        {
+          "id": "8db32389-232b-400a-9cbb-4a7ffca27fc6",
+          "similarity": 0.857814
+        },
+        {
+          "id": "d962180a-daed-437b-91fc-882a5eb3ac21",
+          "similarity": 0.848482
+        },
+        {
+          "id": "92551b55-7ffc-4bb8-b9bd-011167f28617",
+          "similarity": 0.848195
+        },
+        {
+          "id": "b985b848-72e1-49ce-8ef9-9b543dd095ad",
+          "similarity": 0.846166
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "1cb270c4-7a38-44c3-8658-32402c62f98b",
+          "cosine_distance": 0.355018,
+          "composite_similarity": 0.932869
+        },
+        {
+          "id": "d962180a-daed-437b-91fc-882a5eb3ac21",
+          "cosine_distance": 0.206202,
+          "composite_similarity": 0.848482
+        },
+        {
+          "id": "92551b55-7ffc-4bb8-b9bd-011167f28617",
+          "cosine_distance": 0.290825,
+          "composite_similarity": 0.848195
+        },
+        {
+          "id": "b985b848-72e1-49ce-8ef9-9b543dd095ad",
+          "cosine_distance": 0.166235,
+          "composite_similarity": 0.846166
+        },
+        {
+          "id": "058d064c-1b8d-44d8-9767-a85e0da41bec",
+          "cosine_distance": 0.335858,
+          "composite_similarity": 0.821785
+        }
+      ],
+      "search_time_ms": 26.33
+    },
+    {
+      "query_id": "7606c182-c938-4fc3-ab17-9217ca6a4bea",
+      "equipment_name": "WTNHJ02_",
+      "utility": "ACID",
+      "size": "150A",
+      "path_arrow": "R-D-R-H-H-H-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "c1a3aa60-9bca-433f-a50b-e47f94858381",
+          "similarity": 0.954207
+        },
+        {
+          "id": "e993fe65-c1e0-4cd1-8346-67b6d7acda26",
+          "similarity": 0.946265
+        },
+        {
+          "id": "880295f7-b5a7-435e-936b-0eac083ce23c",
+          "similarity": 0.943804
+        },
+        {
+          "id": "a2c2f48d-62ed-46c6-9825-9184f4792085",
+          "similarity": 0.923295
+        },
+        {
+          "id": "361439c4-2a39-4839-9edc-cfeaf690f379",
+          "similarity": 0.901259
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "c1a3aa60-9bca-433f-a50b-e47f94858381",
+          "cosine_distance": 0.157282,
+          "composite_similarity": 0.954207
+        },
+        {
+          "id": "e993fe65-c1e0-4cd1-8346-67b6d7acda26",
+          "cosine_distance": 0.000413,
+          "composite_similarity": 0.946265
+        },
+        {
+          "id": "880295f7-b5a7-435e-936b-0eac083ce23c",
+          "cosine_distance": 0.050048,
+          "composite_similarity": 0.943804
+        },
+        {
+          "id": "a2c2f48d-62ed-46c6-9825-9184f4792085",
+          "cosine_distance": 0.001534,
+          "composite_similarity": 0.923295
+        },
+        {
+          "id": "361439c4-2a39-4839-9edc-cfeaf690f379",
+          "cosine_distance": 0.135937,
+          "composite_similarity": 0.901259
+        }
+      ],
+      "search_time_ms": 21.66
+    },
+    {
+      "query_id": "f251189d-fcea-43f5-af5c-f478e8be437d",
+      "equipment_name": "WTNHJ02_",
+      "utility": "NW",
+      "size": "1B",
+      "path_arrow": "R-D-H-D-H-H-D-H-R-H-H-R-H-R-H-R-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "cc197f53-7470-49a4-ba6c-ae7514da7c76",
+          "similarity": 0.762712
+        },
+        {
+          "id": "d7fdd9fa-01b5-4835-8164-4739c5616079",
+          "similarity": 0.754828
+        },
+        {
+          "id": "0c6df762-ceb1-46eb-85fb-d612d6221dde",
+          "similarity": 0.746257
+        },
+        {
+          "id": "aa45a6e2-071c-4a20-8bc7-d0536ea46254",
+          "similarity": 0.731979
+        },
+        {
+          "id": "8c0eeb03-b9fa-4e2e-9c38-c45cf16d433b",
+          "similarity": 0.729398
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "cc197f53-7470-49a4-ba6c-ae7514da7c76",
+          "cosine_distance": 0.052116,
+          "composite_similarity": 0.762712
+        },
+        {
+          "id": "d7fdd9fa-01b5-4835-8164-4739c5616079",
+          "cosine_distance": 0.090114,
+          "composite_similarity": 0.754828
+        },
+        {
+          "id": "0c6df762-ceb1-46eb-85fb-d612d6221dde",
+          "cosine_distance": 0.111567,
+          "composite_similarity": 0.746257
+        },
+        {
+          "id": "aa45a6e2-071c-4a20-8bc7-d0536ea46254",
+          "cosine_distance": 0.092873,
+          "composite_similarity": 0.731979
+        },
+        {
+          "id": "8c0eeb03-b9fa-4e2e-9c38-c45cf16d433b",
+          "cosine_distance": 0.152334,
+          "composite_similarity": 0.729398
+        }
+      ],
+      "search_time_ms": 29.16
+    },
+    {
+      "query_id": "e1593423-4887-441a-b78f-63dbb8fb408d",
+      "equipment_name": "ELOHJ07",
+      "utility": "PN2",
+      "size": "1/4B",
+      "path_arrow": "R-D-H-H-H-H-H-R-H-R-H-H-R-H-R-H-H-H-H-H-D-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 0.7798,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "2931fd16-4ae8-4998-a76f-b707b48575d7",
+          "similarity": 0.977059
+        },
+        {
+          "id": "53dd8347-bdd0-4abb-8b92-743d3e454f43",
+          "similarity": 0.932128
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "similarity": 0.921223
+        },
+        {
+          "id": "53dd8347-bdd0-4abb-8b92-743d3e454f43",
+          "similarity": 0.900459
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "similarity": 0.840025
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "2931fd16-4ae8-4998-a76f-b707b48575d7",
+          "cosine_distance": 0.15403,
+          "composite_similarity": 0.977059
+        },
+        {
+          "id": "53dd8347-bdd0-4abb-8b92-743d3e454f43",
+          "cosine_distance": 0.124551,
+          "composite_similarity": 0.932128
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "cosine_distance": 0.035162,
+          "composite_similarity": 0.921223
+        },
+        {
+          "id": "53dd8347-bdd0-4abb-8b92-743d3e454f43",
+          "cosine_distance": 0.008889,
+          "composite_similarity": 0.900459
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "cosine_distance": 0.072494,
+          "composite_similarity": 0.840025
+        }
+      ],
+      "search_time_ms": 26.39
+    },
+    {
+      "query_id": "61af9d85-97ea-4d2d-bc56-494b117234f9",
+      "equipment_name": "kscta01",
+      "utility": "AKWW",
+      "size": "20A",
+      "path_arrow": "R-H-H-R-R-R-R-H-H-H-R-R-R-R-H-H-R",
+      "recall_at_k": 0.6667,
+      "ndcg_at_k": 0.4707,
+      "spearman_rho": 0.6,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "7404da16-2d9a-48ba-979a-478b71ebbb49",
+          "similarity": 0.926307
+        },
+        {
+          "id": "61af9d85-97ea-4d2d-bc56-494b117234f9",
+          "similarity": 0.913905
+        },
+        {
+          "id": "f44605a5-9554-40f2-b90a-6e0ce23a7068",
+          "similarity": 0.890426
+        },
+        {
+          "id": "7404da16-2d9a-48ba-979a-478b71ebbb49",
+          "similarity": 0.887393
+        },
+        {
+          "id": "f44605a5-9554-40f2-b90a-6e0ce23a7068",
+          "similarity": 0.883312
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "7404da16-2d9a-48ba-979a-478b71ebbb49",
+          "cosine_distance": 0.086593,
+          "composite_similarity": 0.926307
+        },
+        {
+          "id": "f44605a5-9554-40f2-b90a-6e0ce23a7068",
+          "cosine_distance": 0.071344,
+          "composite_similarity": 0.890426
+        },
+        {
+          "id": "7404da16-2d9a-48ba-979a-478b71ebbb49",
+          "cosine_distance": 0.041444,
+          "composite_similarity": 0.887393
+        },
+        {
+          "id": "f44605a5-9554-40f2-b90a-6e0ce23a7068",
+          "cosine_distance": 0.054883,
+          "composite_similarity": 0.883312
+        },
+        {
+          "id": "7404da16-2d9a-48ba-979a-478b71ebbb49",
+          "cosine_distance": 0.000897,
+          "composite_similarity": 0.868288
+        }
+      ],
+      "search_time_ms": 26.59
+    },
+    {
+      "query_id": "9028682b-5a1a-46b1-b725-8c110888c99a",
+      "equipment_name": "kscta01",
+      "utility": "UPW_S",
+      "size": "25A",
+      "path_arrow": "R-H-H-H-H-H-H-R-H-R-H-H-H-H-R-H-H-R-H-H-H-H-H-H-H-R",
+      "recall_at_k": 0.5,
+      "ndcg_at_k": 0.4763,
+      "spearman_rho": 0.0,
+      "mrr": 0.0,
+      "gt_top_k": [
+        {
+          "id": "9028682b-5a1a-46b1-b725-8c110888c99a",
+          "similarity": 0.93228
+        },
+        {
+          "id": "9028682b-5a1a-46b1-b725-8c110888c99a",
+          "similarity": 0.817205
+        },
+        {
+          "id": "74171778-37ec-4b7c-b0ae-18fba0910202",
+          "similarity": 0.792594
+        },
+        {
+          "id": "9028682b-5a1a-46b1-b725-8c110888c99a",
+          "similarity": 0.788051
+        },
+        {
+          "id": "9028682b-5a1a-46b1-b725-8c110888c99a",
+          "similarity": 0.733658
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "74171778-37ec-4b7c-b0ae-18fba0910202",
+          "cosine_distance": 0.307097,
+          "composite_similarity": 0.792594
+        },
+        {
+          "id": "74171778-37ec-4b7c-b0ae-18fba0910202",
+          "cosine_distance": 0.294998,
+          "composite_similarity": 0.725197
+        },
+        {
+          "id": "c80e0783-c4a9-4867-bb11-3519ac47dfc1",
+          "cosine_distance": 0.162717,
+          "composite_similarity": 0.705863
+        },
+        {
+          "id": "c80e0783-c4a9-4867-bb11-3519ac47dfc1",
+          "cosine_distance": 0.264219,
+          "composite_similarity": 0.696351
+        },
+        {
+          "id": "adb56770-9974-4a02-b8fb-318fd320d6b3",
+          "cosine_distance": 0.266527,
+          "composite_similarity": 0.695694
+        }
+      ],
+      "search_time_ms": 28.3
+    },
+    {
+      "query_id": "25eebf81-7f8d-49df-979e-c7ef87bb4e16",
+      "equipment_name": "PSTWA03",
+      "utility": "-",
+      "size": "3/4B",
+      "path_arrow": "R-D-H-D-H-H-H-R-H-H-R-H-H-R-D-H-H-H-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "433fe50b-1d49-4cb7-a1ca-d9461ce52104",
+          "similarity": 0.822863
+        },
+        {
+          "id": "e960a6fe-1a22-4a16-bb47-7420c8f252c6",
+          "similarity": 0.804966
+        },
+        {
+          "id": "9b7da154-c1b4-4ee2-b316-aba496205465",
+          "similarity": 0.730896
+        },
+        {
+          "id": "b6740c99-ead4-4633-b331-d2179f9c7967",
+          "similarity": 0.714951
+        },
+        {
+          "id": "1ed77514-4633-4c7b-bb7e-08df29956986",
+          "similarity": 0.706475
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "433fe50b-1d49-4cb7-a1ca-d9461ce52104",
+          "cosine_distance": 0.12422,
+          "composite_similarity": 0.822863
+        },
+        {
+          "id": "e960a6fe-1a22-4a16-bb47-7420c8f252c6",
+          "cosine_distance": 0.006515,
+          "composite_similarity": 0.804966
+        },
+        {
+          "id": "9b7da154-c1b4-4ee2-b316-aba496205465",
+          "cosine_distance": 0.064909,
+          "composite_similarity": 0.730896
+        },
+        {
+          "id": "b6740c99-ead4-4633-b331-d2179f9c7967",
+          "cosine_distance": 0.111958,
+          "composite_similarity": 0.714951
+        },
+        {
+          "id": "1ed77514-4633-4c7b-bb7e-08df29956986",
+          "cosine_distance": 0.11173,
+          "composite_similarity": 0.706475
+        }
+      ],
+      "search_time_ms": 24.85
+    },
+    {
+      "query_id": "5c14d9ba-570a-43fe-b7a4-3983756331bc",
+      "equipment_name": "SLWHJ02",
+      "utility": "PA",
+      "size": "1/4B",
+      "path_arrow": "R-H-R-H-H-H-H-H-R-H-H-R-H-R-H-R-H-H-H-H-H-R-H-R",
+      "recall_at_k": 0.75,
+      "ndcg_at_k": 0.8607,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "63093af2-45c0-45b4-844a-4522a2ed18c2",
+          "similarity": 0.938834
+        },
+        {
+          "id": "63093af2-45c0-45b4-844a-4522a2ed18c2",
+          "similarity": 0.793452
+        },
+        {
+          "id": "63f06de1-94ca-4a1a-a2b2-75ab7afbd469",
+          "similarity": 0.791632
+        },
+        {
+          "id": "5c14d9ba-570a-43fe-b7a4-3983756331bc",
+          "similarity": 0.789765
+        },
+        {
+          "id": "b4a80908-f3cc-4d28-8486-167194ce25eb",
+          "similarity": 0.789059
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "63093af2-45c0-45b4-844a-4522a2ed18c2",
+          "cosine_distance": 0.141196,
+          "composite_similarity": 0.938834
+        },
+        {
+          "id": "63093af2-45c0-45b4-844a-4522a2ed18c2",
+          "cosine_distance": 0.160019,
+          "composite_similarity": 0.793452
+        },
+        {
+          "id": "63f06de1-94ca-4a1a-a2b2-75ab7afbd469",
+          "cosine_distance": 0.239465,
+          "composite_similarity": 0.791632
+        },
+        {
+          "id": "b4a80908-f3cc-4d28-8486-167194ce25eb",
+          "cosine_distance": 0.231332,
+          "composite_similarity": 0.789059
+        },
+        {
+          "id": "b4a80908-f3cc-4d28-8486-167194ce25eb",
+          "cosine_distance": 0.252821,
+          "composite_similarity": 0.780667
+        }
+      ],
+      "search_time_ms": 26.39
+    },
+    {
+      "query_id": "73937ac6-b691-4e66-945d-733fad39cff1",
+      "equipment_name": "Comp_Pump_KAS_MU300P_9??",
+      "utility": "-",
+      "size": "20A",
+      "path_arrow": "D-H-H-H-D",
+      "recall_at_k": 0.4,
+      "ndcg_at_k": 0.5482,
+      "spearman_rho": -1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "5f11e7f4-fd28-403b-93d2-784f3de8a708",
+          "similarity": 0.866033
+        },
+        {
+          "id": "293286d2-c214-4c96-8024-cb47775a593a",
+          "similarity": 0.601035
+        },
+        {
+          "id": "86b4be9f-d440-415b-9bd6-7ec7f1a39ea0",
+          "similarity": 0.587932
+        },
+        {
+          "id": "a04dc7ad-39a7-474f-a929-22ca8178edcf",
+          "similarity": 0.586665
+        },
+        {
+          "id": "e90af5bf-041d-4972-86fa-a51d899aea3d",
+          "similarity": 0.581343
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "5f11e7f4-fd28-403b-93d2-784f3de8a708",
+          "cosine_distance": 0.006927,
+          "composite_similarity": 0.866033
+        },
+        {
+          "id": "e90af5bf-041d-4972-86fa-a51d899aea3d",
+          "cosine_distance": 0.743178,
+          "composite_similarity": 0.581343
+        },
+        {
+          "id": "38c27c77-c3bf-4017-b0bb-78fa2c157847",
+          "cosine_distance": 0.733783,
+          "composite_similarity": 0.567512
+        },
+        {
+          "id": "7606c182-c938-4fc3-ab17-9217ca6a4bea",
+          "cosine_distance": 0.731444,
+          "composite_similarity": 0.535901
+        },
+        {
+          "id": "0f3f642e-60a7-4f0d-9705-706ccefae114",
+          "cosine_distance": 0.673611,
+          "composite_similarity": 0.534861
+        }
+      ],
+      "search_time_ms": 21.08
+    },
+    {
+      "query_id": "9028682b-5a1a-46b1-b725-8c110888c99a",
+      "equipment_name": "kscta01",
+      "utility": "UPW_S",
+      "size": "25A",
+      "path_arrow": "R-H-H-H-H-H-H-R-H-R-H-H-H-H-R-H-H-R-H-H-H-H-H-H-R",
+      "recall_at_k": 0.5,
+      "ndcg_at_k": 0.6351,
+      "spearman_rho": 0.0,
+      "mrr": 0.0,
+      "gt_top_k": [
+        {
+          "id": "9028682b-5a1a-46b1-b725-8c110888c99a",
+          "similarity": 0.93228
+        },
+        {
+          "id": "74171778-37ec-4b7c-b0ae-18fba0910202",
+          "similarity": 0.814582
+        },
+        {
+          "id": "9028682b-5a1a-46b1-b725-8c110888c99a",
+          "similarity": 0.8102
+        },
+        {
+          "id": "9028682b-5a1a-46b1-b725-8c110888c99a",
+          "similarity": 0.797762
+        },
+        {
+          "id": "9028682b-5a1a-46b1-b725-8c110888c99a",
+          "similarity": 0.74324
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "74171778-37ec-4b7c-b0ae-18fba0910202",
+          "cosine_distance": 0.29091,
+          "composite_similarity": 0.814582
+        },
+        {
+          "id": "74171778-37ec-4b7c-b0ae-18fba0910202",
+          "cosine_distance": 0.291461,
+          "composite_similarity": 0.724894
+        },
+        {
+          "id": "c80e0783-c4a9-4867-bb11-3519ac47dfc1",
+          "cosine_distance": 0.21614,
+          "composite_similarity": 0.724694
+        },
+        {
+          "id": "c80e0783-c4a9-4867-bb11-3519ac47dfc1",
+          "cosine_distance": 0.157426,
+          "composite_similarity": 0.724584
+        },
+        {
+          "id": "53dd8347-bdd0-4abb-8b92-743d3e454f43",
+          "cosine_distance": 0.299626,
+          "composite_similarity": 0.691759
+        }
+      ],
+      "search_time_ms": 26.62
+    },
+    {
+      "query_id": "8db32389-232b-400a-9cbb-4a7ffca27fc6",
+      "equipment_name": "SLWHJ02",
+      "utility": "Ar",
+      "size": "1/4B",
+      "path_arrow": "H-R-H-H-H-H-H-H-H-H-H-H-H-H-R-H-R-H-R-H-H-R-H-R-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "00e59291-15a8-4fa5-a965-c15374595463",
+          "similarity": 0.930066
+        },
+        {
+          "id": "92551b55-7ffc-4bb8-b9bd-011167f28617",
+          "similarity": 0.917167
+        },
+        {
+          "id": "d08af87d-80f0-459f-bc88-eb7d1ff85ef4",
+          "similarity": 0.881312
+        },
+        {
+          "id": "d962180a-daed-437b-91fc-882a5eb3ac21",
+          "similarity": 0.866029
+        },
+        {
+          "id": "4232693d-b27d-4849-9090-488dc6728fca",
+          "similarity": 0.864968
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "00e59291-15a8-4fa5-a965-c15374595463",
+          "cosine_distance": 0.282165,
+          "composite_similarity": 0.930066
+        },
+        {
+          "id": "92551b55-7ffc-4bb8-b9bd-011167f28617",
+          "cosine_distance": 0.331654,
+          "composite_similarity": 0.917167
+        },
+        {
+          "id": "d08af87d-80f0-459f-bc88-eb7d1ff85ef4",
+          "cosine_distance": 0.491871,
+          "composite_similarity": 0.881312
+        },
+        {
+          "id": "d962180a-daed-437b-91fc-882a5eb3ac21",
+          "cosine_distance": 0.2601,
+          "composite_similarity": 0.866029
+        },
+        {
+          "id": "4232693d-b27d-4849-9090-488dc6728fca",
+          "cosine_distance": 0.281591,
+          "composite_similarity": 0.864968
+        }
+      ],
+      "search_time_ms": 26.33
+    },
+    {
+      "query_id": "63f06de1-94ca-4a1a-a2b2-75ab7afbd469",
+      "equipment_name": "SLWHJ02",
+      "utility": "PA",
+      "size": "1/4B",
+      "path_arrow": "R-H-H-H-H-H-H-H-R-H-H-R-H-H-H-H-R-H-H-R-H-H-H-H-H-R-H-R",
+      "recall_at_k": 0.75,
+      "ndcg_at_k": 0.638,
+      "spearman_rho": -0.5,
+      "mrr": 0.0,
+      "gt_top_k": [
+        {
+          "id": "63f06de1-94ca-4a1a-a2b2-75ab7afbd469",
+          "similarity": 0.887857
+        },
+        {
+          "id": "5c14d9ba-570a-43fe-b7a4-3983756331bc",
+          "similarity": 0.875578
+        },
+        {
+          "id": "63093af2-45c0-45b4-844a-4522a2ed18c2",
+          "similarity": 0.808699
+        },
+        {
+          "id": "b4a80908-f3cc-4d28-8486-167194ce25eb",
+          "similarity": 0.807961
+        },
+        {
+          "id": "63f06de1-94ca-4a1a-a2b2-75ab7afbd469",
+          "similarity": 0.77454
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "b4a80908-f3cc-4d28-8486-167194ce25eb",
+          "cosine_distance": 0.01335,
+          "composite_similarity": 0.807961
+        },
+        {
+          "id": "b4a80908-f3cc-4d28-8486-167194ce25eb",
+          "cosine_distance": 0.030896,
+          "composite_similarity": 0.762335
+        },
+        {
+          "id": "5c14d9ba-570a-43fe-b7a4-3983756331bc",
+          "cosine_distance": 0.25767,
+          "composite_similarity": 0.74533
+        },
+        {
+          "id": "63093af2-45c0-45b4-844a-4522a2ed18c2",
+          "cosine_distance": 0.133929,
+          "composite_similarity": 0.7375
+        },
+        {
+          "id": "e1593423-4887-441a-b78f-63dbb8fb408d",
+          "cosine_distance": 0.263968,
+          "composite_similarity": 0.717228
+        }
+      ],
+      "search_time_ms": 26.48
+    },
+    {
+      "query_id": "7c487c1c-8840-4852-96c3-7c22556d14cb",
+      "equipment_name": "SLWHJ02",
+      "utility": "PA",
+      "size": "1/2B",
+      "path_arrow": "R-D-H-H-H-H-H-H-H-R-H-R-H-R-H-H-R-H-R-R",
+      "recall_at_k": 0.4,
+      "ndcg_at_k": 0.671,
+      "spearman_rho": 0.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "5c14d9ba-570a-43fe-b7a4-3983756331bc",
+          "similarity": 0.836387
+        },
+        {
+          "id": "4232693d-b27d-4849-9090-488dc6728fca",
+          "similarity": 0.816018
+        },
+        {
+          "id": "16c97265-a5e1-42b3-954f-0bf35137edd5",
+          "similarity": 0.766968
+        },
+        {
+          "id": "8fd60ae9-da8a-4db7-a8af-7432f5367932",
+          "similarity": 0.763215
+        },
+        {
+          "id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+          "similarity": 0.761238
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "5c14d9ba-570a-43fe-b7a4-3983756331bc",
+          "cosine_distance": 0.061318,
+          "composite_similarity": 0.836387
+        },
+        {
+          "id": "16c97265-a5e1-42b3-954f-0bf35137edd5",
+          "cosine_distance": 0.323943,
+          "composite_similarity": 0.766968
+        },
+        {
+          "id": "8be2bed2-29c1-442a-8555-fdba335d1ee2",
+          "cosine_distance": 0.077029,
+          "composite_similarity": 0.759609
+        },
+        {
+          "id": "b4a80908-f3cc-4d28-8486-167194ce25eb",
+          "cosine_distance": 0.163341,
+          "composite_similarity": 0.758357
+        },
+        {
+          "id": "dadca1a9-c04f-4518-adc9-b77a22897dbf",
+          "cosine_distance": 0.082903,
+          "composite_similarity": 0.754303
+        }
+      ],
+      "search_time_ms": 24.72
+    },
+    {
+      "query_id": "63093af2-45c0-45b4-844a-4522a2ed18c2",
+      "equipment_name": "SLWHJ02",
+      "utility": "PA",
+      "size": "3/8B",
+      "path_arrow": "R-H-R-H-H-H-H-H-R-H-R-H-R-H-H-R-H-H-H-H-H-R-H-R",
+      "recall_at_k": 0.75,
+      "ndcg_at_k": 0.9372,
+      "spearman_rho": -0.9,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "5c14d9ba-570a-43fe-b7a4-3983756331bc",
+          "similarity": 0.938834
+        },
+        {
+          "id": "b4a80908-f3cc-4d28-8486-167194ce25eb",
+          "similarity": 0.819515
+        },
+        {
+          "id": "63093af2-45c0-45b4-844a-4522a2ed18c2",
+          "similarity": 0.812375
+        },
+        {
+          "id": "b4a80908-f3cc-4d28-8486-167194ce25eb",
+          "similarity": 0.811561
+        },
+        {
+          "id": "63f06de1-94ca-4a1a-a2b2-75ab7afbd469",
+          "similarity": 0.77435
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "5c14d9ba-570a-43fe-b7a4-3983756331bc",
+          "cosine_distance": 0.141196,
+          "composite_similarity": 0.938834
+        },
+        {
+          "id": "b4a80908-f3cc-4d28-8486-167194ce25eb",
+          "cosine_distance": 0.155708,
+          "composite_similarity": 0.819515
+        },
+        {
+          "id": "b4a80908-f3cc-4d28-8486-167194ce25eb",
+          "cosine_distance": 0.131634,
+          "composite_similarity": 0.811561
+        },
+        {
+          "id": "63f06de1-94ca-4a1a-a2b2-75ab7afbd469",
+          "cosine_distance": 0.16309,
+          "composite_similarity": 0.77435
+        },
+        {
+          "id": "5c14d9ba-570a-43fe-b7a4-3983756331bc",
+          "cosine_distance": 0.25439,
+          "composite_similarity": 0.772602
+        }
+      ],
+      "search_time_ms": 27.49
+    },
+    {
+      "query_id": "360b7d7d-ff15-4022-8160-e43b186f2860",
+      "equipment_name": "ELOHJ07",
+      "utility": "O2",
+      "size": "1/4B",
+      "path_arrow": "R-D-H-H-H-H-R-H-H-R-H-H-H-R-H-R-H-H-R-H-H-D-R",
+      "recall_at_k": 0.6667,
+      "ndcg_at_k": 0.3595,
+      "spearman_rho": 0.6,
+      "mrr": 0.0,
+      "gt_top_k": [
+        {
+          "id": "360b7d7d-ff15-4022-8160-e43b186f2860",
+          "similarity": 0.936053
+        },
+        {
+          "id": "32a674e4-7efe-42b9-a04f-e4b57259c7af",
+          "similarity": 0.838473
+        },
+        {
+          "id": "ba7de456-132d-4627-8273-d8d515136a92",
+          "similarity": 0.807119
+        },
+        {
+          "id": "ba7de456-132d-4627-8273-d8d515136a92",
+          "similarity": 0.789714
+        },
+        {
+          "id": "32a674e4-7efe-42b9-a04f-e4b57259c7af",
+          "similarity": 0.786694
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "32a674e4-7efe-42b9-a04f-e4b57259c7af",
+          "cosine_distance": 0.281826,
+          "composite_similarity": 0.838473
+        },
+        {
+          "id": "ba7de456-132d-4627-8273-d8d515136a92",
+          "cosine_distance": 0.283098,
+          "composite_similarity": 0.807119
+        },
+        {
+          "id": "ba7de456-132d-4627-8273-d8d515136a92",
+          "cosine_distance": 0.051761,
+          "composite_similarity": 0.789714
+        },
+        {
+          "id": "32a674e4-7efe-42b9-a04f-e4b57259c7af",
+          "cosine_distance": 0.225052,
+          "composite_similarity": 0.786694
+        },
+        {
+          "id": "eafaac46-e250-49d9-b19c-9a32fc94a138",
+          "cosine_distance": 0.224837,
+          "composite_similarity": 0.764702
+        }
+      ],
+      "search_time_ms": 27.43
+    },
+    {
+      "query_id": "252c2fc8-95a1-48fc-a708-e8a769fca265",
+      "equipment_name": "SLWHJ02",
+      "utility": "Ar",
+      "size": "1/4B",
+      "path_arrow": "H-R-H-H-H-H-H-H-H-H-H-H-H-R-H-R-H-H-H-H-R-H-R-H-H-H-H-H-H-H-H-H-H-H-R-H",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 0.5901,
+      "spearman_rho": 0.75,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "52fc01ac-b7cf-41ad-841b-cc30ea23004e",
+          "similarity": 0.934437
+        },
+        {
+          "id": "52fc01ac-b7cf-41ad-841b-cc30ea23004e",
+          "similarity": 0.893468
+        },
+        {
+          "id": "9fef0329-c045-4578-bd21-dbd63f9a4de1",
+          "similarity": 0.87336
+        },
+        {
+          "id": "99a28835-815e-4288-9565-c22f7a0a83c2",
+          "similarity": 0.871251
+        },
+        {
+          "id": "9fef0329-c045-4578-bd21-dbd63f9a4de1",
+          "similarity": 0.861978
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "52fc01ac-b7cf-41ad-841b-cc30ea23004e",
+          "cosine_distance": 0.569666,
+          "composite_similarity": 0.934437
+        },
+        {
+          "id": "9fef0329-c045-4578-bd21-dbd63f9a4de1",
+          "cosine_distance": 0.619494,
+          "composite_similarity": 0.87336
+        },
+        {
+          "id": "99a28835-815e-4288-9565-c22f7a0a83c2",
+          "cosine_distance": 0.311022,
+          "composite_similarity": 0.871251
+        },
+        {
+          "id": "9fef0329-c045-4578-bd21-dbd63f9a4de1",
+          "cosine_distance": 0.08042,
+          "composite_similarity": 0.861978
+        },
+        {
+          "id": "92551b55-7ffc-4bb8-b9bd-011167f28617",
+          "cosine_distance": 0.328873,
+          "composite_similarity": 0.851334
+        }
+      ],
+      "search_time_ms": 30.61
+    },
+    {
+      "query_id": "0b7fa9b6-de74-45cd-94be-3e0ae7959541",
+      "equipment_name": "WTNHJ02_",
+      "utility": "UPW_S",
+      "size": "25A",
+      "path_arrow": "R-R-H-R-R-H-H-R-H-R-R-H-R-H-H-H-R-H-H-H-R-R-R-R-R",
+      "recall_at_k": 0.5,
+      "ndcg_at_k": 0.2075,
+      "spearman_rho": -1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "d0bdbe16-3347-4a82-b7be-37a40af0dc5b",
+          "similarity": 0.866409
+        },
+        {
+          "id": "d0bdbe16-3347-4a82-b7be-37a40af0dc5b",
+          "similarity": 0.822121
+        },
+        {
+          "id": "0b7fa9b6-de74-45cd-94be-3e0ae7959541",
+          "similarity": 0.765768
+        },
+        {
+          "id": "0b7fa9b6-de74-45cd-94be-3e0ae7959541",
+          "similarity": 0.765062
+        },
+        {
+          "id": "d0bdbe16-3347-4a82-b7be-37a40af0dc5b",
+          "similarity": 0.729717
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "d0bdbe16-3347-4a82-b7be-37a40af0dc5b",
+          "cosine_distance": 0.064758,
+          "composite_similarity": 0.866409
+        },
+        {
+          "id": "d0bdbe16-3347-4a82-b7be-37a40af0dc5b",
+          "cosine_distance": 0.142075,
+          "composite_similarity": 0.822121
+        },
+        {
+          "id": "d0bdbe16-3347-4a82-b7be-37a40af0dc5b",
+          "cosine_distance": 0.075149,
+          "composite_similarity": 0.729717
+        },
+        {
+          "id": "fa9210cb-349b-4e13-a393-bfca14ff1ae8",
+          "cosine_distance": 0.137263,
+          "composite_similarity": 0.6933
+        },
+        {
+          "id": "675ebab3-2278-458a-97b5-8754c896d75f",
+          "cosine_distance": 0.218558,
+          "composite_similarity": 0.680258
+        }
+      ],
+      "search_time_ms": 26.14
+    },
+    {
+      "query_id": "d0bdbe16-3347-4a82-b7be-37a40af0dc5b",
+      "equipment_name": "WTNHJ02_",
+      "utility": "UPW_S",
+      "size": "25A",
+      "path_arrow": "R-R-R-H-H-H-R-H-H-H-R-R-R-R-R",
+      "recall_at_k": 0.75,
+      "ndcg_at_k": 0.5183,
+      "spearman_rho": 0.6,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "0b7fa9b6-de74-45cd-94be-3e0ae7959541",
+          "similarity": 0.842316
+        },
+        {
+          "id": "d0bdbe16-3347-4a82-b7be-37a40af0dc5b",
+          "similarity": 0.806883
+        },
+        {
+          "id": "675ebab3-2278-458a-97b5-8754c896d75f",
+          "similarity": 0.770487
+        },
+        {
+          "id": "0b7fa9b6-de74-45cd-94be-3e0ae7959541",
+          "similarity": 0.743396
+        },
+        {
+          "id": "46e0264b-0eb9-4985-9e5d-66aac5d13c59",
+          "similarity": 0.736829
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "0b7fa9b6-de74-45cd-94be-3e0ae7959541",
+          "cosine_distance": 0.032501,
+          "composite_similarity": 0.842316
+        },
+        {
+          "id": "675ebab3-2278-458a-97b5-8754c896d75f",
+          "cosine_distance": 0.212823,
+          "composite_similarity": 0.770487
+        },
+        {
+          "id": "0b7fa9b6-de74-45cd-94be-3e0ae7959541",
+          "cosine_distance": 0.034047,
+          "composite_similarity": 0.743396
+        },
+        {
+          "id": "46e0264b-0eb9-4985-9e5d-66aac5d13c59",
+          "cosine_distance": 0.243978,
+          "composite_similarity": 0.736829
+        },
+        {
+          "id": "a2f54b79-4e75-4f6a-be7d-56fb6b0b91ef",
+          "cosine_distance": 0.125647,
+          "composite_similarity": 0.736754
+        }
+      ],
+      "search_time_ms": 24.3
+    },
+    {
+      "query_id": "8e67f73e-445c-482f-9d3c-bdd1905fd6b6",
+      "equipment_name": "DANHJ14",
+      "utility": "GN2",
+      "size": "1/8B",
+      "path_arrow": "R-H-H-R-H-R-H-R-R-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "590729b9-edc3-4f7f-afb0-d6adf6352666",
+          "similarity": 0.988677
+        },
+        {
+          "id": "09b91176-5a61-4b5a-a158-c1e2cd5e69f2",
+          "similarity": 0.742596
+        },
+        {
+          "id": "98153e8f-7d8e-48d1-9ac8-932d3d11db8f",
+          "similarity": 0.74042
+        },
+        {
+          "id": "879ec375-ecc0-4252-b1a6-3b64e2e81491",
+          "similarity": 0.738467
+        },
+        {
+          "id": "96468def-c655-4ab4-9009-1f686ce1fdc1",
+          "similarity": 0.737059
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "590729b9-edc3-4f7f-afb0-d6adf6352666",
+          "cosine_distance": 0.023765,
+          "composite_similarity": 0.988677
+        },
+        {
+          "id": "09b91176-5a61-4b5a-a158-c1e2cd5e69f2",
+          "cosine_distance": 0.042751,
+          "composite_similarity": 0.742596
+        },
+        {
+          "id": "98153e8f-7d8e-48d1-9ac8-932d3d11db8f",
+          "cosine_distance": 0.066673,
+          "composite_similarity": 0.74042
+        },
+        {
+          "id": "879ec375-ecc0-4252-b1a6-3b64e2e81491",
+          "cosine_distance": 0.066701,
+          "composite_similarity": 0.738467
+        },
+        {
+          "id": "96468def-c655-4ab4-9009-1f686ce1fdc1",
+          "cosine_distance": 0.066805,
+          "composite_similarity": 0.737059
+        }
+      ],
+      "search_time_ms": 23.14
+    },
+    {
+      "query_id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+      "equipment_name": "ELOHJ07",
+      "utility": "PN2",
+      "size": "1/4B",
+      "path_arrow": "R-H-H-H-H-H-H-R-H-R-H-R-H-R-H-H-H-H-H-R",
+      "recall_at_k": 0.75,
+      "ndcg_at_k": 0.784,
+      "spearman_rho": -0.5,
+      "mrr": 0.0,
+      "gt_top_k": [
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "similarity": 0.881396
+        },
+        {
+          "id": "e1593423-4887-441a-b78f-63dbb8fb408d",
+          "similarity": 0.840025
+        },
+        {
+          "id": "53dd8347-bdd0-4abb-8b92-743d3e454f43",
+          "similarity": 0.829057
+        },
+        {
+          "id": "2931fd16-4ae8-4998-a76f-b707b48575d7",
+          "similarity": 0.827482
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "similarity": 0.797513
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "e1593423-4887-441a-b78f-63dbb8fb408d",
+          "cosine_distance": 0.072494,
+          "composite_similarity": 0.840025
+        },
+        {
+          "id": "53dd8347-bdd0-4abb-8b92-743d3e454f43",
+          "cosine_distance": 0.192826,
+          "composite_similarity": 0.829057
+        },
+        {
+          "id": "2931fd16-4ae8-4998-a76f-b707b48575d7",
+          "cosine_distance": 0.22167,
+          "composite_similarity": 0.827482
+        },
+        {
+          "id": "4c26c113-83ac-4c2f-b442-314e8ed191e1",
+          "cosine_distance": 0.172305,
+          "composite_similarity": 0.794692
+        },
+        {
+          "id": "53dd8347-bdd0-4abb-8b92-743d3e454f43",
+          "cosine_distance": 0.081403,
+          "composite_similarity": 0.788905
+        }
+      ],
+      "search_time_ms": 25.84
+    },
+    {
+      "query_id": "bd91c40b-ef5b-478f-a9fb-31b6ec652c29",
+      "equipment_name": "kscta01",
+      "utility": "AKWW",
+      "size": "20A",
+      "path_arrow": "R-H-R-R-R-R-H-H-R-R-R-R-H-R",
+      "recall_at_k": 0.8,
+      "ndcg_at_k": 1.0334,
+      "spearman_rho": 0.5,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "b5c42f37-046a-4ba9-903b-6512f67dbcab",
+          "similarity": 0.964286
+        },
+        {
+          "id": "1877e033-0fd9-4e9d-ad41-3b3489080f8c",
+          "similarity": 0.91898
+        },
+        {
+          "id": "97e80aa5-0809-40de-83ce-00c29c268095",
+          "similarity": 0.893751
+        },
+        {
+          "id": "bd91c40b-ef5b-478f-a9fb-31b6ec652c29",
+          "similarity": 0.889392
+        },
+        {
+          "id": "f44605a5-9554-40f2-b90a-6e0ce23a7068",
+          "similarity": 0.887557
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "b5c42f37-046a-4ba9-903b-6512f67dbcab",
+          "cosine_distance": 0.173416,
+          "composite_similarity": 0.964286
+        },
+        {
+          "id": "1877e033-0fd9-4e9d-ad41-3b3489080f8c",
+          "cosine_distance": 0.178107,
+          "composite_similarity": 0.91898
+        },
+        {
+          "id": "97e80aa5-0809-40de-83ce-00c29c268095",
+          "cosine_distance": 0.145835,
+          "composite_similarity": 0.893751
+        },
+        {
+          "id": "f44605a5-9554-40f2-b90a-6e0ce23a7068",
+          "cosine_distance": 0.086664,
+          "composite_similarity": 0.887557
+        },
+        {
+          "id": "97e80aa5-0809-40de-83ce-00c29c268095",
+          "cosine_distance": 0.001015,
+          "composite_similarity": 0.878149
+        }
+      ],
+      "search_time_ms": 23.64
+    },
+    {
+      "query_id": "53dd8347-bdd0-4abb-8b92-743d3e454f43",
+      "equipment_name": "ELOHJ07",
+      "utility": "PA",
+      "size": "1/4B",
+      "path_arrow": "R-H-H-H-H-H-H-R-H-D-R-H-R-H-R-H-H-H-H-H-D-R",
+      "recall_at_k": 0.75,
+      "ndcg_at_k": 0.7019,
+      "spearman_rho": 0.8,
+      "mrr": 0.0,
+      "gt_top_k": [
+        {
+          "id": "53dd8347-bdd0-4abb-8b92-743d3e454f43",
+          "similarity": 0.945065
+        },
+        {
+          "id": "e1593423-4887-441a-b78f-63dbb8fb408d",
+          "similarity": 0.900459
+        },
+        {
+          "id": "2931fd16-4ae8-4998-a76f-b707b48575d7",
+          "similarity": 0.889048
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "similarity": 0.845332
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "similarity": 0.800241
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "e1593423-4887-441a-b78f-63dbb8fb408d",
+          "cosine_distance": 0.008889,
+          "composite_similarity": 0.900459
+        },
+        {
+          "id": "2931fd16-4ae8-4998-a76f-b707b48575d7",
+          "cosine_distance": 0.149821,
+          "composite_similarity": 0.889048
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "cosine_distance": 0.020919,
+          "composite_similarity": 0.845332
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "cosine_distance": 0.174175,
+          "composite_similarity": 0.800241
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "cosine_distance": 0.081403,
+          "composite_similarity": 0.788905
+        }
+      ],
+      "search_time_ms": 26.57
+    },
+    {
+      "query_id": "433fe50b-1d49-4cb7-a1ca-d9461ce52104",
+      "equipment_name": "PSTWA03",
+      "utility": "PV",
+      "size": "1/2B",
+      "path_arrow": "R-R-H-H-H-H-H-R-H-H-R-H-H-R-H-R-H-H-H-R-R",
+      "recall_at_k": 0.8,
+      "ndcg_at_k": 0.9623,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "25eebf81-7f8d-49df-979e-c7ef87bb4e16",
+          "similarity": 0.822863
+        },
+        {
+          "id": "b6740c99-ead4-4633-b331-d2179f9c7967",
+          "similarity": 0.772311
+        },
+        {
+          "id": "e960a6fe-1a22-4a16-bb47-7420c8f252c6",
+          "similarity": 0.772301
+        },
+        {
+          "id": "9b7da154-c1b4-4ee2-b316-aba496205465",
+          "similarity": 0.760358
+        },
+        {
+          "id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+          "similarity": 0.74129
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "25eebf81-7f8d-49df-979e-c7ef87bb4e16",
+          "cosine_distance": 0.12422,
+          "composite_similarity": 0.822863
+        },
+        {
+          "id": "b6740c99-ead4-4633-b331-d2179f9c7967",
+          "cosine_distance": 0.094319,
+          "composite_similarity": 0.772311
+        },
+        {
+          "id": "e960a6fe-1a22-4a16-bb47-7420c8f252c6",
+          "cosine_distance": 0.130133,
+          "composite_similarity": 0.772301
+        },
+        {
+          "id": "9b7da154-c1b4-4ee2-b316-aba496205465",
+          "cosine_distance": 0.044019,
+          "composite_similarity": 0.760358
+        },
+        {
+          "id": "b4a80908-f3cc-4d28-8486-167194ce25eb",
+          "cosine_distance": 0.195519,
+          "composite_similarity": 0.729959
+        }
+      ],
+      "search_time_ms": 24.76
+    },
+    {
+      "query_id": "00e59291-15a8-4fa5-a965-c15374595463",
+      "equipment_name": "SLWHJ02",
+      "utility": "Ar",
+      "size": "1/4B",
+      "path_arrow": "H-R-H-H-H-H-H-H-H-H-H-H-H-H-R-H-R-H-H-R-H-R-H-H-H-H-H-H-H-H-H-H-R-H",
+      "recall_at_k": 0.4,
+      "ndcg_at_k": 0.6096,
+      "spearman_rho": -1.0,
+      "mrr": 0.0,
+      "gt_top_k": [
+        {
+          "id": "00e59291-15a8-4fa5-a965-c15374595463",
+          "similarity": 0.918706
+        },
+        {
+          "id": "058d064c-1b8d-44d8-9767-a85e0da41bec",
+          "similarity": 0.878731
+        },
+        {
+          "id": "0c5f5a61-d33c-4dcb-babf-82edc4f007e6",
+          "similarity": 0.876417
+        },
+        {
+          "id": "92551b55-7ffc-4bb8-b9bd-011167f28617",
+          "similarity": 0.874231
+        },
+        {
+          "id": "d962180a-daed-437b-91fc-882a5eb3ac21",
+          "similarity": 0.869212
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "058d064c-1b8d-44d8-9767-a85e0da41bec",
+          "cosine_distance": 0.667676,
+          "composite_similarity": 0.878731
+        },
+        {
+          "id": "92551b55-7ffc-4bb8-b9bd-011167f28617",
+          "cosine_distance": 0.364628,
+          "composite_similarity": 0.874231
+        },
+        {
+          "id": "92551b55-7ffc-4bb8-b9bd-011167f28617",
+          "cosine_distance": 0.170123,
+          "composite_similarity": 0.866112
+        },
+        {
+          "id": "8db32389-232b-400a-9cbb-4a7ffca27fc6",
+          "cosine_distance": 0.517893,
+          "composite_similarity": 0.860434
+        },
+        {
+          "id": "d08af87d-80f0-459f-bc88-eb7d1ff85ef4",
+          "cosine_distance": 0.224398,
+          "composite_similarity": 0.853161
+        }
+      ],
+      "search_time_ms": 29.69
+    },
+    {
+      "query_id": "360b7d7d-ff15-4022-8160-e43b186f2860",
+      "equipment_name": "ELOHJ07",
+      "utility": "O2",
+      "size": "1/4B",
+      "path_arrow": "R-D-H-H-H-H-R-H-H-R-H-H-R-D-H-R-H-H-D-H-H-D-R",
+      "recall_at_k": 0.6667,
+      "ndcg_at_k": 0.3662,
+      "spearman_rho": -0.6,
+      "mrr": 0.0,
+      "gt_top_k": [
+        {
+          "id": "360b7d7d-ff15-4022-8160-e43b186f2860",
+          "similarity": 0.936053
+        },
+        {
+          "id": "ba7de456-132d-4627-8273-d8d515136a92",
+          "similarity": 0.821804
+        },
+        {
+          "id": "32a674e4-7efe-42b9-a04f-e4b57259c7af",
+          "similarity": 0.807119
+        },
+        {
+          "id": "32a674e4-7efe-42b9-a04f-e4b57259c7af",
+          "similarity": 0.789482
+        },
+        {
+          "id": "ba7de456-132d-4627-8273-d8d515136a92",
+          "similarity": 0.778425
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "32a674e4-7efe-42b9-a04f-e4b57259c7af",
+          "cosine_distance": 0.283096,
+          "composite_similarity": 0.807119
+        },
+        {
+          "id": "32a674e4-7efe-42b9-a04f-e4b57259c7af",
+          "cosine_distance": 0.242124,
+          "composite_similarity": 0.789482
+        },
+        {
+          "id": "ba7de456-132d-4627-8273-d8d515136a92",
+          "cosine_distance": 0.100837,
+          "composite_similarity": 0.778425
+        },
+        {
+          "id": "eafaac46-e250-49d9-b19c-9a32fc94a138",
+          "cosine_distance": 0.233656,
+          "composite_similarity": 0.77703
+        },
+        {
+          "id": "eafaac46-e250-49d9-b19c-9a32fc94a138",
+          "cosine_distance": 0.244403,
+          "composite_similarity": 0.753793
+        }
+      ],
+      "search_time_ms": 27.3
+    },
+    {
+      "query_id": "8db32389-232b-400a-9cbb-4a7ffca27fc6",
+      "equipment_name": "SLWHJ02",
+      "utility": "Ar",
+      "size": "1/4B",
+      "path_arrow": "H-R-H-H-H-H-H-H-H-H-H-H-H-H-R-H-R-H-R-H-R-H-H-H-H-H-H-H-H-H-H-R-H",
+      "recall_at_k": 0.5,
+      "ndcg_at_k": 0.5737,
+      "spearman_rho": 0.25,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "1cb270c4-7a38-44c3-8658-32402c62f98b",
+          "similarity": 0.902026
+        },
+        {
+          "id": "8db32389-232b-400a-9cbb-4a7ffca27fc6",
+          "similarity": 0.900466
+        },
+        {
+          "id": "1cb270c4-7a38-44c3-8658-32402c62f98b",
+          "similarity": 0.891179
+        },
+        {
+          "id": "92551b55-7ffc-4bb8-b9bd-011167f28617",
+          "similarity": 0.881018
+        },
+        {
+          "id": "b985b848-72e1-49ce-8ef9-9b543dd095ad",
+          "similarity": 0.857295
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "1cb270c4-7a38-44c3-8658-32402c62f98b",
+          "cosine_distance": 0.612418,
+          "composite_similarity": 0.902026
+        },
+        {
+          "id": "1cb270c4-7a38-44c3-8658-32402c62f98b",
+          "cosine_distance": 0.409156,
+          "composite_similarity": 0.891179
+        },
+        {
+          "id": "92551b55-7ffc-4bb8-b9bd-011167f28617",
+          "cosine_distance": 0.39625,
+          "composite_similarity": 0.881018
+        },
+        {
+          "id": "0c5f5a61-d33c-4dcb-babf-82edc4f007e6",
+          "cosine_distance": 0.675552,
+          "composite_similarity": 0.830931
+        },
+        {
+          "id": "00e59291-15a8-4fa5-a965-c15374595463",
+          "cosine_distance": 0.515025,
+          "composite_similarity": 0.829631
+        }
+      ],
+      "search_time_ms": 52.28
+    },
+    {
+      "query_id": "aa45a6e2-071c-4a20-8bc7-d0536ea46254",
+      "equipment_name": "WTNHJ02_",
+      "utility": "NW",
+      "size": "1/2B",
+      "path_arrow": "R-H-R-H-H-R-H-R-H-H-R-H-R-H-R-R-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "d7fdd9fa-01b5-4835-8164-4739c5616079",
+          "similarity": 0.94999
+        },
+        {
+          "id": "cc197f53-7470-49a4-ba6c-ae7514da7c76",
+          "similarity": 0.942272
+        },
+        {
+          "id": "0c6df762-ceb1-46eb-85fb-d612d6221dde",
+          "similarity": 0.914757
+        },
+        {
+          "id": "1a877d03-ca1a-4bb4-93fa-9c8d48feeb7d",
+          "similarity": 0.786369
+        },
+        {
+          "id": "627e4092-9de5-4936-8830-abec025e5e85",
+          "similarity": 0.772836
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "d7fdd9fa-01b5-4835-8164-4739c5616079",
+          "cosine_distance": 0.000746,
+          "composite_similarity": 0.94999
+        },
+        {
+          "id": "cc197f53-7470-49a4-ba6c-ae7514da7c76",
+          "cosine_distance": 0.032337,
+          "composite_similarity": 0.942272
+        },
+        {
+          "id": "0c6df762-ceb1-46eb-85fb-d612d6221dde",
+          "cosine_distance": 0.08282,
+          "composite_similarity": 0.914757
+        },
+        {
+          "id": "1a877d03-ca1a-4bb4-93fa-9c8d48feeb7d",
+          "cosine_distance": 0.12463,
+          "composite_similarity": 0.786369
+        },
+        {
+          "id": "627e4092-9de5-4936-8830-abec025e5e85",
+          "cosine_distance": 0.147288,
+          "composite_similarity": 0.772836
+        }
+      ],
+      "search_time_ms": 24.7
+    },
+    {
+      "query_id": "dadca1a9-c04f-4518-adc9-b77a22897dbf",
+      "equipment_name": "WTNHJ02_",
+      "utility": "HOT DI_S",
+      "size": "40A",
+      "path_arrow": "R-H-H-H-H-R-H-H-H-R-H-H-H-R-R-R-R",
+      "recall_at_k": 0.8,
+      "ndcg_at_k": 0.9623,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "e3d463cf-d483-4e90-b01f-5bb8114535df",
+          "similarity": 0.901574
+        },
+        {
+          "id": "7a205a2b-0c09-4043-b7b2-b3cdc976740c",
+          "similarity": 0.888799
+        },
+        {
+          "id": "2801e2d1-3c29-49cf-bf44-1d722c4f58c6",
+          "similarity": 0.872869
+        },
+        {
+          "id": "a868cc95-ce63-44f6-b2d9-3cc7283e5e6e",
+          "similarity": 0.864999
+        },
+        {
+          "id": "dadca1a9-c04f-4518-adc9-b77a22897dbf",
+          "similarity": 0.815792
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "e3d463cf-d483-4e90-b01f-5bb8114535df",
+          "cosine_distance": 0.138957,
+          "composite_similarity": 0.901574
+        },
+        {
+          "id": "7a205a2b-0c09-4043-b7b2-b3cdc976740c",
+          "cosine_distance": 0.137986,
+          "composite_similarity": 0.888799
+        },
+        {
+          "id": "2801e2d1-3c29-49cf-bf44-1d722c4f58c6",
+          "cosine_distance": 0.280029,
+          "composite_similarity": 0.872869
+        },
+        {
+          "id": "a868cc95-ce63-44f6-b2d9-3cc7283e5e6e",
+          "cosine_distance": 0.282611,
+          "composite_similarity": 0.864999
+        },
+        {
+          "id": "f81d217e-1f4c-433a-a5e6-ce9690ef5a9d",
+          "cosine_distance": 0.053252,
+          "composite_similarity": 0.798168
+        }
+      ],
+      "search_time_ms": 25.04
+    },
+    {
+      "query_id": "675ebab3-2278-458a-97b5-8754c896d75f",
+      "equipment_name": "WTNHJ02_",
+      "utility": "UPW_S",
+      "size": "25A",
+      "path_arrow": "R-R-H-R-R-H-H-H-H-R-H-H-R-R-R-R-R",
+      "recall_at_k": 0.8,
+      "ndcg_at_k": 0.713,
+      "spearman_rho": 0.6,
+      "mrr": 0.0,
+      "gt_top_k": [
+        {
+          "id": "675ebab3-2278-458a-97b5-8754c896d75f",
+          "similarity": 0.814071
+        },
+        {
+          "id": "e3d463cf-d483-4e90-b01f-5bb8114535df",
+          "similarity": 0.790783
+        },
+        {
+          "id": "d0bdbe16-3347-4a82-b7be-37a40af0dc5b",
+          "similarity": 0.788917
+        },
+        {
+          "id": "7a205a2b-0c09-4043-b7b2-b3cdc976740c",
+          "similarity": 0.782657
+        },
+        {
+          "id": "0b7fa9b6-de74-45cd-94be-3e0ae7959541",
+          "similarity": 0.763502
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "e3d463cf-d483-4e90-b01f-5bb8114535df",
+          "cosine_distance": 0.159344,
+          "composite_similarity": 0.790783
+        },
+        {
+          "id": "d0bdbe16-3347-4a82-b7be-37a40af0dc5b",
+          "cosine_distance": 0.204126,
+          "composite_similarity": 0.788917
+        },
+        {
+          "id": "7a205a2b-0c09-4043-b7b2-b3cdc976740c",
+          "cosine_distance": 0.157446,
+          "composite_similarity": 0.782657
+        },
+        {
+          "id": "0b7fa9b6-de74-45cd-94be-3e0ae7959541",
+          "cosine_distance": 0.177384,
+          "composite_similarity": 0.763502
+        },
+        {
+          "id": "dadca1a9-c04f-4518-adc9-b77a22897dbf",
+          "cosine_distance": 0.174483,
+          "composite_similarity": 0.761893
+        }
+      ],
+      "search_time_ms": 26.56
+    },
+    {
+      "query_id": "0dc415c5-b50b-4819-8458-a234ac600805",
+      "equipment_name": "kscta01",
+      "utility": "ALKA",
+      "size": "50A",
+      "path_arrow": "D-R-H-H-H-H-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "cae048f3-3e2e-41a2-b597-c764732ff12a",
+          "similarity": 0.96082
+        },
+        {
+          "id": "0457f5d5-245c-4cd9-9a7d-6577f157ed18",
+          "similarity": 0.951077
+        },
+        {
+          "id": "81d2348c-87a8-4cae-8238-bbc05b3658e2",
+          "similarity": 0.919926
+        },
+        {
+          "id": "d914a43e-c878-496e-8030-48b48d17ee22",
+          "similarity": 0.780409
+        },
+        {
+          "id": "d3eacff7-de5d-4b98-b074-48eb53e8ee22",
+          "similarity": 0.773987
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "cae048f3-3e2e-41a2-b597-c764732ff12a",
+          "cosine_distance": 0.052255,
+          "composite_similarity": 0.96082
+        },
+        {
+          "id": "0457f5d5-245c-4cd9-9a7d-6577f157ed18",
+          "cosine_distance": 0.11943,
+          "composite_similarity": 0.951077
+        },
+        {
+          "id": "81d2348c-87a8-4cae-8238-bbc05b3658e2",
+          "cosine_distance": 0.103248,
+          "composite_similarity": 0.919926
+        },
+        {
+          "id": "d914a43e-c878-496e-8030-48b48d17ee22",
+          "cosine_distance": 0.007471,
+          "composite_similarity": 0.780409
+        },
+        {
+          "id": "d3eacff7-de5d-4b98-b074-48eb53e8ee22",
+          "cosine_distance": 0.06609,
+          "composite_similarity": 0.773987
+        }
+      ],
+      "search_time_ms": 21.9
+    },
+    {
+      "query_id": "9fef0329-c045-4578-bd21-dbd63f9a4de1",
+      "equipment_name": "SLWHJ02",
+      "utility": "PN2",
+      "size": "1/4B",
+      "path_arrow": "H-R-H-H-H-H-H-H-H-H-H-H-H-R-H-R-H-H-H-R-H-R-H-H-H-H-H-H-H-H-H-H-H-H-R-H",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 0.9026,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "252c2fc8-95a1-48fc-a708-e8a769fca265",
+          "similarity": 0.87336
+        },
+        {
+          "id": "058d064c-1b8d-44d8-9767-a85e0da41bec",
+          "similarity": 0.868579
+        },
+        {
+          "id": "99a28835-815e-4288-9565-c22f7a0a83c2",
+          "similarity": 0.865252
+        },
+        {
+          "id": "d08af87d-80f0-459f-bc88-eb7d1ff85ef4",
+          "similarity": 0.858714
+        },
+        {
+          "id": "99a28835-815e-4288-9565-c22f7a0a83c2",
+          "similarity": 0.857747
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "252c2fc8-95a1-48fc-a708-e8a769fca265",
+          "cosine_distance": 0.619494,
+          "composite_similarity": 0.87336
+        },
+        {
+          "id": "058d064c-1b8d-44d8-9767-a85e0da41bec",
+          "cosine_distance": 0.349278,
+          "composite_similarity": 0.868579
+        },
+        {
+          "id": "99a28835-815e-4288-9565-c22f7a0a83c2",
+          "cosine_distance": 0.680055,
+          "composite_similarity": 0.865252
+        },
+        {
+          "id": "d08af87d-80f0-459f-bc88-eb7d1ff85ef4",
+          "cosine_distance": 0.410846,
+          "composite_similarity": 0.858714
+        },
+        {
+          "id": "99a28835-815e-4288-9565-c22f7a0a83c2",
+          "cosine_distance": 0.332047,
+          "composite_similarity": 0.857747
+        }
+      ],
+      "search_time_ms": 31.11
+    },
+    {
+      "query_id": "1877e033-0fd9-4e9d-ad41-3b3489080f8c",
+      "equipment_name": "kscta01",
+      "utility": "AKWW",
+      "size": "20A",
+      "path_arrow": "R-H-R-R-R-R-H-H-H-H-H-R-R-R-R-H-H-R",
+      "recall_at_k": 0.5,
+      "ndcg_at_k": 0.707,
+      "spearman_rho": -1.0,
+      "mrr": 0.0,
+      "gt_top_k": [
+        {
+          "id": "1877e033-0fd9-4e9d-ad41-3b3489080f8c",
+          "similarity": 0.888595
+        },
+        {
+          "id": "97e80aa5-0809-40de-83ce-00c29c268095",
+          "similarity": 0.867684
+        },
+        {
+          "id": "1877e033-0fd9-4e9d-ad41-3b3489080f8c",
+          "similarity": 0.855782
+        },
+        {
+          "id": "7404da16-2d9a-48ba-979a-478b71ebbb49",
+          "similarity": 0.833353
+        },
+        {
+          "id": "b5c42f37-046a-4ba9-903b-6512f67dbcab",
+          "similarity": 0.833039
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "97e80aa5-0809-40de-83ce-00c29c268095",
+          "cosine_distance": 0.019773,
+          "composite_similarity": 0.867684
+        },
+        {
+          "id": "7404da16-2d9a-48ba-979a-478b71ebbb49",
+          "cosine_distance": 0.335492,
+          "composite_similarity": 0.833353
+        },
+        {
+          "id": "97e80aa5-0809-40de-83ce-00c29c268095",
+          "cosine_distance": 0.09431,
+          "composite_similarity": 0.811834
+        },
+        {
+          "id": "6dc0e809-5930-42e4-9e1a-930bbd3d895e",
+          "cosine_distance": 0.19336,
+          "composite_similarity": 0.806503
+        },
+        {
+          "id": "61af9d85-97ea-4d2d-bc56-494b117234f9",
+          "cosine_distance": 0.223304,
+          "composite_similarity": 0.800837
+        }
+      ],
+      "search_time_ms": 25.31
+    },
+    {
+      "query_id": "bd91c40b-ef5b-478f-a9fb-31b6ec652c29",
+      "equipment_name": "kscta01",
+      "utility": "AKWW",
+      "size": "20A",
+      "path_arrow": "R-H-R-R-R-R-H-R-R-R-R-H-H-R",
+      "recall_at_k": 0.75,
+      "ndcg_at_k": 0.9737,
+      "spearman_rho": -0.9,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "b5c42f37-046a-4ba9-903b-6512f67dbcab",
+          "similarity": 0.981666
+        },
+        {
+          "id": "b5c42f37-046a-4ba9-903b-6512f67dbcab",
+          "similarity": 0.972581
+        },
+        {
+          "id": "97e80aa5-0809-40de-83ce-00c29c268095",
+          "similarity": 0.90028
+        },
+        {
+          "id": "bd91c40b-ef5b-478f-a9fb-31b6ec652c29",
+          "similarity": 0.889392
+        },
+        {
+          "id": "1877e033-0fd9-4e9d-ad41-3b3489080f8c",
+          "similarity": 0.887533
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "b5c42f37-046a-4ba9-903b-6512f67dbcab",
+          "cosine_distance": 3.4e-05,
+          "composite_similarity": 0.981666
+        },
+        {
+          "id": "b5c42f37-046a-4ba9-903b-6512f67dbcab",
+          "cosine_distance": 0.17332,
+          "composite_similarity": 0.972581
+        },
+        {
+          "id": "97e80aa5-0809-40de-83ce-00c29c268095",
+          "cosine_distance": 0.088066,
+          "composite_similarity": 0.90028
+        },
+        {
+          "id": "1877e033-0fd9-4e9d-ad41-3b3489080f8c",
+          "cosine_distance": 0.094296,
+          "composite_similarity": 0.887533
+        },
+        {
+          "id": "b5c42f37-046a-4ba9-903b-6512f67dbcab",
+          "cosine_distance": 0.259905,
+          "composite_similarity": 0.871535
+        }
+      ],
+      "search_time_ms": 23.71
+    },
+    {
+      "query_id": "b985b848-72e1-49ce-8ef9-9b543dd095ad",
+      "equipment_name": "SLWHJ02",
+      "utility": "Ar",
+      "size": "1/4B",
+      "path_arrow": "H-R-H-H-H-H-H-H-H-H-H-H-R-H-R-H-R-H-H-R-H-R-R",
+      "recall_at_k": 0.8,
+      "ndcg_at_k": 0.8717,
+      "spearman_rho": 0.8,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "d962180a-daed-437b-91fc-882a5eb3ac21",
+          "similarity": 0.899092
+        },
+        {
+          "id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+          "similarity": 0.852357
+        },
+        {
+          "id": "058d064c-1b8d-44d8-9767-a85e0da41bec",
+          "similarity": 0.847554
+        },
+        {
+          "id": "8fd60ae9-da8a-4db7-a8af-7432f5367932",
+          "similarity": 0.847393
+        },
+        {
+          "id": "a8a2ad56-7041-4f9c-aa00-0f9bb5ba570d",
+          "similarity": 0.846166
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "d962180a-daed-437b-91fc-882a5eb3ac21",
+          "cosine_distance": 0.004461,
+          "composite_similarity": 0.899092
+        },
+        {
+          "id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+          "cosine_distance": 0.004244,
+          "composite_similarity": 0.852357
+        },
+        {
+          "id": "8fd60ae9-da8a-4db7-a8af-7432f5367932",
+          "cosine_distance": 0.169985,
+          "composite_similarity": 0.847393
+        },
+        {
+          "id": "a8a2ad56-7041-4f9c-aa00-0f9bb5ba570d",
+          "cosine_distance": 0.166235,
+          "composite_similarity": 0.846166
+        },
+        {
+          "id": "4232693d-b27d-4849-9090-488dc6728fca",
+          "cosine_distance": 0.064689,
+          "composite_similarity": 0.831432
+        }
+      ],
+      "search_time_ms": 26.95
+    },
+    {
+      "query_id": "7a205a2b-0c09-4043-b7b2-b3cdc976740c",
+      "equipment_name": "WTNHJ02_",
+      "utility": "HOT DI_S",
+      "size": "40A",
+      "path_arrow": "R-H-H-H-H-R-H-H-H-R-H-H-R-H-R-R-R-R",
+      "recall_at_k": 0.8,
+      "ndcg_at_k": 0.9623,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "e3d463cf-d483-4e90-b01f-5bb8114535df",
+          "similarity": 0.97138
+        },
+        {
+          "id": "a868cc95-ce63-44f6-b2d9-3cc7283e5e6e",
+          "similarity": 0.891486
+        },
+        {
+          "id": "dadca1a9-c04f-4518-adc9-b77a22897dbf",
+          "similarity": 0.888799
+        },
+        {
+          "id": "2801e2d1-3c29-49cf-bf44-1d722c4f58c6",
+          "similarity": 0.887645
+        },
+        {
+          "id": "7a205a2b-0c09-4043-b7b2-b3cdc976740c",
+          "similarity": 0.803284
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "e3d463cf-d483-4e90-b01f-5bb8114535df",
+          "cosine_distance": 0.000795,
+          "composite_similarity": 0.97138
+        },
+        {
+          "id": "a868cc95-ce63-44f6-b2d9-3cc7283e5e6e",
+          "cosine_distance": 0.173217,
+          "composite_similarity": 0.891486
+        },
+        {
+          "id": "dadca1a9-c04f-4518-adc9-b77a22897dbf",
+          "cosine_distance": 0.137986,
+          "composite_similarity": 0.888799
+        },
+        {
+          "id": "2801e2d1-3c29-49cf-bf44-1d722c4f58c6",
+          "cosine_distance": 0.169938,
+          "composite_similarity": 0.887645
+        },
+        {
+          "id": "9b28dfda-86d5-499d-8147-4a195d9c6a80",
+          "cosine_distance": 0.1083,
+          "composite_similarity": 0.787886
+        }
+      ],
+      "search_time_ms": 24.73
+    },
+    {
+      "query_id": "dcaae8cc-4d6c-4e41-be61-71947f8407cb",
+      "equipment_name": "WTNHJ02_",
+      "utility": "NW",
+      "size": "3/4B",
+      "path_arrow": "R-H-H-H-H-H-R-H-H-R-H-R-H-R-R-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "8c0eeb03-b9fa-4e2e-9c38-c45cf16d433b",
+          "similarity": 0.938809
+        },
+        {
+          "id": "0c6df762-ceb1-46eb-85fb-d612d6221dde",
+          "similarity": 0.804697
+        },
+        {
+          "id": "aa45a6e2-071c-4a20-8bc7-d0536ea46254",
+          "similarity": 0.736676
+        },
+        {
+          "id": "cc197f53-7470-49a4-ba6c-ae7514da7c76",
+          "similarity": 0.735106
+        },
+        {
+          "id": "d7fdd9fa-01b5-4835-8164-4739c5616079",
+          "similarity": 0.728645
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "8c0eeb03-b9fa-4e2e-9c38-c45cf16d433b",
+          "cosine_distance": 0.014955,
+          "composite_similarity": 0.938809
+        },
+        {
+          "id": "0c6df762-ceb1-46eb-85fb-d612d6221dde",
+          "cosine_distance": 0.076761,
+          "composite_similarity": 0.804697
+        },
+        {
+          "id": "aa45a6e2-071c-4a20-8bc7-d0536ea46254",
+          "cosine_distance": 0.153046,
+          "composite_similarity": 0.736676
+        },
+        {
+          "id": "cc197f53-7470-49a4-ba6c-ae7514da7c76",
+          "cosine_distance": 0.137725,
+          "composite_similarity": 0.735106
+        },
+        {
+          "id": "d7fdd9fa-01b5-4835-8164-4739c5616079",
+          "cosine_distance": 0.155857,
+          "composite_similarity": 0.728645
+        }
+      ],
+      "search_time_ms": 24.74
+    },
+    {
+      "query_id": "ee10eab0-dc29-4a4a-a2eb-ea7792a3ed4b",
+      "equipment_name": "SLWHJ02",
+      "utility": "Foreline",
+      "size": "50A",
+      "path_arrow": "R-R-R-R-R-R-D-R-R-R-R-R-R-R-R-R-R-R-D",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "80ae15a0-4164-4a5c-9f57-17d2c038c665",
+          "similarity": 0.836283
+        },
+        {
+          "id": "c157c0cf-5a79-4073-bd2e-687b0ba77364",
+          "similarity": 0.790693
+        },
+        {
+          "id": "03add684-7a89-4124-8747-6089625c3429",
+          "similarity": 0.790608
+        },
+        {
+          "id": "6bde945d-1a05-4a90-a370-3020bdc3483f",
+          "similarity": 0.785415
+        },
+        {
+          "id": "e67a68c4-5adf-48bd-92a7-9164fd405a73",
+          "similarity": 0.776131
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "80ae15a0-4164-4a5c-9f57-17d2c038c665",
+          "cosine_distance": 0.113143,
+          "composite_similarity": 0.836283
+        },
+        {
+          "id": "c157c0cf-5a79-4073-bd2e-687b0ba77364",
+          "cosine_distance": 0.072061,
+          "composite_similarity": 0.790693
+        },
+        {
+          "id": "03add684-7a89-4124-8747-6089625c3429",
+          "cosine_distance": 0.058496,
+          "composite_similarity": 0.790608
+        },
+        {
+          "id": "6bde945d-1a05-4a90-a370-3020bdc3483f",
+          "cosine_distance": 0.157733,
+          "composite_similarity": 0.785415
+        },
+        {
+          "id": "e67a68c4-5adf-48bd-92a7-9164fd405a73",
+          "cosine_distance": 0.119802,
+          "composite_similarity": 0.776131
+        }
+      ],
+      "search_time_ms": 27.81
+    },
+    {
+      "query_id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+      "equipment_name": "SLWHJ02",
+      "utility": "Ar",
+      "size": "1/4B",
+      "path_arrow": "H-R-H-H-H-H-H-H-H-H-R-H-R-H-H-H-R-H-R-H-H-H-H-H-H-H-H-H-H-R-H",
+      "recall_at_k": 0.75,
+      "ndcg_at_k": 0.5894,
+      "spearman_rho": -1.0,
+      "mrr": 0.0,
+      "gt_top_k": [
+        {
+          "id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+          "similarity": 0.901513
+        },
+        {
+          "id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+          "similarity": 0.897717
+        },
+        {
+          "id": "b985b848-72e1-49ce-8ef9-9b543dd095ad",
+          "similarity": 0.892083
+        },
+        {
+          "id": "8fd60ae9-da8a-4db7-a8af-7432f5367932",
+          "similarity": 0.884225
+        },
+        {
+          "id": "d962180a-daed-437b-91fc-882a5eb3ac21",
+          "similarity": 0.876225
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "b985b848-72e1-49ce-8ef9-9b543dd095ad",
+          "cosine_distance": 0.284474,
+          "composite_similarity": 0.892083
+        },
+        {
+          "id": "8fd60ae9-da8a-4db7-a8af-7432f5367932",
+          "cosine_distance": 0.563482,
+          "composite_similarity": 0.884225
+        },
+        {
+          "id": "d962180a-daed-437b-91fc-882a5eb3ac21",
+          "cosine_distance": 8e-05,
+          "composite_similarity": 0.876225
+        },
+        {
+          "id": "b985b848-72e1-49ce-8ef9-9b543dd095ad",
+          "cosine_distance": 0.313022,
+          "composite_similarity": 0.873332
+        },
+        {
+          "id": "1cb270c4-7a38-44c3-8658-32402c62f98b",
+          "cosine_distance": 0.552708,
+          "composite_similarity": 0.860307
+        }
+      ],
+      "search_time_ms": 34.04
+    },
+    {
+      "query_id": "d2cc11c6-48b8-49f9-9dbc-909b3013b1ac",
+      "equipment_name": "Scrubber_001",
+      "utility": "PFC",
+      "size": "50A",
+      "path_arrow": "H-H-R-R-H-H-R-R-R-R-H-H-H-H-H-H-H-H-R-R-R",
+      "recall_at_k": 0.25,
+      "ndcg_at_k": 0.4868,
+      "spearman_rho": 0.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "5cb39ebc-678f-440d-a6d2-e027d6af06a9",
+          "similarity": 0.926035
+        },
+        {
+          "id": "c80e0783-c4a9-4867-bb11-3519ac47dfc1",
+          "similarity": 0.650807
+        },
+        {
+          "id": "74171778-37ec-4b7c-b0ae-18fba0910202",
+          "similarity": 0.639805
+        },
+        {
+          "id": "74171778-37ec-4b7c-b0ae-18fba0910202",
+          "similarity": 0.629428
+        },
+        {
+          "id": "61af9d85-97ea-4d2d-bc56-494b117234f9",
+          "similarity": 0.611636
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "5cb39ebc-678f-440d-a6d2-e027d6af06a9",
+          "cosine_distance": 0.04336,
+          "composite_similarity": 0.926035
+        },
+        {
+          "id": "fa9210cb-349b-4e13-a393-bfca14ff1ae8",
+          "cosine_distance": 0.517499,
+          "composite_similarity": 0.610548
+        },
+        {
+          "id": "16c97265-a5e1-42b3-954f-0bf35137edd5",
+          "cosine_distance": 0.30083,
+          "composite_similarity": 0.60911
+        },
+        {
+          "id": "8fd60ae9-da8a-4db7-a8af-7432f5367932",
+          "cosine_distance": 0.534691,
+          "composite_similarity": 0.6004
+        },
+        {
+          "id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+          "cosine_distance": 0.544488,
+          "composite_similarity": 0.590534
+        }
+      ],
+      "search_time_ms": 25.88
+    },
+    {
+      "query_id": "a2f54b79-4e75-4f6a-be7d-56fb6b0b91ef",
+      "equipment_name": "PSTWA03",
+      "utility": "T3(ArF)",
+      "size": "25A",
+      "path_arrow": "R-R-H-R-H-H-R-H-H-H-R-R-R-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 0.9026,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "46e0264b-0eb9-4985-9e5d-66aac5d13c59",
+          "similarity": 0.898187
+        },
+        {
+          "id": "6dc0e809-5930-42e4-9e1a-930bbd3d895e",
+          "similarity": 0.760693
+        },
+        {
+          "id": "675ebab3-2278-458a-97b5-8754c896d75f",
+          "similarity": 0.755707
+        },
+        {
+          "id": "d0bdbe16-3347-4a82-b7be-37a40af0dc5b",
+          "similarity": 0.736754
+        },
+        {
+          "id": "675ebab3-2278-458a-97b5-8754c896d75f",
+          "similarity": 0.718933
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "46e0264b-0eb9-4985-9e5d-66aac5d13c59",
+          "cosine_distance": 0.104357,
+          "composite_similarity": 0.898187
+        },
+        {
+          "id": "6dc0e809-5930-42e4-9e1a-930bbd3d895e",
+          "cosine_distance": 0.052738,
+          "composite_similarity": 0.760693
+        },
+        {
+          "id": "675ebab3-2278-458a-97b5-8754c896d75f",
+          "cosine_distance": 0.24339,
+          "composite_similarity": 0.755707
+        },
+        {
+          "id": "d0bdbe16-3347-4a82-b7be-37a40af0dc5b",
+          "cosine_distance": 0.125647,
+          "composite_similarity": 0.736754
+        },
+        {
+          "id": "675ebab3-2278-458a-97b5-8754c896d75f",
+          "cosine_distance": 0.237782,
+          "composite_similarity": 0.718933
+        }
+      ],
+      "search_time_ms": 23.33
+    },
+    {
+      "query_id": "361439c4-2a39-4839-9edc-cfeaf690f379",
+      "equipment_name": "WTNHJ02_",
+      "utility": "ACID",
+      "size": "150A",
+      "path_arrow": "R-D-R-H-H-H-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "880295f7-b5a7-435e-936b-0eac083ce23c",
+          "similarity": 0.953919
+        },
+        {
+          "id": "c1a3aa60-9bca-433f-a50b-e47f94858381",
+          "similarity": 0.943722
+        },
+        {
+          "id": "e993fe65-c1e0-4cd1-8346-67b6d7acda26",
+          "similarity": 0.934916
+        },
+        {
+          "id": "a2c2f48d-62ed-46c6-9825-9184f4792085",
+          "similarity": 0.918836
+        },
+        {
+          "id": "7606c182-c938-4fc3-ab17-9217ca6a4bea",
+          "similarity": 0.901259
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "880295f7-b5a7-435e-936b-0eac083ce23c",
+          "cosine_distance": 0.068233,
+          "composite_similarity": 0.953919
+        },
+        {
+          "id": "c1a3aa60-9bca-433f-a50b-e47f94858381",
+          "cosine_distance": 0.070592,
+          "composite_similarity": 0.943722
+        },
+        {
+          "id": "e993fe65-c1e0-4cd1-8346-67b6d7acda26",
+          "cosine_distance": 0.136872,
+          "composite_similarity": 0.934916
+        },
+        {
+          "id": "a2c2f48d-62ed-46c6-9825-9184f4792085",
+          "cosine_distance": 0.138734,
+          "composite_similarity": 0.918836
+        },
+        {
+          "id": "7606c182-c938-4fc3-ab17-9217ca6a4bea",
+          "cosine_distance": 0.135937,
+          "composite_similarity": 0.901259
+        }
+      ],
+      "search_time_ms": 21.52
+    },
+    {
+      "query_id": "eafaac46-e250-49d9-b19c-9a32fc94a138",
+      "equipment_name": "ELOHJ07",
+      "utility": "O2",
+      "size": "1/4B",
+      "path_arrow": "R-D-H-H-R-H-H-R-H-D-R-H-R-H-R-H-H-R-H-H-D-R",
+      "recall_at_k": 0.6667,
+      "ndcg_at_k": 0.8065,
+      "spearman_rho": -1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "ba7de456-132d-4627-8273-d8d515136a92",
+          "similarity": 0.950736
+        },
+        {
+          "id": "32a674e4-7efe-42b9-a04f-e4b57259c7af",
+          "similarity": 0.910858
+        },
+        {
+          "id": "eafaac46-e250-49d9-b19c-9a32fc94a138",
+          "similarity": 0.845813
+        },
+        {
+          "id": "eafaac46-e250-49d9-b19c-9a32fc94a138",
+          "similarity": 0.838895
+        },
+        {
+          "id": "32a674e4-7efe-42b9-a04f-e4b57259c7af",
+          "similarity": 0.806346
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "ba7de456-132d-4627-8273-d8d515136a92",
+          "cosine_distance": 0.161953,
+          "composite_similarity": 0.950736
+        },
+        {
+          "id": "32a674e4-7efe-42b9-a04f-e4b57259c7af",
+          "cosine_distance": 0.006135,
+          "composite_similarity": 0.910858
+        },
+        {
+          "id": "32a674e4-7efe-42b9-a04f-e4b57259c7af",
+          "cosine_distance": 0.064149,
+          "composite_similarity": 0.806346
+        },
+        {
+          "id": "ba7de456-132d-4627-8273-d8d515136a92",
+          "cosine_distance": 0.100092,
+          "composite_similarity": 0.803358
+        },
+        {
+          "id": "360b7d7d-ff15-4022-8160-e43b186f2860",
+          "cosine_distance": 0.222096,
+          "composite_similarity": 0.764036
+        }
+      ],
+      "search_time_ms": 25.79
+    },
+    {
+      "query_id": "c80e0783-c4a9-4867-bb11-3519ac47dfc1",
+      "equipment_name": "kscta01",
+      "utility": "UPW_S",
+      "size": "25A",
+      "path_arrow": "R-H-H-H-H-H-R-H-H-R-H-H-H-H-R",
+      "recall_at_k": 0.5,
+      "ndcg_at_k": 0.525,
+      "spearman_rho": -1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "9028682b-5a1a-46b1-b725-8c110888c99a",
+          "similarity": 0.836573
+        },
+        {
+          "id": "74171778-37ec-4b7c-b0ae-18fba0910202",
+          "similarity": 0.816667
+        },
+        {
+          "id": "e3086dcf-503a-425e-8f4b-2856c1ae2901",
+          "similarity": 0.804763
+        },
+        {
+          "id": "9028682b-5a1a-46b1-b725-8c110888c99a",
+          "similarity": 0.767231
+        },
+        {
+          "id": "c80e0783-c4a9-4867-bb11-3519ac47dfc1",
+          "similarity": 0.761986
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "9028682b-5a1a-46b1-b725-8c110888c99a",
+          "cosine_distance": 0.10654,
+          "composite_similarity": 0.836573
+        },
+        {
+          "id": "e3086dcf-503a-425e-8f4b-2856c1ae2901",
+          "cosine_distance": 0.163346,
+          "composite_similarity": 0.804763
+        },
+        {
+          "id": "e3086dcf-503a-425e-8f4b-2856c1ae2901",
+          "cosine_distance": 0.165302,
+          "composite_similarity": 0.739151
+        },
+        {
+          "id": "f44605a5-9554-40f2-b90a-6e0ce23a7068",
+          "cosine_distance": 0.240647,
+          "composite_similarity": 0.720172
+        },
+        {
+          "id": "61af9d85-97ea-4d2d-bc56-494b117234f9",
+          "cosine_distance": 0.202784,
+          "composite_similarity": 0.699811
+        }
+      ],
+      "search_time_ms": 24.64
+    },
+    {
+      "query_id": "32a674e4-7efe-42b9-a04f-e4b57259c7af",
+      "equipment_name": "ELOHJ07",
+      "utility": "O2",
+      "size": "1/4B",
+      "path_arrow": "R-D-H-H-R-H-H-R-H-R-H-R-D-H-R-H-H-D-H-H-D-R",
+      "recall_at_k": 0.75,
+      "ndcg_at_k": 0.9372,
+      "spearman_rho": -0.9,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "ba7de456-132d-4627-8273-d8d515136a92",
+          "similarity": 0.914425
+        },
+        {
+          "id": "eafaac46-e250-49d9-b19c-9a32fc94a138",
+          "similarity": 0.910858
+        },
+        {
+          "id": "32a674e4-7efe-42b9-a04f-e4b57259c7af",
+          "similarity": 0.829459
+        },
+        {
+          "id": "eafaac46-e250-49d9-b19c-9a32fc94a138",
+          "similarity": 0.814456
+        },
+        {
+          "id": "360b7d7d-ff15-4022-8160-e43b186f2860",
+          "similarity": 0.789482
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "ba7de456-132d-4627-8273-d8d515136a92",
+          "cosine_distance": 0.167682,
+          "composite_similarity": 0.914425
+        },
+        {
+          "id": "eafaac46-e250-49d9-b19c-9a32fc94a138",
+          "cosine_distance": 0.006135,
+          "composite_similarity": 0.910858
+        },
+        {
+          "id": "eafaac46-e250-49d9-b19c-9a32fc94a138",
+          "cosine_distance": 0.002085,
+          "composite_similarity": 0.814456
+        },
+        {
+          "id": "360b7d7d-ff15-4022-8160-e43b186f2860",
+          "cosine_distance": 0.242124,
+          "composite_similarity": 0.789482
+        },
+        {
+          "id": "ba7de456-132d-4627-8273-d8d515136a92",
+          "cosine_distance": 0.100835,
+          "composite_similarity": 0.787252
+        }
+      ],
+      "search_time_ms": 26.42
+    },
+    {
+      "query_id": "0b7fa9b6-de74-45cd-94be-3e0ae7959541",
+      "equipment_name": "WTNHJ02_",
+      "utility": "UPW_S",
+      "size": "25A",
+      "path_arrow": "R-R-H-R-R-H-H-R-H-H-R-H-H-H-R-R-R-R-R",
+      "recall_at_k": 0.6667,
+      "ndcg_at_k": 0.2689,
+      "spearman_rho": -1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "d0bdbe16-3347-4a82-b7be-37a40af0dc5b",
+          "similarity": 0.854949
+        },
+        {
+          "id": "0b7fa9b6-de74-45cd-94be-3e0ae7959541",
+          "similarity": 0.802736
+        },
+        {
+          "id": "0b7fa9b6-de74-45cd-94be-3e0ae7959541",
+          "similarity": 0.765062
+        },
+        {
+          "id": "675ebab3-2278-458a-97b5-8754c896d75f",
+          "similarity": 0.763502
+        },
+        {
+          "id": "d0bdbe16-3347-4a82-b7be-37a40af0dc5b",
+          "similarity": 0.743396
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "d0bdbe16-3347-4a82-b7be-37a40af0dc5b",
+          "cosine_distance": 0.031047,
+          "composite_similarity": 0.854949
+        },
+        {
+          "id": "675ebab3-2278-458a-97b5-8754c896d75f",
+          "cosine_distance": 0.177384,
+          "composite_similarity": 0.763502
+        },
+        {
+          "id": "d0bdbe16-3347-4a82-b7be-37a40af0dc5b",
+          "cosine_distance": 0.034047,
+          "composite_similarity": 0.743396
+        },
+        {
+          "id": "fa9210cb-349b-4e13-a393-bfca14ff1ae8",
+          "cosine_distance": 0.101114,
+          "composite_similarity": 0.737192
+        },
+        {
+          "id": "5cc843cd-6307-4f27-b414-f8bde9d4a15e",
+          "cosine_distance": 0.166306,
+          "composite_similarity": 0.732291
+        }
+      ],
+      "search_time_ms": 24.96
+    },
+    {
+      "query_id": "4232693d-b27d-4849-9090-488dc6728fca",
+      "equipment_name": "SLWHJ02",
+      "utility": "PN2",
+      "size": "1/4B",
+      "path_arrow": "H-R-D-H-H-H-H-H-H-H-H-H-H-H-R-H-R-H-H-R-H-R-H-H-H-H-H-H-H-H-H-H-H-H-R-H",
+      "recall_at_k": 0.25,
+      "ndcg_at_k": 0.2096,
+      "spearman_rho": 0.0,
+      "mrr": 0.25,
+      "gt_top_k": [
+        {
+          "id": "d08af87d-80f0-459f-bc88-eb7d1ff85ef4",
+          "similarity": 0.930373
+        },
+        {
+          "id": "92551b55-7ffc-4bb8-b9bd-011167f28617",
+          "similarity": 0.886503
+        },
+        {
+          "id": "4232693d-b27d-4849-9090-488dc6728fca",
+          "similarity": 0.884184
+        },
+        {
+          "id": "4232693d-b27d-4849-9090-488dc6728fca",
+          "similarity": 0.868071
+        },
+        {
+          "id": "00e59291-15a8-4fa5-a965-c15374595463",
+          "similarity": 0.844655
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "9fef0329-c045-4578-bd21-dbd63f9a4de1",
+          "cosine_distance": 0.609403,
+          "composite_similarity": 0.834367
+        },
+        {
+          "id": "52fc01ac-b7cf-41ad-841b-cc30ea23004e",
+          "cosine_distance": 0.125563,
+          "composite_similarity": 0.83249
+        },
+        {
+          "id": "52fc01ac-b7cf-41ad-841b-cc30ea23004e",
+          "cosine_distance": 0.223736,
+          "composite_similarity": 0.829917
+        },
+        {
+          "id": "d08af87d-80f0-459f-bc88-eb7d1ff85ef4",
+          "cosine_distance": 0.601473,
+          "composite_similarity": 0.825649
+        },
+        {
+          "id": "8db32389-232b-400a-9cbb-4a7ffca27fc6",
+          "cosine_distance": 0.582542,
+          "composite_similarity": 0.815085
+        }
+      ],
+      "search_time_ms": 30.11
+    },
+    {
+      "query_id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+      "equipment_name": "ELOHJ07",
+      "utility": "PN2",
+      "size": "1/4B",
+      "path_arrow": "R-H-H-H-H-H-H-R-H-R-H-H-R-H-R-H-H-H-H-D-R",
+      "recall_at_k": 0.75,
+      "ndcg_at_k": 0.8231,
+      "spearman_rho": 0.8,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "e1593423-4887-441a-b78f-63dbb8fb408d",
+          "similarity": 0.921223
+        },
+        {
+          "id": "2931fd16-4ae8-4998-a76f-b707b48575d7",
+          "similarity": 0.898204
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "similarity": 0.881396
+        },
+        {
+          "id": "53dd8347-bdd0-4abb-8b92-743d3e454f43",
+          "similarity": 0.876056
+        },
+        {
+          "id": "53dd8347-bdd0-4abb-8b92-743d3e454f43",
+          "similarity": 0.845332
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "e1593423-4887-441a-b78f-63dbb8fb408d",
+          "cosine_distance": 0.035162,
+          "composite_similarity": 0.921223
+        },
+        {
+          "id": "2931fd16-4ae8-4998-a76f-b707b48575d7",
+          "cosine_distance": 0.121031,
+          "composite_similarity": 0.898204
+        },
+        {
+          "id": "53dd8347-bdd0-4abb-8b92-743d3e454f43",
+          "cosine_distance": 0.066594,
+          "composite_similarity": 0.876056
+        },
+        {
+          "id": "53dd8347-bdd0-4abb-8b92-743d3e454f43",
+          "cosine_distance": 0.020919,
+          "composite_similarity": 0.845332
+        },
+        {
+          "id": "b4a80908-f3cc-4d28-8486-167194ce25eb",
+          "cosine_distance": 0.217712,
+          "composite_similarity": 0.82561
+        }
+      ],
+      "search_time_ms": 25.5
+    },
+    {
+      "query_id": "1cb270c4-7a38-44c3-8658-32402c62f98b",
+      "equipment_name": "SLWHJ02",
+      "utility": "Ar",
+      "size": "1/4B",
+      "path_arrow": "H-R-H-H-H-H-H-H-H-H-H-H-R-H-R-H-R-H-R-H-H-H-H-H-H-H-H-H-H-H-R-H",
+      "recall_at_k": 0.8,
+      "ndcg_at_k": 0.9581,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "92551b55-7ffc-4bb8-b9bd-011167f28617",
+          "similarity": 0.867241
+        },
+        {
+          "id": "89e5d182-bf09-4db5-bfb6-72fa7f163c56",
+          "similarity": 0.862787
+        },
+        {
+          "id": "99a28835-815e-4288-9565-c22f7a0a83c2",
+          "similarity": 0.849776
+        },
+        {
+          "id": "52fc01ac-b7cf-41ad-841b-cc30ea23004e",
+          "similarity": 0.845117
+        },
+        {
+          "id": "d08af87d-80f0-459f-bc88-eb7d1ff85ef4",
+          "similarity": 0.832992
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "92551b55-7ffc-4bb8-b9bd-011167f28617",
+          "cosine_distance": 0.030516,
+          "composite_similarity": 0.867241
+        },
+        {
+          "id": "89e5d182-bf09-4db5-bfb6-72fa7f163c56",
+          "cosine_distance": 0.520732,
+          "composite_similarity": 0.862787
+        },
+        {
+          "id": "99a28835-815e-4288-9565-c22f7a0a83c2",
+          "cosine_distance": 0.146946,
+          "composite_similarity": 0.849776
+        },
+        {
+          "id": "d08af87d-80f0-459f-bc88-eb7d1ff85ef4",
+          "cosine_distance": 0.261363,
+          "composite_similarity": 0.832992
+        },
+        {
+          "id": "d08af87d-80f0-459f-bc88-eb7d1ff85ef4",
+          "cosine_distance": 0.150006,
+          "composite_similarity": 0.832763
+        }
+      ],
+      "search_time_ms": 29.82
+    },
+    {
+      "query_id": "74171778-37ec-4b7c-b0ae-18fba0910202",
+      "equipment_name": "kscta01",
+      "utility": "UPW_S",
+      "size": "25A",
+      "path_arrow": "R-H-H-H-H-R-H-H-R-H-H-H-H-H-R",
+      "recall_at_k": 0.6667,
+      "ndcg_at_k": 0.4039,
+      "spearman_rho": 0.2,
+      "mrr": 0.0,
+      "gt_top_k": [
+        {
+          "id": "c80e0783-c4a9-4867-bb11-3519ac47dfc1",
+          "similarity": 0.816667
+        },
+        {
+          "id": "e3086dcf-503a-425e-8f4b-2856c1ae2901",
+          "similarity": 0.790057
+        },
+        {
+          "id": "9028682b-5a1a-46b1-b725-8c110888c99a",
+          "similarity": 0.786573
+        },
+        {
+          "id": "e3086dcf-503a-425e-8f4b-2856c1ae2901",
+          "similarity": 0.772484
+        },
+        {
+          "id": "9028682b-5a1a-46b1-b725-8c110888c99a",
+          "similarity": 0.751922
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "e3086dcf-503a-425e-8f4b-2856c1ae2901",
+          "cosine_distance": 0.282693,
+          "composite_similarity": 0.790057
+        },
+        {
+          "id": "e3086dcf-503a-425e-8f4b-2856c1ae2901",
+          "cosine_distance": 0.286314,
+          "composite_similarity": 0.772484
+        },
+        {
+          "id": "9028682b-5a1a-46b1-b725-8c110888c99a",
+          "cosine_distance": 0.101443,
+          "composite_similarity": 0.751922
+        },
+        {
+          "id": "97e80aa5-0809-40de-83ce-00c29c268095",
+          "cosine_distance": 0.239915,
+          "composite_similarity": 0.720172
+        },
+        {
+          "id": "9028682b-5a1a-46b1-b725-8c110888c99a",
+          "cosine_distance": 0.103345,
+          "composite_similarity": 0.681042
+        }
+      ],
+      "search_time_ms": 24.13
+    },
+    {
+      "query_id": "b6740c99-ead4-4633-b331-d2179f9c7967",
+      "equipment_name": "PSTWA03",
+      "utility": "PV",
+      "size": "1/2B",
+      "path_arrow": "R-R-H-H-H-H-H-H-R-H-H-R-H-H-R-H-R-H-H-H-H-R-R",
+      "recall_at_k": 0.8,
+      "ndcg_at_k": 0.9204,
+      "spearman_rho": 0.9,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "9b7da154-c1b4-4ee2-b316-aba496205465",
+          "similarity": 0.959188
+        },
+        {
+          "id": "1ed77514-4633-4c7b-bb7e-08df29956986",
+          "similarity": 0.902426
+        },
+        {
+          "id": "433fe50b-1d49-4cb7-a1ca-d9461ce52104",
+          "similarity": 0.772311
+        },
+        {
+          "id": "b985b848-72e1-49ce-8ef9-9b543dd095ad",
+          "similarity": 0.759046
+        },
+        {
+          "id": "63f06de1-94ca-4a1a-a2b2-75ab7afbd469",
+          "similarity": 0.752867
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "9b7da154-c1b4-4ee2-b316-aba496205465",
+          "cosine_distance": 0.039446,
+          "composite_similarity": 0.959188
+        },
+        {
+          "id": "1ed77514-4633-4c7b-bb7e-08df29956986",
+          "cosine_distance": 0.073398,
+          "composite_similarity": 0.902426
+        },
+        {
+          "id": "433fe50b-1d49-4cb7-a1ca-d9461ce52104",
+          "cosine_distance": 0.094319,
+          "composite_similarity": 0.772311
+        },
+        {
+          "id": "63f06de1-94ca-4a1a-a2b2-75ab7afbd469",
+          "cosine_distance": 0.284907,
+          "composite_similarity": 0.752867
+        },
+        {
+          "id": "e960a6fe-1a22-4a16-bb47-7420c8f252c6",
+          "cosine_distance": 0.122915,
+          "composite_similarity": 0.740001
+        }
+      ],
+      "search_time_ms": 26.15
+    },
+    {
+      "query_id": "86b4be9f-d440-415b-9bd6-7ec7f1a39ea0",
+      "equipment_name": "WTNHJ02_",
+      "utility": "T2(IPA)",
+      "size": "3/4B",
+      "path_arrow": "R-D-H-H-H-R-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "342137f4-937d-4683-ba3b-570d31d2c5e0",
+          "similarity": 0.758957
+        },
+        {
+          "id": "293286d2-c214-4c96-8024-cb47775a593a",
+          "similarity": 0.689506
+        },
+        {
+          "id": "361439c4-2a39-4839-9edc-cfeaf690f379",
+          "similarity": 0.686938
+        },
+        {
+          "id": "04d6e216-2bbf-47a3-999b-c42060b60818",
+          "similarity": 0.684006
+        },
+        {
+          "id": "7606c182-c938-4fc3-ab17-9217ca6a4bea",
+          "similarity": 0.679112
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "342137f4-937d-4683-ba3b-570d31d2c5e0",
+          "cosine_distance": 0.122239,
+          "composite_similarity": 0.758957
+        },
+        {
+          "id": "293286d2-c214-4c96-8024-cb47775a593a",
+          "cosine_distance": 0.315394,
+          "composite_similarity": 0.689506
+        },
+        {
+          "id": "361439c4-2a39-4839-9edc-cfeaf690f379",
+          "cosine_distance": 0.318672,
+          "composite_similarity": 0.686938
+        },
+        {
+          "id": "04d6e216-2bbf-47a3-999b-c42060b60818",
+          "cosine_distance": 0.409627,
+          "composite_similarity": 0.684006
+        },
+        {
+          "id": "7606c182-c938-4fc3-ab17-9217ca6a4bea",
+          "cosine_distance": 0.272188,
+          "composite_similarity": 0.679112
+        }
+      ],
+      "search_time_ms": 21.89
+    },
+    {
+      "query_id": "da6e23b4-0f82-4544-8b96-e897ebdf9cac",
+      "equipment_name": "WTNHJ02_",
+      "utility": "UPW_S",
+      "size": "20A",
+      "path_arrow": "R-H-H-H-H-H-H-R-H-H-H-R-H-H-H-R-R-R-R-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "76168a2c-9b11-4b10-850f-9ea1bb6fbf27",
+          "similarity": 0.971891
+        },
+        {
+          "id": "dadca1a9-c04f-4518-adc9-b77a22897dbf",
+          "similarity": 0.918119
+        },
+        {
+          "id": "a868cc95-ce63-44f6-b2d9-3cc7283e5e6e",
+          "similarity": 0.880731
+        },
+        {
+          "id": "2801e2d1-3c29-49cf-bf44-1d722c4f58c6",
+          "similarity": 0.879772
+        },
+        {
+          "id": "e3d463cf-d483-4e90-b01f-5bb8114535df",
+          "similarity": 0.87767
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "76168a2c-9b11-4b10-850f-9ea1bb6fbf27",
+          "cosine_distance": 0.108911,
+          "composite_similarity": 0.971891
+        },
+        {
+          "id": "dadca1a9-c04f-4518-adc9-b77a22897dbf",
+          "cosine_distance": 0.206502,
+          "composite_similarity": 0.918119
+        },
+        {
+          "id": "a868cc95-ce63-44f6-b2d9-3cc7283e5e6e",
+          "cosine_distance": 0.28464,
+          "composite_similarity": 0.880731
+        },
+        {
+          "id": "2801e2d1-3c29-49cf-bf44-1d722c4f58c6",
+          "cosine_distance": 0.279886,
+          "composite_similarity": 0.879772
+        },
+        {
+          "id": "e3d463cf-d483-4e90-b01f-5bb8114535df",
+          "cosine_distance": 0.189095,
+          "composite_similarity": 0.87767
+        }
+      ],
+      "search_time_ms": 24.99
+    },
+    {
+      "query_id": "53dd8347-bdd0-4abb-8b92-743d3e454f43",
+      "equipment_name": "ELOHJ07",
+      "utility": "PA",
+      "size": "1/4B",
+      "path_arrow": "R-H-H-H-H-H-H-R-H-D-R-H-H-H-H-R-H-H-R-H-H-R-H-H-D-R",
+      "recall_at_k": 0.6,
+      "ndcg_at_k": 0.8298,
+      "spearman_rho": 0.75,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "2931fd16-4ae8-4998-a76f-b707b48575d7",
+          "similarity": 0.951812
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "similarity": 0.820053
+        },
+        {
+          "id": "4ae06fe3-1a4c-4bf2-98bd-6d8b232c7397",
+          "similarity": 0.806845
+        },
+        {
+          "id": "e1593423-4887-441a-b78f-63dbb8fb408d",
+          "similarity": 0.794263
+        },
+        {
+          "id": "53dd8347-bdd0-4abb-8b92-743d3e454f43",
+          "similarity": 0.783377
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "2931fd16-4ae8-4998-a76f-b707b48575d7",
+          "cosine_distance": 0.013419,
+          "composite_similarity": 0.951812
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "cosine_distance": 0.002646,
+          "composite_similarity": 0.820053
+        },
+        {
+          "id": "e1593423-4887-441a-b78f-63dbb8fb408d",
+          "cosine_distance": 0.015359,
+          "composite_similarity": 0.794263
+        },
+        {
+          "id": "d4c307f8-fc02-4fc8-a96b-299ed5e1b044",
+          "cosine_distance": 0.10018,
+          "composite_similarity": 0.782677
+        },
+        {
+          "id": "b4a80908-f3cc-4d28-8486-167194ce25eb",
+          "cosine_distance": 0.088635,
+          "composite_similarity": 0.776733
+        }
+      ],
+      "search_time_ms": 27.29
+    },
+    {
+      "query_id": "7cffb761-a474-4634-b11c-29e91a65fd8a",
+      "equipment_name": "SLWHJ02",
+      "utility": "PV_VENT",
+      "size": "1/4B",
+      "path_arrow": "H-R-H-H-H-R-R-R-R",
+      "recall_at_k": 0.2,
+      "ndcg_at_k": 0.1947,
+      "spearman_rho": 0.0,
+      "mrr": 0.0,
+      "gt_top_k": [
+        {
+          "id": "0f3f642e-60a7-4f0d-9705-706ccefae114",
+          "similarity": 0.767918
+        },
+        {
+          "id": "691c8b79-f280-402d-a281-9c2498cdce37",
+          "similarity": 0.684134
+        },
+        {
+          "id": "c2a2e7cd-0ac3-480a-8045-953742ae9877",
+          "similarity": 0.63802
+        },
+        {
+          "id": "293286d2-c214-4c96-8024-cb47775a593a",
+          "similarity": 0.604783
+        },
+        {
+          "id": "b10cbff6-7197-4d7a-be0b-bbee9e733151",
+          "similarity": 0.599853
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "293286d2-c214-4c96-8024-cb47775a593a",
+          "cosine_distance": 0.57336,
+          "composite_similarity": 0.604783
+        },
+        {
+          "id": "96468def-c655-4ab4-9009-1f686ce1fdc1",
+          "cosine_distance": 0.463289,
+          "composite_similarity": 0.576016
+        },
+        {
+          "id": "879ec375-ecc0-4252-b1a6-3b64e2e81491",
+          "cosine_distance": 0.463497,
+          "composite_similarity": 0.573802
+        },
+        {
+          "id": "98153e8f-7d8e-48d1-9ac8-932d3d11db8f",
+          "cosine_distance": 0.463533,
+          "composite_similarity": 0.572854
+        },
+        {
+          "id": "09b91176-5a61-4b5a-a158-c1e2cd5e69f2",
+          "cosine_distance": 0.488193,
+          "composite_similarity": 0.571746
+        }
+      ],
+      "search_time_ms": 26.82
+    },
+    {
+      "query_id": "cbf9d256-01d6-4e12-b815-a4f16dffaa26",
+      "equipment_name": "ELOHJ07",
+      "utility": "PN2",
+      "size": "1/4B",
+      "path_arrow": "R-H-H-H-H-H-R-H-R-H-R-H-R-H-H-H-H-D-R",
+      "recall_at_k": 0.75,
+      "ndcg_at_k": 0.7489,
+      "spearman_rho": 0.7,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "d4c307f8-fc02-4fc8-a96b-299ed5e1b044",
+          "similarity": 0.882282
+        },
+        {
+          "id": "cbf9d256-01d6-4e12-b815-a4f16dffaa26",
+          "similarity": 0.784378
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "similarity": 0.782741
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "similarity": 0.772642
+        },
+        {
+          "id": "2931fd16-4ae8-4998-a76f-b707b48575d7",
+          "similarity": 0.761446
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "d4c307f8-fc02-4fc8-a96b-299ed5e1b044",
+          "cosine_distance": 0.282813,
+          "composite_similarity": 0.882282
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "cosine_distance": 0.074946,
+          "composite_similarity": 0.782741
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "cosine_distance": 0.174156,
+          "composite_similarity": 0.772642
+        },
+        {
+          "id": "2931fd16-4ae8-4998-a76f-b707b48575d7",
+          "cosine_distance": 0.193313,
+          "composite_similarity": 0.761446
+        },
+        {
+          "id": "e1593423-4887-441a-b78f-63dbb8fb408d",
+          "cosine_distance": 0.101718,
+          "composite_similarity": 0.761387
+        }
+      ],
+      "search_time_ms": 27.13
+    },
+    {
+      "query_id": "d2cc11c6-48b8-49f9-9dbc-909b3013b1ac",
+      "equipment_name": "Scrubber_001",
+      "utility": "PFC",
+      "size": "50A",
+      "path_arrow": "H-H-R-R-H-H-R-H-H-D-R-D-H-H",
+      "recall_at_k": 0.4,
+      "ndcg_at_k": 0.7325,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "5cb39ebc-678f-440d-a6d2-e027d6af06a9",
+          "similarity": 0.849965
+        },
+        {
+          "id": "691c8b79-f280-402d-a281-9c2498cdce37",
+          "similarity": 0.610415
+        },
+        {
+          "id": "c2a2e7cd-0ac3-480a-8045-953742ae9877",
+          "similarity": 0.608261
+        },
+        {
+          "id": "360b7d7d-ff15-4022-8160-e43b186f2860",
+          "similarity": 0.596373
+        },
+        {
+          "id": "e3086dcf-503a-425e-8f4b-2856c1ae2901",
+          "similarity": 0.59395
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "5cb39ebc-678f-440d-a6d2-e027d6af06a9",
+          "cosine_distance": 0.263059,
+          "composite_similarity": 0.849965
+        },
+        {
+          "id": "691c8b79-f280-402d-a281-9c2498cdce37",
+          "cosine_distance": 0.655032,
+          "composite_similarity": 0.610415
+        },
+        {
+          "id": "0f3f642e-60a7-4f0d-9705-706ccefae114",
+          "cosine_distance": 0.623831,
+          "composite_similarity": 0.588589
+        },
+        {
+          "id": "b5c42f37-046a-4ba9-903b-6512f67dbcab",
+          "cosine_distance": 0.749511,
+          "composite_similarity": 0.575745
+        },
+        {
+          "id": "bd91c40b-ef5b-478f-a9fb-31b6ec652c29",
+          "cosine_distance": 0.729686,
+          "composite_similarity": 0.574477
+        }
+      ],
+      "search_time_ms": 27.16
+    },
+    {
+      "query_id": "b4a80908-f3cc-4d28-8486-167194ce25eb",
+      "equipment_name": "SLWHJ02",
+      "utility": "PA",
+      "size": "1/4B",
+      "path_arrow": "R-H-H-H-H-H-H-H-R-H-R-H-H-H-R-H-H-R-H-R-R",
+      "recall_at_k": 0.6,
+      "ndcg_at_k": 0.8298,
+      "spearman_rho": 0.75,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "63f06de1-94ca-4a1a-a2b2-75ab7afbd469",
+          "similarity": 0.832135
+        },
+        {
+          "id": "8be2bed2-29c1-442a-8555-fdba335d1ee2",
+          "similarity": 0.806166
+        },
+        {
+          "id": "16c97265-a5e1-42b3-954f-0bf35137edd5",
+          "similarity": 0.794612
+        },
+        {
+          "id": "5c14d9ba-570a-43fe-b7a4-3983756331bc",
+          "similarity": 0.788075
+        },
+        {
+          "id": "b4a80908-f3cc-4d28-8486-167194ce25eb",
+          "similarity": 0.779923
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "63f06de1-94ca-4a1a-a2b2-75ab7afbd469",
+          "cosine_distance": 0.024492,
+          "composite_similarity": 0.832135
+        },
+        {
+          "id": "8be2bed2-29c1-442a-8555-fdba335d1ee2",
+          "cosine_distance": 0.11526,
+          "composite_similarity": 0.806166
+        },
+        {
+          "id": "5c14d9ba-570a-43fe-b7a4-3983756331bc",
+          "cosine_distance": 0.090816,
+          "composite_similarity": 0.788075
+        },
+        {
+          "id": "c8e9073f-0d2e-4d2b-88fe-2585049a3ddc",
+          "cosine_distance": 0.2493,
+          "composite_similarity": 0.766325
+        },
+        {
+          "id": "8fd60ae9-da8a-4db7-a8af-7432f5367932",
+          "cosine_distance": 0.263027,
+          "composite_similarity": 0.760296
+        }
+      ],
+      "search_time_ms": 26.18
+    },
+    {
+      "query_id": "97e80aa5-0809-40de-83ce-00c29c268095",
+      "equipment_name": "kscta01",
+      "utility": "AKWW",
+      "size": "20A",
+      "path_arrow": "R-H-R-R-R-R-H-H-H-R-R-R-R-H-R",
+      "recall_at_k": 0.75,
+      "ndcg_at_k": 0.8231,
+      "spearman_rho": 0.8,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "b5c42f37-046a-4ba9-903b-6512f67dbcab",
+          "similarity": 0.95
+        },
+        {
+          "id": "bd91c40b-ef5b-478f-a9fb-31b6ec652c29",
+          "similarity": 0.914088
+        },
+        {
+          "id": "97e80aa5-0809-40de-83ce-00c29c268095",
+          "similarity": 0.907617
+        },
+        {
+          "id": "1877e033-0fd9-4e9d-ad41-3b3489080f8c",
+          "similarity": 0.903646
+        },
+        {
+          "id": "1877e033-0fd9-4e9d-ad41-3b3489080f8c",
+          "similarity": 0.883743
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "b5c42f37-046a-4ba9-903b-6512f67dbcab",
+          "cosine_distance": 0.209649,
+          "composite_similarity": 0.95
+        },
+        {
+          "id": "bd91c40b-ef5b-478f-a9fb-31b6ec652c29",
+          "cosine_distance": 0.092706,
+          "composite_similarity": 0.914088
+        },
+        {
+          "id": "1877e033-0fd9-4e9d-ad41-3b3489080f8c",
+          "cosine_distance": 0.090273,
+          "composite_similarity": 0.903646
+        },
+        {
+          "id": "1877e033-0fd9-4e9d-ad41-3b3489080f8c",
+          "cosine_distance": 0.089658,
+          "composite_similarity": 0.883743
+        },
+        {
+          "id": "f44605a5-9554-40f2-b90a-6e0ce23a7068",
+          "cosine_distance": 0.237783,
+          "composite_similarity": 0.874284
+        }
+      ],
+      "search_time_ms": 25.78
+    },
+    {
+      "query_id": "d962180a-daed-437b-91fc-882a5eb3ac21",
+      "equipment_name": "SLWHJ02",
+      "utility": "Ar",
+      "size": "1/4B",
+      "path_arrow": "H-R-H-H-H-H-H-H-H-H-H-H-R-H-R-H-H-H-R-H-H-R-H-R-R",
+      "recall_at_k": 0.6,
+      "ndcg_at_k": 0.6583,
+      "spearman_rho": -1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "b985b848-72e1-49ce-8ef9-9b543dd095ad",
+          "similarity": 0.899092
+        },
+        {
+          "id": "00e59291-15a8-4fa5-a965-c15374595463",
+          "similarity": 0.897692
+        },
+        {
+          "id": "058d064c-1b8d-44d8-9767-a85e0da41bec",
+          "similarity": 0.893257
+        },
+        {
+          "id": "2b304490-caa6-4629-a04d-60e01f636aae",
+          "similarity": 0.886604
+        },
+        {
+          "id": "8db32389-232b-400a-9cbb-4a7ffca27fc6",
+          "similarity": 0.866029
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "b985b848-72e1-49ce-8ef9-9b543dd095ad",
+          "cosine_distance": 0.004461,
+          "composite_similarity": 0.899092
+        },
+        {
+          "id": "2b304490-caa6-4629-a04d-60e01f636aae",
+          "cosine_distance": 0.264892,
+          "composite_similarity": 0.886604
+        },
+        {
+          "id": "8db32389-232b-400a-9cbb-4a7ffca27fc6",
+          "cosine_distance": 0.2601,
+          "composite_similarity": 0.866029
+        },
+        {
+          "id": "a8a2ad56-7041-4f9c-aa00-0f9bb5ba570d",
+          "cosine_distance": 0.206202,
+          "composite_similarity": 0.848482
+        },
+        {
+          "id": "dae692eb-c902-40a8-8282-f698b5c370bf",
+          "cosine_distance": 0.001247,
+          "composite_similarity": 0.843701
+        }
+      ],
+      "search_time_ms": 26.15
+    },
+    {
+      "query_id": "e960a6fe-1a22-4a16-bb47-7420c8f252c6",
+      "equipment_name": "PSTWA03",
+      "utility": "-",
+      "size": "3/4B",
+      "path_arrow": "R-D-H-D-H-H-H-H-H-H-R-H-H-R-H-H-R-H-H-H-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "25eebf81-7f8d-49df-979e-c7ef87bb4e16",
+          "similarity": 0.804966
+        },
+        {
+          "id": "433fe50b-1d49-4cb7-a1ca-d9461ce52104",
+          "similarity": 0.772301
+        },
+        {
+          "id": "9b7da154-c1b4-4ee2-b316-aba496205465",
+          "similarity": 0.746208
+        },
+        {
+          "id": "b6740c99-ead4-4633-b331-d2179f9c7967",
+          "similarity": 0.740001
+        },
+        {
+          "id": "63f06de1-94ca-4a1a-a2b2-75ab7afbd469",
+          "similarity": 0.717857
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "25eebf81-7f8d-49df-979e-c7ef87bb4e16",
+          "cosine_distance": 0.006515,
+          "composite_similarity": 0.804966
+        },
+        {
+          "id": "433fe50b-1d49-4cb7-a1ca-d9461ce52104",
+          "cosine_distance": 0.130133,
+          "composite_similarity": 0.772301
+        },
+        {
+          "id": "9b7da154-c1b4-4ee2-b316-aba496205465",
+          "cosine_distance": 0.08423,
+          "composite_similarity": 0.746208
+        },
+        {
+          "id": "b6740c99-ead4-4633-b331-d2179f9c7967",
+          "cosine_distance": 0.122915,
+          "composite_similarity": 0.740001
+        },
+        {
+          "id": "63f06de1-94ca-4a1a-a2b2-75ab7afbd469",
+          "cosine_distance": 0.208319,
+          "composite_similarity": 0.717857
+        }
+      ],
+      "search_time_ms": 24.79
+    },
+    {
+      "query_id": "776d30bb-86f7-4a92-980c-275523c206a7",
+      "equipment_name": "WTNHJ02_",
+      "utility": "UPW_S",
+      "size": "40A",
+      "path_arrow": "R-H-H-H-H-H-H-H-R-H-H-H-R-H-H-H-R-R-R-R-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "f81d217e-1f4c-433a-a5e6-ce9690ef5a9d",
+          "similarity": 0.943938
+        },
+        {
+          "id": "cf33a9fe-0d3b-4035-9907-59076a353b01",
+          "similarity": 0.934839
+        },
+        {
+          "id": "c8e9073f-0d2e-4d2b-88fe-2585049a3ddc",
+          "similarity": 0.917841
+        },
+        {
+          "id": "9b28dfda-86d5-499d-8147-4a195d9c6a80",
+          "similarity": 0.88238
+        },
+        {
+          "id": "da6e23b4-0f82-4544-8b96-e897ebdf9cac",
+          "similarity": 0.861411
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "f81d217e-1f4c-433a-a5e6-ce9690ef5a9d",
+          "cosine_distance": 0.156163,
+          "composite_similarity": 0.943938
+        },
+        {
+          "id": "cf33a9fe-0d3b-4035-9907-59076a353b01",
+          "cosine_distance": 0.195268,
+          "composite_similarity": 0.934839
+        },
+        {
+          "id": "c8e9073f-0d2e-4d2b-88fe-2585049a3ddc",
+          "cosine_distance": 0.237794,
+          "composite_similarity": 0.917841
+        },
+        {
+          "id": "9b28dfda-86d5-499d-8147-4a195d9c6a80",
+          "cosine_distance": 0.237362,
+          "composite_similarity": 0.88238
+        },
+        {
+          "id": "da6e23b4-0f82-4544-8b96-e897ebdf9cac",
+          "cosine_distance": 0.186226,
+          "composite_similarity": 0.861411
+        }
+      ],
+      "search_time_ms": 24.44
+    },
+    {
+      "query_id": "adb56770-9974-4a02-b8fb-318fd320d6b3",
+      "equipment_name": "kscta01",
+      "utility": "UPW_S",
+      "size": "25A",
+      "path_arrow": "R-H-H-H-H-H-H-H-H-R-H-R-H-H-H-H-H-H-H-H-H-H-R-H-R-H-H-H-H-H-H-H-R",
+      "recall_at_k": 0.6667,
+      "ndcg_at_k": 0.9948,
+      "spearman_rho": -1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "4c26c113-83ac-4c2f-b442-314e8ed191e1",
+          "similarity": 0.868665
+        },
+        {
+          "id": "90f17d8b-c0f0-4b57-8320-c4b320f662da",
+          "similarity": 0.847824
+        },
+        {
+          "id": "adb56770-9974-4a02-b8fb-318fd320d6b3",
+          "similarity": 0.828667
+        },
+        {
+          "id": "adb56770-9974-4a02-b8fb-318fd320d6b3",
+          "similarity": 0.814184
+        },
+        {
+          "id": "90f17d8b-c0f0-4b57-8320-c4b320f662da",
+          "similarity": 0.778387
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "4c26c113-83ac-4c2f-b442-314e8ed191e1",
+          "cosine_distance": 0.215751,
+          "composite_similarity": 0.868665
+        },
+        {
+          "id": "90f17d8b-c0f0-4b57-8320-c4b320f662da",
+          "cosine_distance": 0.252813,
+          "composite_similarity": 0.847824
+        },
+        {
+          "id": "90f17d8b-c0f0-4b57-8320-c4b320f662da",
+          "cosine_distance": 0.134694,
+          "composite_similarity": 0.778387
+        },
+        {
+          "id": "4c26c113-83ac-4c2f-b442-314e8ed191e1",
+          "cosine_distance": 0.097579,
+          "composite_similarity": 0.771435
+        },
+        {
+          "id": "4c26c113-83ac-4c2f-b442-314e8ed191e1",
+          "cosine_distance": 0.153902,
+          "composite_similarity": 0.688649
+        }
+      ],
+      "search_time_ms": 27.98
+    },
+    {
+      "query_id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+      "equipment_name": "ELOHJ07",
+      "utility": "PN2",
+      "size": "1/4B",
+      "path_arrow": "R-H-H-H-H-H-H-R-H-R-H-H-H-R-H-R-H-H-R-H-H-D-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 0.7671,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "cbf9d256-01d6-4e12-b815-a4f16dffaa26",
+          "similarity": 0.891196
+        },
+        {
+          "id": "e1593423-4887-441a-b78f-63dbb8fb408d",
+          "similarity": 0.881473
+        },
+        {
+          "id": "2931fd16-4ae8-4998-a76f-b707b48575d7",
+          "similarity": 0.848859
+        },
+        {
+          "id": "2931fd16-4ae8-4998-a76f-b707b48575d7",
+          "similarity": 0.829392
+        },
+        {
+          "id": "e1593423-4887-441a-b78f-63dbb8fb408d",
+          "similarity": 0.82833
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "cbf9d256-01d6-4e12-b815-a4f16dffaa26",
+          "cosine_distance": 0.088786,
+          "composite_similarity": 0.891196
+        },
+        {
+          "id": "e1593423-4887-441a-b78f-63dbb8fb408d",
+          "cosine_distance": 0.015624,
+          "composite_similarity": 0.881473
+        },
+        {
+          "id": "2931fd16-4ae8-4998-a76f-b707b48575d7",
+          "cosine_distance": 0.200447,
+          "composite_similarity": 0.848859
+        },
+        {
+          "id": "2931fd16-4ae8-4998-a76f-b707b48575d7",
+          "cosine_distance": 0.016492,
+          "composite_similarity": 0.829392
+        },
+        {
+          "id": "e1593423-4887-441a-b78f-63dbb8fb408d",
+          "cosine_distance": 0.203791,
+          "composite_similarity": 0.82833
+        }
+      ],
+      "search_time_ms": 25.87
+    },
+    {
+      "query_id": "1877e033-0fd9-4e9d-ad41-3b3489080f8c",
+      "equipment_name": "kscta01",
+      "utility": "AKWW",
+      "size": "20A",
+      "path_arrow": "R-H-R-R-R-R-H-H-H-H-R-R-R-R-H-R",
+      "recall_at_k": 0.5,
+      "ndcg_at_k": 0.8234,
+      "spearman_rho": -1.0,
+      "mrr": 0.2,
+      "gt_top_k": [
+        {
+          "id": "b5c42f37-046a-4ba9-903b-6512f67dbcab",
+          "similarity": 0.9375
+        },
+        {
+          "id": "97e80aa5-0809-40de-83ce-00c29c268095",
+          "similarity": 0.918265
+        },
+        {
+          "id": "1877e033-0fd9-4e9d-ad41-3b3489080f8c",
+          "similarity": 0.916409
+        },
+        {
+          "id": "1877e033-0fd9-4e9d-ad41-3b3489080f8c",
+          "similarity": 0.888595
+        },
+        {
+          "id": "f44605a5-9554-40f2-b90a-6e0ce23a7068",
+          "similarity": 0.869545
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "97e80aa5-0809-40de-83ce-00c29c268095",
+          "cosine_distance": 0.135111,
+          "composite_similarity": 0.918265
+        },
+        {
+          "id": "97e80aa5-0809-40de-83ce-00c29c268095",
+          "cosine_distance": 0.091349,
+          "composite_similarity": 0.868976
+        },
+        {
+          "id": "bd91c40b-ef5b-478f-a9fb-31b6ec652c29",
+          "cosine_distance": 0.239891,
+          "composite_similarity": 0.843365
+        },
+        {
+          "id": "5cc843cd-6307-4f27-b414-f8bde9d4a15e",
+          "cosine_distance": 0.310822,
+          "composite_similarity": 0.827335
+        },
+        {
+          "id": "b5c42f37-046a-4ba9-903b-6512f67dbcab",
+          "cosine_distance": 0.283271,
+          "composite_similarity": 0.822101
+        }
+      ],
+      "search_time_ms": 23.63
+    },
+    {
+      "query_id": "4232693d-b27d-4849-9090-488dc6728fca",
+      "equipment_name": "SLWHJ02",
+      "utility": "PN2",
+      "size": "1/4B",
+      "path_arrow": "H-R-D-H-H-H-H-H-H-H-H-H-H-H-R-H-R-H-H-H-H-H-R-H-R-H-H-H-H-H-H-H-H-H-H-H-R-H",
+      "recall_at_k": 0.3333,
+      "ndcg_at_k": 0.0974,
+      "spearman_rho": -1.0,
+      "mrr": 0.0,
+      "gt_top_k": [
+        {
+          "id": "4232693d-b27d-4849-9090-488dc6728fca",
+          "similarity": 0.868071
+        },
+        {
+          "id": "4232693d-b27d-4849-9090-488dc6728fca",
+          "similarity": 0.858059
+        },
+        {
+          "id": "9fef0329-c045-4578-bd21-dbd63f9a4de1",
+          "similarity": 0.843021
+        },
+        {
+          "id": "d08af87d-80f0-459f-bc88-eb7d1ff85ef4",
+          "similarity": 0.825773
+        },
+        {
+          "id": "d08af87d-80f0-459f-bc88-eb7d1ff85ef4",
+          "similarity": 0.825683
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "d08af87d-80f0-459f-bc88-eb7d1ff85ef4",
+          "cosine_distance": 0.549484,
+          "composite_similarity": 0.825683
+        },
+        {
+          "id": "52fc01ac-b7cf-41ad-841b-cc30ea23004e",
+          "cosine_distance": 0.079917,
+          "composite_similarity": 0.812291
+        },
+        {
+          "id": "8db32389-232b-400a-9cbb-4a7ffca27fc6",
+          "cosine_distance": 0.431007,
+          "composite_similarity": 0.807715
+        },
+        {
+          "id": "52fc01ac-b7cf-41ad-841b-cc30ea23004e",
+          "cosine_distance": 0.236752,
+          "composite_similarity": 0.776391
+        },
+        {
+          "id": "0c5f5a61-d33c-4dcb-babf-82edc4f007e6",
+          "cosine_distance": 0.365188,
+          "composite_similarity": 0.76511
+        }
+      ],
+      "search_time_ms": 31.04
+    },
+    {
+      "query_id": "64ce731f-e3e7-4b1c-9638-fe0c592d03b8",
+      "equipment_name": "ELOHJ07",
+      "utility": "PUMP",
+      "size": "50A",
+      "path_arrow": "R-R-R-D-D-R-D-R-R-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "b0aa31ec-2559-4cbb-8047-f3f1f6daafed",
+          "similarity": 0.964844
+        },
+        {
+          "id": "7290145d-afa9-45b2-a265-9b4d16774ed8",
+          "similarity": 0.799495
+        },
+        {
+          "id": "984c1024-148e-4d15-a780-b2f3e9f3e4dd",
+          "similarity": 0.787912
+        },
+        {
+          "id": "80ae15a0-4164-4a5c-9f57-17d2c038c665",
+          "similarity": 0.677784
+        },
+        {
+          "id": "aced1caa-5363-4586-aefa-764b97df9794",
+          "similarity": 0.673773
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "b0aa31ec-2559-4cbb-8047-f3f1f6daafed",
+          "cosine_distance": 0.001437,
+          "composite_similarity": 0.964844
+        },
+        {
+          "id": "7290145d-afa9-45b2-a265-9b4d16774ed8",
+          "cosine_distance": 0.021127,
+          "composite_similarity": 0.799495
+        },
+        {
+          "id": "984c1024-148e-4d15-a780-b2f3e9f3e4dd",
+          "cosine_distance": 0.149179,
+          "composite_similarity": 0.787912
+        },
+        {
+          "id": "80ae15a0-4164-4a5c-9f57-17d2c038c665",
+          "cosine_distance": 0.248364,
+          "composite_similarity": 0.677784
+        },
+        {
+          "id": "aced1caa-5363-4586-aefa-764b97df9794",
+          "cosine_distance": 0.311901,
+          "composite_similarity": 0.673773
+        }
+      ],
+      "search_time_ms": 23.87
+    },
+    {
+      "query_id": "879ec375-ecc0-4252-b1a6-3b64e2e81491",
+      "equipment_name": "DANHJ14",
+      "utility": "PN2",
+      "size": "1/8B",
+      "path_arrow": "R-R-H-H-R-H-R-H-R-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "98153e8f-7d8e-48d1-9ac8-932d3d11db8f",
+          "similarity": 0.996418
+        },
+        {
+          "id": "09b91176-5a61-4b5a-a158-c1e2cd5e69f2",
+          "similarity": 0.99292
+        },
+        {
+          "id": "96468def-c655-4ab4-9009-1f686ce1fdc1",
+          "similarity": 0.992695
+        },
+        {
+          "id": "590729b9-edc3-4f7f-afb0-d6adf6352666",
+          "similarity": 0.74038
+        },
+        {
+          "id": "8e67f73e-445c-482f-9d3c-bdd1905fd6b6",
+          "similarity": 0.738467
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "98153e8f-7d8e-48d1-9ac8-932d3d11db8f",
+          "cosine_distance": 1.2e-05,
+          "composite_similarity": 0.996418
+        },
+        {
+          "id": "09b91176-5a61-4b5a-a158-c1e2cd5e69f2",
+          "cosine_distance": 0.024288,
+          "composite_similarity": 0.99292
+        },
+        {
+          "id": "96468def-c655-4ab4-9009-1f686ce1fdc1",
+          "cosine_distance": 1.8e-05,
+          "composite_similarity": 0.992695
+        },
+        {
+          "id": "590729b9-edc3-4f7f-afb0-d6adf6352666",
+          "cosine_distance": 0.041786,
+          "composite_similarity": 0.74038
+        },
+        {
+          "id": "8e67f73e-445c-482f-9d3c-bdd1905fd6b6",
+          "cosine_distance": 0.066701,
+          "composite_similarity": 0.738467
+        }
+      ],
+      "search_time_ms": 24.73
+    },
+    {
+      "query_id": "d3eacff7-de5d-4b98-b074-48eb53e8ee22",
+      "equipment_name": "kscta01",
+      "utility": "ALKA",
+      "size": "65A",
+      "path_arrow": "D-R-H-H-H-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "3c807e98-23e0-4b70-9781-c82465547c1a",
+          "similarity": 0.995818
+        },
+        {
+          "id": "d914a43e-c878-496e-8030-48b48d17ee22",
+          "similarity": 0.975447
+        },
+        {
+          "id": "3424271a-5b83-4860-b675-73a953de2d75",
+          "similarity": 0.880957
+        },
+        {
+          "id": "81d2348c-87a8-4cae-8238-bbc05b3658e2",
+          "similarity": 0.794045
+        },
+        {
+          "id": "cae048f3-3e2e-41a2-b597-c764732ff12a",
+          "similarity": 0.792331
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "3c807e98-23e0-4b70-9781-c82465547c1a",
+          "cosine_distance": 0.087979,
+          "composite_similarity": 0.995818
+        },
+        {
+          "id": "d914a43e-c878-496e-8030-48b48d17ee22",
+          "cosine_distance": 0.039647,
+          "composite_similarity": 0.975447
+        },
+        {
+          "id": "3424271a-5b83-4860-b675-73a953de2d75",
+          "cosine_distance": 0.052277,
+          "composite_similarity": 0.880957
+        },
+        {
+          "id": "81d2348c-87a8-4cae-8238-bbc05b3658e2",
+          "cosine_distance": 0.065061,
+          "composite_similarity": 0.794045
+        },
+        {
+          "id": "cae048f3-3e2e-41a2-b597-c764732ff12a",
+          "cosine_distance": 0.019458,
+          "composite_similarity": 0.792331
+        }
+      ],
+      "search_time_ms": 23.35
+    },
+    {
+      "query_id": "fa9210cb-349b-4e13-a393-bfca14ff1ae8",
+      "equipment_name": "PSTWA03",
+      "utility": "OWW",
+      "size": "25A",
+      "path_arrow": "R-R-H-R-R-R-R-H-R-R-R-R-H-R-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "6dc0e809-5930-42e4-9e1a-930bbd3d895e",
+          "similarity": 0.983333
+        },
+        {
+          "id": "61af9d85-97ea-4d2d-bc56-494b117234f9",
+          "similarity": 0.878869
+        },
+        {
+          "id": "f44605a5-9554-40f2-b90a-6e0ce23a7068",
+          "similarity": 0.859662
+        },
+        {
+          "id": "7404da16-2d9a-48ba-979a-478b71ebbb49",
+          "similarity": 0.853128
+        },
+        {
+          "id": "5cc843cd-6307-4f27-b414-f8bde9d4a15e",
+          "similarity": 0.850941
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "6dc0e809-5930-42e4-9e1a-930bbd3d895e",
+          "cosine_distance": 0.187739,
+          "composite_similarity": 0.983333
+        },
+        {
+          "id": "61af9d85-97ea-4d2d-bc56-494b117234f9",
+          "cosine_distance": 0.10118,
+          "composite_similarity": 0.878869
+        },
+        {
+          "id": "f44605a5-9554-40f2-b90a-6e0ce23a7068",
+          "cosine_distance": 0.164698,
+          "composite_similarity": 0.859662
+        },
+        {
+          "id": "7404da16-2d9a-48ba-979a-478b71ebbb49",
+          "cosine_distance": 0.165301,
+          "composite_similarity": 0.853128
+        },
+        {
+          "id": "5cc843cd-6307-4f27-b414-f8bde9d4a15e",
+          "cosine_distance": 0.222695,
+          "composite_similarity": 0.850941
+        }
+      ],
+      "search_time_ms": 23.9
+    },
+    {
+      "query_id": "53dd8347-bdd0-4abb-8b92-743d3e454f43",
+      "equipment_name": "ELOHJ07",
+      "utility": "PA",
+      "size": "1/4B",
+      "path_arrow": "R-H-H-H-H-H-H-R-H-D-R-H-R-H-R-H-H-H-H-H-D-R",
+      "recall_at_k": 0.75,
+      "ndcg_at_k": 0.7019,
+      "spearman_rho": 0.8,
+      "mrr": 0.0,
+      "gt_top_k": [
+        {
+          "id": "53dd8347-bdd0-4abb-8b92-743d3e454f43",
+          "similarity": 0.945065
+        },
+        {
+          "id": "2931fd16-4ae8-4998-a76f-b707b48575d7",
+          "similarity": 0.943658
+        },
+        {
+          "id": "e1593423-4887-441a-b78f-63dbb8fb408d",
+          "similarity": 0.932128
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "similarity": 0.876056
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "similarity": 0.829057
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "2931fd16-4ae8-4998-a76f-b707b48575d7",
+          "cosine_distance": 0.029837,
+          "composite_similarity": 0.943658
+        },
+        {
+          "id": "e1593423-4887-441a-b78f-63dbb8fb408d",
+          "cosine_distance": 0.124551,
+          "composite_similarity": 0.932128
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "cosine_distance": 0.066594,
+          "composite_similarity": 0.876056
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "cosine_distance": 0.192826,
+          "composite_similarity": 0.829057
+        },
+        {
+          "id": "c2916053-d5a6-4fbe-b1f1-3b362c35de47",
+          "cosine_distance": 0.140098,
+          "composite_similarity": 0.818332
+        }
+      ],
+      "search_time_ms": 25.93
+    },
+    {
+      "query_id": "90f17d8b-c0f0-4b57-8320-c4b320f662da",
+      "equipment_name": "kscta01",
+      "utility": "UPW_S",
+      "size": "25A",
+      "path_arrow": "R-H-H-H-H-H-H-H-R-H-R-H-H-H-H-H-H-H-H-R",
+      "recall_at_k": 0.6667,
+      "ndcg_at_k": 0.4336,
+      "spearman_rho": 0.7,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "adb56770-9974-4a02-b8fb-318fd320d6b3",
+          "similarity": 0.840857
+        },
+        {
+          "id": "4c26c113-83ac-4c2f-b442-314e8ed191e1",
+          "similarity": 0.800083
+        },
+        {
+          "id": "adb56770-9974-4a02-b8fb-318fd320d6b3",
+          "similarity": 0.790263
+        },
+        {
+          "id": "90f17d8b-c0f0-4b57-8320-c4b320f662da",
+          "similarity": 0.767606
+        },
+        {
+          "id": "adb56770-9974-4a02-b8fb-318fd320d6b3",
+          "similarity": 0.758397
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "adb56770-9974-4a02-b8fb-318fd320d6b3",
+          "cosine_distance": 0.318244,
+          "composite_similarity": 0.840857
+        },
+        {
+          "id": "4c26c113-83ac-4c2f-b442-314e8ed191e1",
+          "cosine_distance": 0.317265,
+          "composite_similarity": 0.800083
+        },
+        {
+          "id": "adb56770-9974-4a02-b8fb-318fd320d6b3",
+          "cosine_distance": 0.230229,
+          "composite_similarity": 0.790263
+        },
+        {
+          "id": "adb56770-9974-4a02-b8fb-318fd320d6b3",
+          "cosine_distance": 0.203226,
+          "composite_similarity": 0.758397
+        },
+        {
+          "id": "d4c307f8-fc02-4fc8-a96b-299ed5e1b044",
+          "cosine_distance": 0.228376,
+          "composite_similarity": 0.751869
+        }
+      ],
+      "search_time_ms": 25.35
+    },
+    {
+      "query_id": "590729b9-edc3-4f7f-afb0-d6adf6352666",
+      "equipment_name": "DANHJ14",
+      "utility": "GN2",
+      "size": "1/8B",
+      "path_arrow": "R-H-H-R-H-R-H-R-R-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "8e67f73e-445c-482f-9d3c-bdd1905fd6b6",
+          "similarity": 0.988677
+        },
+        {
+          "id": "09b91176-5a61-4b5a-a158-c1e2cd5e69f2",
+          "similarity": 0.744841
+        },
+        {
+          "id": "98153e8f-7d8e-48d1-9ac8-932d3d11db8f",
+          "similarity": 0.742497
+        },
+        {
+          "id": "879ec375-ecc0-4252-b1a6-3b64e2e81491",
+          "similarity": 0.74038
+        },
+        {
+          "id": "96468def-c655-4ab4-9009-1f686ce1fdc1",
+          "similarity": 0.738831
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "8e67f73e-445c-482f-9d3c-bdd1905fd6b6",
+          "cosine_distance": 0.023765,
+          "composite_similarity": 0.988677
+        },
+        {
+          "id": "09b91176-5a61-4b5a-a158-c1e2cd5e69f2",
+          "cosine_distance": 0.065783,
+          "composite_similarity": 0.744841
+        },
+        {
+          "id": "98153e8f-7d8e-48d1-9ac8-932d3d11db8f",
+          "cosine_distance": 0.041767,
+          "composite_similarity": 0.742497
+        },
+        {
+          "id": "879ec375-ecc0-4252-b1a6-3b64e2e81491",
+          "cosine_distance": 0.041786,
+          "composite_similarity": 0.74038
+        },
+        {
+          "id": "96468def-c655-4ab4-9009-1f686ce1fdc1",
+          "cosine_distance": 0.04182,
+          "composite_similarity": 0.738831
+        }
+      ],
+      "search_time_ms": 22.91
+    },
+    {
+      "query_id": "8be2bed2-29c1-442a-8555-fdba335d1ee2",
+      "equipment_name": "SLWHJ02",
+      "utility": "PA",
+      "size": "1/2B",
+      "path_arrow": "R-H-R-H-H-H-H-H-H-H-R-H-R-H-R-H-H-R-R",
+      "recall_at_k": 0.6,
+      "ndcg_at_k": 0.6583,
+      "spearman_rho": -1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "b4a80908-f3cc-4d28-8486-167194ce25eb",
+          "similarity": 0.806166
+        },
+        {
+          "id": "89e5d182-bf09-4db5-bfb6-72fa7f163c56",
+          "similarity": 0.767371
+        },
+        {
+          "id": "52fc01ac-b7cf-41ad-841b-cc30ea23004e",
+          "similarity": 0.763646
+        },
+        {
+          "id": "5c14d9ba-570a-43fe-b7a4-3983756331bc",
+          "similarity": 0.761315
+        },
+        {
+          "id": "7c487c1c-8840-4852-96c3-7c22556d14cb",
+          "similarity": 0.759609
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "b4a80908-f3cc-4d28-8486-167194ce25eb",
+          "cosine_distance": 0.11526,
+          "composite_similarity": 0.806166
+        },
+        {
+          "id": "5c14d9ba-570a-43fe-b7a4-3983756331bc",
+          "cosine_distance": 0.022074,
+          "composite_similarity": 0.761315
+        },
+        {
+          "id": "7c487c1c-8840-4852-96c3-7c22556d14cb",
+          "cosine_distance": 0.077029,
+          "composite_similarity": 0.759609
+        },
+        {
+          "id": "4232693d-b27d-4849-9090-488dc6728fca",
+          "cosine_distance": 0.328081,
+          "composite_similarity": 0.747035
+        },
+        {
+          "id": "f81d217e-1f4c-433a-a5e6-ce9690ef5a9d",
+          "cosine_distance": 0.065482,
+          "composite_similarity": 0.729948
+        }
+      ],
+      "search_time_ms": 45.23
+    },
+    {
+      "query_id": "293f3198-8613-4883-abb9-622bfbf96e53",
+      "equipment_name": "WTNHJ02_",
+      "utility": "-",
+      "size": "1/2B",
+      "path_arrow": "R-H-H-H-H-H-H-H-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "5d3cd53a-d074-458a-b6c1-56434f8606b6",
+          "similarity": 0.952267
+        },
+        {
+          "id": "034b2cc4-706b-42e3-bf59-8a7831d413ac",
+          "similarity": 0.921228
+        },
+        {
+          "id": "c789b935-73ca-4329-a746-f02aeb82c99d",
+          "similarity": 0.914444
+        },
+        {
+          "id": "d0b38e6d-3e26-4712-b8f5-80984f61b797",
+          "similarity": 0.870759
+        },
+        {
+          "id": "a04dc7ad-39a7-474f-a929-22ca8178edcf",
+          "similarity": 0.845463
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "5d3cd53a-d074-458a-b6c1-56434f8606b6",
+          "cosine_distance": 0.002542,
+          "composite_similarity": 0.952267
+        },
+        {
+          "id": "034b2cc4-706b-42e3-bf59-8a7831d413ac",
+          "cosine_distance": 0.009784,
+          "composite_similarity": 0.921228
+        },
+        {
+          "id": "c789b935-73ca-4329-a746-f02aeb82c99d",
+          "cosine_distance": 0.000345,
+          "composite_similarity": 0.914444
+        },
+        {
+          "id": "d0b38e6d-3e26-4712-b8f5-80984f61b797",
+          "cosine_distance": 0.003691,
+          "composite_similarity": 0.870759
+        },
+        {
+          "id": "a04dc7ad-39a7-474f-a929-22ca8178edcf",
+          "cosine_distance": 0.05669,
+          "composite_similarity": 0.845463
+        }
+      ],
+      "search_time_ms": 66.22
+    },
+    {
+      "query_id": "b838c114-3ff8-41f1-8b31-cd03961403f6",
+      "equipment_name": "WTNHJ02_",
+      "utility": "-",
+      "size": "1/2B",
+      "path_arrow": "R-H-D-H-H-H-H-H-H-R",
+      "recall_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "spearman_rho": 1.0,
+      "mrr": 1.0,
+      "gt_top_k": [
+        {
+          "id": "2c562f2d-7957-424b-b999-bc891cce1c58",
+          "similarity": 0.88492
+        },
+        {
+          "id": "a04dc7ad-39a7-474f-a929-22ca8178edcf",
+          "similarity": 0.874958
+        },
+        {
+          "id": "d0b38e6d-3e26-4712-b8f5-80984f61b797",
+          "similarity": 0.853555
+        },
+        {
+          "id": "034b2cc4-706b-42e3-bf59-8a7831d413ac",
+          "similarity": 0.829301
+        },
+        {
+          "id": "c789b935-73ca-4329-a746-f02aeb82c99d",
+          "similarity": 0.822191
+        }
+      ],
+      "vec_top_k": [
+        {
+          "id": "2c562f2d-7957-424b-b999-bc891cce1c58",
+          "cosine_distance": 0.008428,
+          "composite_similarity": 0.88492
+        },
+        {
+          "id": "a04dc7ad-39a7-474f-a929-22ca8178edcf",
+          "cosine_distance": 0.085562,
+          "composite_similarity": 0.874958
+        },
+        {
+          "id": "d0b38e6d-3e26-4712-b8f5-80984f61b797",
+          "cosine_distance": 0.015851,
+          "composite_similarity": 0.853555
+        },
+        {
+          "id": "034b2cc4-706b-42e3-bf59-8a7831d413ac",
+          "cosine_distance": 0.008546,
+          "composite_similarity": 0.829301
+        },
+        {
+          "id": "c789b935-73ca-4329-a746-f02aeb82c99d",
+          "cosine_distance": 0.028387,
+          "composite_similarity": 0.822191
+        }
+      ],
+      "search_time_ms": 23.37
+    }
+  ]
+}
