@@ -1,32 +1,41 @@
-# ==============================================================================
-# 실행 방법 (Command Line)
-# python duct_poc_clustering.py <DATA_DIRECTORY_PATH>
-# 예시: python duct_poc_clustering.py ./data-v10
-# 예시: python duct_poc_clustering.py ./data-v11
-# [전체적인 흐름도 및 알고리즘]
-# 1. 인자로 받은 디렉토리 내의 모든 JSON 파일을 재귀적으로 탐색합니다.
-# 2. 각 JSON 파일에서 노드(Nodes)와 장비(Equipment) 중 덕트(DUCT) 타입의 정보를 추출하여 해시맵(Dictionary)을 구성합니다.
-# 3. 장비(Equipment)가 소유한 PoC(Start PoC)와 그 종단점(End PoC)이 지칭하는 대상이 덕트(Duct)인지 확인합니다.
-# 4. 덕트에 연결된 PoC(TakeOff 포인트 등)의 좌표(x,y,z)를 가져옵니다.
-# 5. 덕트의 3D 바운딩 박스를 통해, 각 PoC가 결속된 덕트의 대상 면적 방향(Face: 상단/좌측/우측 등)을 판별해냅니다.
-# 6. 식별된(추출된) 덕트 PoC 목록을 장비명-덕트ID 기준으로 그룹화합니다.
-# 7. 그룹화된 데이터를 기반으로, 각 유틸리티별 집합에 대한 PoC 간의 내부 최소, 최대 유클리디안 거리를 연산하여 클러스터링을 구성합니다.
-# 8. 클러스터 그룹 내 PoC 포인트들을 감싸는 좌표축별 Range와 직육면체 3D 바운딩 박스를 계산해냅니다.
-# 9. 모든 JSON 파일의 검사가 끝나면 CSV, Excel 포맷으로 내보내기를 수행합니다.
+# =====================================================================================
+# [실행 명령어]
+#   python duct_poc_clustering.py ./data-v10
+#   python duct_poc_clustering.py ./data-v11
+# =====================================================================================
 #
-# [주요 함수 설명]
-# - calc_dist(p1, p2): 3차원 유클리드 거리를 산출.
-# - detect_poc_face(poc_pos, duct_bbox): 바운딩 박스를 기준으로 대상 PoC가 꽂히는 면을 (TOP/LEFT/RIGHT/UNKNOWN)으로 판정합니다.
-# - min_distance(pocs): 단일 클러스터/유틸리티 내부 노드간의 최단 이격 거리를 구합니다.
-# - max_distance(pocs): 클러스터/유틸리티 내부 노드간 뻗어나간 장축(최대선) 거리를 구합니다.
-# - extract_duct_poc_analysis(directory): 디렉토리 대상 JSON 파일 핵심 분석 루프.
-# - export_results(records, output_prefix): CSV, Excel 파일 생성.
+# duct_poc_clustering.py  — 덕트 PoC 클러스터링 분석
+# ====================================================
 #
-# [주요 변수 설명]
-# - records: 최종 CSV, Excel 통계 익스포트에 사용할 리스트 형식의 딕셔너리 테이블.
-# - node_map: JSON `nodes` 객체들을 GUID 기준으로 빠른 탐색(O(1))이 가능하게 만든 맵.
-# - duct_info_map: 분석 대상 장비 중 '덕트(DUCT)'만을 거른 사전형 정보.
-# ==============================================================================
+# [프로그램 개요]
+#   3D 배관 설계 JSON에서 덕트(DUCT) 타입 장비의 PoC(TakeOff 접속점)를
+#   추출·클러스터링하고, 각 클러스터의 3D 바운딩 박스 및 이격 거리를 계산합니다.
+#
+# [전체 흐름도]
+#   ┌──────────────────────────────────────────────────────────────┐
+#   │  1. 디렉토리 내 *.json 파일 재귀 탐색                       │
+#   │  2. Nodes + Equipment(DUCT) 해시맵 구성                     │
+#   │  3. 장비 PoC → 덕트 종단점 매칭 확인                        │
+#   │  4. 덕트 PoC 좌표 추출 + 접속면(Face) 판별                  │
+#   │     └─ detect_poc_face(): TOP/LEFT/RIGHT/UNKNOWN            │
+#   │  5. 장비명-덕트ID 기준 그룹화                               │
+#   │  6. 유틸리티별 PoC 간 유클리디안 거리 → 클러스터링           │
+#   │  7. 클러스터 3D 바운딩 박스 + Range 계산                    │
+#   │  8. CSV + Excel 내보내기                                    │
+#   └──────────────────────────────────────────────────────────────┘
+#
+# [주요 함수]
+#   - calc_dist(p1, p2)                       : 3D 유클리디안 거리
+#   - detect_poc_face(poc_pos, duct_bbox)      : PoC 접속면 판별 (TOP/LEFT/RIGHT)
+#   - min_distance(pocs) / max_distance(pocs)  : 클러스터 내 최소/최대 이격거리
+#   - extract_duct_poc_analysis(directory)      : 핵심 분석 루프
+#   - export_results(records, output_prefix)    : CSV + Excel 생성
+#
+# [주요 변수]
+#   - records        : 최종 익스포트용 딕셔너리 리스트
+#   - node_map       : GUID→노드 빠른 조회 맵 (O(1))
+#   - duct_info_map  : 덕트 장비만 필터링한 정보 맵
+# =====================================================================================
 
 import os
 import json

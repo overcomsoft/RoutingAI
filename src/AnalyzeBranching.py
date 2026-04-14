@@ -1,30 +1,47 @@
+# =====================================================================================
+# [실행 명령어]
+#   python AnalyzeBranching.py --input ./data-v10 --output ./BranchAnalysisResults
+#   python AnalyzeBranching.py --input ./data-v11 --output ./BranchAnalysisResults
+# =====================================================================================
 """
-[실행 명령어]
-python AnalyzeBranching.py --input ./data-v10 --output ./BranchAnalysisResults
+AnalyzeBranching.py  — 배관 분기점 분석 프로그램
+==================================================
 
 [프로그램 개요]
-본 프로그램은 배관 설계 데이터(JSON)를 분석하여 장비(Equipment) 및 유틸리티(Utility)별로
-배관 네트워크 내의 분기점(Tee, Cross, Branch 등)의 현황을 파악하고 정밀한 통계를 산출합니다.
-모든 결과물에는 장비의 프로세스(Process), 제조사(Maker), 이름(Name), ID 및 설치 공간(Space) 정보가 포함됩니다.
-또한 각 분기점에서 연결된 실제 터미널 노드(PoC, Takeoff, Nozzle 등)의 ID를 추적하여 제공합니다.
+  배관 설계 데이터(JSON)를 분석하여 장비(Equipment) 및 유틸리티(Utility)별로
+  배관 네트워크 내의 분기점(Tee, Cross, Branch 등) 현황을 파악하고 정밀한 통계를 산출합니다.
+  모든 결과물에는 장비의 프로세스(Process), 제조사(Maker), 이름(Name), ID 및
+  설치 공간(Space) 정보가 포함됩니다.
 
-[전체적인 기능 흐름도]
-1. 초기화: 명령어 인자를 파싱하고 결과 저장 디렉토리 생성
-2. 파일 순회: 지정된 디렉토리 내의 모든 배관 설계 JSON 파일을 검색
-3. 데이터 로딩 및 인덱싱 (BranchGraph.load_from_json): 
-   - 노드(Nodes)와 엣지(Edges)를 메모리에 로드
-   - 엣지 정보를 바탕으로 인접 리스트(Adjacency List) 구축
-   - 장비의 PoC(Connection Points)를 노드 인덱스에 통합
-4. 분기 탐색 (BranchGraph.analyze_branches):
-   - 각 장비의 PoC를 시작점으로 설정
-   - BFS(너비 우선 탐색) 알고리즘을 사용하여 해당 유틸리티 라인의 모든 연결 경로 추적
-   - 각 노드 방문 시 분기점 판단 로직 수행
-5. 분기점 및 터미널 추적 알고리즘:
-   - 분기 판단: 노드의 'connectionGuidList' 속성 크기가 3개 이상인지 확인 (Tee: 3, Cross: 4 등)
-   - 터미널 추적: 분기점에서 각 방향으로 배관을 따라가며 끝점(PoC, Takeoff, Nozzle 등) 탐색
-6. 결과 집계 및 리포트 생성:
-   - 중복 데이터 제거 및 장비/유틸리티별 그룹화
-   - 상세 정보를 포함한 JSON 리포트 및 요약용 CSV 리포트 저장
+[전체 흐름도]
+  ┌──────────────────────────────────────────────────────────────┐
+  │  1. 초기화: argparse로 입출력 경로 파싱, 결과 디렉토리 생성  │
+  │  2. 파일 순회: data-v10/*.json 파일 검색                     │
+  │  3. 데이터 로딩 및 인덱싱 (BranchGraph.load_from_json)       │
+  │     ├─ Nodes/Edges를 메모리 로드                             │
+  │     ├─ 엣지 기반 인접 리스트(Adjacency List) 구축            │
+  │     └─ 장비 PoC를 노드 인덱스에 통합                         │
+  │  4. 분기 탐색 (BranchGraph.analyze_branches)                 │
+  │     ├─ 각 장비 PoC를 시작점으로 BFS 탐색                     │
+  │     ├─ 분기 판단: connectionGuidList 크기 ≥ 3 (Tee=3 등)     │
+  │     └─ 터미널 추적: 분기점→끝점(PoC, Takeoff, Nozzle) 탐색   │
+  │  5. 결과 집계: 중복 제거 + 장비/유틸리티별 그룹화             │
+  │  6. 리포트 저장: JSON(상세) + CSV(요약)                      │
+  └──────────────────────────────────────────────────────────────┘
+
+[주요 클래스/함수]
+  - BranchGraph                : 배관 네트워크 위상(Topology) 분석 핵심 클래스
+    .load_from_json()          : JSON → 그래프 구조 구축
+    .analyze_branches()        : BFS로 분기점 탐색 및 터미널 추적
+  - _get_guid()                : 객체에서 GUID 추출 (guid/id/GUID 우선순위)
+  - _get_human_id()            : 사람이 읽기 좋은 ID 추출
+  - _get_position()            : 노드의 3D 좌표 추출 (다양한 JSON 포맷 대응)
+
+[주요 변수]
+  - node_by_guid               : GUID→노드 정보 테이블
+  - edge_by_guid               : GUID→엣지(배관) 정보 테이블
+  - adj                        : 인접 리스트 (노드GUID → [(엣지, 이웃GUID), ...])
+  - equipment_list             : 파일 내 장비 목록
 """
 
 import json

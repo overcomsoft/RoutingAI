@@ -1,0 +1,12 @@
+{
+  "bbox_max": {
+    "x": 6670.0,
+    "y": 8841.3,
+    "z": 11492.0
+  },
+  "displacement_max": 11545.73369737741,
+  "total_length_max": 24120.2,
+  "bend_count_max": 35,
+  "obstacle_score_max": 1.0,
+  "support_score_max": 1.0
+}

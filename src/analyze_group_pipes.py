@@ -1,48 +1,52 @@
-# ==============================================================================
-# 실행 명령어 (Command Line)
-# python analyze_group_pipes.py <데이터_디렉토리_경로> --mode <equipment|utility> [알고리즘_옵션]
-# 예시: python analyze_group_pipes.py ./data-v10 --mode equipment --tol_z 150 --max_spacing 500
-# python analyze_group_pipes.py ./data-v10 --mode equipment --tol_z 150 --max_spacing 500 --min_group_count 2
-# python analyze_group_pipes.py ./data-v11 --mode equipment --tol_z 150 --max_spacing 500 --min_group_count 1
-# [프로그램 명]: analyze_group_pipes.py
-# [목적]: 3D 배관 설계 데이터(JSON)에서 인접한 배관들을 찾아 그룹(Group)으로 묶고 통계를 산출합니다.
+# =====================================================================================
+# [실행 명령어]
+#   python analyze_group_pipes.py ./data-v10 --mode equipment --tol_z 150 --max_spacing 500
+#   python analyze_group_pipes.py ./data-v10 --mode equipment --tol_z 150 --max_spacing 500 --min_group_count 2
+#   python analyze_group_pipes.py ./data-v11 --mode equipment --tol_z 150 --max_spacing 500 --min_group_count 1
+# =====================================================================================
 #
-# [주요 기능]:
-#   - 장비(Equipment)별 연결 배관 추출 (BFS 탐색)
-#   - 입상(수직) 및 수평 배관 분류
-#   - 유틸리티별 그룹핑 및 클러스터링 기반 군집화
-#   - 그룹별 3D 바운더리(Min/Max), 간격(Spacing), 고도(Elevation) 연산
-#   - 결과를 CSV 파일로 저장합니다.
+# analyze_group_pipes.py  — 3D 배관 그룹 분석 및 클러스터링
+# ==========================================================
 #
-# [전체적인 흐름도 (Workflow)]
-# 1. 프로그램 시작: argparse를 통해 분석할 디렉토리와 모드를 설정합니다.
-# 2. 파일 탐색: 지정된 경로에서 수동/자동으로 모든 .json 파일을 리스트업합니다.
-# 3. 데이터 파싱 (analyze_json 함수):
-#    - Nodes: 각 노드의 UUID와 3D 좌표(x, y, z)를 매핑합니다.
-#    - Edges: 배관 연결 정보를 읽고, 유효한 길이를 가진 항목들을 PipeData(클래스) 객체로화.
-#    - Equipment: 장비 목록과 각 장비의 POC(Point of Connection) 정보를 추출.
-# 4. 배관 추출 및 그래프 탐색: BFS(너비 우선 탐색) 진행
-# 5. 배관 분류 및 정렬:
-#    - 방향 벡터(Direction)를 분석해 Z축 편차에 따라 수직(Vertical), 수평(Horizontal) 선별
-# 6. 그룹 클러스터링 알고리즘 적용: (group_vertical_pipes, group_horizontal_pipes)
-# 7. 결과 및 병합: 중복 추출된 서브셋들을 정리하고 내보내기 리스트 컴파일.
+# [프로그램 개요]
+#   3D 배관 설계 데이터(JSON)에서 인접한 배관들을 찾아 그룹(Group)으로 묶고
+#   그룹별 통계(바운더리, 간격, 고도 등)를 산출하여 CSV로 저장합니다.
 #
-# [주요 함수 설명]
-# - dot_product(v1, v2): 두 벡터간 내적.
-# - normalize(v): 3D 좌표 단위 방향 벡터 변환.
-# - group_by_tolerance(items, selector, tolerance): 공차(Tolerance) 이내에 있는 근접 파이프들을 초기 1차 묶음으로 정의.
-# - group_by_direction(items, angle_tolerance_deg): 파이프간 정렬/방향 벡터의 내적을 통한 각도 평행성 검증(2차 필터링).
-# - cluster_vertical_pipes(...) / cluster_horizontal_pipes(...): BFS 큐(Queue) 알고리즘을 이용하는 최종 3차 밀집 공간 클러스터링을 도출.
-# - create_pipe_group(...): 추출된 군집들을 통계화하고 '바운딩 박스', 'BOP' 등을 포함한 데이터 레코드로 포맷팅.
-# - analyze_json(file_path, mode): JSON 파일을 로드하고 위의 모든 알고리즘을 파이프라인처럼 연결하는 핵심.
+# [전체 흐름도]
+#   ┌───────────────────────────────────────────────────────────────┐
+#   │  1. argparse로 분석 디렉토리/모드 설정                        │
+#   │  2. 디렉토리 내 *.json 파일 검색                              │
+#   │  3. 데이터 파싱 (analyze_json):                               │
+#   │     ├─ Nodes: UUID→3D좌표 매핑                                │
+#   │     ├─ Edges: 유효 배관 → PipeData 객체 생성                   │
+#   │     └─ Equipment: 장비 목록 + POC 추출                         │
+#   │  4. BFS 기반 배관 추출 및 그래프 탐색                          │
+#   │  5. 배관 분류: 방향벡터 분석 → 수직/수평 분류                   │
+#   │  6. 3단계 클러스터링:                                          │
+#   │     ├─ 1차: Z축 공차 기반 초기 묶음 (group_by_tolerance)       │
+#   │     ├─ 2차: 방향 벡터 평행성 검증 (group_by_direction)         │
+#   │     └─ 3차: BFS 밀집 공간 클러스터 (cluster_*_pipes)           │
+#   │  7. 그룹 통계 산출 + CSV 저장                                  │
+#   └───────────────────────────────────────────────────────────────┘
 #
-# [주요 전역/로컬 변수]
-# - TOL_Z_ELEVATION, MAX_SPACING, TOL_ANGLE_DEG 등 Constants: 배관 묶음의 물리적 오차 한도 조건.
-# - nodes, edges, equipments: 파싱된 원시 데이터 컬렉션
-# - node_positions: GUID 식별자를 통한 배관들의 기준 중심 좌표
-# - all_pipes: Edge/Connection 구역들로 선별 완성된 전체 PipeData 객체 리스트 모음
-# - space_info: 층(Level), 구역(Bay) 등을 정의하기 위한 바운딩 인포메이션
-# ==============================================================================
+# [주요 함수]
+#   - dot_product(v1, v2)          : 두 3D 벡터의 내적
+#   - normalize(v)                 : 3D 벡터를 단위 방향 벡터로 변환
+#   - group_by_tolerance()         : 공차 이내 근접 파이프 1차 묶음
+#   - group_by_direction()         : 방향 벡터 내적 기반 평행성 2차 필터링
+#   - cluster_vertical_pipes()     : 수직 배관 BFS 밀집 공간 3차 클러스터링
+#   - cluster_horizontal_pipes()   : 수평 배관 BFS 밀집 공간 3차 클러스터링
+#   - create_pipe_group()          : 군집→통계 레코드 포맷팅 (바운딩박스, BOP 등)
+#   - analyze_json(file_path, mode): 전체 파이프라인 실행 (파싱→분류→클러스터링)
+#
+# [주요 전역 변수]
+#   - TOL_Z_ELEVATION (100mm)      : 수평 배관 판단 Z축 허용 오차
+#   - TOL_ANGLE_DEG (3°)           : 평행 판단 최대 허용 각도
+#   - MAX_SPACING (300mm)          : 그룹 내 인접 배관 최대 허용 간격
+#   - MAX_LONGITUDINAL_GAP (1000mm): 길이 방향 겹침/이격 한계치
+#   - TOL_ALIGNMENT (100mm)        : 정렬 축 이탈 오차 범위
+#   - MIN_GROUP_SIZE               : 유의미한 그룹 최소 배관 수
+# =====================================================================================
 
 
 import json

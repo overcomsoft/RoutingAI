@@ -1,18 +1,49 @@
 # -*- coding: utf-8 -*-
+# =====================================================================================
+# [실행 명령어]
+#   python import_obstacles_json.py ./data-v10 --dbname AUTOROUTINGV7 --user postgres --password dinno --host localhost -p 5432
+#   python import_obstacles_json.py ./data-v10 --dbname AUTOROUTINGV7 --user postgres --password dinno --host localhost -p 5432 --clean
+#   python import_obstacles_json.py ./data-v11 --dbname AUTOROUTINGV7 --user postgres --password dinno --host localhost -p 5432 --clean
+# =====================================================================================
 """
-실행 명령어 (Command Line):
-python import_obstacles_json.py <JSON_DIR_PATH> --dbname <DB_NAME> --user <DB_USER> --password <DB_PW> [--host DB_HOST -p DB_PORT] [--clean]
-예시: python import_obstacles_json.py ./data-v10 --dbname AUTOROUTINGV7 --user postgres --password dinno --host localhost -p 5432
-      python import_obstacles_json.py ./data-v10 --dbname AUTOROUTINGV7 --user postgres --password dinno --host localhost -p 5432 --clean
-      python import_obstacles_json.py ./data-v11 --dbname AUTOROUTINGV7 --user postgres --password dinno --host localhost -p 5432 --clean
+import_obstacles_json.py  — BIM 데이터 통합 임포트 시스템 (v3.0)
+================================================================
 
-BIM 데이터 통합 임포트 시스템 (v3.0)
-------------------------------------
-기능:
-1. JSON 파일로부터 장애물(Obstacles), 공간 레벨(SpaceInfo), 장비(Equipment), 덕트/라테랄(Duct/Lateral) 정보를 통합 추출합니다.
-2. 모든 데이터를 데이터베이스 임포트 전 CSV 파일로 백업/생성합니다.
-3. PostgreSQL(PostGIS)에 Multi-Table 구성을 지원하며 3D 공간 데이터(box3d, MultiPointZ)를 저장합니다.
-4. 스키마 자동 검증 및 상세 통계 보고를 지원합니다.
+[프로그램 개요]
+  BIM 설계 JSON 파일로부터 장애물(Obstacles), 공간 레벨(SpaceInfo), 장비(Equipment),
+  덕트/라테랄(Duct/Lateral) 정보를 통합 추출하여 PostgreSQL(PostGIS)에 적재합니다.
+
+[전체 흐름도]
+  ┌──────────────────────────────────────────────────────────────┐
+  │  1. JSON 디렉토리 내 *.json 파일 검색                        │
+  │  2. 데이터 추출 (extract_all_data_from_json):                │
+  │     ├─ Obstacles: 장애물 BBox + ddworksType 분류             │
+  │     ├─ SpaceInfo: 공간 레벨(CSF/A/F/CR) BBox                │
+  │     ├─ Equipment: 장비 BBox + POC 좌표 (MultiPointZ)        │
+  │     └─ Duct/Lateral: 덕트·라테랄 BBox + 유틸리티            │
+  │  3. CSV 백업 파일 생성                                       │
+  │  4. PostgreSQL 테이블 스키마 검증/생성:                      │
+  │     ├─ TB_BIM_OBSTACLES (box3d)                              │
+  │     ├─ TB_BIM_SPACE_INFO (box3d)                             │
+  │     ├─ TB_BIM_EQUIPMENT (box3d + MultiPointZ)                │
+  │     └─ TB_DUCT_LATERAL (box3d)                               │
+  │  5. 기존 동일 파일 데이터 DELETE + 신규 INSERT               │
+  │  6. 통계 보고 출력                                           │
+  └──────────────────────────────────────────────────────────────┘
+
+[주요 함수]
+  - get_obstacle_schema_sql()      : TB_BIM_OBSTACLES CREATE 쿼리
+  - get_space_schema_sql()         : TB_BIM_SPACE_INFO CREATE 쿼리
+  - get_equipment_schema_sql()     : TB_BIM_EQUIPMENT CREATE 쿼리 (POC_GEOM 포함)
+  - get_duct_lateral_schema_sql()  : TB_DUCT_LATERAL CREATE 쿼리
+  - extract_all_data_from_json()   : JSON에서 4종 데이터 통합 추출
+  - run_integration_import()       : CSV 생성 + DB 적재 전체 파이프라인
+
+[주요 변수]
+  - OBSTACLE_TABLE                 : "TB_BIM_OBSTACLES"
+  - SPACE_TABLE                    : "TB_BIM_SPACE_INFO"
+  - EQUIPMENT_TABLE                : "TB_BIM_EQUIPMENT"
+  - DUCT_LATERAL_TABLE             : "TB_DUCT_LATERAL"
 """
 
 import json

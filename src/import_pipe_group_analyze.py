@@ -1,27 +1,40 @@
-# ==============================================================================
-# 실행 방법 (Command Line)
-# python import_pipe_group_analyze.py <CSV_FILE_PATH> --dbname <DB_NAME> --user <DB_USER> --password <DB_PW> [--host DB_HOST -p DB_PORT] [--clean]
-# 예시: python import_pipe_group_analyze.py ./group_rule_data-v11_20260406113523_equipment+util.csv --dbname AUTOROUTINGV7 --user postgres --password dinno --host localhost -p 5432 --clean
-# 원격  python import_pipe_group_analyze.py ./group_rule_data-v11_20260406113523_equipment+util.csv --dbname AUTOROUTINGV7 --user dinno  --password dinno --host 192.168.0.35 -p 55432 --clean
-# [전체적인 흐름도 및 알고리즘]
-# 1. 인자로 전달받은 CSV 경로 및 PostgreSQL 접속 정보를 파싱하여 읽어들입니다.
-# 2. PostgreSQL DB에 연결하고, TB_PIPE_GROUP_ANALYZE 테이블의 존재 및 스키마 구조(컬럼)를 비교하여 최신화합니다 (다를 경우 자동 재생성).
-# 3. PostGIS 확장을 로드하며, WKT 형상 데이터를 포함시킬 준비를 합니다. (POLYGON Z)
-# 4. CSV 파일을 읽고(parse_csv_data), 읽어온 정보를 기반으로 BBOX_GEOMETRY 생성을 위한 3D 바운딩 박스를 구성합니다.
-# 5. 기존에 저장된 동일한 파일명의 데이터가 존재하면 중복 적재 방지를 위해 DELETE를 수행합니다.
-# 6. executemany()를 사용해 파싱된 다수의 행(row) 데이터를 DB에 한 번에 (INSERT) 적재합니다.
+# =====================================================================================
+# [실행 명령어]
+#   python import_pipe_group_analyze.py ./group_rule_data-v11_20260406113523_equipment+util.csv \
+#       --dbname AUTOROUTINGV7 --user postgres --password dinno --host localhost -p 5432 --clean
+#   (원격) python import_pipe_group_analyze.py ./group_rule_data-v11_20260406113523_equipment+util.csv \
+#       --dbname AUTOROUTINGV7 --user dinno --password dinno --host 192.168.0.35 -p 55432 --clean
+# =====================================================================================
 #
-# [주요 함수 설명]
-# - get_db_schema_sql: TB_PIPE_GROUP_ANALYZE 테이블의 CREATE 구문을 반환하는 함수
-# - parse_csv_data(csv_path): 인코딩 문제(utf-8/cp949) 방지를 포함하여 CSV를 읽고 Python 데이터 튜플 리스트로 변환.
-# - run_postgresql_import(csv_path, db_params): 파싱된 데이터를 기반으로, PostGIS에서 인식 가능한 다각형 좌표(WKT)로 변환하고, DB에 적재를 수행.
+# import_pipe_group_analyze.py  — 배관 그룹 분석 결과 DB 적재
+# =============================================================
 #
-# [주요 변수 설명]
-# - rows: CSV에서 읽어들여 튜플 형태로 변환된 기본 메타 정보 리스트
-# - unique_filenames: 중복 스캔 시 이전 파일 레코드들을 찾아 삭제(DELETE) 쿼리를 날릴 타겟들
-# - wkt_str: 3차원 공간에서 그룹의 면적을 나타내기 위해 조합된 POLYGON Z WKT 문자열
-# - db_params: 데이터베이스 연결 주소(IP), 포트, 유저명, 비밀번호 등의 정보를 담고 있는 Dictionary
-# ==============================================================================
+# [프로그램 개요]
+#   analyze_group_pipes.py에서 생성한 배관 그룹 분석 CSV를 PostgreSQL(PostGIS)에 적재합니다.
+#   그룹의 3D 바운딩 박스를 POLYGON Z WKT로 변환하여 공간 쿼리를 지원합니다.
+#
+# [전체 흐름도]
+#   ┌──────────────────────────────────────────────────────────────┐
+#   │  1. CSV 경로 + DB 접속 정보 파싱 (argparse)                  │
+#   │  2. PostgreSQL 연결 + TB_PIPE_GROUP_ANALYZE 스키마 검증/생성 │
+#   │  3. PostGIS 확장 로드 (POLYGON Z 지원)                       │
+#   │  4. CSV 파싱 (parse_csv_data):                               │
+#   │     └─ 그룹 BBox → POLYGON Z WKT 변환                       │
+#   │  5. 동일 파일명 기존 데이터 DELETE (중복 방지)                │
+#   │  6. executemany()로 일괄 INSERT                              │
+#   └──────────────────────────────────────────────────────────────┘
+#
+# [주요 함수]
+#   - get_db_schema_sql()                   : TB_PIPE_GROUP_ANALYZE CREATE 쿼리
+#   - parse_csv_data(csv_path)              : CSV → 데이터 튜플 리스트 변환
+#   - run_postgresql_import(csv_path, db)   : POLYGON Z WKT 변환 + DB 적재
+#
+# [주요 변수]
+#   - rows             : CSV에서 변환된 메타 정보 리스트
+#   - unique_filenames : 중복 DELETE 대상 파일명 집합
+#   - wkt_str          : POLYGON Z WKT 문자열 (그룹 면적 표현)
+#   - db_params        : DB 접속 정보 딕셔너리
+# =====================================================================================
 
 import csv
 import argparse

@@ -1,3 +1,37 @@
+# =====================================================================================
+# [실행 명령어]
+#   python VisualizeRouting3D.py ./RoutingResults
+#   python VisualizeRouting3D.py ./RoutingResults/CMP_KSCTA01_Path.json
+# =====================================================================================
+"""
+VisualizeRouting3D.py  — 배관 경로 3D 시각화
+==============================================
+
+[프로그램 개요]
+  Phase 1(AnalyzeRoutingAi_V2.py)에서 추출한 배관 경로 JSON을
+  Plotly 3D Scatter를 사용하여 인터랙티브 HTML 파일로 시각화합니다.
+
+[전체 흐름도]
+  ┌──────────────────────────────────────────────────────────────┐
+  │  1. 입력 경로(디렉토리 또는 단일 JSON) 파싱                  │
+  │  2. 경로 JSON 로드 (load_path_json)                          │
+  │  3. 3D 시각화 구성 (visualize_paths):                        │
+  │     ├─ 시작점(POC) 마커: 빨간 다이아몬드                     │
+  │     ├─ 경로 선: 색상 팔레트로 구분된 3D 라인                 │
+  │     └─ 종단점 마커: 검정 사각형                              │
+  │  4. HTML 파일로 저장 (Visualize_{장비명}.html)               │
+  └──────────────────────────────────────────────────────────────┘
+
+[주요 함수]
+  - load_path_json(file_path)  : 경로 JSON 파일 로드
+  - visualize_paths(data)      : Plotly 3D 그래프 생성 + HTML 저장
+  - main()                     : CLI 진입점 (디렉토리/파일 자동 구분)
+
+[주요 변수]
+  - colors                     : 경로 구분용 색상 팔레트 (10색)
+  - fig                        : Plotly Figure 객체
+"""
+
 import json
 import os
 import glob

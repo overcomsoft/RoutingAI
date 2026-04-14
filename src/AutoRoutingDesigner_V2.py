@@ -1,26 +1,142 @@
 from __future__ import annotations
 
+# =====================================================================================
+# [실행 명령어]
+#   (단일 경로 자동설계)
+#   python AutoRoutingDesigner_V2.py --json_input ./data-v10/CMP_KSCTA01_*.json \
+#       --group_results ./GroupPipeResults/group_pipe_results_20260405194814.json \
+#       --equipment kscta01 --utility AKWW --size 20A \
+#       --start 5500,28200,15495 --dest 5300,27000,15495
+#
+#   (그룹 목록 조회)
+#   python AutoRoutingDesigner_V2.py --json_input ./data-v10/CMP_KSCTA01_*.json \
+#       --group_results ./GroupPipeResults/group_pipe_results_20260405194814.json \
+#       --list_groups --filter_equipment kscta01
+#
+#   (공간 컨텍스트 요약)
+#   python AutoRoutingDesigner_V2.py --json_input ./data-v10/CMP_KSCTA01_*.json \
+#       --group_results ./GroupPipeResults/group_pipe_results_20260405194814.json \
+#       --spatial_summary
+#
+#   (배치 자동설계)
+#   python AutoRoutingDesigner_V2.py --json_input ./data-v10/CMP_KSCTA01_*.json \
+#       --group_results ./GroupPipeResults/group_pipe_results_20260405194814.json \
+#       --batch_input ./batch_poc_list.json
+# =====================================================================================
 """
-AutoRoutingDesigner_V2.py
-==============================
-장비 형상, 장애물(기둥/빔), 종단점(부대장비/Duct/Lateral) 위치를 모두 고려하여
-자동 배관 경로를 설계하는 시스템입니다.
+AutoRoutingDesigner_V2.py  — 장애물 인식 자동 배관 경로 설계 시스템 (V2)
+========================================================================
 
-핵심 개선 사항 (V1 대비)
------------
-1. 원본 설계 JSON에서 Equipment BBox, Obstacle boundary, SpaceInfo를 직접 로딩
-2. POC 위치를 장비 상대 좌표로 정규화하여 장비 간 비교 가능
-3. 종단점(endPocs) 위치·타입을 경로 특징량에 포함
-4. 장애물 근접도를 특징량 및 유사도 계산에 반영
-5. 장애물 회피 경로 생성 (충돌 감지 + 우회 세그먼트 삽입)
-6. SpaceInfo 레벨(CSF/A/F/CR) 기반 경로 구간 제약
+[프로그램 개요]
+  장비 형상, 장애물(구조기둥/포스트/H-빔/그레이팅), 종단점(부대장비/Duct/Lateral)
+  위치를 모두 고려하여 기존 설계 데이터 기반으로 자동 배관 경로를 설계합니다.
 
-실행 예
--------
-python AutoRoutingDesigner_V2.py --json_input ./data-v10/CMP_KSCTA01_*.json \\
-    --group_results ./GroupPipeResults/group_pipe_results_20260405194814.json \\
-    --equipment kscta01 --utility AKWW --size 20A \\
-    --start 5500,28200,15495 --dest 5300,27000,15495
+[전체 흐름도]
+  ┌──────────────────────────────────────────────────────────────────────────┐
+  │  1. 데이터 로딩 (AutoRoutingDesignerV2.load_data)                        │
+  │  ┌─────────────────────────────────────┐                                │
+  │  │ 원본 설계 JSON 로드                  │                                │
+  │  │  └→ SpatialContext 구축              │                                │
+  │  │     ├─ EquipmentInfo (장비 BBox, POC)│                                │
+  │  │     ├─ ObstacleInfo × N (6종 분류)   │ ← _classify_obstacle()        │
+  │  │     │  ├─ STRUCTURAL_COLUMN (구조기둥)│                                │
+  │  │     │  ├─ POST (포스트)              │                                │
+  │  │     │  ├─ H_BEAM (H빔)              │                                │
+  │  │     │  ├─ STRUCTURAL_BEAM (구조보)   │                                │
+  │  │     │  ├─ GRATING (그레이팅)         │                                │
+  │  │     │  └─ CEILING (천장)             │                                │
+  │  │     └─ SpaceLevelInfo (CSF/A/F/CR)  │                                │
+  │  │ GroupPipeResults JSON 로드           │ ← Phase 2 결과                 │
+  │  └─────────────────────────────────────┘                                │
+  ├──────────────────────────────────────────────────────────────────────────┤
+  │  2. 템플릿 매칭 (find_matching_group)                                    │
+  │  ┌─────────────────────────────────────┐                                │
+  │  │ 새 경로의 대략적 벡터 추정           │ ← _estimate_rough_vectors()    │
+  │  │ EnhancedFeatureExtractor로 8차원 특징│                                │
+  │  │ 그룹 내 모든 템플릿과 8차원 유사도:  │                                │
+  │  │  0.12×arrow + 0.12×vector           │                                │
+  │  │  0.08×range + 0.08×length           │                                │
+  │  │  0.15×장비상대 + 0.15×종단           │                                │
+  │  │  0.20×장애물관계 + 0.10×레벨         │ ← SpatialSimilarity.compute() │
+  │  │ 최고 유사도 템플릿 선택              │                                │
+  │  └─────────────────────────────────────┘                                │
+  ├──────────────────────────────────────────────────────────────────────────┤
+  │  3. 경로 생성 (ObstacleAwarePathBuilder.build_path)                      │
+  │  ┌─────────────────────────────────────┐                                │
+  │  │ Zone 분류 (fan-in/trunk/fan-out)    │                                │
+  │  │ 회전각도 계산 (템플릿→새방향)        │                                │
+  │  │ 3단계 구간별 벡터 생성:              │                                │
+  │  │   Stage 1: FAN-IN  (시작→트렁크)    │ ← _build_zone_segment()       │
+  │  │   Stage 2: TRUNK   (주 통로)        │ ← _build_trunk()              │
+  │  │   Stage 3: FAN-OUT (트렁크→목적지)  │ ← _build_zone_segment()       │
+  │  │ 장애물 회피 (구조기둥만, 최대5회)    │ ← _apply_obstacle_avoidance() │
+  │  │ 끝점 보정 + 벡터 정리               │                                │
+  │  └─────────────────────────────────────┘                                │
+  ├──────────────────────────────────────────────────────────────────────────┤
+  │  4. 검증 (PathValidatorV2.validate)                                      │
+  │  ┌─────────────────────────────────────┐                                │
+  │  │ ① 좌표 연속성 (0.20)               │                                │
+  │  │ ② 길이 합리성 (0.20)               │                                │
+  │  │ ③ 방향 패턴 (0.15)                 │                                │
+  │  │ ④ 장애물 충돌 검사 (0.25)           │ ← COLUMN_STRUCTURE만 대상     │
+  │  │ ⑤ Zone 준수 (0.20)                 │                                │
+  │  │ 종합 quality ≥ 0.4 → PASS          │                                │
+  │  └─────────────────────────────────────┘                                │
+  │  5. 결과 저장 → AutoRoutingResults/*.json                               │
+  └──────────────────────────────────────────────────────────────────────────┘
+
+[V1 대비 핵심 개선 사항]
+  1. Equipment BBox, Obstacle boundary, SpaceInfo를 원본 JSON에서 직접 로딩
+  2. POC 위치를 장비 상대 좌표(0~1)로 정규화 → 장비 간 비교 가능
+  3. 종단점(endPocs) 위치·타입을 경로 특징량에 포함
+  4. 장애물 유형별 18개 공간관계 특징량 + 유사도 계산에 20% 반영
+  5. 장애물 회피 경로 생성 (Slab Method 충돌 감지 + 우회 세그먼트 삽입)
+  6. SpaceInfo 레벨(CSF/A/F/CR) 기반 경로 구간 제약
+
+[주요 클래스/함수 목록]
+  - ObstacleCategory(Enum)        : 장애물 6종 분류 열거형
+  - ObstacleInfo                  : 장애물 정보 (BBox, 유형, 거리계산)
+  - EquipmentInfo                 : 장비 정보 (BBox, POC, 상대좌표 변환)
+  - SpaceLevelInfo                : 공간 레벨 정보 (이름, Z범위)
+  - SpatialContext                : 공간 데이터 통합 관리 (장비/장애물/레벨)
+    .load_from_json()             : 설계 JSON에서 공간 컨텍스트 로드
+    .find_obstacles_in_path()     : 두 점 사이 경로의 장애물 충돌 감지 (Slab Method)
+    .find_nearby_obstacles()      : 반경 내 장애물 검색
+    .compute_obstacle_density()   : 가중 장애물 밀도 계산 (기둥=3배)
+    ._segment_intersects_box()    : 선분-BBox 교차 판정 (Slab Method)
+  - ObstacleRelationFeatures      : 장애물 유형별 18개 공간관계 특징량 데이터클래스
+  - EnhancedPathFeatures          : 경로의 8차원 확장 특징량 데이터클래스
+  - EnhancedFeatureExtractor      : 확장 특징량 추출기
+    .extract()                    : 경로에서 8차원 특징량 추출
+    ._classify_face()             : 점이 장비 BBox 어느 면에 가까운지 판별
+  - ObstacleRelationExtractor     : 유형별 장애물 공간관계 추출기
+    .extract()                    : 경로 좌표로부터 18개 특징량 추출
+    ._compute_column_relations()  : 구조기둥 관계 (5개 특징)
+    ._compute_lr_pattern()        : 기둥 좌/우/사이 패턴 (법선벡터 투영)
+    ._compute_post_relations()    : 포스트 관계 (3개 특징)
+    ._compute_grid_alignment()    : 그리드 규칙성 + 경로 정렬도
+    ._compute_beam_relations()    : H-빔 관계 (3개 특징)
+    ._compute_grating_relations() : 그레이팅 관계 (3개 특징)
+  - SpatialSimilarity             : 8차원 확장 유사도 계산
+    .compute()                    : 복합 유사도 점수 반환
+    .compute_detail()             : 항목별 상세 유사도 반환
+    ._obstacle_sim()              : 장애물관계 유사도 (기둥0.35/빔0.30/그레이팅0.20/포스트0.15)
+  - ObstacleAwarePathBuilder      : 장애물 회피 경로 생성기
+    .build_path()                 : 3단계(fan-in/trunk/fan-out) 경로 구성
+    ._apply_obstacle_avoidance()  : 구조기둥 회피 (H세그먼트만, 최대5회)
+    ._compute_detour()            : 우회 세그먼트 생성
+  - PathValidatorV2               : 경로 검증기 (연속성/길이/패턴/충돌/Zone)
+  - AutoRoutingDesignerV2         : 메인 오케스트레이터
+    .load_data()                  : 원본 JSON + 그룹 결과 로드
+    .find_matching_group()        : 8차원 유사도 기반 최적 템플릿 매칭
+    .design_route()               : 단일 경로 자동설계
+    .design_routes_batch()        : 배치 자동설계
+
+[주요 변수 설명]
+  - DesignConfigV2                : 설계 설정 (클리어런스, 유사도 가중치 등)
+  - OBSTACLE_CLEARANCE            : 배관-장애물 최소 이격거리 (200mm)
+  - TERMINAL_TYPES                : 종단점 타입 분류 매핑
+  - _DDWORKS_TO_CATEGORY          : BIM ddworksType → ObstacleCategory 매핑
 """
 
 import argparse

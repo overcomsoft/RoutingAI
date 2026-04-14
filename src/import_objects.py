@@ -1,15 +1,44 @@
+# =====================================================================================
+# [실행 명령어]
+#   python import_objects.py ./all_objects_summary_en_20260401_121428.csv \
+#       --dbname AUTOROUTINGV7 --user postgres --password dinno --host localhost -p 5432
+#   (원격) python import_objects.py ./all_objects_summary_en_20260401_121428.csv \
+#       --dbname AUTOROUTINGV7 --user dinno --password dinno --host 192.168.0.41 -p 55432
+# =====================================================================================
+#
+# import_objects.py  — BIM 객체 요약 정보 DB 적재
+# ==================================================
+#
+# [프로그램 개요]
+#   BIM 객체 요약 CSV(all_objects_summary_en_*.csv)를 PostgreSQL(PostGIS)의
+#   TB_OBJECTS 테이블에 적재합니다. 각 객체의 3D BBox를 box3d 형상으로 저장합니다.
+#
+# [전체 흐름도]
+#   ┌──────────────────────────────────────────────────────────────┐
+#   │  1. CSV 경로 + DB 접속 정보 파싱 (argparse)                  │
+#   │  2. PostgreSQL 연결 + TB_OBJECTS 스키마 검증/재생성           │
+#   │  3. CSV 파싱 (parse_csv_data):                               │
+#   │     └─ SourceFile, Category, ID, Name, Level, BBox 추출      │
+#   │  4. 동일 파일명 기존 데이터 DELETE (중복 방지)                │
+#   │  5. executemany()로 일괄 INSERT (box3d 포함)                 │
+#   └──────────────────────────────────────────────────────────────┘
+#
+# [주요 함수]
+#   - get_db_schema_sql()                    : TB_OBJECTS CREATE 쿼리
+#   - validate_and_ensure_schema(cur)        : 기존 테이블 스키마 검증, 불일치 시 재생성
+#   - parse_csv_data(csv_path)               : CSV → 데이터 리스트 + 고유 파일명 추출
+#   - run_postgresql_import(csv_path, db)    : DB 연결 + 스키마 검증 + INSERT
+#
+# [주요 변수]
+#   - rows             : CSV에서 변환된 데이터 리스트
+#   - unique_filenames : 중복 DELETE 대상 파일명 집합
+# =====================================================================================
+
 import csv
 import argparse
 import os
 import sys
 from datetime import datetime
-
-# ==============================================================================
-# 실행 명령어 (Command Line)
-# python import_objects.py <CSV_FILE_PATH> --dbname <DB_NAME> --user <DB_USER> --password <DB_PW> [--host DB_HOST -p DB_PORT]
-# 예시: python import_objects.py ./all_objects_summary_en_20260401_121428.csv --dbname AUTOROUTINGV7 --user postgres --password dinno --host localhost -p 5432
-# 예시 : python import_objects.py ./all_objects_summary_en_20260401_121428.csv --dbname AUTOROUTINGV7 --user dinno  --password dinno --host 192.168.0.41  -p 55432
-# ==============================================================================
 
 def get_db_schema_sql():
     return """

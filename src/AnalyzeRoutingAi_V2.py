@@ -1,27 +1,84 @@
 from __future__ import annotations
 
+# =====================================================================================
+# [실행 명령어]
+#   python AnalyzeRoutingAi_V2.py --phase all
+#   python AnalyzeRoutingAi_V2.py --phase routing --input ./data-v10
+#   python AnalyzeRoutingAi_V2.py --phase grouping --routing_out ./RoutingResults
+# =====================================================================================
 """
-AnalyzeRoutingAi_V2.py
-==============================
-3D 배관 설계 데이터(JSON)에서 개별 배관 경로를 추출하고,
-추출된 경로들의 형상/방향/길이/공간 정보를 바탕으로 그룹 배관(Trunk/Bundle)을 분석하는 개선 버전입니다.
+AnalyzeRoutingAi_V2.py  — 배관 경로 추출 및 그룹 배관 분석 (개선 버전)
+======================================================================
 
-개선 포인트
------------
-1. 예외를 묵살하지 않고 파일명과 원인을 로깅합니다.
-2. 경로 특징량을 문자열이 아닌 구조화된 숫자 리스트로도 함께 저장합니다.
-3. 시작-끝 절대 변위가 아니라 전체 노드의 BBox Range를 사용합니다.
-4. 같은 장비 내부 POC와 다른 장비 POC를 구분하여 종단 판정을 개선합니다.
-5. 복합 유사도 계산 시 코사인 유사도를 0~1 범위로 정규화합니다.
-6. Grouping 시 size까지 버킷 키에 포함하여 오검출을 줄입니다.
-7. Phase 1 / Phase 2를 분리 실행할 수 있습니다.
-8. 경로 수, 깊이, 큐 길이에 대한 안전 장치를 추가했습니다.
+[프로그램 개요]
+  3D 배관 설계 데이터(JSON)에서 개별 배관 경로를 추출하고(Phase 1),
+  추출된 경로들의 형상·방향·길이·공간·장애물관계 정보를 바탕으로
+  유사 경로들을 그룹 배관(Trunk/Bundle)으로 클러스터링합니다(Phase 2).
 
-실행 예
--------
-python AnalyzeRoutingAi_V2.py --phase all
-python AnalyzeRoutingAi_V2.py --phase routing --input ./data-v10
-python AnalyzeRoutingAi_V2.py --phase grouping --routing_out ./RoutingResults
+[전체 흐름도]
+  ┌──────────────────────────────────────────────────────────────────────┐
+  │  Phase 1: 경로 추출 (run_phase_routing)                             │
+  │  ┌───────────────────────────────┐                                  │
+  │  │ 1. 원본 설계 JSON 로드        │ ← data-v10/*.json               │
+  │  │ 2. RoutingGraph 생성          │   (Nodes, Edges, Equipment)     │
+  │  │ 3. SpatialContext 로드        │   (Obstacles, SpaceInfo)        │
+  │  │ 4. BFS로 POC→종단 경로 탐색   │   (get_neighbors, is_branch)    │
+  │  │ 5. 경로 특징량 계산            │   (_compute_path_features)      │
+  │  │ 6. 장애물관계 18속성 추출      │   (ObstacleRelationExtractor)   │
+  │  │ 7. JSON 저장                  │ → RoutingResults/*.json         │
+  │  └───────────────────────────────┘                                  │
+  ├──────────────────────────────────────────────────────────────────────┤
+  │  Phase 2: 그룹 클러스터링 (run_phase_grouping)                       │
+  │  ┌───────────────────────────────┐                                  │
+  │  │ 1. Phase1 결과 JSON 로드       │ ← RoutingResults/*.json         │
+  │  │ 2. (장비,유틸리티,사이즈)별 버킷│   (_load_routing_records)       │
+  │  │ 3. 5차원 복합 유사도 계산       │   (compute_composite_similarity)│
+  │  │    - arrow(0.25) + vector(0.25)│                                 │
+  │  │    - range(0.15) + length(0.15)│                                 │
+  │  │    - obstacle_relations(0.20)  │   (_obstacle_relation_similarity)│
+  │  │ 4. Union-Find 클러스터링       │   (threshold ≥ 0.70)            │
+  │  │ 5. Zone 탐지 (trunk/fan)       │   (detect_zones)               │
+  │  │ 6. JSON + CSV 저장             │ → GroupPipeResults/*.json       │
+  │  └───────────────────────────────┘                                  │
+  └──────────────────────────────────────────────────────────────────────┘
+
+[V1 대비 개선 포인트]
+  1. 예외를 묵살하지 않고 파일명과 원인을 로깅
+  2. 경로 특징량을 구조화된 숫자 리스트(path_step_vectors 등)로 저장
+  3. 시작-끝 절대 변위 대신 전체 노드의 BBox Range 사용
+  4. 같은 장비 내부 POC와 다른 장비 POC를 구분하여 종단 판정 개선
+  5. 코사인 유사도를 0~1 범위로 정규화
+  6. Grouping 시 size까지 버킷 키에 포함하여 오검출 감소
+  7. Phase 1 / Phase 2를 분리 실행 가능
+  8. 경로 수·깊이·큐 길이에 대한 안전 장치 추가
+  9. 장애물관계 특징량(18속성)을 경로별로 추출하여 유사도에 반영(20%)
+
+[주요 클래스/함수 목록]
+  - AnalysisConfig          : 분석 설정값 (입출력 경로, BFS 보호장치, 임계값)
+  - RoutingGraph            : JSON 설계 데이터를 그래프로 로드, BFS 경로 탐색
+    .load_from_json()       : 노드/엣지/장비 인덱스 생성
+    .get_neighbors()        : 인접 노드 조회 (VIRTUAL 엣지 제외)
+    .is_branch_node()       : 분기 노드 판정 (TEE/BRANCH/JUNCTION 등)
+    .find_routing_paths()   : 모든 Equipment의 POC에서 경로 추출
+    ._trace_paths_from_poc(): 단일 POC에서 BFS 종단 경로 추출
+    ._classify_terminal()   : 현재 노드가 종단인지 판정 (Duct/Lateral/장비 등)
+  - GroupAnalyzer           : 경로 레코드를 유사도 기반으로 그룹 배관 후보로 묶음
+    .find_groups()          : Union-Find 클러스터링 수행
+    ._find_common_z_levels(): 공통 수평(H) 레벨 탐색
+  - compute_composite_similarity() : 5차원 복합 유사도 계산 (장애물관계 포함)
+  - _obstacle_relation_similarity(): 장애물관계 특징량 유사도 (기둥0.35/빔0.30/그레이팅0.20/포스트0.15)
+  - detect_zones()          : 그룹 배관 후보의 trunk/fan-in/fan-out 영역 추정
+  - run_phase_routing()     : Phase 1 실행 (경로 추출 + 장애물관계)
+  - run_phase_grouping()    : Phase 2 실행 (그룹 클러스터링 + Zone 탐지)
+
+[주요 변수 설명]
+  - TYPE_ABBREV             : 노드 타입 → 2자 약어 매핑 (경로 요약용)
+  - BRANCH_NODE_TYPES       : 분기 판정 대상 노드 타입 집합 (TEE, BRANCH 등)
+  - node_by_guid            : GUID→노드 딕셔너리 (빠른 조회용)
+  - edge_by_guid            : GUID→엣지 딕셔너리
+  - poc_owner_map           : POC GUID → 소속 장비 ID 매핑 (종단 판정용)
+  - sim_matrix              : 버킷 내 경로 간 유사도 행렬 (NxN)
+  - parent                  : Union-Find 부모 배열
 """
 
 import argparse

@@ -1,30 +1,40 @@
-# ==============================================================================
-# 실행 방법 (Command Line)
-# python import_duct_poc_cluster.py <CSV_FILE_PATH> --dbname <DB_NAME> --user <DB_USER> --password <DB_PW> [--host DB_HOST -p DB_PORT] [--clean]
-# 예시: python import_duct_poc_cluster.py ./duct_poc_cluster_20260406_113528.csv --dbname AUTOROUTINGV7 --user postgres --password dinno --host localhost -p 5432 --clean
-# 원격 python import_duct_poc_cluster.py ./duct_poc_cluster_20260330_084611.csv --dbname AUTOROUTINGV7 --user dinno  --password dinno --host 192.168.0.41 -p 55432  
-# 원격2 python import_duct_poc_cluster.py ./duct_poc_cluster_20260406_113528.csv --dbname AUTOROUTINGV7 --user dinno  --password dinno --host 192.168.0.35 -p 55432 --clean
-
+# =====================================================================================
+# [실행 명령어]
+#   python import_duct_poc_cluster.py ./duct_poc_cluster_20260406_113528.csv \
+#       --dbname AUTOROUTINGV7 --user postgres --password dinno --host localhost -p 5432 --clean
+#   (원격) python import_duct_poc_cluster.py ./duct_poc_cluster_20260406_113528.csv \
+#       --dbname AUTOROUTINGV7 --user dinno --password dinno --host 192.168.0.35 -p 55432 --clean
+# =====================================================================================
 #
-# [전체적인 흐름도 및 알고리즘]
-# 1. 인자로 전달받은 CSV 경로 및 PostgreSQL 접속 정보를 파싱하여 읽어들입니다.
-# 2. PostgreSQL DB에 연결하고, TB_DUCT_POC_CLUSTER 테이블의 존재 및 스키마 구조(컬럼)를 비교하여 최신화합니다 (없거나 다르면 재생성).
-# 3. PostGIS 확장을 로드하며, WKT 형상 데이터를 포함시킬 준비를 합니다.
-# 4. CSV 파일을 읽고(parse_csv_data), 읽어온 PoC 좌표 문자열을 WKT(MULTIPOINT Z) 포맷으로 가공합니다.
-# 5. 기존에 저장된 동일한 파일명의 데이터가 존재하면 중복 적재 방지를 위해 DELETE를 수행합니다.
-# 6. executemany()를 사용해 파싱된 다수의 행(row) 데이터를 DB에 안전하고 통째로(INSERT) 적재합니다.
+# import_duct_poc_cluster.py  — 덕트 PoC 클러스터 DB 적재
+# ==========================================================
 #
-# [주요 함수 설명]
-# - get_db_schema_sql: TB_DUCT_POC_CLUSTER 테이블의 CREATE 구문을 반환하는 함수
-# - parse_csv_data(csv_path): 인코딩 문제 방지를 포함하여 CSV를 읽고 (data_rows, distinct_filenames) 튜플을 반환. 문자로 된 좌표들을 MULTIPOINT Z 문자열로 바꿈.
-# - run_postgresql_import(csv_path, db_params): 파싱된 데이터를 DB에 연결 및 검증 후 삽입.
+# [프로그램 개요]
+#   duct_poc_clustering.py에서 생성한 CSV 결과를 PostgreSQL(PostGIS) DB에 적재합니다.
+#   PoC 좌표를 WKT(MULTIPOINT Z) 형상으로 변환하여 공간 쿼리가 가능하도록 합니다.
 #
-# [주요 변수 설명]
-# - rows: CSV에서 읽어들여 튜플 형태로 변환된 최종 데이터 리스트
-# - unique_filenames: 중복 삭제(DELETE) 쿼리에 쓰일 삽입 타겟들(파일명집합)
-# - wkt_geom: MULTIPOINT Z 포맷으로 조립된 공간 객체의 Well-Known Text
-# - db_params: 데이터베이스 접속 호스트, 포트, 이름, 권한 등의 Dictionary
-# ==============================================================================
+# [전체 흐름도]
+#   ┌──────────────────────────────────────────────────────────────┐
+#   │  1. CSV 경로 + DB 접속 정보 파싱 (argparse)                  │
+#   │  2. PostgreSQL 연결 + TB_DUCT_POC_CLUSTER 스키마 검증/생성   │
+#   │  3. PostGIS 확장 로드                                        │
+#   │  4. CSV 파싱 (parse_csv_data):                               │
+#   │     └─ PoC 좌표 문자열 → WKT(MULTIPOINT Z) 변환             │
+#   │  5. 동일 파일명 기존 데이터 DELETE (중복 방지)                │
+#   │  6. executemany()로 일괄 INSERT                              │
+#   └──────────────────────────────────────────────────────────────┘
+#
+# [주요 함수]
+#   - get_db_schema_sql()                   : TB_DUCT_POC_CLUSTER CREATE 쿼리
+#   - parse_csv_data(csv_path)              : CSV → (data_rows, 고유파일명) 추출
+#   - run_postgresql_import(csv_path, db)   : DB 연결 + 검증 + INSERT
+#
+# [주요 변수]
+#   - rows             : CSV에서 변환된 최종 데이터 튜플 리스트
+#   - unique_filenames : 중복 DELETE 대상 파일명 집합
+#   - wkt_geom         : MULTIPOINT Z WKT 문자열
+#   - db_params        : DB 접속 정보 딕셔너리
+# =====================================================================================
 
 import csv
 import argparse

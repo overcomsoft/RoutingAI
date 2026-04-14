@@ -1,6 +1,11 @@
+# =====================================================================================
+# [실행 명령어]
+#   python AnalyzeRoutingPath.py --input ./data-v10 --output ./RoutingResults
+#   python AnalyzeRoutingPath.py --input ./data-v11 --output ./RoutingResults
+# =====================================================================================
 """
-AnalyzeRoutingPath.py
-=====================
+AnalyzeRoutingPath.py  — BFS 기반 배관 경로 추출기 (V1)
+========================================================
 3D 배관 설계 데이터(JSON)에서 Equipment의 POC(Point of Connection)를 시작점으로
 배관 네트워크를 BFS(너비 우선 탐색)로 순회하여 각 종단점(Duct, Nozzle, 부대장비 등)까지의
 라우팅 경로를 추출하고 JSON 파일로 저장한다.
